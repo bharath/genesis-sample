@@ -92,12 +92,12 @@ function obk_scripts_styles() {
     wp_deregister_style( 'dashicons' );
     
     // Move jQuery to footer
-	if( ! is_admin() ) {
-		wp_deregister_script( 'jquery' );
-		wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
-		wp_enqueue_script( 'jquery' );
-	}
-	
+    if( ! is_admin() ) {
+        wp_deregister_script( 'jquery' );
+        wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
+        wp_enqueue_script( 'jquery' );
+    }
+    
 }
 add_action( 'wp_enqueue_scripts', 'obk_scripts_styles', 11 );
 
