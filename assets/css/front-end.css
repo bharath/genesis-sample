@@ -458,7 +458,7 @@ hr.wp-block-separator {
 
 .site-container .wp-block-button.is-style-outline .wp-block-button__link:focus,
 .site-container .wp-block-button.is-style-outline .wp-block-button__link:hover {
-	color: #2396ff;
+	color: #ff0014; /* Color changed from default #2396ff to #ff0014 */
 }		
 
 .site-container .has-small-font-size {
