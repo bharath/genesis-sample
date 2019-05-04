@@ -1841,6 +1841,9 @@ p.entry-meta {
 
 }
 
+/* -- Font and default Color Overrides 
+--------------------------------------------- */
+
 body { 
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;  
     font-weight: 400; 
@@ -1855,4 +1858,40 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+a,
+.entry-title a:focus,
+.entry-title a:hover,
+.gs-faq__question:focus,
+.gs-faq__question:hover,
+.genesis-nav-menu a:focus,
+.genesis-nav-menu a:hover,
+.genesis-nav-menu .current-menu-item > a,
+.genesis-nav-menu .sub-menu .current-menu-item > a:focus,
+.genesis-nav-menu .sub-menu .current-menu-item > a:hover,
+.menu-toggle:focus,
+.menu-toggle:hover,
+.sub-menu-toggle:focus,
+.sub-menu-toggle:hover {
+    color: #ff0014; /* Color changed from default #0073e5 to #ff0014 */
+}
+
+button:focus,
+button:hover,
+input[type="button"]:focus,
+input[type="button"]:hover,
+input[type="reset"]:focus,
+input[type="reset"]:hover,
+input[type="submit"]:focus,
+input[type="submit"]:hover,
+.site-container div.wpforms-container-full .wpforms-form input[type="submit"]:focus,
+.site-container div.wpforms-container-full .wpforms-form input[type="submit"]:hover,
+.site-container div.wpforms-container-full .wpforms-form button[type="submit"]:focus,
+.site-container div.wpforms-container-full .wpforms-form button[type="submit"]:hover,
+.button:focus,
+.button:hover,
+.genesis-nav-menu > .menu-highlight > a:focus,
+.genesis-nav-menu > .menu-highlight > a:hover {
+	background-color: #ff0014; /* Color changed from default #0073e5 to #ff0014 */
 }

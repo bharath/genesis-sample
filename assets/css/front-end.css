@@ -435,14 +435,15 @@ hr.wp-block-separator {
 
 /* --   Inline styles removed after dequeing Gutenberg front-end styles.
         genesis-sample-gutenberg-inline-css
+        default Color Overrides 
 --------------------------------------------- */
 
 .ab-block-post-grid .ab-post-grid-items h2 a:hover {
-	color: #0073e5;
+	color: #ff0014; /* Color changed from default #0073e5 to #ff0014 */
 }
 
 .site-container .wp-block-button .wp-block-button__link {
-	background-color: #0073e5;
+	background-color: #ff0014; /* Color changed from default #0073e5 to #ff0014 */
 }
 
 .wp-block-button .wp-block-button__link:not(.has-background),
@@ -452,7 +453,7 @@ hr.wp-block-separator {
 }
 
 .site-container .wp-block-button.is-style-outline .wp-block-button__link {
-	color: #0073e5;
+	color: #ff0014; /* Color changed from default #0073e5 to #ff0014 */
 }
 
 .site-container .wp-block-button.is-style-outline .wp-block-button__link:focus,
@@ -479,29 +480,29 @@ hr.wp-block-separator {
 .site-container .has-theme-primary-color,
 .site-container .wp-block-button .wp-block-button__link.has-theme-primary-color,
 .site-container .wp-block-button.is-style-outline .wp-block-button__link.has-theme-primary-color {
-    color: #0073e5;
+    color: #ff0014; /* Color changed from default #0073e5 to #ff0014 */
 }
 
 .site-container .has-theme-primary-background-color,
 .site-container .wp-block-button .wp-block-button__link.has-theme-primary-background-color,
 .site-container .wp-block-pullquote.is-style-solid-color.has-theme-primary-background-color {
-    background-color: #0073e5;
+    background-color: #ff0014; /* Color changed from default #0073e5 to #ff0014 */
 }		
 
 .site-container .has-theme-secondary-color,
 .site-container .wp-block-button .wp-block-button__link.has-theme-secondary-color,
 .site-container .wp-block-button.is-style-outline .wp-block-button__link.has-theme-secondary-color {
-    color: #0073e5;
+    color: #ff0014; /* Color changed from default #0073e5 to #ff0014 */
 }
 
 .site-container .has-theme-secondary-background-color,
 .site-container .wp-block-button .wp-block-button__link.has-theme-secondary-background-color,
 .site-container .wp-block-pullquote.is-style-solid-color.has-theme-secondary-background-color {
-    background-color: #0073e5;
+    background-color: #ff0014; /* Color changed from default #0073e5 to #ff0014 */
 }
 
 
-/* -- overrides 
+/* -- Font Overrides 
 --------------------------------------------- */
 
 /* Buttons
@@ -512,7 +513,6 @@ hr.wp-block-separator {
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-
 /* Blockquotes and captions
 ---------------------------------------------------------------------------- */
 
@@ -520,7 +520,6 @@ hr.wp-block-separator {
 .site-container .wp-block-quote p {
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
-
 
 .site-container .wp-block-pullquote cite,
 .site-container .wp-block-quote cite {

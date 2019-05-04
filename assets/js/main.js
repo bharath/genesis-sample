@@ -71,18 +71,5 @@
 
 	});
 
-    //hljs.initHighlightingOnLoad();
-    
-
-    $("pre.lang-html, pre[rel=HTML]").find("code").addClass("language-markup"),
-    $("code.html, code.lang-html").removeClass().addClass("language-markup").parent().attr("rel", "HTML"),
-    $("code.javascript").removeClass().addClass("language-javascript").attr("rel", "JavaScript"),
-    $("pre[rel=JavaScript], pre.lang-js, pre.JavaScript").attr("rel", "JavaScript").find("code").removeClass().addClass("language-javascript"),
-    $("pre[rel=jQuery]").find("code").removeClass().addClass("language-javascript"),
-    $("pre[rel='CSS'], pre[rel='LESS']").find("code").removeClass().addClass("language-css"),
-    $("code.css, code.lang-css").removeClass().addClass("language-css").parent().attr("rel", "CSS"),
-    $("pre[rel='Sass'], pre[rel='SASS'], pre[rel='SCSS']").removeClass().addClass("language-scss"),
-    $("pre[rel=PHP]").attr("rel", "PHP").find("code").removeClass().addClass("language-javascript"),
-    $("code.php").removeClass().addClass("language-javascript").parent().attr("rel", "PHP");
 
 })(jQuery);
