@@ -97,7 +97,7 @@ function obk_scripts_styles() {
         wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
         wp_enqueue_script( 'jquery' );
     }
-    
+
 }
 add_action( 'wp_enqueue_scripts', 'obk_scripts_styles', 11 );
 
@@ -106,7 +106,7 @@ add_action( 'wp_enqueue_scripts', 'obk_scripts_styles', 11 );
 add_action('genesis_after', 'obk_assets_after_footer');
 function obk_assets_after_footer() {
     // Move dash to footer
-	if( ! is_admin() ) {
+    if( ! is_admin() ) {
         wp_enqueue_style( 'dashicons' );
     }
 }
@@ -122,9 +122,9 @@ function obk_gutenberg_scripts_styles() {
     // Enqueue Google Fonts for Gutenberg admin editor.
     wp_enqueue_style( 'obk-gutenberg-fonts', obk_fonts_url() );
     
-	// Enqueue Gutenberg admin editor scripts.
-	$last_modified_editor_js = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ) );
-	wp_enqueue_script( 'obk-editor-js', get_stylesheet_directory_uri() . '/assets/js/editor.js', array( 'wp-blocks', 'wp-dom' ), $last_modified_editor_js, true );
+    // Enqueue Gutenberg admin editor scripts.
+    $last_modified_editor_js = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ) );
+    wp_enqueue_script( 'obk-editor-js', get_stylesheet_directory_uri() . '/assets/js/editor.js', array( 'wp-blocks', 'wp-dom' ), $last_modified_editor_js, true );
 
 }
 add_action( 'enqueue_block_editor_assets', 'obk_gutenberg_scripts_styles', 11 );
