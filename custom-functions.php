@@ -65,8 +65,8 @@ function obk_scripts_styles() {
 
     // Dequeue genesis-sample script.
     wp_dequeue_script( 'genesis-sample' );
-	
-	// Dequeue Gutenberg front-end styles.
+    
+    // Dequeue Gutenberg front-end styles.
     wp_dequeue_style( 'genesis-sample-gutenberg' );
 
     // Enqueue Google Fonts.
