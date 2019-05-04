@@ -76,10 +76,9 @@ function obk_scripts_styles() {
     date_default_timezone_set('Asia/Kolkata');
     
     // Enqueue custom Gutenberg front-end styles.
-	$last_modified_front_end_css = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/front-end.css' ) );
-	wp_enqueue_style( 'obk-gutenberg', get_stylesheet_directory_uri() . '/assets/css/front-end.css', array(), $last_modified_front_end_css );
-    
-	// Enqueue theme's main styles.
+    $last_modified_front_end_css = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/front-end.css' ) );
+    wp_enqueue_style( 'obk-gutenberg', get_stylesheet_directory_uri() . '/assets/css/front-end.css', array(), $last_modified_front_end_css );
+    // Enqueue theme's main styles.
 	$last_modified_main_css = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) );
 	wp_enqueue_style( 'obk-styles', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), $last_modified_main_css );
 	
