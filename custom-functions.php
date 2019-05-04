@@ -135,48 +135,48 @@ add_action( 'enqueue_block_editor_assets', 'obk_gutenberg_scripts_styles', 11 );
  */
 function obk_setup() {
 
-// Disable the custom color picker.
-add_theme_support( 'disable-custom-colors' );
+    // Disable the custom color picker.
+    add_theme_support( 'disable-custom-colors' );
 
-/**
- * Custom colors for use in the editor.
-  * Add support for custom color palettes in Gutenberg.
- * @link https://wordpress.org/gutenberg/handbook/reference/theme-support/
- */
-add_theme_support(
-    'editor-color-palette', array(
-        array(
-            'name'  => esc_html__( 'Red', 'obk' ),
-            'slug' => 'red',
-            'color' => '#FF0014',
-        ),
-        array(
-            'name'  => esc_html__( 'Gray', 'obk' ),
-            'slug' => 'gray',
-            'color' => '#6E6E6A',
-        ),
-        array(
-            'name'  => esc_html__( 'Black', 'obk' ),
-            'slug' => 'black',
-            'color' => '#000000',
-        ),
-        array(
-            'name'  => esc_html__( 'Blackish', 'obk' ),
-            'slug' => 'blackish',
-            'color' => '#2c2c2c',
-        ),
-        array(
-            'name'  => esc_html__( 'White', 'obk' ),
-            'slug' => 'white',
-            'color' => '#ffffff',
-        ),
-        array(
-            'name'  => esc_html__( 'Transparent', 'obk' ),
-            'slug' => 'transparent',
-            'color' => 'transparent',
+    /**
+     * Custom colors for use in the editor.
+     * Add support for custom color palettes in Gutenberg.
+    * @link https://wordpress.org/gutenberg/handbook/reference/theme-support/
+    */
+    add_theme_support(
+        'editor-color-palette', array(
+            array(
+                'name'  => esc_html__( 'Red', 'obk' ),
+                'slug' => 'red',
+                'color' => '#FF0014',
+            ),
+            array(
+                'name'  => esc_html__( 'Gray', 'obk' ),
+                'slug' => 'gray',
+                'color' => '#6E6E6A',
+            ),
+            array(
+                'name'  => esc_html__( 'Black', 'obk' ),
+                'slug' => 'black',
+                'color' => '#000000',
+            ),
+            array(
+                'name'  => esc_html__( 'Blackish', 'obk' ),
+                'slug' => 'blackish',
+                'color' => '#2c2c2c',
+            ),
+            array(
+                'name'  => esc_html__( 'White', 'obk' ),
+                'slug' => 'white',
+                'color' => '#ffffff',
+            ),
+            array(
+                'name'  => esc_html__( 'Transparent', 'obk' ),
+                'slug' => 'transparent',
+                'color' => 'transparent',
+            )
         )
-    )
-);
+    );
 
 // -- Disable custom font sizes
 add_theme_support( 'disable-custom-font-sizes' );
