@@ -178,51 +178,51 @@ function obk_setup() {
         )
     );
 
-// -- Disable custom font sizes
-add_theme_support( 'disable-custom-font-sizes' );
+    // -- Disable custom font sizes
+    add_theme_support( 'disable-custom-font-sizes' );
 
-/**
- * Custom font sizes for use in the editor.
- *
- * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/#block-font-sizes
- */
-add_theme_support(
-    'editor-font-sizes', array(
-        array(
-            'name'      => esc_html__( 'Small', 'obk' ),
-            'shortName' => esc_html__( 'S', 'obk' ),
-            'size'      => 15,
-            'slug'      => 'small',
-        ),
-        array(
-            'name'      => esc_html__( 'Normal', 'obk' ),
-            'shortName' => esc_html__( 'N', 'obk' ),
-            'size'      => 18,
-            'slug'      => 'normal',
-        ),
-        array(
-            'name'      => esc_html__( 'Medium', 'obk' ),
-            'shortName' => esc_html__( 'M', 'obk' ),
-            'size'      => 20,
-            'slug'      => 'medium',
-        ),
-        array(
-            'name'      => esc_html__( 'Large', 'obk' ),
-            'shortName' => esc_html__( 'L', 'obk' ),
-            'size'      => 24,
-            'slug'      => 'large',
-        ),
-        array(
-            'name'      => esc_html__( 'Huge', 'obk' ),
-            'shortName' => esc_html__( 'XL', 'obk' ),
-            'size'      => 28,
-            'slug'      => 'huge',
-        ),
-    )
-);
+    /**
+     * Custom font sizes for use in the editor.
+     *
+     * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/#block-font-sizes
+     */
+    add_theme_support(
+        'editor-font-sizes', array(
+            array(
+                'name'      => esc_html__( 'Small', 'obk' ),
+                'shortName' => esc_html__( 'S', 'obk' ),
+                'size'      => 15,
+                'slug'      => 'small',
+            ),
+            array(
+                'name'      => esc_html__( 'Normal', 'obk' ),
+                'shortName' => esc_html__( 'N', 'obk' ),
+                'size'      => 18,
+                'slug'      => 'normal',
+            ),
+            array(
+                'name'      => esc_html__( 'Medium', 'obk' ),
+                'shortName' => esc_html__( 'M', 'obk' ),
+                'size'      => 20,
+                'slug'      => 'medium',
+            ),
+            array(
+                'name'      => esc_html__( 'Large', 'obk' ),
+                'shortName' => esc_html__( 'L', 'obk' ),
+                'size'      => 24,
+                'slug'      => 'large',
+            ),
+            array(
+                'name'      => esc_html__( 'Huge', 'obk' ),
+                'shortName' => esc_html__( 'XL', 'obk' ),
+                'size'      => 28,
+                'slug'      => 'huge',
+            ),
+        )
+    );
 
-// Enqueue editor styles.
-add_editor_style( '/assets/css/style-editor.css' );
+    // Enqueue editor styles.
+    add_editor_style( '/assets/css/style-editor.css' );
 
 }
 add_action( 'after_setup_theme', 'obk_setup' );
