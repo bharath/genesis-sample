@@ -84,7 +84,8 @@ function obk_scripts_styles() {
     wp_enqueue_style( 'obk-styles', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), $last_modified_main_css );
     
     // Enqueue theme's main scripts.
-    $last_modified_main_js = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/main.js' ) );wp_enqueue_script( 'obk-scripts', get_stylesheet_directory_uri() . '/assets/js/main.js', array( 'jquery' ), $last_modified_main_js, true );
+    $last_modified_main_js = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/main.js' ) ); 
+    wp_enqueue_script( 'obk-scripts', get_stylesheet_directory_uri() . '/assets/js/main.js', array( 'jquery' ), $last_modified_main_js, true );
 
     wp_enqueue_script( 'clipboard-script', '//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', array('jquery'), '2.0.0', true);
 
