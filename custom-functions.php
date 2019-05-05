@@ -30,15 +30,15 @@ function obk_fonts_url() {
      */
 
     $montserrat = esc_html_x( 'on', 'Montserrat font: on or off', 'obk' );
-    //$merriweather = esc_html_x( 'on', 'Merriweather font: on or off', 'obk' );
+    $lora = esc_html_x( 'on', 'Lora font: on or off', 'obk' );
     
     if ( 'off' !== $montserrat ) {
         $font_families[] = 'Montserrat:400,400i,600,700';
     }
 
-    //if ( 'off' !== $merriweather ) {
-    //    $font_families[] = 'Merriweather:400,400i,700';
-    //}
+    if ( 'off' !== $lora ) {
+        $font_families[] = 'Lora:400,400i,700';
+    }
 
     $query_args = array(
         'family' => rawurlencode( implode( '|', array_unique( $font_families ) ) ),
@@ -226,3 +226,21 @@ function obk_setup() {
 
 }
 add_action( 'after_setup_theme', 'obk_setup' );
+
+add_filter(
+	'code_syntax_block_style',
+	function() {
+		//return 'tomorrow';
+		//return 'xcode';
+        //return 'color-brewer';
+        return 'github-gist';
+        //return 'bharath';
+    }
+    
+
+    //if ( ! is_page() ) {
+    //    return 'atom-one-light';
+    //}
+    //return 'atom-one-light';
+    
+);

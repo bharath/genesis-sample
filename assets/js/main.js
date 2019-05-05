@@ -25,7 +25,7 @@
 
 
 		// snippets.js
-		var snippets = document.querySelectorAll('pre');
+		var snippets = document.querySelectorAll('.wp-block-code');
 
 		[].forEach.call(snippets, function(snippet) {
 			snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn" data-clipboard-snippet><i class="far fa-clone"></i></button>');
