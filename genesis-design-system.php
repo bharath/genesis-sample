@@ -1,7 +1,7 @@
 <?php
  /**
  * Plugin Name: Genesis Design System
- * Plugin URI: https://bharath.dev/genesis-design-system
+ * Plugin URI: https://bharath.blog/genesis-design-system
  * Description: Customize the default Genesis Theme design options.
  * Version: 0.1
  * Author: Bharath
