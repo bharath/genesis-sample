@@ -100,8 +100,8 @@ class MyTheme_Customize {
 	   <style type="text/css">
 
 			:root { 
-				--color-link: <?php echo get_theme_mod('link_textcolor', '#000000'); ?>; 
-				--color-link-accent: <?php echo get_theme_mod('link_textaccentcolor', '#000000'); ?>; 
+				--color-linkkkk: <?php echo get_theme_mod('link_textcolor', '#000000'); ?>; 
+				--color-link-accentkkk: <?php echo get_theme_mod('link_textaccentcolor', '#000000'); ?>; 
 			}
 
 
