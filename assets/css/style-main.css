@@ -1960,7 +1960,11 @@ p.entry-meta {
     
     /* -- Editor Color Palette 
     --------------------------------------------- */
-    --ecp-main: #ff0014;
+    --ecp-one: #ff0014;
+    --ecp-two: #000000;
+    --ecp-three: #2c2c2c;
+    --ecp-four: #ffffff;
+    --ecp-five: transparent;
 			
 }
 
@@ -2097,8 +2101,11 @@ p.entry-meta {
         
         /* -- Editor Color Palette 
         --------------------------------------------- */
-        --ecp-main: #ff0014;
-                
+        --ecp-one: #ff0014;
+        --ecp-two: #000000;
+        --ecp-three: #2c2c2c;
+        --ecp-four: #ffffff;
+        --ecp-five: transparent;
     }
 
 }
@@ -2148,7 +2155,7 @@ a,
 .menu-toggle:hover,
 .sub-menu-toggle:focus,
 .sub-menu-toggle:hover {
-    color: #ff0014; /* Color changed from default #0073e5 to #ff0014 */
+    color: var(--ecp-one, #ff0014); /* Color changed from default #0073e5 to #ff0014 */
 }
 
 button:focus,
@@ -2167,7 +2174,7 @@ input[type="submit"]:hover,
 .button:hover,
 .genesis-nav-menu > .menu-highlight > a:focus,
 .genesis-nav-menu > .menu-highlight > a:hover {
-	background-color: #ff0014; /* Color changed from default #0073e5 to #ff0014 */
+	background-color: var(--ecp-one, #ff0014); /* Color changed from default #0073e5 to #ff0014 */
 }
 
 /* -- Code Block
