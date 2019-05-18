@@ -283,6 +283,8 @@ function genesis_sample_comments_gravatar( $args ) {
 
 }
 
+
+
 //require_once get_stylesheet_directory() . '/custom-functions.php';
 //add_theme_support( 'custom-functions', genesis_get_config( 'custom-functions' ) );
 //require_once get_stylesheet_directory() . '/genesis-design-system.php';
@@ -291,5 +293,5 @@ function genesis_sample_comments_gravatar( $args ) {
 // Custom Functions
 require_once( __DIR__ . '/custom-functions.php' );
 
-// Genesis Fesign System
+// Genesis Design System
 require_once( __DIR__ . '/genesis-design-system.php' );

@@ -227,6 +227,27 @@ function obk_setup() {
 }
 add_action( 'after_setup_theme', 'obk_setup' );
 
+
+/**
+ * Gravity Forms Domain
+ *
+ * Adds a notice at the end of admin email notifications
+ * specifying the domain from which the email was sent.
+ *
+ * @param array $notification
+ * @param object $form
+ * @param object $entry
+ * @return array $notification
+ */
+function ea_gravityforms_domain( $notification, $form, $entry ) {
+	if( $notification['name'] == 'Admin Notification' ) {
+		$notification['message'] .= 'Sent from ' . home_url();
+	}
+	return $notification;
+}
+add_filter( 'gform_notification', 'ea_gravityforms_domain', 10, 3 );
+
+
 add_filter(
 	'code_syntax_block_style',
 	function() {
@@ -236,7 +257,6 @@ add_filter(
         return 'github-gist';
         //return 'bharath';
     }
-    
 
     //if ( ! is_page() ) {
     //    return 'atom-one-light';
