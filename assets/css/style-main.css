@@ -975,7 +975,7 @@ img.alignright,
 
 .site-header {
 	background-color: var(--site-header-background-color, #fff);
-    box-shadow: 0 0 20px var(--site-header-box-shadow-color, rgba(0, 0, 0, 0.05));
+    box-shadow: var(--site-header-box-shadow-color, rgba(0, 0, 0, 0.05));
 	padding: 0 30px;
 }
 
@@ -1826,6 +1826,22 @@ p.entry-meta {
 
 
 
+/* -- Fix for Menu items flash 
+--------------------------------------------- */
+
+.js nav {
+    display: none;
+}
+
+@media only screen and (min-width: 960px) {
+
+    .js nav {
+        display: inline-block;
+    }
+
+}
+
+
 /* CSS Variables
 ---------------------------------------------------------------------------- */ 
 
@@ -1972,7 +1988,7 @@ p.entry-meta {
 	
 	:root { 
 
-        /* -- Genesis Default Color Palette 
+        /* -- Genesis Sample Color Palette 
         --------------------------------------------- */
         --gcp-one: #0073e5;
         --gcp-two: #333;
@@ -1988,7 +2004,7 @@ p.entry-meta {
 
         /* -- Background Colors 
         --------------------------------------------- */
-        --background-color: #fff;
+        --background-color: #333;
         --mark-background-color: #ddd;
         --input-background-color: #fff;
         --select-background-color: #fff;
@@ -2002,7 +2018,7 @@ p.entry-meta {
         --faq-background-color: transparent;
         --faq-focus-background-color: transparent;
         --faq-hover-background-color: transparent;
-        --site-header-background-color: #fff;
+        --site-header-background-color: #333;
         --nav-menu-sub-link-background-color: #fff;
         --menu-toggle-background-color: transparent;
         --menu-toggle-focus-background-color: transparent;
@@ -2011,8 +2027,8 @@ p.entry-meta {
         --sticky-background-color: #f5f5f5;
         --pagination-link-background-color: #f5f5f5;
         --pagination-link-hover-background-color: #333;
-        --footer-widgets-background-color: #fff;
-        --site-footer-background-color: #fff;
+        --footer-widgets-background-color: #333;
+        --site-footer-background-color: #333;
         --nav-menu-highlight-link-background-color: #333;
         --nav-menu-highlight-link-focus-background-color: #0073e5;
         --nav-menu-highlight-link-hover-background-color: #0073e5;
@@ -2021,7 +2037,7 @@ p.entry-meta {
 
         /* -- Text Colors 
         --------------------------------------------- */
-        --text-color: #333;
+        --text-color: #fff;
         --mark-color: #333;
         --input-color: #333;
         --select-color: #333;
@@ -2041,6 +2057,7 @@ p.entry-meta {
         
         /* -- Link Colors 
         --------------------------------------------- */
+
         --link-color: #0073e5;
         --link-focus-color: #333;
         --link-hover-color: #333;
@@ -2048,10 +2065,10 @@ p.entry-meta {
         --widget-title-link-color: #333;
         --entry-title-link-focus-color: #0073e5;
         --entry-title-link-hover-color: #0073e5;
-        --site-title-link-color: #333;
-        --site-title-link-focus-color: #333;
-        --site-title-link-hover-color: #333;
-        --nav-menu-link-color: #333;
+        --site-title-link-color: #fff;
+        --site-title-link-focus-color: #ddd;
+        --site-title-link-hover-color: #ddd;
+        --nav-menu-link-color: #fff;
         --nav-menu-link-focus-color: #0073e5;
         --nav-menu-link-hover-color: #0073e5;
         --nav-menu-current-link-focus-color: #0073e5;
@@ -2106,21 +2123,6 @@ p.entry-meta {
         --ecp-three: #2c2c2c;
         --ecp-four: #ffffff;
         --ecp-five: transparent;
-    }
-
-}
-
-/* -- Custom Styles 
---------------------------------------------- */
-
-.js nav {
-    display: none;
-}
-
-@media only screen and (min-width: 960px) {
-
-    .js nav {
-        display: inline-block;
     }
 
 }
