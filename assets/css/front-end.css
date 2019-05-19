@@ -526,3 +526,10 @@ hr.wp-block-separator {
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 18px;
 }
+
+
+/* -- Custom Styles by Bharath 
+--------------------------------------------- */
+.site-container .is-style-theme-default .wp-block-button__link {
+    border-radius: 0;
+}

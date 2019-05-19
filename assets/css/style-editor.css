@@ -469,3 +469,20 @@ h6 {
     font-family: monospace, monospace;
     font-size: 16px;
 }
+
+
+/* -- Custom Styles by Bharath 
+--------------------------------------------- */
+
+.wp-block-button.is-style-theme-default .wp-block-button__link,
+.wp-block-button__link {
+    background-color: #ff0014;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+    color: #ff0014;
+}
+
+.wp-block-button.is-style-theme-default .wp-block-button__link {
+    border-radius: 0;
+}

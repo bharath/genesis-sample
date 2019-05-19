@@ -1,1 +1,1 @@
-function setBlockCustomClassName(e,l){return"core/code"===l?"wp-block-code is-style-alignwide":e}wp.domReady(()=>{wp.blocks.registerBlockStyle("core/code",{name:"default",label:"Default",isDefault:!1}),wp.blocks.registerBlockStyle("core/code",{name:"alignwide",label:"Alignwide",isDefault:!0})}),wp.hooks.addFilter("blocks.getBlockDefaultClassName","my-plugin/set-block-custom-class-name",setBlockCustomClassName);
+wp.domReady(()=>{wp.blocks.registerBlockStyle("core/button",{name:"theme-default",label:"Theme Default"})});
