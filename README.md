@@ -1,22 +1,7 @@
-# Genesis Sample Theme Customizations
-
-Customizations to Genesis Sample theme
-
 ## Description
 
-These are the changes to Genesis Sample theme to work on client websites
+Starter Theme with customizations to Genesis Sample theme
 
 ## Installation
 
-Drop all the files in obk folder in your Genesis Sample theme.
-
-## Custom Functions
-
-Add the following code to functions.php.
-
-Place any custom PHP in the `custom-functions.php` file.
-
-```php
-// Custom Functions
-require_once( __DIR__ . '/custom-functions.php' );
-```
+Download [Genesis Sample](https://github.com/studiopress/genesis-sample/ "Title") theme, rename the folder genesis-sample-master to obk. Download this repo and move all the files inside obk-master folder to obk.
