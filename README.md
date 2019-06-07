@@ -1,6 +1,6 @@
 ## Description
 
-Starter Theme with customizations to Genesis Sample theme
+Genesis Starter Theme with customizations to Genesis Sample theme
 
 ## Installation
 
