@@ -285,13 +285,24 @@ function genesis_sample_comments_gravatar( $args ) {
 
 
 
-//require_once get_stylesheet_directory() . '/custom-functions.php';
-//add_theme_support( 'custom-functions', genesis_get_config( 'custom-functions' ) );
-//require_once get_stylesheet_directory() . '/genesis-design-system.php';
+add_action( 'after_setup_theme', 'obk_add_functions', 15 );
+/**
+ * Loads custom functions after theme setup.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function obk_add_functions() {
 
+	//require_once get_stylesheet_directory() . '/custom-functions.php';
+    //require_once get_stylesheet_directory() . '/genesis-design-system.php';
+    //add_theme_support( 'custom-functions', genesis_get_config( 'custom-functions' ) );
 
-// Custom Functions
-require_once( __DIR__ . '/custom-functions.php' );
+    // Custom Functions
+    require_once( __DIR__ . '/custom-functions.php' );
 
-// Genesis Design System
-require_once( __DIR__ . '/genesis-design-system.php' );
+    // Genesis Design System
+    require_once( __DIR__ . '/genesis-design-system.php' );
+
+}
