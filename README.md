@@ -14,7 +14,5 @@ Add the following code at the end of functions.php
 
 ```php
 // Custom Functions
-//add_theme_support( 'custom-functions', genesis_get_config( 'custom-functions' ) );
-//require_once get_stylesheet_directory() . '/custom-functions.php';
 require_once( __DIR__ . '/custom-functions.php' );
 ```
