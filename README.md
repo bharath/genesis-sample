@@ -1,6 +1,6 @@
 # Genesis Sample Theme Customizations
 
-Genesis Sample Theme Customizations
+Customizations to Genesis Sample theme
 
 ## Description
 
