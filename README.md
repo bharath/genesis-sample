@@ -17,7 +17,7 @@ Add the following code at the end of `functions.php`
 require_once( __DIR__ . '/custom-functions.php' );
 ```
 
-Change the Theme Name to obk in `style.css`
+Change the Theme Name in `style.css` as follows.
 
 ```css
 /*
