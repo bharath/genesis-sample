@@ -21,5 +21,12 @@ Change the Theme Name to obk in `style.css`
 
 ```css
 /*
+Theme Name: Genesis Sample
+```
+
+to
+
+```css
+/*
 Theme Name: obk
 ```
