@@ -81,7 +81,7 @@ function obk_scripts_styles() {
     
     // Enqueue theme's main styles.
     $last_modified_main_css = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) );
-    wp_enqueue_style( 'obk-styles', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), $last_modified_main_css );
+    wp_enqueue_style( 'obk-theme', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), $last_modified_main_css );
     
     // Enqueue theme's main scripts.
     $last_modified_main_js = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/main.js' ) ); 
@@ -226,26 +226,6 @@ function obk_setup() {
 
 }
 add_action( 'after_setup_theme', 'obk_setup' );
-
-
-/**
- * Gravity Forms Domain
- *
- * Adds a notice at the end of admin email notifications
- * specifying the domain from which the email was sent.
- *
- * @param array $notification
- * @param object $form
- * @param object $entry
- * @return array $notification
- */
-function ea_gravityforms_domain( $notification, $form, $entry ) {
-	if( $notification['name'] == 'Admin Notification' ) {
-		$notification['message'] .= 'Sent from ' . home_url();
-	}
-	return $notification;
-}
-add_filter( 'gform_notification', 'ea_gravityforms_domain', 10, 3 );
 
 
 add_filter(
