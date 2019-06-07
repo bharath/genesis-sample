@@ -16,3 +16,10 @@ Add the following code at the end of functions.php
 // Custom Functions
 require_once( __DIR__ . '/custom-functions.php' );
 ```
+
+Vhange the Theme Name to obk in style.css
+
+```css
+/*
+Theme Name: obk
+```
