@@ -89,7 +89,7 @@ function obk_scripts_styles() {
 
     wp_enqueue_script( 'clipboard-script', '//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', array('jquery'), '2.0.0', true);
 
-    wp_deregister_style( 'dashicons' );
+    //wp_deregister_style( 'dashicons' );
     
     // Move jQuery to footer
     if( ! is_admin() ) {
@@ -107,7 +107,7 @@ add_action('genesis_after', 'obk_assets_after_footer');
 function obk_assets_after_footer() {
     // Move dash to footer
     if( ! is_admin() ) {
-        wp_enqueue_style( 'dashicons' );
+        //wp_enqueue_style( 'dashicons' );
     }
 }
 
