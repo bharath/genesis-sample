@@ -10,20 +10,20 @@ Works only with Genesis Sample theme Version: 3.0.0-beta
 
 1. Download this repo and move all the files inside starter-master folder to genesis-sample theme folder.
 
-2. Change your theme folder to any name you want depending on the project you are working, or you can leave it as genesis-sample.
+2. Change genesis-sample theme folder to any name you want depending on the project you are working, or you can leave it as genesis-sample.
 
 3. Open style.css and change the settings in header as needed.
 
-4. Open assets/css/style-main.css and change the settings in header to match what you have done in step 4.
+4. Open assets/css/style-main.css and change the settings in header to match what you have done in step 3.
 
 5. Open Add the following code at the end of functions.php
 
 // Custom Functions
 require_once( __DIR__ . '/custom-functions.php' );
 
-6. In custom-functions.php replace 'starter' with your 'theme-name'. Its on line 21 and 24 
+6. In custom-functions.php replace 'starter' with your 'theme-name'. Its on line 21 and 24.
 
-Example: If your theme name is genesis-child then change 
+Example: If you changed your theme name to genesis-child in step 2, then change 
 
 // Dequeue default Fonts Source Sans Pro.
 wp_dequeue_style( 'starter-fonts' );
@@ -45,4 +45,5 @@ wp_dequeue_style( 'genesis-child' );
 
 9. Open assets/css/front-end.css and make changes as per your color pallette & editor-font-sizes. Its between lines 441 - 532.
 
-10. Open assets/css/style-editor.css and make changes as per your color pallette & editor-font-sizes. Its between lines 424 - 462.
+10. Open assets/css/style-editor.css and make changes as per your color pallette & editor-font-sizes. Its between lines 424 - 488.
+

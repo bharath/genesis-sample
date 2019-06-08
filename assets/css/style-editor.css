@@ -423,7 +423,7 @@ genesis-sample-gutenberg-fonts-inline-css
 
 .ab-block-post-grid .ab-post-grid-items h2 a:hover,
 .block-editor__container .editor-block-list__block a {
-	color: #0073e5;
+	color: #ff0014;
 }
 
 .editor-styles-wrapper .editor-rich-text .button,
@@ -433,7 +433,7 @@ genesis-sample-gutenberg-fonts-inline-css
 }
 
 .editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link {
-	color: #0073e5;
+	color: #ff0014;
 }
 
 .editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:focus,
@@ -461,6 +461,10 @@ h6 {
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
+
+/* -- Custom Styles by Bharath 
+--------------------------------------------- */
+
 .block-editor-block-list__layout .block-editor-block-list__block > .block-editor-block-list__block-edit::before {
 	border: 1px solid #e8eaeb;
 }
@@ -469,10 +473,6 @@ h6 {
     font-family: monospace, monospace;
     font-size: 16px;
 }
-
-
-/* -- Custom Styles by Bharath 
---------------------------------------------- */
 
 .wp-block-button.is-style-theme-default .wp-block-button__link,
 .wp-block-button__link {
