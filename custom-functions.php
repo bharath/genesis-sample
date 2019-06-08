@@ -58,7 +58,7 @@ function obk_fonts_url() {
 function obk_scripts_styles() {
 
     // Dequeue default Fonts Source Sans Pro.
-    wp_dequeue_style( 'genesis-sample-fonts' );
+    wp_dequeue_style( 'obk-fonts' );
 
     // Dequeue default theme styles.
     wp_dequeue_style( 'obk' );
@@ -70,7 +70,7 @@ function obk_scripts_styles() {
     wp_dequeue_style( 'genesis-sample-gutenberg' );
 
     // Enqueue Google Fonts.
-    wp_enqueue_style( 'obk-fonts', obk_fonts_url() );
+    wp_enqueue_style( 'obk1-fonts', obk_fonts_url() );
     
     // Sets the default timezone used by all date/time functions in a script
     date_default_timezone_set('Asia/Kolkata');
