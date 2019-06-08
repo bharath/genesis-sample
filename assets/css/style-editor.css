@@ -417,30 +417,6 @@ hr.wp-block-separator.is-style-dots {
 /* -- Custom Styles
 --------------------------------------------- */
 
-/* --   Adding back inline styles which disappear after dequeing. 
-genesis-sample-gutenberg-fonts-inline-css
---------------------------------------------- */
-
-.ab-block-post-grid .ab-post-grid-items h2 a:hover,
-.block-editor__container .editor-block-list__block a {
-	color: #0073e5;
-}
-
-.editor-styles-wrapper .editor-rich-text .button,
-.editor-styles-wrapper .wp-block-button .wp-block-button__link:not(.has-background) {
-	background-color: #0073e5;
-	color: #ffffff;
-}
-
-.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link {
-	color: #0073e5;
-}
-
-.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:focus,
-.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:hover {
-	color: #2396ff;
-}
-
 /* -- overrides 
 --------------------------------------------- */
 
