@@ -1,13 +1,11 @@
 <?php
 /**
- * obk.
- *
- * This file adds functions to the obk Theme.
+ * This file adds functions to the Starter Theme.
  *
  * @package obk
  * @author  Bharath
  * @license GPL-2.0-or-later
- * @link    https://bharath.blog/
+ * @link    https://bharath.dev/
  */
 
 
@@ -210,32 +208,3 @@ function obk_setup() {
 
 }
 add_action( 'after_setup_theme', 'obk_setup' );
-
-
-add_filter(
-	'code_syntax_block_style',
-	function() {
-		//return 'tomorrow';
-		//return 'xcode';
-        //return 'color-brewer';
-        return 'github-gist';
-        //return 'bharath';
-    }
-
-    //if ( ! is_page() ) {
-    //    return 'atom-one-light';
-    //}
-    //return 'atom-one-light';
-
-);
-
-
-add_filter( 'rest_authentication_errors', function( $result ) {
-    if ( ! empty( $result ) ) {
-        return $result;
-    }
-    if ( ! is_user_logged_in() ) {
-        return new WP_Error( 'rest_not_logged_in', 'You are not currently logged in.', array( 'status' => 401 ) );
-    }
-    return $result;
-});

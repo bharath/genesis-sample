@@ -462,19 +462,23 @@ hr.wp-block-separator {
 }		
 
 .site-container .has-small-font-size {
-    font-size: 12px;
+    font-size: 16px;
 }		
 
 .site-container .has-normal-font-size {
     font-size: 18px;
 }		
 
-.site-container .has-large-font-size {
+.site-container .has-medium-font-size {
     font-size: 20px;
+}
+
+.site-container .has-large-font-size {
+    font-size: 24px;
 }		
 
-.site-container .has-larger-font-size {
-    font-size: 24px;
+.site-container .has-huge-font-size {
+    font-size: 28px;
 }		
 
 .site-container .has-theme-primary-color,
