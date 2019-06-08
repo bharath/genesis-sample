@@ -58,10 +58,10 @@ function obk_fonts_url() {
 function obk_scripts_styles() {
 
     // Dequeue default Fonts Source Sans Pro.
-    wp_dequeue_style( 'obk-fonts' );
+    wp_dequeue_style( 'starter-fonts' );
 
     // Dequeue default theme styles.
-    wp_dequeue_style( 'obk' );
+    wp_dequeue_style( 'starter' );
 
     // Dequeue genesis-sample script.
     wp_dequeue_script( 'genesis-sample' );
@@ -70,7 +70,7 @@ function obk_scripts_styles() {
     wp_dequeue_style( 'genesis-sample-gutenberg' );
 
     // Enqueue Google Fonts.
-    wp_enqueue_style( 'obk1-fonts', obk_fonts_url() );
+    wp_enqueue_style( 'obk-fonts', obk_fonts_url() );
     
     // Sets the default timezone used by all date/time functions in a script
     date_default_timezone_set('Asia/Kolkata');
@@ -81,7 +81,7 @@ function obk_scripts_styles() {
     
     // Enqueue theme's main styles.
     $last_modified_main_css = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) );
-    wp_enqueue_style( 'obk-theme', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), $last_modified_main_css );
+    wp_enqueue_style( 'obk', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), $last_modified_main_css );
     
     // Enqueue theme's main scripts.
     $last_modified_main_js = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/main.js' ) ); 
@@ -229,6 +229,16 @@ add_filter(
     //    return 'atom-one-light';
     //}
     //return 'atom-one-light';
-  
-    
+
 );
+
+
+add_filter( 'rest_authentication_errors', function( $result ) {
+    if ( ! empty( $result ) ) {
+        return $result;
+    }
+    if ( ! is_user_logged_in() ) {
+        return new WP_Error( 'rest_not_logged_in', 'You are not currently logged in.', array( 'status' => 401 ) );
+    }
+    return $result;
+});
