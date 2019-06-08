@@ -173,7 +173,7 @@ function obk_setup() {
             array(
                 'name'      => esc_html__( 'Small', 'obk' ),
                 'shortName' => esc_html__( 'S', 'obk' ),
-                'size'      => 15,
+                'size'      => 16,
                 'slug'      => 'small',
             ),
             array(
