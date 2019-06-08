@@ -451,12 +451,12 @@ input[type="submit"]:hover,
 .button:hover {
 	background-color: var(--button-focus-background-color, #0073e5);
 	border-width: 0;
-    color: var(--button-focus-color, #fff);
+    color: var(--button-focus-text-color, #fff);
 }
 
 .entry-content .button:focus,
 .entry-content .button:hover {
-    color: var(--entry-content-button-hover-color, #fff);
+    color: var(--entry-content-button-hover-text-color, #fff);
 }
 
 .button {
@@ -1917,10 +1917,10 @@ p.entry-meta {
 	--textarea-color: #333;
 	--placeholder-color: #333;
 	--button-text-color: #fff;
-	--button-hover-color: #fff;
-	--button-focus-color: #fff;
-	--entry-content-button-focus-color: #fff;
-	--entry-content-button-hover-color: #fff;
+	--button-hover-text-color: #fff;
+	--button-focus-text-color: #fff;
+	--entry-content-button-focus-text-color: #fff;
+	--entry-content-button-hover-text-color: #fff;
 	--button-disabled-text-color: #777;
     --search-input-focus-text-color: #333;
     --faq-text-color: #333;
@@ -2058,10 +2058,10 @@ p.entry-meta {
         --textarea-color: #333;
         --placeholder-color: #333;
         --button-text-color: #fff;
-        --button-hover-color: #fff;
-        --button-focus-color: #fff;
-        --entry-content-button-focus-color: #fff;
-        --entry-content-button-hover-color: #fff;
+        --button-hover-text-color: #fff;
+	    --button-focus-text-color: #fff;
+        --entry-content-button-focus-text-color: #fff;
+	    --entry-content-button-hover-text-color: #fff;
         --button-disabled-text-color: #777;
         --search-input-focus-text-color: #333;
         --faq-text-color: #333;
@@ -2397,5 +2397,3 @@ pre .btn:focus {
 	-ms-transform: translateX(50%);
 	transform: translateX(50%)
 }
-
-
