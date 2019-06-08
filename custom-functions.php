@@ -86,10 +86,6 @@ function obk_scripts_styles() {
     // Enqueue theme's main scripts.
     $last_modified_main_js = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/main.js' ) ); 
     wp_enqueue_script( 'obk-scripts', get_stylesheet_directory_uri() . '/assets/js/main.js', array( 'jquery' ), $last_modified_main_js, true );
-
-    wp_enqueue_script( 'clipboard-script', '//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', array('jquery'), '2.0.0', true);
-
-    //wp_deregister_style( 'dashicons' );
     
     // Move jQuery to footer
     if( ! is_admin() ) {
@@ -101,15 +97,6 @@ function obk_scripts_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'obk_scripts_styles', 11 );
 
-
-//* Enqueue Extra child theme scripts and styles
-add_action('genesis_after', 'obk_assets_after_footer');
-function obk_assets_after_footer() {
-    // Move dash to footer
-    if( ! is_admin() ) {
-        //wp_enqueue_style( 'dashicons' );
-    }
-}
 
 /**
  * Enqueue Gutenberg editor styles and scripts
