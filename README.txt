@@ -16,7 +16,9 @@ Add the following code at the end of functions.php
 require_once( __DIR__ . '/custom-functions.php' );
 
 
-In custom-functions.php replace 'starter' with your 'theme-name'
+In custom-functions.php replace 'starter' on line 23 and 26 with your 'theme-name'
+
+Example: If your theme name is genesis-child then change 
 
 // Dequeue default Fonts Source Sans Pro.
 wp_dequeue_style( 'starter-fonts' );
@@ -24,7 +26,7 @@ wp_dequeue_style( 'starter-fonts' );
 // Dequeue default theme styles.
 wp_dequeue_style( 'starter' );
 
-Example: If your theme name is genesis-child then 
+to
 
 // Dequeue default Fonts Source Sans Pro.
 wp_dequeue_style( 'genesis-child-fonts' );

@@ -15,44 +15,6 @@
 --------------------------------------------- */
 
 /**
- * Register Google Fonts
- */
-function obk_fonts_url() {
-    
-    $fonts_url = '';
-
-    $font_families = array();
-
-    /**
-     * Translators: If there are characters in your language that are not
-     * supported by Merriweather and Lora, translate this to 'off'. Do not translate
-     * into your own language.
-     */
-
-    $montserrat = esc_html_x( 'on', 'Montserrat font: on or off', 'obk' );
-    $lora = esc_html_x( 'on', 'Lora font: on or off', 'obk' );
-    
-    if ( 'off' !== $montserrat ) {
-        $font_families[] = 'Montserrat:400,400i,600,700';
-    }
-
-    if ( 'off' !== $lora ) {
-        $font_families[] = 'Lora:400,400i,700';
-    }
-
-    $query_args = array(
-        'family' => rawurlencode( implode( '|', array_unique( $font_families ) ) ),
-        'subset' => rawurlencode( 'latin,latin-ext' ),
-    );
-
-    $fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-    
-    return esc_url_raw( $fonts_url );
-
-}
-
-
-/**
  * Enqueue scripts and styles.
  */
 function obk_scripts_styles() {
@@ -112,6 +74,44 @@ function obk_gutenberg_scripts_styles() {
 
 }
 add_action( 'enqueue_block_editor_assets', 'obk_gutenberg_scripts_styles', 11 );
+
+
+/**
+ * Register Google Fonts
+ */
+function obk_fonts_url() {
+    
+    $fonts_url = '';
+
+    $font_families = array();
+
+    /**
+     * Translators: If there are characters in your language that are not
+     * supported by Merriweather and Lora, translate this to 'off'. Do not translate
+     * into your own language.
+     */
+
+    $montserrat = esc_html_x( 'on', 'Montserrat font: on or off', 'obk' );
+    $lora = esc_html_x( 'on', 'Lora font: on or off', 'obk' );
+    
+    if ( 'off' !== $montserrat ) {
+        $font_families[] = 'Montserrat:400,400i,600,700';
+    }
+
+    if ( 'off' !== $lora ) {
+        $font_families[] = 'Lora:400,400i,700';
+    }
+
+    $query_args = array(
+        'family' => rawurlencode( implode( '|', array_unique( $font_families ) ) ),
+        'subset' => rawurlencode( 'latin,latin-ext' ),
+    );
+
+    $fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+    
+    return esc_url_raw( $fonts_url );
+
+}
 
 
 /**
