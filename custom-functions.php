@@ -62,9 +62,6 @@ function obk_scripts_styles() {
 
     // Dequeue default theme styles.
     wp_dequeue_style( 'starter' );
-
-    // Dequeue genesis-sample script.
-    wp_dequeue_script( 'genesis-sample' );
     
     // Dequeue Gutenberg front-end styles.
     wp_dequeue_style( 'genesis-sample-gutenberg' );
