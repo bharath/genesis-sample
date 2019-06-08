@@ -8,15 +8,20 @@ Works only with Genesis Sample theme Version: 3.0.0-beta
 
 ## Installation
 
-Download this repo and move all the files inside starter-master folder to your Genesis Sample theme.
+1. Download this repo and move all the files inside starter-master folder to your Genesis Sample theme.
 
-Add the following code at the end of functions.php
+2. Change your theme folder to any name you want depending on the project you are working, or you can leave it as genesis-sample.
+
+3. Open style.css and change the settings in header as needed.
+
+4. Open assets/css/style-main.css and change the settings in header to match what you have done in step 4.
+
+5. Open Add the following code at the end of functions.php
 
 // Custom Functions
 require_once( __DIR__ . '/custom-functions.php' );
 
-
-In custom-functions.php replace 'starter' on line 23 and 26 with your 'theme-name'
+6. In custom-functions.php replace 'starter' on line 23 and 26 with your 'theme-name'
 
 Example: If your theme name is genesis-child then change 
 
