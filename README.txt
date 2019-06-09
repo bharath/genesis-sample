@@ -47,3 +47,6 @@ wp_dequeue_style( 'genesis-child' );
 
 10. Open assets/css/style-editor.css and make changes as per your color pallette & editor-font-sizes. Its between lines 424 - 488.
 
+11. Open assets/css/style-main.css and make changes as per your color pallette & editor-font-sizes. Its between lines 1850 - 1897.
+
+

@@ -31,6 +31,10 @@ function obk_scripts_styles() {
     
     // Sets the default timezone used by all date/time functions in a script
     date_default_timezone_set('Asia/Kolkata');
+
+    // Enqueue theme's main styles.
+    $last_modified_var_css = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-min.css' ) );
+    wp_enqueue_style( 'obk-var', get_stylesheet_directory_uri() . '/assets/css/style-var-min.css', array(), $last_modified_var_css );
     
     // Enqueue custom Gutenberg front-end styles.
     $last_modified_front_end_css = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/front-end.css' ) );
