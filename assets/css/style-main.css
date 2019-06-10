@@ -1840,9 +1840,8 @@ p.entry-meta {
 
 
 
-/* -- Add your own CSS 
+/* -- Start adding your own CSS 
 --------------------------------------------- */
-
 
 /* -- Font and default Color Overrides 
 --------------------------------------------- */
@@ -1874,7 +1873,7 @@ a,
 .menu-toggle:hover,
 .sub-menu-toggle:focus,
 .sub-menu-toggle:hover {
-    color: var(--ecp-one, #ff0014); /* Color changed from default #0073e5 to #ff0014 */
+    color: var(--ccp-one, #ff0014); /* Color changed from default #0073e5 to #ff0014 */
 }
 
 button:focus,
@@ -1893,7 +1892,7 @@ input[type="submit"]:hover,
 .button:hover,
 .genesis-nav-menu > .menu-highlight > a:focus,
 .genesis-nav-menu > .menu-highlight > a:hover {
-	background-color: var(--ecp-one, #ff0014); /* Color changed from default #0073e5 to #ff0014 */
+	background-color: var(--ccp-one, #ff0014); /* Color changed from default #0073e5 to #ff0014 */
 }
 
 /* -- Fix for Menu items flash 

@@ -42,11 +42,11 @@ function obk_scripts_styles() {
     
     // Enqueue theme's main styles.
     $last_modified_main_css = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) );
-    wp_enqueue_style( 'obk', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), $last_modified_main_css );
+    wp_enqueue_style( 'obk-main', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), $last_modified_main_css );
     
     // Enqueue theme's main scripts.
-    $last_modified_main_js = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/main.js' ) ); 
-    wp_enqueue_script( 'obk-scripts', get_stylesheet_directory_uri() . '/assets/js/main.js', array( 'jquery' ), $last_modified_main_js, true );
+    $last_modified_main_js = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/main-min.js' ) ); 
+    wp_enqueue_script( 'obk-scripts', get_stylesheet_directory_uri() . '/assets/js/main-min.js', array( 'jquery' ), $last_modified_main_js, true );
     
     // Move jQuery to footer
     if( ! is_admin() ) {
@@ -71,8 +71,8 @@ function obk_gutenberg_scripts_styles() {
     wp_enqueue_style( 'obk-gutenberg-fonts', obk_fonts_url() );
     
     // Enqueue Gutenberg admin editor scripts.
-    $last_modified_editor_js = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ) );
-    wp_enqueue_script( 'obk-editor-js', get_stylesheet_directory_uri() . '/assets/js/editor.js', array( 'wp-blocks', 'wp-dom' ), $last_modified_editor_js, true );
+    $last_modified_editor_js = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/editor-min.js' ) );
+    wp_enqueue_script( 'obk-editor-js', get_stylesheet_directory_uri() . '/assets/js/editor-min.js', array( 'wp-blocks', 'wp-dom' ), $last_modified_editor_js, true );
 
 }
 add_action( 'enqueue_block_editor_assets', 'obk_gutenberg_scripts_styles', 11 );

@@ -43,7 +43,7 @@ wp_dequeue_style( 'genesis-child' );
 
 8. In custom-functions.php change editor-font-sizes values as per your color scheme. Its between lines 171 - 204.
 
-9. Open assets/css/front-end.css and make changes as per your color pallette & editor-font-sizes. Its between lines 441 - 532.
+9. Open assets/css/front-end.css and make changes as per your color pallette & editor-font-sizes. Its between lines 441 - 576.
 
 10. Open assets/css/style-editor.css and make changes as per your color pallette & editor-font-sizes. Its between lines 424 - 488.
 
