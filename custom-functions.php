@@ -30,7 +30,7 @@ function obk_scripts_styles() {
     wp_enqueue_style( genesis_get_theme_handle() . '-fonts', obk_fonts_url(), array(), null );
 
     // Enqueue Adobe Fonts.
-    wp_enqueue_style( genesis_get_theme_handle() . '-typekit', '//use.typekit.net/tlh3veq.css', array(), '1.0', 'all');
+    //wp_enqueue_style( genesis_get_theme_handle() . '-typekit', '//use.typekit.net/tlh3veq.css', array(), '1.0', 'all');
     
     // Sets the default timezone used by all date/time functions in a script
     date_default_timezone_set('Asia/Kolkata');
@@ -59,33 +59,6 @@ function obk_scripts_styles() {
     }
 
     //Outputs front-end inline styles based on colors declared in config/block-editor-settings.php.
-    $block_editor_settings = genesis_get_config( 'block-editor-settings' );
-
-	$css = <<<CSS
-.ab-block-post-grid .ab-post-grid-items h2 a:hover {
-	color: {$block_editor_settings['default-link-color']};
-}
-
-.site-container .wp-block-button .wp-block-button__link {
-	background-color: {$block_editor_settings['default-link-color']};
-}
-
-.wp-block-button .wp-block-button__link:not(.has-background),
-.wp-block-button .wp-block-button__link:not(.has-background):focus,
-.wp-block-button .wp-block-button__link:not(.has-background):hover {
-	color: {$block_editor_settings['default-button-color']};
-}
-
-.site-container .wp-block-button.is-style-outline .wp-block-button__link {
-	color: {$block_editor_settings['default-button-bg']};
-}
-
-.site-container .wp-block-button.is-style-outline .wp-block-button__link:focus,
-.site-container .wp-block-button.is-style-outline .wp-block-button__link:hover {
-	color: {$block_editor_settings['default-button-outline-hover']};
-}
-CSS;
-
 	$css .= genesis_sample_inline_font_sizes();
 	$css .= genesis_sample_inline_color_palette();
 
@@ -107,7 +80,7 @@ function obk_gutenberg_scripts_styles() {
     wp_enqueue_style( genesis_get_theme_handle() . '-gutenberg-fonts', obk_fonts_url(), array(), null );
 
     // Enqueue Adobe Fonts for Gutenberg admin editor.
-    wp_enqueue_style( genesis_get_theme_handle() . '-typekit', '//use.typekit.net/tlh3veq.css', array(), '1.0', 'all');
+    //wp_enqueue_style( genesis_get_theme_handle() . '-typekit', '//use.typekit.net/tlh3veq.css', array(), '1.0', 'all');
     
     // Enqueue Gutenberg admin editor scripts.
     $last_modified_editor_js = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/editor-min.js' ) );
@@ -118,27 +91,25 @@ function obk_gutenberg_scripts_styles() {
     //Note this will appear before the style-editor.css injected by JavaScript,
     //so overrides will need to have higher specificity.
     
-    $block_editor_settings = genesis_get_config( 'block-editor-settings' );
-
 	$css = <<<CSS
 .ab-block-post-grid .ab-post-grid-items h2 a:hover,
 .block-editor__container .editor-block-list__block a {
-	color: {$block_editor_settings['default-link-color']};
+	color: #ff0014;
 }
 
 .editor-styles-wrapper .editor-rich-text .button,
 .editor-styles-wrapper .wp-block-button .wp-block-button__link:not(.has-background) {
-	background-color: {$block_editor_settings['default-button-bg']};
-	color: {$block_editor_settings['default-button-color']};
+	background-color: #0073e5;
+	color: #ffffff;
 }
 
 .editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link {
-	color: {$block_editor_settings['default-button-bg']};
+	color: #ff0014;
 }
 
 .editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:focus,
 .editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:hover {
-	color: {$block_editor_settings['default-button-outline-hover']};
+	color: #2396ff;
 }
 CSS;
 
