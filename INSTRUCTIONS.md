@@ -1,6 +1,6 @@
 ## Description
 
-Genesis Starter Theme with customizations to Genesis Sample theme
+Customizations to Genesis Sample theme to use as a Starter theme
 
 ## Requirement
 
