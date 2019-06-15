@@ -31,7 +31,7 @@ Author URI: https://bharath.dev/
 // Custom Functions
 //add_theme_support( 'custom-functions', genesis_get_config( 'custom-functions' ) );
 //require_once get_stylesheet_directory() . '/assets/custom-functions.php';
-require_once( __DIR__ . '/assets/custom-functions.php' );
+require_once( __DIR__ . '/custom-functions.php' );
 
 // Genesis Design System
 //require_once get_stylesheet_directory() . '/assets/genesis-design-system.php';
