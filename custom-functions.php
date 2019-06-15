@@ -59,7 +59,29 @@ function obk_scripts_styles() {
     }
 
     //Outputs front-end inline styles based on colors declared in config/block-editor-settings.php.
-	$css .= genesis_sample_inline_font_sizes();
+	$block_editor_settings = genesis_get_config( 'block-editor-settings' );
+	$css = <<<CSS
+.ab-block-post-grid .ab-post-grid-items h2 a:hover {
+	color: #ff0014;
+}
+.site-container .wp-block-button .wp-block-button__link {
+	background-color: #ff0014;
+}
+.wp-block-button .wp-block-button__link:not(.has-background),
+.wp-block-button .wp-block-button__link:not(.has-background):focus,
+.wp-block-button .wp-block-button__link:not(.has-background):hover {
+	color: #fff;
+}
+.site-container .wp-block-button.is-style-outline .wp-block-button__link {
+	color: #ff0014;
+}
+.site-container .wp-block-button.is-style-outline .wp-block-button__link:focus,
+.site-container .wp-block-button.is-style-outline .wp-block-button__link:hover {
+	color: #ff2337;
+}
+CSS;
+    
+    $css .= genesis_sample_inline_font_sizes();
 	$css .= genesis_sample_inline_color_palette();
 
 	wp_add_inline_style( genesis_get_theme_handle() . '-gutenberg', $css );
@@ -109,7 +131,7 @@ function obk_gutenberg_scripts_styles() {
 
 .editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:focus,
 .editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:hover {
-	color: #2396ff;
+	color: #ff2337;
 }
 CSS;
 
@@ -255,3 +277,6 @@ function obk_setup() {
 
 }
 add_action( 'after_setup_theme', 'obk_setup' );
+
+
+//require_once get_stylesheet_directory() . '/assets/inc/inline-styles.php';
