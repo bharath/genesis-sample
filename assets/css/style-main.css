@@ -1843,21 +1843,8 @@ p.entry-meta {
 /* -- Start adding your own CSS 
 --------------------------------------------- */
 
-/* -- Font and default Color Overrides 
+/* -- Default Color Overrides 
 --------------------------------------------- */
-
-body { 
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;  
-    -webkit-overflow-scrolling: touch;
-    -webkit-text-size-adjust: none;
-    text-rendering: optimizeLegibility;
-    word-wrap: break-word;
-    font-display: swap;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
-}
 
 a,
 .entry-title a:focus,
@@ -1873,7 +1860,7 @@ a,
 .menu-toggle:hover,
 .sub-menu-toggle:focus,
 .sub-menu-toggle:hover {
-    color: var(--ccp-one, #ff0014); /* Color changed from default #0073e5 to #ff0014 */
+    color: var(--ccp-main); /* Color changed from default #0073e5 to #ff0014 */
 }
 
 button:focus,
@@ -1892,8 +1879,26 @@ input[type="submit"]:hover,
 .button:hover,
 .genesis-nav-menu > .menu-highlight > a:focus,
 .genesis-nav-menu > .menu-highlight > a:hover {
-	background-color: var(--ccp-one, #ff0014); /* Color changed from default #0073e5 to #ff0014 */
+	background-color: var(--ccp-accent); /* Color changed from default #0073e5 to #ff0014 */
 }
+
+
+/* -- Font Overrides 
+--------------------------------------------- */
+
+body { 
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;  
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: none;
+    text-rendering: optimizeLegibility;
+    word-wrap: break-word;
+    font-display: swap;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
 
 /* -- Fix for Menu items flash 
 --------------------------------------------- */
@@ -1909,3 +1914,7 @@ input[type="submit"]:hover,
     }
 
 }
+
+
+/* -- Custom Styles by Bharath 
+--------------------------------------------- */

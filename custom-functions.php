@@ -35,9 +35,13 @@ function obk_scripts_styles() {
     // Sets the default timezone used by all date/time functions in a script
     date_default_timezone_set('Asia/Kolkata');
 
-    // Enqueue theme's main styles.
+    // Enqueue CSS Variables.
     $last_modified_var_css = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-min.css' ) );
     wp_enqueue_style( genesis_get_theme_handle() . '-var', get_stylesheet_directory_uri() . '/assets/css/style-var-min.css', array(), $last_modified_var_css );
+
+    // Enqueue CSS Variables overrides for genesis-sample style.css.
+    $last_modified_var_css = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-gs-min.css' ) );
+    wp_enqueue_style( genesis_get_theme_handle() . '-var-gs', get_stylesheet_directory_uri() . '/assets/css/style-var-gs-min.css', array(), $last_modified_var_css );
     
     // Enqueue custom Gutenberg front-end styles.
     $last_modified_front_end_css = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/front-end.css' ) );
@@ -59,29 +63,34 @@ function obk_scripts_styles() {
     }
 
     //Outputs front-end inline styles based on colors declared in config/block-editor-settings.php.
-	$block_editor_settings = genesis_get_config( 'block-editor-settings' );
+
 	$css = <<<CSS
 .ab-block-post-grid .ab-post-grid-items h2 a:hover {
-	color: #ff0014;
+	color: var(--ccp-main);
 }
+
 .site-container .wp-block-button .wp-block-button__link {
-	background-color: #ff0014;
+	background-color: var(--ccp-main);
 }
+
 .wp-block-button .wp-block-button__link:not(.has-background),
 .wp-block-button .wp-block-button__link:not(.has-background):focus,
 .wp-block-button .wp-block-button__link:not(.has-background):hover {
-	color: #fff;
+	color: var(--ccp-white);
 }
+
 .site-container .wp-block-button.is-style-outline .wp-block-button__link {
-	color: #ff0014;
+	color: var(--ccp-main);
 }
+
 .site-container .wp-block-button.is-style-outline .wp-block-button__link:focus,
 .site-container .wp-block-button.is-style-outline .wp-block-button__link:hover {
-	color: #ff2337;
+	color: var(--ccp-accent);
 }
 CSS;
     
     $css .= genesis_sample_inline_font_sizes();
+    
 	$css .= genesis_sample_inline_color_palette();
 
 	wp_add_inline_style( genesis_get_theme_handle() . '-gutenberg', $css );
@@ -103,6 +112,10 @@ function obk_gutenberg_scripts_styles() {
 
     // Enqueue Adobe Fonts for Gutenberg admin editor.
     //wp_enqueue_style( genesis_get_theme_handle() . '-typekit', '//use.typekit.net/tlh3veq.css', array(), '1.0', 'all');
+
+    // Enqueue theme's main styles.
+    $last_modified_var_css = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-min.css' ) );
+    wp_enqueue_style( genesis_get_theme_handle() . '-var', get_stylesheet_directory_uri() . '/assets/css/style-var-min.css', array(), $last_modified_var_css );
     
     // Enqueue Gutenberg admin editor scripts.
     $last_modified_editor_js = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/editor-min.js' ) );
@@ -116,22 +129,22 @@ function obk_gutenberg_scripts_styles() {
 	$css = <<<CSS
 .ab-block-post-grid .ab-post-grid-items h2 a:hover,
 .block-editor__container .editor-block-list__block a {
-	color: #ff0014;
+	color: var(--ccp-main);
 }
 
 .editor-styles-wrapper .editor-rich-text .button,
 .editor-styles-wrapper .wp-block-button .wp-block-button__link:not(.has-background) {
-	background-color: #0073e5;
-	color: #ffffff;
+	background-color: var(--ccp-main);
+	color: var(--ccp-white);
 }
 
 .editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link {
-	color: #ff0014;
+	color: var(--ccp-main);
 }
 
 .editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:focus,
 .editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:hover {
-	color: #ff2337;
+	color: var(--ccp-accent);
 }
 CSS;
 
@@ -197,34 +210,44 @@ function obk_setup() {
     add_theme_support(
         'editor-color-palette', array(
             array(
-                'name'  => esc_html__( 'Red', 'obk' ),
-                'slug' => 'red',
-                'color' => '#FF0014',
+                'name'  => esc_html__( 'Main', 'obk' ),
+                'slug' => 'main',
+                'color' => 'var(--ccp-main)',
+            ),
+            array(
+                'name'  => esc_html__( 'Accent', 'obk' ),
+                'slug' => 'accent',
+                'color' => 'var(--ccp-accent)',
             ),
             array(
                 'name'  => esc_html__( 'Gray', 'obk' ),
                 'slug' => 'gray',
-                'color' => '#6E6E6A',
-            ),
-            array(
-                'name'  => esc_html__( 'Black', 'obk' ),
-                'slug' => 'black',
-                'color' => '#000000',
+                'color' => 'var(--ccp-gray)',
+                //'color' => '#6E6E6A',
             ),
             array(
                 'name'  => esc_html__( 'Blackish', 'obk' ),
                 'slug' => 'blackish',
-                'color' => '#2c2c2c',
+                'color' => 'var(--ccp-blackish)',
+                //'color' => '#2c2c2c',
+            ),
+            array(
+                'name'  => esc_html__( 'Black', 'obk' ),
+                'slug' => 'black',
+                'color' => 'var(--ccp-black)',
+                //'color' => '#000000',
             ),
             array(
                 'name'  => esc_html__( 'White', 'obk' ),
                 'slug' => 'white',
-                'color' => '#ffffff',
+                'color' => 'var(--ccp-white)',
+                //'color' => '#ffffff',
             ),
             array(
                 'name'  => esc_html__( 'Transparent', 'obk' ),
                 'slug' => 'transparent',
-                'color' => 'transparent',
+                'color' => 'var(--ccp-transparent)',
+                //'color' => 'transparent',
             )
         )
     );

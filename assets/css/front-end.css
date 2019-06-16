@@ -439,26 +439,26 @@ hr.wp-block-separator {
 --------------------------------------------- */
 
 .ab-block-post-grid .ab-post-grid-items h2 a:hover {
-	color: #ff0014; /* Color changed from default #0073e5 to #ff0014 */
+	color: var(--ccp-main); /* Color changed from default #0073e5 to #ff0014 */
 }
 
 .site-container .wp-block-button .wp-block-button__link {
-	background-color: #ff0014; /* Color changed from default #0073e5 to #ff0014 */
+	background-color: var(--ccp-main); /* Color changed from default #0073e5 to #ff0014 */
 }
 
 .wp-block-button .wp-block-button__link:not(.has-background),
 .wp-block-button .wp-block-button__link:not(.has-background):focus,
 .wp-block-button .wp-block-button__link:not(.has-background):hover {
-	color: #ffffff;
+	color: var(--ccp-white);
 }
 
 .site-container .wp-block-button.is-style-outline .wp-block-button__link {
-	color: #ff0014; /* Color changed from default #0073e5 to #ff0014 */
+	color: var(--ccp-main); /* Color changed from default #0073e5 to #ff0014 */
 }
 
 .site-container .wp-block-button.is-style-outline .wp-block-button__link:focus,
 .site-container .wp-block-button.is-style-outline .wp-block-button__link:hover {
-	color: #ff0014; /* Color changed from default #2396ff to #ff0014 */
+	color: var(--ccp-accent); /* Color changed from default #2396ff to #ff0014 */
 }		
 
 /* -- Font Overrides 
@@ -488,6 +488,21 @@ hr.wp-block-separator {
 
 /* -- Custom Styles by Bharath 
 --------------------------------------------- */
+
+/* Button Variations */
+
+.site-container .wp-block-button.is-style-outline .wp-block-button__link {
+	background-color: transparent;
+	border: 2px solid currentColor;
+}
+
+.site-container .wp-block-button .wp-block-button__link:focus,
+.site-container .wp-block-button .wp-block-button__link:hover,
+.site-container .wp-block-button.is-style-outline .wp-block-button__link:focus,
+.site-container .wp-block-button.is-style-outline .wp-block-button__link:hover {
+	box-shadow: none;
+    background: var(--ccp-accent);
+}
 
 .site-container .is-style-theme-default .wp-block-button__link {
     border-radius: 0;
