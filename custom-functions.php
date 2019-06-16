@@ -300,6 +300,3 @@ function obk_setup() {
 
 }
 add_action( 'after_setup_theme', 'obk_setup' );
-
-
-//require_once get_stylesheet_directory() . '/assets/inc/inline-styles.php';
