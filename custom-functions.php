@@ -1,6 +1,6 @@
 <?php
 /**
- * This file adds functions to the Starter Theme.
+ * This file adds custom functions to your Theme.
  *
  * @package obk
  * @author  Bharath
