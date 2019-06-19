@@ -1892,11 +1892,12 @@ body {
     -webkit-text-size-adjust: none;
     text-rendering: optimizeLegibility;
     word-wrap: break-word;
-    font-display: swap;
+    /*font-display: swap;*/
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
+    /*font-display: swap;*/
 }
 
 
