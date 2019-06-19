@@ -9,6 +9,47 @@
  */
 
 
+/**
+ * Register Google Fonts
+ */
+function obk_fonts_url() {
+    
+    $fonts_url = '';
+
+    $font_families = array();
+
+    /**
+     * Translators: If there are characters in your language that are not
+     * supported by Merriweather and Lora, translate this to 'off'. Do not translate
+     * into your own language.
+     */
+
+    $montserrat = esc_html_x( 'on', 'Montserrat font: on or off', 'obk' );
+    $lora = esc_html_x( 'on', 'Lora font: on or off', 'obk' );
+    
+    if ( 'off' !== $montserrat ) {
+        $font_families[] = 'Montserrat:400,400i,600,700';
+    }
+
+    if ( 'off' !== $lora ) {
+        $font_families[] = 'Lora:400,400i,700';
+    }
+
+    $query_args = array(
+        'family' => rawurlencode( implode( '|', array_unique( $font_families ) ) ),
+        'subset' => rawurlencode( 'latin,latin-ext' ),
+        'display' => rawurlencode( 'swap' ),
+    );
+
+    $fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+    //$fonts_url = 'https://use.typekit.net/tlh3veq.css';
+    //<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    
+    return esc_url_raw( $fonts_url );
+
+}
+
+
  /* -- Gutenberg Stuff & Global Enqueues 
 --------------------------------------------- */
 
@@ -27,7 +68,7 @@ function obk_scripts_styles() {
     wp_dequeue_style( 'genesis-sample-gutenberg' );
 
     // Enqueue Google Fonts.
-    wp_enqueue_style( genesis_get_theme_handle() . '-fonts', obk_fonts_url(), array(), null );
+    wp_enqueue_style( 'starter-custom-fonts', obk_fonts_url(), array(), null );
 
     // Enqueue Adobe Fonts.
     //wp_enqueue_style( genesis_get_theme_handle() . '-typekit', '//use.typekit.net/tlh3veq.css', array(), '1.0', 'all');
@@ -65,33 +106,34 @@ function obk_scripts_styles() {
     //Outputs front-end inline styles based on colors declared in config/block-editor-settings.php.
 
 	$css = <<<CSS
-.ab-block-post-grid .ab-post-grid-items h2 a:hover {
-	color: var(--ccp-main);
-}
+    .ab-block-post-grid .ab-post-grid-items h2 a:hover {
+        color: var(--ccp-main);
+    }
 
-.site-container .wp-block-button .wp-block-button__link {
-	background-color: var(--ccp-main);
-}
+    .site-container .wp-block-button .wp-block-button__link {
+        background-color: var(--ccp-main);
+    }
 
-.wp-block-button .wp-block-button__link:not(.has-background),
-.wp-block-button .wp-block-button__link:not(.has-background):focus,
-.wp-block-button .wp-block-button__link:not(.has-background):hover {
-	color: var(--ccp-white);
-}
+    .wp-block-button .wp-block-button__link:not(.has-background),
+    .wp-block-button .wp-block-button__link:not(.has-background):focus,
+    .wp-block-button .wp-block-button__link:not(.has-background):hover {
+        color: var(--ccp-white);
+    }
 
-.site-container .wp-block-button.is-style-outline .wp-block-button__link {
-	color: var(--ccp-main);
-}
+    .site-container .wp-block-button.is-style-outline .wp-block-button__link {
+        color: var(--ccp-main);
+    }
 
-.site-container .wp-block-button.is-style-outline .wp-block-button__link:focus,
-.site-container .wp-block-button.is-style-outline .wp-block-button__link:hover {
-	color: var(--ccp-accent);
-}
+    .site-container .wp-block-button.is-style-outline .wp-block-button__link:focus,
+    .site-container .wp-block-button.is-style-outline .wp-block-button__link:hover {
+        color: var(--ccp-accent);
+    }
+
 CSS;
     
-    $css .= genesis_sample_inline_font_sizes();
+    $css .= genesis_sample_inline_font_size();
     
-	$css .= genesis_sample_inline_color_palette();
+	$css .= genesis_sample_inline_color_palettes();
 
 	wp_add_inline_style( genesis_get_theme_handle() . '-gutenberg', $css );
 
@@ -127,25 +169,25 @@ function obk_gutenberg_scripts_styles() {
     //so overrides will need to have higher specificity.
     
 	$css = <<<CSS
-.ab-block-post-grid .ab-post-grid-items h2 a:hover,
-.block-editor__container .editor-block-list__block a {
-	color: var(--ccp-main);
-}
+    .ab-block-post-grid .ab-post-grid-items h2 a:hover,
+    .block-editor__container .editor-block-list__block a {
+        color: var(--ccp-main);
+    }
 
-.editor-styles-wrapper .editor-rich-text .button,
-.editor-styles-wrapper .wp-block-button .wp-block-button__link:not(.has-background) {
-	background-color: var(--ccp-main);
-	color: var(--ccp-white);
-}
+    .editor-styles-wrapper .editor-rich-text .button,
+    .editor-styles-wrapper .wp-block-button .wp-block-button__link:not(.has-background) {
+        background-color: var(--ccp-main);
+        color: var(--ccp-white);
+    }
 
-.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link {
-	color: var(--ccp-main);
-}
+    .editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link {
+        color: var(--ccp-main);
+    }
 
-.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:focus,
-.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:hover {
-	color: var(--ccp-accent);
-}
+    .editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:focus,
+    .editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:hover {
+        color: var(--ccp-accent);
+    }
 CSS;
 
 	wp_add_inline_style( genesis_get_theme_handle() . '-gutenberg-fonts', $css );
@@ -155,41 +197,63 @@ add_action( 'enqueue_block_editor_assets', 'obk_gutenberg_scripts_styles', 11 );
 
 
 /**
- * Register Google Fonts
+ * Generate CSS for editor font sizes from the provided theme support.
+ *
+ * @since 2.9.0
+ *
+ * @return string The CSS for editor font sizes if theme support was declared.
  */
-function obk_fonts_url() {
-    
-    $fonts_url = '';
+function genesis_sample_inline_font_size() {
 
-    $font_families = array();
+	$css               = '';
+	$editor_font_sizes = get_theme_support( 'editor-font-sizes' );
 
-    /**
-     * Translators: If there are characters in your language that are not
-     * supported by Merriweather and Lora, translate this to 'off'. Do not translate
-     * into your own language.
-     */
+	if ( ! $editor_font_sizes ) {
+		return '';
+	}
 
-    $montserrat = esc_html_x( 'on', 'Montserrat font: on or off', 'obk' );
-    $lora = esc_html_x( 'on', 'Lora font: on or off', 'obk' );
-    
-    if ( 'off' !== $montserrat ) {
-        $font_families[] = 'Montserrat:400,400i,600,700';
-    }
+	foreach ( $editor_font_sizes[0] as $font_size ) {
+		$css .= <<<CSS
+		.site-container .has-{$font_size['slug']}-font-size {
+			font-size: {$font_size['size']}px;
+		}
+CSS;
+	}
 
-    if ( 'off' !== $lora ) {
-        $font_families[] = 'Lora:400,400i,700';
-    }
+	return $css;
 
-    $query_args = array(
-        'family' => rawurlencode( implode( '|', array_unique( $font_families ) ) ),
-        'subset' => rawurlencode( 'latin,latin-ext' ),
-    );
+}
 
-    $fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-    //$fonts_url = 'https://use.typekit.net/tlh3veq.css';
-    //<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    
-    return esc_url_raw( $fonts_url );
+
+/**
+ * Generate CSS for editor colors based on theme color palette support.
+ *
+ * @since 2.9.0
+ *
+ * @return string The editor colors CSS if `editor-color-palette` theme support was declared.
+ */
+function genesis_sample_inline_color_palettes() {
+
+	$css                   = '';
+    $editor_color_palette = get_theme_support( 'editor-color-palette' );
+
+	foreach ( $editor_color_palette[0] as $color_info ) {
+		$css .= <<<CSS
+		.site-container .has-{$color_info['slug']}-color,
+		.site-container .wp-block-button .wp-block-button__link.has-{$color_info['slug']}-color,
+		.site-container .wp-block-button.is-style-outline .wp-block-button__link.has-{$color_info['slug']}-color {
+			color: {$color_info['color']};
+		}
+
+		.site-container .has-{$color_info['slug']}-background-color,
+		.site-container .wp-block-button .wp-block-button__link.has-{$color_info['slug']}-background-color,
+		.site-container .wp-block-pullquote.is-style-solid-color.has-{$color_info['slug']}-background-color {
+			background-color: {$color_info['color']};
+		}
+CSS;
+	}
+
+	return $css;
 
 }
 
