@@ -162,31 +162,26 @@ function obk_setup() {
                 'name'  => esc_html__( 'Gray', 'theme-name' ),
                 'slug' => 'gray',
                 'color' => 'var(--ccp-gray)',
-                //'color' => '#6E6E6A',
             ),
             array(
                 'name'  => esc_html__( 'Blackish', 'theme-name' ),
                 'slug' => 'blackish',
                 'color' => 'var(--ccp-blackish)',
-                //'color' => '#2c2c2c',
             ),
             array(
                 'name'  => esc_html__( 'Black', 'theme-name' ),
                 'slug' => 'black',
                 'color' => 'var(--ccp-black)',
-                //'color' => '#000000',
             ),
             array(
                 'name'  => esc_html__( 'White', 'theme-name' ),
                 'slug' => 'white',
                 'color' => 'var(--ccp-white)',
-                //'color' => '#ffffff',
             ),
             array(
                 'name'  => esc_html__( 'Transparent', 'theme-name' ),
                 'slug' => 'transparent',
                 'color' => 'var(--ccp-transparent)',
-                //'color' => 'transparent',
             )
         )
     );
