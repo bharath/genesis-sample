@@ -4,7 +4,7 @@ Customizations to Genesis Sample theme to use as a Starter theme
 
 ## Requirement
 
-Works only with Genesis Sample theme Version: 3.0.0-beta
+Tested with Genesis Sample theme Version: 3.0.0
 
 ## Installation
 
