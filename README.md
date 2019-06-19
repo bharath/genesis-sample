@@ -38,7 +38,7 @@ require_once( __DIR__ . '/custom-functions.php' );
 //require_once( __DIR__ . '/assets/genesis-design-system.php' );
 ``` 
 
-6. In custom-functions.php replace 'starter' with your 'theme-name'. Its on line 62 and 65.
+6. In custom-functions.php replace 'starter' with your 'theme-name'. Its on line 21 and 24.
 
 Example: If you changed your theme name to genesis-child in step 2, then change 
 
