@@ -131,9 +131,9 @@ function obk_scripts_styles() {
 
 CSS;
     
-    $css .= genesis_sample_inline_font_size();
+    $css .= obk_inline_font_sizes();
     
-	$css .= genesis_sample_inline_color_palettes();
+	$css .= obk_inline_color_palette();
 
 	wp_add_inline_style( genesis_get_theme_handle() . '-gutenberg', $css );
 
@@ -203,7 +203,7 @@ add_action( 'enqueue_block_editor_assets', 'obk_gutenberg_scripts_styles', 11 );
  *
  * @return string The CSS for editor font sizes if theme support was declared.
  */
-function genesis_sample_inline_font_size() {
+function obk_inline_font_sizes() {
 
 	$css               = '';
 	$editor_font_sizes = get_theme_support( 'editor-font-sizes' );
@@ -232,7 +232,7 @@ CSS;
  *
  * @return string The editor colors CSS if `editor-color-palette` theme support was declared.
  */
-function genesis_sample_inline_color_palettes() {
+function obk_inline_color_palette() {
 
 	$css                   = '';
     $editor_color_palette = get_theme_support( 'editor-color-palette' );

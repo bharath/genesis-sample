@@ -38,7 +38,7 @@ require_once( __DIR__ . '/custom-functions.php' );
 //require_once( __DIR__ . '/assets/genesis-design-system.php' );
 ``` 
 
-6. In custom-functions.php replace 'starter' with your 'theme-name'. Its on line 21 and 24.
+6. In custom-functions.php replace 'starter' with your 'theme-name'. Its on line 62 and 65.
 
 Example: If you changed your theme name to genesis-child in step 2, then change 
 
@@ -60,12 +60,12 @@ wp_dequeue_style( 'genesis-child-fonts' );
 wp_dequeue_style( 'genesis-child' );
 ``` 
 
-7. In custom-functions.php change editor-color-palette values as per your color scheme. Its between lines 128 - 161.
+7. In custom-functions.php change editor-color-palette values as per your color scheme. Its between lines 276 - 315.
 
-8. In custom-functions.php change editor-font-sizes values as per your color scheme. Its between lines 171 - 204.
+8. In custom-functions.php change editor-font-sizes values as per your color scheme. Its between lines 329 - 358.
 
 9. Open assets/css/front-end.css and make changes as per your color pallette & editor-font-sizes. Its between lines 441 - 576.
 
-10. Open assets/css/style-editor.css and make changes as per your color pallette & editor-font-sizes. Its between lines 424 - 488.
+10. Open assets/css/style-editor.css and make changes as per your color pallette & editor-font-sizes. Its between lines 424 - 442.
 
-11. Open assets/css/style-main.css and make changes as per your color pallette & editor-font-sizes. Its between lines 1850 - 1897.
+11. Open assets/css/style-main.css and make changes as per your color pallette & editor-font-sizes. Its between lines 1849 - 1883.
