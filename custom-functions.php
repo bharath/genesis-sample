@@ -5,7 +5,7 @@
  * @package obk
  * @author  Bharath
  * @license GPL-2.0-or-later
- * @link    https://bharath.dev/
+ * @link    https://bharath.blog/
  */
 
 
