@@ -1,6 +1,6 @@
 # Description
 
-Customizations to Genesis Sample theme to use as a Starter theme
+Customizations to Genesis Sample theme to use as a Starter theme. [Learn More](https://bharath.blog/)
 
 ## Requirement
 
