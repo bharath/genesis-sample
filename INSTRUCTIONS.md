@@ -17,7 +17,7 @@ Author URI: https://bharath.dev/
 
 4. Open assets/css/style-main.css and change the settings in header to match what you have done in step 3.
 
-5. Open Add the following code at the end of functions.php
+5. Open functions.php and add the following code at the end.
 
 ```php
 // Custom Functions
