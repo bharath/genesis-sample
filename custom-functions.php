@@ -27,7 +27,7 @@ function obk_scripts_styles() {
     wp_dequeue_style( 'genesis-sample-gutenberg' );
 
     // Enqueue Google Fonts.
-    wp_enqueue_style( genesis_get_theme_handle() . '-fonts', obk_fonts_url(), array(), null );
+    wp_enqueue_style( genesis_get_theme_handle() . '-custom-fonts', obk_fonts_url(), array(), null );
 
     // Enqueue Adobe Fonts.
     //wp_enqueue_style( genesis_get_theme_handle() . '-typekit', '//use.typekit.net/tlh3veq.css', array(), '1.0', 'all');
