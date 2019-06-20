@@ -16,7 +16,7 @@ This Will be tested and updated when a new Genesis Sample update is released.
 
 3. Open style.css and change the settings in header as needed.
 
-Example: If you changed your theme name to genesis-child in step 2, then change 
+Example: If you changed your theme name to genesis-child in step 2, then change the following
 
 ```css
 /*
@@ -40,7 +40,7 @@ require_once( __DIR__ . '/custom-functions.php' );
 
 6. In custom-functions.php replace 'starter' with your 'theme-name'. Its on line 21 and 24.
 
-Example: If you changed your theme name to genesis-child in step 2, then change 
+Example: If you changed your theme name to genesis-child in step 2, then change the following
 
 ```php
 // Dequeue default Fonts Source Sans Pro.
