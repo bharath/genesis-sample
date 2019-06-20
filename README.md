@@ -31,13 +31,7 @@ Author URI: https://bharath.dev/
 
 ```php
 // Custom Functions
-//add_theme_support( 'custom-functions', genesis_get_config( 'custom-functions' ) );
-//require_once get_stylesheet_directory() . '/assets/custom-functions.php';
 require_once( __DIR__ . '/custom-functions.php' );
-
-// Genesis Design System
-//require_once get_stylesheet_directory() . '/assets/genesis-design-system.php';
-//require_once( __DIR__ . '/assets/genesis-design-system.php' );
 ``` 
 
 6. In custom-functions.php replace 'starter' with your 'theme-name'. Its on line 21 and 24.
