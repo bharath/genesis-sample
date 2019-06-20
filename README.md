@@ -16,13 +16,17 @@ This Will be tested and updated when a new Genesis Sample update is released.
 
 3. Open style.css and change the settings in header as needed.
 
+Example: If you changed your theme name to genesis-child in step 2, then change 
+
 ```css
 /*
 Theme Name: Starter
-Theme URI: https://bharath.blog/
-Description: This is the genesis starter theme created for Bharath's Blog.
-Author: Bharath
-Author URI: https://bharath.dev/
+``` 
+to
+
+```css
+/*
+Theme Name: Genesis Child
 ``` 
 
 4. Open assets/css/style-main.css and change the settings in header to match what you have done in step 3.
