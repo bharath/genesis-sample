@@ -59,3 +59,5 @@ wp_dequeue_style( 'genesis-child-fonts' );
 // Dequeue default theme styles.
 wp_dequeue_style( 'genesis-child' );
 ``` 
+
+7. That's it. If you want to customize it further, read INSTRUCTIONS.md.
