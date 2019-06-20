@@ -60,4 +60,4 @@ wp_dequeue_style( 'genesis-child-fonts' );
 wp_dequeue_style( 'genesis-child' );
 ``` 
 
-7. That's it. If you want to customize it further, read INSTRUCTIONS.md.
+7. That's it. If you want to customize it further, read INSTRUCTIONS.md
