@@ -1,6 +1,6 @@
 # Customizing
 
-1. ## Gutenberg color palette and font sizes
+## 1. Gutenberg color palette and font sizes
 
 1. In assets/css/style-var.css add your own Custom Color Palette for Front End & Gutenberg. Its between lines 135 - 141
 
