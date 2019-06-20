@@ -20,7 +20,7 @@ Example: If you changed your theme name to genesis-child in step 2, then change 
 
 ```css
 /*
-Theme Name: Starter
+Theme Name: Genesis Sample
 ``` 
 to
 
@@ -44,10 +44,10 @@ Example: If you changed your theme name to genesis-child in step 2, then change 
 
 ```php
 // Dequeue default Fonts Source Sans Pro.
-wp_dequeue_style( 'starter-fonts' );
+wp_dequeue_style( 'genesis-sample-fonts' );
 
 // Dequeue default theme styles.
-wp_dequeue_style( 'starter' );
+wp_dequeue_style( 'genesis-sample' );
 ``` 
 
 to
