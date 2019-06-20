@@ -8,7 +8,7 @@ Tested and works with Genesis Sample theme Version: 3.0.0
 
 This Will be tested and updated when a new Genesis Sample update is released.
 
-##Getting started
+## Getting started
 
 1. Download this repo and move all the files inside starter-master folder to genesis-sample theme folder.
 
