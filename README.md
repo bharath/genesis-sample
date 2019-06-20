@@ -44,10 +44,10 @@ Example: If you changed your theme name to genesis-child in step 2, then change 
 
 ```php
 // Dequeue default Fonts Source Sans Pro.
-wp_dequeue_style( 'genesis-sample-fonts' );
+wp_dequeue_style( 'starter-fonts' );
 
 // Dequeue default theme styles.
-wp_dequeue_style( 'genesis-sample' );
+wp_dequeue_style( 'starter' );
 ``` 
 
 to
