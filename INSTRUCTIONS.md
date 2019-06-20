@@ -52,6 +52,8 @@ wp_dequeue_style( 'genesis-child-fonts' );
 wp_dequeue_style( 'genesis-child' );
 ``` 
 
+## Customization
+
 7. In assets/css/style-var.css add your own Custom Color Palette for Front End & Gutenberg. Its between lines 135 - 141
 
 8. In custom-functions.php change editor-color-palette values as per your color scheme. Its between lines 276 - 315.
