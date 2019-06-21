@@ -27,7 +27,7 @@ function obk_scripts_styles() {
     wp_dequeue_style( 'genesis-sample-gutenberg' );
 
     // Enqueue Google Fonts.
-    wp_enqueue_style( genesis_get_theme_handle() . '-custom-fonts', obk_fonts_url(), array(), null );
+    wp_enqueue_style( genesis_get_theme_handle() . '-fonts-custom', obk_fonts_url(), array(), null );
 
     // Enqueue Adobe Fonts.
     //wp_enqueue_style( genesis_get_theme_handle() . '-typekit', '//use.typekit.net/tlh3veq.css', array(), '1.0', 'all');
@@ -121,12 +121,11 @@ function obk_fonts_url() {
     $query_args = array(
         'family' => rawurlencode( implode( '|', array_unique( $font_families ) ) ),
         'subset' => rawurlencode( 'latin,latin-ext' ),
-        'display' => rawurlencode( 'swap' ),
+        'display' => rawurlencode( 'fallback' ),
     );
 
     $fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
     //$fonts_url = 'https://use.typekit.net/tlh3veq.css';
-    //<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     
     return esc_url_raw( $fonts_url );
 
