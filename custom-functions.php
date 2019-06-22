@@ -2,7 +2,7 @@
 /**
  * This file adds custom functions to your Theme.
  *
- * @package obk
+ * @package bkchild
  * @author  Bharath
  * @license GPL-2.0-or-later
  * @link    https://bharath.blog/
@@ -12,7 +12,7 @@
 /**
  * Register Custom/Google/Adobe Fonts
  */
-function obk_fonts_url() {
+function bk_fonts_url() {
     
     $fonts_url = '';
 
@@ -55,7 +55,7 @@ function obk_fonts_url() {
 /**
  * Enqueue scripts and styles.
  */
-function obk_scripts_styles() {
+function bk_scripts_styles() {
 
     // Dequeue default theme styles.
     wp_dequeue_style( 'starter' );
@@ -67,31 +67,31 @@ function obk_scripts_styles() {
     wp_dequeue_style( 'starter-gutenberg' );
 
     // Enqueue Google Fonts.
-    wp_enqueue_style( genesis_get_theme_handle() . '-custom-fonts', obk_fonts_url(), array(), null );
+    wp_enqueue_style( 'bk-fonts', bk_fonts_url(), array(), null );
 
     // Enqueue Adobe Fonts.
-    //wp_enqueue_style( genesis_get_theme_handle() . '-typekit', '//use.typekit.net/tlh3veq.css', array(), '1.0', 'all');
+    //wp_enqueue_style( 'bk-typekit', '//use.typekit.net/tlh3veq.css', array(), '1.0', 'all');
     
     // Sets the default timezone used by all date/time functions in a script
     date_default_timezone_set('Asia/Kolkata');
 
     // Enqueue CSS Variables.
-    wp_enqueue_style( genesis_get_theme_handle() . '-var', get_stylesheet_directory_uri() . '/assets/css/style-var-min.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-min.css' ) ) );
+    wp_enqueue_style( 'bk-var', get_stylesheet_directory_uri() . '/assets/css/style-var-min.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-min.css' ) ) );
 
     // Enqueue custom Gutenberg front-end styles.
-    wp_enqueue_style( genesis_get_theme_handle() . '-custom-gutenberg', get_stylesheet_directory_uri() . '/assets/css/front-end.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/front-end.css' ) ) );
+    wp_enqueue_style( 'bk-gutenberg', get_stylesheet_directory_uri() . '/assets/css/front-end.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/front-end.css' ) ) );
 
     // Enqueue CSS Variables overrides for genesis-sample style.css.
-    //wp_enqueue_style( genesis_get_theme_handle() . '-var-gs', get_stylesheet_directory_uri() . '/assets/css/style-var-gs-min.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-gs-min.css' ) ) );
+    //wp_enqueue_style( 'bk-var-gs', get_stylesheet_directory_uri() . '/assets/css/style-var-gs-min.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-gs-min.css' ) ) );
     
     // Enqueue theme's main styles.
-    //wp_enqueue_style( genesis_get_theme_handle() . '-main', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
+    //wp_enqueue_style( 'bk-style', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
 
     // Enqueue theme's main styles with variables.
-    wp_enqueue_style( genesis_get_theme_handle() . '-main', get_stylesheet_directory_uri() . '/assets/css/style-main-var.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main-var.css' ) ) );
+    wp_enqueue_style( 'bk-styles', get_stylesheet_directory_uri() . '/assets/css/style-main-var.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main-var.css' ) ) );
     
     // Enqueue theme's main scripts.
-    wp_enqueue_script( genesis_get_theme_handle() . '-scripts', get_stylesheet_directory_uri() . '/assets/js/main-min.js', array( 'jquery' ), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/main-min.js' ) ), true );
+    wp_enqueue_script( 'bk-scripts', get_stylesheet_directory_uri() . '/assets/js/main-min.js', array( 'jquery' ), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/main-min.js' ) ), true );
     
     // Move jQuery to footer
     if( ! is_admin() ) {
@@ -101,31 +101,31 @@ function obk_scripts_styles() {
     }
 
 }
-add_action( 'wp_enqueue_scripts', 'obk_scripts_styles', 11 );
+add_action( 'wp_enqueue_scripts', 'bk_scripts_styles', 11 );
 
 
 /**
  * Enqueue Gutenberg editor styles and scripts
  */
-function obk_gutenberg_scripts_styles() {	
+function bk_gutenberg_scripts_styles() {	
 
     // Dequeue default Gutenberg admin editor fonts, Source Sans Pro.
     wp_dequeue_style( genesis_get_theme_handle() . '-gutenberg-fonts' );
 
     // Enqueue theme's main styles.
-    wp_enqueue_style( genesis_get_theme_handle() . '-var', get_stylesheet_directory_uri() . '/assets/css/style-var-min.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-min.css' ) ) );
+    wp_enqueue_style( 'bk-var', get_stylesheet_directory_uri() . '/assets/css/style-var-min.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-min.css' ) ) );
     
     // Enqueue Google Fonts for Gutenberg admin editor.
-    wp_enqueue_style( genesis_get_theme_handle() . '-custom-gutenberg-fonts', obk_fonts_url(), array(), null );
+    wp_enqueue_style( 'bk-gutenberg-fonts', bk_fonts_url(), array(), null );
 
     // Enqueue Adobe Fonts for Gutenberg admin editor.
-    //wp_enqueue_style( genesis_get_theme_handle() . '-typekit', '//use.typekit.net/tlh3veq.css', array(), '1.0', 'all');
+    //wp_enqueue_style( 'bk-typekit', '//use.typekit.net/tlh3veq.css', array(), '1.0', 'all');
 
     // Enqueue Gutenberg admin editor scripts.
-    wp_enqueue_script( genesis_get_theme_handle() . '-editor-js', get_stylesheet_directory_uri() . '/assets/js/editor-min.js', array( 'wp-blocks', 'wp-dom' ), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/editor-min.js' ) ), true );
+    wp_enqueue_script( 'bk-editor-js', get_stylesheet_directory_uri() . '/assets/js/editor-min.js', array( 'wp-blocks', 'wp-dom' ), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/editor-min.js' ) ), true );
 
 }
-add_action( 'enqueue_block_editor_assets', 'obk_gutenberg_scripts_styles', 11 );
+add_action( 'enqueue_block_editor_assets', 'bk_gutenberg_scripts_styles', 11 );
 
 
 /**
@@ -133,10 +133,10 @@ add_action( 'enqueue_block_editor_assets', 'obk_gutenberg_scripts_styles', 11 );
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package obk
+ * @package bkchild
  */
 
-if ( ! function_exists( 'obk_setup' ) ) :
+if ( ! function_exists( 'bk_setup' ) ) :
 
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -146,7 +146,7 @@ if ( ! function_exists( 'obk_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 
-    function obk_setup() {
+    function bk_setup() {
 
         // Disable the custom color picker.
         add_theme_support( 'disable-custom-colors' );
@@ -246,16 +246,16 @@ if ( ! function_exists( 'obk_setup' ) ) :
 
 endif;
 
-add_action( 'after_setup_theme', 'obk_setup' );
+add_action( 'after_setup_theme', 'bk_setup' );
 
 
-add_action( 'wp_enqueue_scripts', 'obk_custom_gutenberg_css', 11 );
+add_action( 'wp_enqueue_scripts', 'bk_custom_gutenberg_css', 11 );
 /**
  * Outputs front-end inline styles based on colors declared in config/appearance.php.
  *
  * @since 2.9.0
  */
-function obk_custom_gutenberg_css() {
+function bk_custom_gutenberg_css() {
 
     $css = <<<CSS
     .ab-block-post-grid .ab-post-grid-items h2 a:hover {
@@ -283,15 +283,15 @@ function obk_custom_gutenberg_css() {
 
 CSS;
     
-    $css .= obk_inline_font_sizes();
-	$css .= obk_inline_color_palette();
+    $css .= bk_inline_font_sizes();
+	$css .= bk_inline_color_palette();
 
-	wp_add_inline_style( genesis_get_theme_handle() . '-custom-gutenberg', $css );
+	wp_add_inline_style( 'bk-gutenberg', $css );
 
 }
 
 
-add_action( 'enqueue_block_editor_assets', 'obk_custom_gutenberg_admin_css', 11 );
+add_action( 'enqueue_block_editor_assets', 'bk_custom_gutenberg_admin_css', 11 );
 /**
  * Outputs back-end inline styles based on colors declared in config/appearance.php.
  *
@@ -300,7 +300,7 @@ add_action( 'enqueue_block_editor_assets', 'obk_custom_gutenberg_admin_css', 11 
  *
  * @since 2.9.0
  */
-function obk_custom_gutenberg_admin_css() {
+function bk_custom_gutenberg_admin_css() {
 
 
     $css = <<<CSS
@@ -325,7 +325,7 @@ function obk_custom_gutenberg_admin_css() {
     }
 CSS;
 
-	wp_add_inline_style( genesis_get_theme_handle() . '-custom-gutenberg-fonts', $css );
+	wp_add_inline_style( 'bk-gutenberg-fonts', $css );
 
 }
 
@@ -337,7 +337,7 @@ CSS;
  *
  * @return string The CSS for editor font sizes if theme support was declared.
  */
-function obk_inline_font_sizes() {
+function bk_inline_font_sizes() {
 
 	$css               = '';
 	$editor_font_sizes = get_theme_support( 'editor-font-sizes' );
@@ -366,7 +366,7 @@ CSS;
  *
  * @return string The editor colors CSS if `editor-color-palette` theme support was declared.
  */
-function obk_inline_color_palette() {
+function bk_inline_color_palette() {
 
 	$css                   = '';
     $editor_color_palette = get_theme_support( 'editor-color-palette' );
