@@ -1919,3 +1919,41 @@ h1, h2, h3, h4, h5, h6 {
 
 /* -- Custom Styles 
 --------------------------------------------- */
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--ccp-accent, #03a577);
+}
+
+.entry-content a {
+    -webkit-box-shadow: inset 0 -1px 0 currentColor;
+    box-shadow: inset 0 -1px 0 currentColor;
+    text-decoration: none;
+    -webkit-transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
+    transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
+    transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
+    transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
+}
+
+.entry-content a:hover {
+    color: var(--ccp-main, #03a577);
+    box-shadow: inset 0 -2px 0 currentcolor;
+    -webkit-box-shadow: inset 0 0 0 currentcolor, 0 3px 0 currentcolor;
+    box-shadow: inset 0 0 0 currentcolor, 0 3px 0 currentcolor;
+}
+
+.entry-content .post-edit-link {
+    text-decoration: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.entry-content .post-edit-link:hover {
+    text-decoration: underline;
+    color: var(--ccp-main, #03a577);
+    box-shadow: none;
+}

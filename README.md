@@ -61,3 +61,30 @@ wp_dequeue_style( 'genesis-child' );
 ``` 
 
 7. That's it. If you want to customize it further, read INSTRUCTIONS.md
+
+```
+
+├── INSTRUCTIONS.md
+├── README.md
+├── assets
+│   ├── css
+│   │   ├── front-end-min.css
+│   │   ├── front-end.css
+│   │   ├── style-editor-min.css
+│   │   ├── style-editor.css
+│   │   ├── style-main-min.css
+│   │   ├── style-main-var-min.css
+│   │   ├── style-main-var.css
+│   │   ├── style-main.css
+│   │   ├── style-var-gs-min.css
+│   │   ├── style-var-gs.css
+│   │   ├── style-var-min.css
+│   │   └── style-var.css
+│   └── js
+│       ├── editor-min.js
+│       ├── editor.js
+│       ├── main-min.js
+│       └── main.js
+├── custom-functions.php
+
+``` 

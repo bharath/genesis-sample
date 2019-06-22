@@ -450,6 +450,7 @@ hr.wp-block-separator {
 .wp-block-button .wp-block-button__link:not(.has-background):focus,
 .wp-block-button .wp-block-button__link:not(.has-background):hover {
 	color: var(--ccp-white);
+    box-shadow: none;
 }
 
 .site-container .wp-block-button.is-style-outline .wp-block-button__link {

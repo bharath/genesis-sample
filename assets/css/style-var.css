@@ -133,7 +133,7 @@
     /* -- Custom Color Palette for Front End & Gutenberg  
     --------------------------------------------- */
     --ccp-main: #03A577;
-    --ccp-accent: #387268;
+    --ccp-accent: #02684C;
     --ccp-grey: #6E6E6A;
     --ccp-blackish: #2c2c2c;
     --ccp-black: #000000;
@@ -148,7 +148,7 @@
 
         /* -- Background Colors 
         --------------------------------------------- */
-        --background-color: #333;
+        --background-color: #121217;
         --mark-background-color: #ddd;
         --input-background-color: #fff;
         --select-background-color: #fff;
@@ -162,7 +162,7 @@
         --faq-background-color: transparent;
         --faq-focus-background-color: transparent;
         --faq-hover-background-color: transparent;
-        --site-header-background-color: #333;
+        --site-header-background-color: #121217;
         --nav-menu-sub-link-background-color: #fff;
         --menu-toggle-background-color: transparent;
         --menu-toggle-focus-background-color: transparent;
@@ -172,7 +172,7 @@
         --pagination-link-background-color: #f5f5f5;
         --pagination-link-hover-background-color: #333;
         --footer-widgets-background-color: #333;
-        --site-footer-background-color: #333;
+        --site-footer-background-color: #121217;
         --nav-menu-highlight-link-background-color: #333;
         --nav-menu-highlight-link-focus-background-color: #0073e5;
         --nav-menu-highlight-link-hover-background-color: #0073e5;
@@ -181,7 +181,7 @@
 
         /* -- Text Colors 
         --------------------------------------------- */
-        --text-color: #fff;
+        --text-color: #707078;
         --mark-color: #333;
         --input-color: #333;
         --select-color: #333;
@@ -198,6 +198,8 @@
         --faq-focus-text-color: #0073e5;    
         --faq-hover-text-color: #0073e5;
         --focus-text-color: #333;
+
+        --headings-color: #fff;
         
         /* -- Link Colors 
         --------------------------------------------- */
@@ -276,14 +278,18 @@
         
         /* -- Custom Color Palette for Front End & Gutenberg  
         --------------------------------------------- */
-        --ccp-main: #03A577;
-        --ccp-accent: #387268;
+        --ccp-main: #007BB3;
+        --ccp-accent: #0067A5;
         --ccp-grey: #6E6E6A;
         --ccp-blackish: #2c2c2c;
         --ccp-black: #000000;
         --ccp-white: #ffffff;
         --ccp-transparent: transparent;
 
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        color: var(--headings-color);
     }
 
 }
