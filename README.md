@@ -72,9 +72,9 @@ wp_dequeue_style( 'genesis-child' );
 │   │   ├── front-end.css
 │   │   ├── style-editor-min.css
 │   │   ├── style-editor.css
-│   │   ├── style-main-min.css
 │   │   ├── style-main-var-min.css
 │   │   ├── style-main-var.css
+│   │   ├── style-main-min.css
 │   │   ├── style-main.css
 │   │   ├── style-var-gs-min.css
 │   │   ├── style-var-gs.css

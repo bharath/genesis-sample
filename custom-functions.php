@@ -85,7 +85,7 @@ function bk_scripts_styles() {
     //wp_enqueue_style( 'bk-var-gs', get_stylesheet_directory_uri() . '/assets/css/style-var-gs-min.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-gs-min.css' ) ) );
     
     // Enqueue theme's main styles.
-    //wp_enqueue_style( 'bk-style', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
+    //wp_enqueue_style( 'bk-styles', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
 
     // Enqueue theme's main styles with variables.
     wp_enqueue_style( 'bk-styles', get_stylesheet_directory_uri() . '/assets/css/style-main-var.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main-var.css' ) ) );
