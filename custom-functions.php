@@ -9,6 +9,46 @@
  */
 
 
+/**
+ * Register Custom/Google/Adobe Fonts
+ */
+function obk_fonts_url() {
+    
+    $fonts_url = '';
+
+    $font_families = array();
+
+    /**
+     * Translators: If there are characters in your language that are not
+     * supported by Montserrat & Merriweather, translate this to 'off'. Do not translate
+     * into your own language.
+     */
+
+    $montserrat = esc_html_x( 'on', 'Montserrat font: on or off', 'theme-name' );
+    $merriweather = esc_html_x( 'on', 'Merriweather font: on or off', 'theme-name' );
+    
+    if ( 'off' !== $montserrat ) {
+        $font_families[] = 'Montserrat:400,400i,700';
+    }
+
+    if ( 'off' !== $merriweather ) {
+        $font_families[] = 'Merriweather:400,400i';
+    }
+
+    $query_args = array(
+        'family' => rawurlencode( implode( '|', array_unique( $font_families ) ) ),
+        'display' => rawurlencode( 'swap' ),
+        'subset' => rawurlencode( 'latin,latin-ext' ),
+    );
+
+    $fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+    //$fonts_url = 'https://use.typekit.net/tlh3veq.css';
+    
+    return esc_url_raw( $fonts_url );
+
+}
+
+
  /* -- Gutenberg Stuff & Global Enqueues 
 --------------------------------------------- */
 
@@ -17,17 +57,17 @@
  */
 function obk_scripts_styles() {
 
-    // Dequeue default Fonts Source Sans Pro.
-    wp_dequeue_style( 'starter-fonts' );
-
     // Dequeue default theme styles.
     wp_dequeue_style( 'starter' );
+
+    // Dequeue default Fonts Source Sans Pro.
+    wp_dequeue_style( 'starter-fonts' );
     
     // Dequeue Gutenberg front-end styles.
-    wp_dequeue_style( 'genesis-sample-gutenberg' );
+    wp_dequeue_style( 'starter-gutenberg' );
 
     // Enqueue Google Fonts.
-    wp_enqueue_style( genesis_get_theme_handle() . '-fonts-custom', obk_fonts_url(), array(), null );
+    wp_enqueue_style( genesis_get_theme_handle() . '-custom-fonts', obk_fonts_url(), array(), null );
 
     // Enqueue Adobe Fonts.
     //wp_enqueue_style( genesis_get_theme_handle() . '-typekit', '//use.typekit.net/tlh3veq.css', array(), '1.0', 'all');
@@ -36,24 +76,22 @@ function obk_scripts_styles() {
     date_default_timezone_set('Asia/Kolkata');
 
     // Enqueue CSS Variables.
-    $last_modified_var_css = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-min.css' ) );
-    wp_enqueue_style( genesis_get_theme_handle() . '-var', get_stylesheet_directory_uri() . '/assets/css/style-var-min.css', array(), $last_modified_var_css );
+    wp_enqueue_style( genesis_get_theme_handle() . '-var', get_stylesheet_directory_uri() . '/assets/css/style-var-min.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-min.css' ) ) );
 
     // Enqueue CSS Variables overrides for genesis-sample style.css.
-    $last_modified_var_css = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-gs-min.css' ) );
-    wp_enqueue_style( genesis_get_theme_handle() . '-var-gs', get_stylesheet_directory_uri() . '/assets/css/style-var-gs-min.css', array(), $last_modified_var_css );
+    //wp_enqueue_style( genesis_get_theme_handle() . '-var-gs', get_stylesheet_directory_uri() . '/assets/css/style-var-gs-min.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-gs-min.css' ) ) );
     
     // Enqueue custom Gutenberg front-end styles.
-    $last_modified_front_end_css = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/front-end.css' ) );
-    wp_enqueue_style( genesis_get_theme_handle() . '-gutenberg', get_stylesheet_directory_uri() . '/assets/css/front-end.css', array(), $last_modified_front_end_css );
+    wp_enqueue_style( genesis_get_theme_handle() . '-custom-gutenberg', get_stylesheet_directory_uri() . '/assets/css/front-end.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/front-end.css' ) ) );
     
     // Enqueue theme's main styles.
-    $last_modified_main_css = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) );
-    wp_enqueue_style( genesis_get_theme_handle() . '-main', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), $last_modified_main_css );
+    //wp_enqueue_style( genesis_get_theme_handle() . '-main', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
+
+    // Enqueue theme's main styles with variables.
+    wp_enqueue_style( genesis_get_theme_handle() . '-main', get_stylesheet_directory_uri() . '/assets/css/style-main-var.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main-var.css' ) ) );
     
     // Enqueue theme's main scripts.
-    $last_modified_main_js = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/main-min.js' ) ); 
-    wp_enqueue_script( genesis_get_theme_handle() . '-scripts', get_stylesheet_directory_uri() . '/assets/js/main-min.js', array( 'jquery' ), $last_modified_main_js, true );
+    wp_enqueue_script( genesis_get_theme_handle() . '-scripts', get_stylesheet_directory_uri() . '/assets/js/main-min.js', array( 'jquery' ), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/main-min.js' ) ), true );
     
     // Move jQuery to footer
     if( ! is_admin() ) {
@@ -72,166 +110,142 @@ add_action( 'wp_enqueue_scripts', 'obk_scripts_styles', 11 );
 function obk_gutenberg_scripts_styles() {	
 
     // Dequeue default Gutenberg admin editor fonts, Source Sans Pro.
-    wp_dequeue_style( 'genesis-sample-gutenberg-fonts' );
+    wp_dequeue_style( genesis_get_theme_handle() . '-gutenberg-fonts' );
+
+    // Enqueue theme's main styles.
+    wp_enqueue_style( genesis_get_theme_handle() . '-var', get_stylesheet_directory_uri() . '/assets/css/style-var-min.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-min.css' ) ) );
     
     // Enqueue Google Fonts for Gutenberg admin editor.
-    wp_enqueue_style( genesis_get_theme_handle() . '-gutenberg-fonts', obk_fonts_url(), array(), null );
+    wp_enqueue_style( genesis_get_theme_handle() . '-custom-gutenberg-fonts', obk_fonts_url(), array(), null );
 
     // Enqueue Adobe Fonts for Gutenberg admin editor.
     //wp_enqueue_style( genesis_get_theme_handle() . '-typekit', '//use.typekit.net/tlh3veq.css', array(), '1.0', 'all');
 
-    // Enqueue theme's main styles.
-    $last_modified_var_css = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-min.css' ) );
-    wp_enqueue_style( genesis_get_theme_handle() . '-var', get_stylesheet_directory_uri() . '/assets/css/style-var-min.css', array(), $last_modified_var_css );
-    
     // Enqueue Gutenberg admin editor scripts.
-    $last_modified_editor_js = date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/editor-min.js' ) );
-    wp_enqueue_script( genesis_get_theme_handle() . '-editor-js', get_stylesheet_directory_uri() . '/assets/js/editor-min.js', array( 'wp-blocks', 'wp-dom' ), $last_modified_editor_js, true );
+    wp_enqueue_script( genesis_get_theme_handle() . '-editor-js', get_stylesheet_directory_uri() . '/assets/js/editor-min.js', array( 'wp-blocks', 'wp-dom' ), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/editor-min.js' ) ), true );
 
 }
 add_action( 'enqueue_block_editor_assets', 'obk_gutenberg_scripts_styles', 11 );
 
 
 /**
- * Register Google Fonts
+ * Gutenbergtheme functions and definitions
+ *
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ * @package obk
  */
-function obk_fonts_url() {
-    
-    $fonts_url = '';
 
-    $font_families = array();
+if ( ! function_exists( 'obk_setup' ) ) :
 
-    /**
-     * Translators: If there are characters in your language that are not
-     * supported by Merriweather and Lora, translate this to 'off'. Do not translate
-     * into your own language.
-     */
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 *
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
+	 */
 
-    $montserrat = esc_html_x( 'on', 'Montserrat font: on or off', 'theme-name' );
-    $lora = esc_html_x( 'on', 'Lora font: on or off', 'theme-name' );
-    
-    if ( 'off' !== $montserrat ) {
-        $font_families[] = 'Montserrat:400,400i,600,700';
-    }
+    function obk_setup() {
 
-    if ( 'off' !== $lora ) {
-        $font_families[] = 'Lora:400,400i,700';
-    }
+        // Disable the custom color picker.
+        add_theme_support( 'disable-custom-colors' );
 
-    $query_args = array(
-        'family' => rawurlencode( implode( '|', array_unique( $font_families ) ) ),
-        'subset' => rawurlencode( 'latin,latin-ext' ),
-        'display' => rawurlencode( 'fallback' ),
-    );
-
-    $fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-    //$fonts_url = 'https://use.typekit.net/tlh3veq.css';
-    
-    return esc_url_raw( $fonts_url );
-
-}
-
-
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- */
-function obk_setup() {
-
-    // Disable the custom color picker.
-    add_theme_support( 'disable-custom-colors' );
-
-    /**
-     * Custom colors for use in the editor.
-     * Add support for custom color palettes in Gutenberg.
-    * @link https://wordpress.org/gutenberg/handbook/reference/theme-support/
-    */
-    add_theme_support(
-        'editor-color-palette', array(
-            array(
-                'name'  => esc_html__( 'Main', 'theme-name' ),
-                'slug' => 'main',
-                'color' => 'var(--ccp-main)',
-            ),
-            array(
-                'name'  => esc_html__( 'Accent', 'theme-name' ),
-                'slug' => 'accent',
-                'color' => 'var(--ccp-accent)',
-            ),
-            array(
-                'name'  => esc_html__( 'Gray', 'theme-name' ),
-                'slug' => 'gray',
-                'color' => 'var(--ccp-gray)',
-            ),
-            array(
-                'name'  => esc_html__( 'Blackish', 'theme-name' ),
-                'slug' => 'blackish',
-                'color' => 'var(--ccp-blackish)',
-            ),
-            array(
-                'name'  => esc_html__( 'Black', 'theme-name' ),
-                'slug' => 'black',
-                'color' => 'var(--ccp-black)',
-            ),
-            array(
-                'name'  => esc_html__( 'White', 'theme-name' ),
-                'slug' => 'white',
-                'color' => 'var(--ccp-white)',
-            ),
-            array(
-                'name'  => esc_html__( 'Transparent', 'theme-name' ),
-                'slug' => 'transparent',
-                'color' => 'var(--ccp-transparent)',
+        /**
+         * Custom colors for use in the editor.
+         * Add support for custom color palettes in Gutenberg.
+        * @link https://wordpress.org/gutenberg/handbook/reference/theme-support/
+        */
+        add_theme_support(
+            'editor-color-palette', array(
+                array(
+                    'name'  => esc_html__( 'Main', 'theme-name' ),
+                    'slug' => 'main',
+                    'color' => 'var(--ccp-main)',
+                ),
+                array(
+                    'name'  => esc_html__( 'Accent', 'theme-name' ),
+                    'slug' => 'accent',
+                    'color' => 'var(--ccp-accent)',
+                ),
+                array(
+                    'name'  => esc_html__( 'Gray', 'theme-name' ),
+                    'slug' => 'gray',
+                    'color' => 'var(--ccp-gray)',
+                ),
+                array(
+                    'name'  => esc_html__( 'Blackish', 'theme-name' ),
+                    'slug' => 'blackish',
+                    'color' => 'var(--ccp-blackish)',
+                ),
+                array(
+                    'name'  => esc_html__( 'Black', 'theme-name' ),
+                    'slug' => 'black',
+                    'color' => 'var(--ccp-black)',
+                ),
+                array(
+                    'name'  => esc_html__( 'White', 'theme-name' ),
+                    'slug' => 'white',
+                    'color' => 'var(--ccp-white)',
+                ),
+                array(
+                    'name'  => esc_html__( 'Transparent', 'theme-name' ),
+                    'slug' => 'transparent',
+                    'color' => 'var(--ccp-transparent)',
+                )
             )
-        )
-    );
+        );
 
-    // -- Disable custom font sizes
-    add_theme_support( 'disable-custom-font-sizes' );
+        // -- Disable custom font sizes
+        add_theme_support( 'disable-custom-font-sizes' );
 
-    /**
-     * Custom font sizes for use in the editor.
-     *
-     * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/#block-font-sizes
-     */
-    add_theme_support(
-        'editor-font-sizes', array(
-            array(
-                'name'      => esc_html__( 'Small', 'theme-name' ),
-                'shortName' => esc_html__( 'S', 'theme-name' ),
-                'size'      => 16,
-                'slug'      => 'small',
-            ),
-            array(
-                'name'      => esc_html__( 'Normal', 'theme-name' ),
-                'shortName' => esc_html__( 'N', 'theme-name' ),
-                'size'      => 18,
-                'slug'      => 'normal',
-            ),
-            array(
-                'name'      => esc_html__( 'Medium', 'theme-name' ),
-                'shortName' => esc_html__( 'M', 'theme-name' ),
-                'size'      => 20,
-                'slug'      => 'medium',
-            ),
-            array(
-                'name'      => esc_html__( 'Large', 'theme-name' ),
-                'shortName' => esc_html__( 'L', 'theme-name' ),
-                'size'      => 24,
-                'slug'      => 'large',
-            ),
-            array(
-                'name'      => esc_html__( 'Huge', 'theme-name' ),
-                'shortName' => esc_html__( 'XL', 'theme-name' ),
-                'size'      => 28,
-                'slug'      => 'huge',
-            ),
-        )
-    );
+        /**
+         * Custom font sizes for use in the editor.
+         *
+         * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/#block-font-sizes
+         */
+        add_theme_support(
+            'editor-font-sizes', array(
+                array(
+                    'name'      => esc_html__( 'Small', 'theme-name' ),
+                    'shortName' => esc_html__( 'S', 'theme-name' ),
+                    'size'      => 16,
+                    'slug'      => 'small',
+                ),
+                array(
+                    'name'      => esc_html__( 'Normal', 'theme-name' ),
+                    'shortName' => esc_html__( 'N', 'theme-name' ),
+                    'size'      => 18,
+                    'slug'      => 'normal',
+                ),
+                array(
+                    'name'      => esc_html__( 'Medium', 'theme-name' ),
+                    'shortName' => esc_html__( 'M', 'theme-name' ),
+                    'size'      => 20,
+                    'slug'      => 'medium',
+                ),
+                array(
+                    'name'      => esc_html__( 'Large', 'theme-name' ),
+                    'shortName' => esc_html__( 'L', 'theme-name' ),
+                    'size'      => 24,
+                    'slug'      => 'large',
+                ),
+                array(
+                    'name'      => esc_html__( 'Huge', 'theme-name' ),
+                    'shortName' => esc_html__( 'XL', 'theme-name' ),
+                    'size'      => 28,
+                    'slug'      => 'huge',
+                ),
+            )
+        );
 
-    // Enqueue editor styles.
-    add_editor_style( '/assets/css/style-editor.css' );
+        // Enqueue editor styles.
+        add_editor_style( '/assets/css/style-editor.css' );
 
-}
+    }
+
+endif;
+
 add_action( 'after_setup_theme', 'obk_setup' );
 
 
@@ -272,7 +286,7 @@ CSS;
     $css .= obk_inline_font_sizes();
 	$css .= obk_inline_color_palette();
 
-	wp_add_inline_style( genesis_get_theme_handle() . '-gutenberg', $css );
+	wp_add_inline_style( genesis_get_theme_handle() . '-custom-gutenberg', $css );
 
 }
 
@@ -311,7 +325,7 @@ function obk_custom_gutenberg_admin_css() {
     }
 CSS;
 
-	wp_add_inline_style( genesis_get_theme_handle() . '-gutenberg-fonts', $css );
+	wp_add_inline_style( genesis_get_theme_handle() . '-custom-gutenberg-fonts', $css );
 
 }
 
