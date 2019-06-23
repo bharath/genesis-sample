@@ -41,8 +41,8 @@ function bk_fonts_url() {
         'subset' => rawurlencode( 'latin,latin-ext' ),
     );
 
-    //$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-    $fonts_url = 'https://use.typekit.net/tlh3veq.css';
+    $fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+    //$fonts_url = 'https://use.typekit.net/tlh3veq.css';
     
     return esc_url_raw( $fonts_url );
 
@@ -112,7 +112,7 @@ function bk_gutenberg_scripts_styles() {
     // Dequeue default Gutenberg admin editor fonts, Source Sans Pro.
     wp_dequeue_style( genesis_get_theme_handle() . '-gutenberg-fonts' );
 
-    // Enqueue theme's main styles.
+    // Enqueue CSS Variables.
     wp_enqueue_style( 'bk-var', get_stylesheet_directory_uri() . '/assets/css/style-var-min.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-min.css' ) ) );
     
     // Enqueue Google Fonts for Gutenberg admin editor.
@@ -122,6 +122,7 @@ function bk_gutenberg_scripts_styles() {
     //wp_enqueue_style( 'bk-typekit', '//use.typekit.net/tlh3veq.css', array(), '1.0', 'all');
 
     // Enqueue Gutenberg admin editor scripts.
+    //array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ),
     wp_enqueue_script( 'bk-editor-js', get_stylesheet_directory_uri() . '/assets/js/editor-min.js', array( 'wp-blocks', 'wp-dom' ), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/editor-min.js' ) ), true );
 
 }
@@ -241,6 +242,8 @@ if ( ! function_exists( 'bk_setup' ) ) :
 
         // Enqueue editor styles.
         add_editor_style( '/assets/css/style-editor.css' );
+        
+        add_theme_support( 'dark-editor-style' );
 
     }
 
