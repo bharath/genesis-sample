@@ -41,8 +41,8 @@ function bk_fonts_url() {
         'subset' => rawurlencode( 'latin,latin-ext' ),
     );
 
-    $fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-    //$fonts_url = 'https://use.typekit.net/tlh3veq.css';
+    //$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+    $fonts_url = 'https://use.typekit.net/tlh3veq.css';
     
     return esc_url_raw( $fonts_url );
 

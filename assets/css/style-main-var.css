@@ -1887,7 +1887,7 @@ input[type="submit"]:hover,
 --------------------------------------------- */
 
 body { 
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;  
+    font-family: proxima-nova, 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;  
     -webkit-overflow-scrolling: touch;
     -webkit-text-size-adjust: none;
     text-rendering: optimizeLegibility;
@@ -1896,7 +1896,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: proxima-nova, 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
     /*font-display: swap;*/
 }
 

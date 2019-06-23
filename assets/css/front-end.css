@@ -433,35 +433,6 @@ hr.wp-block-separator {
 /* -- Start adding your own CSS 
 --------------------------------------------- */
 
-/* --   Inline styles removed after dequeing Gutenberg front-end styles.
-        genesis-sample-gutenberg-inline-css
-        default Color Overrides 
---------------------------------------------- */
-
-.ab-block-post-grid .ab-post-grid-items h2 a:hover {
-	color: var(--ccp-main); /* Color changed from default #0073e5 to #ff0014 */
-}
-
-.site-container .wp-block-button .wp-block-button__link {
-	background-color: var(--ccp-main); /* Color changed from default #0073e5 to #ff0014 */
-}
-
-.wp-block-button .wp-block-button__link:not(.has-background),
-.wp-block-button .wp-block-button__link:not(.has-background):focus,
-.wp-block-button .wp-block-button__link:not(.has-background):hover {
-	color: var(--ccp-white);
-    box-shadow: none;
-}
-
-.site-container .wp-block-button.is-style-outline .wp-block-button__link {
-	color: var(--ccp-main); /* Color changed from default #0073e5 to #ff0014 */
-}
-
-.site-container .wp-block-button.is-style-outline .wp-block-button__link:focus,
-.site-container .wp-block-button.is-style-outline .wp-block-button__link:hover {
-	color: var(--ccp-accent); /* Color changed from default #2396ff to #ff0014 */
-}		
-
 /* -- Font Overrides 
 --------------------------------------------- */
 
