@@ -62,7 +62,7 @@ function bk_scripts_styles() {
 
     // Dequeue default Fonts Source Sans Pro.
     wp_dequeue_style( 'starter-fonts' );
-    
+
     // Dequeue Gutenberg front-end styles.
     wp_dequeue_style( 'starter-gutenberg' );
 
