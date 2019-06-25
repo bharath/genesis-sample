@@ -75,11 +75,11 @@ function bk_scripts_styles() {
     // Sets the default timezone used by all date/time functions in a script
     date_default_timezone_set('Asia/Kolkata');
 
-    // Enqueue CSS Variables.
-    wp_enqueue_style( 'bk-var', get_stylesheet_directory_uri() . '/assets/css/style-var-min.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-min.css' ) ) );
-
     // Enqueue custom Gutenberg front-end styles.
     wp_enqueue_style( 'bk-gutenberg', get_stylesheet_directory_uri() . '/assets/css/front-end.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/front-end.css' ) ) );
+
+    // Enqueue CSS Variables.
+    //wp_enqueue_style( 'bk-var', get_stylesheet_directory_uri() . '/assets/css/style-var-min.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-min.css' ) ) );
 
     // Enqueue CSS Variables overrides for genesis-sample style.css.
     //wp_enqueue_style( 'bk-var-gs', get_stylesheet_directory_uri() . '/assets/css/style-var-gs-min.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-gs-min.css' ) ) );
@@ -91,10 +91,10 @@ function bk_scripts_styles() {
     wp_enqueue_style( 'bk-styles', get_stylesheet_directory_uri() . '/assets/css/style-main-var.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main-var.css' ) ) );
 
     // Enqueue Fira Code font for code block
-    wp_enqueue_style( 'blog-code', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', array(), '1.206', 'all');
+    //wp_enqueue_style( 'blog-code', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', array(), '1.206', 'all');
 
     // Enqueue Clipboard script for code block
-    wp_enqueue_script( 'clipboard-script', '//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', array('jquery'), '2.0.0', true);
+    //wp_enqueue_script( 'clipboard-script', '//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', array('jquery'), '2.0.0', true);
     
     // Enqueue theme's main scripts.
     wp_enqueue_script( 'bk-scripts', get_stylesheet_directory_uri() . '/assets/js/main-min.js', array( 'jquery' ), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/main-min.js' ) ), true );
@@ -105,6 +105,8 @@ function bk_scripts_styles() {
         wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
         wp_enqueue_script( 'jquery' );
     }
+
+    wp_deregister_style( 'dashicons' );
 
 }
 add_action( 'wp_enqueue_scripts', 'bk_scripts_styles', 11 );
