@@ -1,6 +1,6 @@
 // Site wide Javascript
 (function($) {	
-
+    /*
     // Add clipboard button to Code Block
     $(document).ready(function () {
 
@@ -71,6 +71,5 @@
 		}
 
 	});
-
-
+    */
 })(jQuery);
