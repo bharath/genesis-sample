@@ -4,7 +4,7 @@ Customizations to Genesis Sample theme to use as a Starter theme. [Learn More](h
 
 ## Requirement
 
-Tested and works with Genesis Sample theme Version: 3.0.0
+Tested and works with Genesis Sample theme Version: 3.0.1
 
 This Will be tested and updated when a new Genesis Sample update is released.
 
@@ -38,29 +38,7 @@ Theme Name: Genesis Child
 require_once( __DIR__ . '/custom-functions.php' );
 ``` 
 
-6. In custom-functions.php replace 'starter' with your 'theme-name'. Its on line 21 and 24.
-
-Example: If you changed your theme name to genesis-child in step 2, then change the following
-
-```php
-// Dequeue default Fonts Source Sans Pro.
-wp_dequeue_style( 'starter-fonts' );
-
-// Dequeue default theme styles.
-wp_dequeue_style( 'starter' );
-``` 
-
-to
-
-```php
-// Dequeue default Fonts Source Sans Pro.
-wp_dequeue_style( 'genesis-child-fonts' );
-
-// Dequeue default theme styles.
-wp_dequeue_style( 'genesis-child' );
-``` 
-
-7. That's it. If you want to customize it further, read INSTRUCTIONS.md
+6. That's it. If you want to customize it further, read INSTRUCTIONS.md
 
 ```
 
@@ -72,12 +50,8 @@ wp_dequeue_style( 'genesis-child' );
 │   │   ├── front-end.css
 │   │   ├── style-editor-min.css
 │   │   ├── style-editor.css
-│   │   ├── style-main-var-min.css
-│   │   ├── style-main-var.css
 │   │   ├── style-main-min.css
 │   │   ├── style-main.css
-│   │   ├── style-var-gs-min.css
-│   │   ├── style-var-gs.css
 │   │   ├── style-var-min.css
 │   │   └── style-var.css
 │   └── js

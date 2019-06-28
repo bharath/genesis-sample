@@ -24,8 +24,8 @@ function bk_fonts_url() {
      * into your own language.
      */
 
-    $montserrat = esc_html_x( 'on', 'Montserrat font: on or off', 'theme-name' );
-    $merriweather = esc_html_x( 'on', 'Merriweather font: on or off', 'theme-name' );
+    $montserrat = esc_html_x( 'on', 'Montserrat font: on or off', 'bk-child' );
+    $merriweather = esc_html_x( 'on', 'Merriweather font: on or off', 'bk-child' );
     
     if ( 'off' !== $montserrat ) {
         $font_families[] = 'Montserrat:400,400i,700';
@@ -58,13 +58,13 @@ function bk_fonts_url() {
 function bk_scripts_styles() {
 
     // Dequeue default theme styles.
-    wp_dequeue_style( 'starter' );
+    wp_dequeue_style( genesis_get_theme_handle() );
 
     // Dequeue default Fonts Source Sans Pro.
-    wp_dequeue_style( 'starter-fonts' );
+    wp_dequeue_style( genesis_get_theme_handle() . '-fonts' );
 
     // Dequeue Gutenberg front-end styles.
-    wp_dequeue_style( 'starter-gutenberg' );
+    wp_dequeue_style( genesis_get_theme_handle() . '-gutenberg' );
 
     // Enqueue Custom / Typekit / Google Fonts.
     wp_enqueue_style( 'bk-fonts', bk_fonts_url(), array(), null );
@@ -94,7 +94,7 @@ function bk_scripts_styles() {
         wp_enqueue_script( 'jquery' );
     }
 
-    wp_deregister_style( 'dashicons' );
+    //wp_deregister_style( 'dashicons' );
 
 }
 add_action( 'wp_enqueue_scripts', 'bk_scripts_styles', 11 );
@@ -153,42 +153,42 @@ if ( ! function_exists( 'bk_setup' ) ) :
         add_theme_support(
             'editor-color-palette', array(
                 array(
-                    'name'  => esc_html__( 'Main', 'theme-name' ),
+                    'name'  => esc_html__( 'Main', 'bk-child' ),
                     'slug' => 'main',
                     'color' => 'var(--ccp-main)',
                 ),
                 array(
-                    'name'  => esc_html__( 'Accent', 'theme-name' ),
+                    'name'  => esc_html__( 'Accent', 'bk-child' ),
                     'slug' => 'accent',
                     'color' => 'var(--ccp-accent)',
                 ),
                 array(
-                    'name'  => esc_html__( 'Black', 'theme-name' ),
+                    'name'  => esc_html__( 'Black', 'bk-child' ),
                     'slug' => 'black',
                     'color' => 'var(--ccp-black)',
                 ),
                 array(
-                    'name'  => esc_html__( 'Blackish', 'theme-name' ),
+                    'name'  => esc_html__( 'Blackish', 'bk-child' ),
                     'slug' => 'blackish',
                     'color' => 'var(--ccp-blackish)',
                 ),
                 array(
-                    'name'  => esc_html__( 'Grey', 'theme-name' ),
+                    'name'  => esc_html__( 'Grey', 'bk-child' ),
                     'slug' => 'grey',
                     'color' => 'var(--ccp-grey)',
                 ),
                 array(
-                    'name'  => esc_html__( 'Greyish', 'theme-name' ),
+                    'name'  => esc_html__( 'Greyish', 'bk-child' ),
                     'slug' => 'greyish',
                     'color' => 'var(--ccp-greyish)',
                 ),
                 array(
-                    'name'  => esc_html__( 'White', 'theme-name' ),
+                    'name'  => esc_html__( 'White', 'bk-child' ),
                     'slug' => 'white',
                     'color' => 'var(--ccp-white)',
                 ),
                 array(
-                    'name'  => esc_html__( 'Transparent', 'theme-name' ),
+                    'name'  => esc_html__( 'Transparent', 'bk-child' ),
                     'slug' => 'transparent',
                     'color' => 'var(--ccp-transparent)',
                 )
@@ -206,32 +206,32 @@ if ( ! function_exists( 'bk_setup' ) ) :
         add_theme_support(
             'editor-font-sizes', array(
                 array(
-                    'name'      => esc_html__( 'Small', 'theme-name' ),
-                    'shortName' => esc_html__( 'S', 'theme-name' ),
+                    'name'      => esc_html__( 'Small', 'bk-child' ),
+                    'shortName' => esc_html__( 'S', 'bk-child' ),
                     'size'      => 16,
                     'slug'      => 'small',
                 ),
                 array(
-                    'name'      => esc_html__( 'Normal', 'theme-name' ),
-                    'shortName' => esc_html__( 'N', 'theme-name' ),
+                    'name'      => esc_html__( 'Normal', 'bk-child' ),
+                    'shortName' => esc_html__( 'N', 'bk-child' ),
                     'size'      => 18,
                     'slug'      => 'normal',
                 ),
                 array(
-                    'name'      => esc_html__( 'Medium', 'theme-name' ),
-                    'shortName' => esc_html__( 'M', 'theme-name' ),
+                    'name'      => esc_html__( 'Medium', 'bk-child' ),
+                    'shortName' => esc_html__( 'M', 'bk-child' ),
                     'size'      => 20,
                     'slug'      => 'medium',
                 ),
                 array(
-                    'name'      => esc_html__( 'Large', 'theme-name' ),
-                    'shortName' => esc_html__( 'L', 'theme-name' ),
+                    'name'      => esc_html__( 'Large', 'bk-child' ),
+                    'shortName' => esc_html__( 'L', 'bk-child' ),
                     'size'      => 24,
                     'slug'      => 'large',
                 ),
                 array(
-                    'name'      => esc_html__( 'Huge', 'theme-name' ),
-                    'shortName' => esc_html__( 'XL', 'theme-name' ),
+                    'name'      => esc_html__( 'Huge', 'bk-child' ),
+                    'shortName' => esc_html__( 'XL', 'bk-child' ),
                     'size'      => 28,
                     'slug'      => 'huge',
                 ),
