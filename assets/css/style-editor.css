@@ -483,7 +483,7 @@ h6 {
 --------------------------------------------- */
 
 .block-editor-block-list__layout .block-editor-block-list__block > .block-editor-block-list__block-edit::before {
-	border: 1px solid #e8eaeb;
+	border: 1px solid var(--ccp-main);
 }
 
 .editor-post-title__block:before {
@@ -497,6 +497,7 @@ h6 {
     top: 0.5em;
 }
 
+/*
 h2:before {
     background: var(--ccp-main);
     content: "\020";
@@ -505,6 +506,7 @@ h2:before {
     margin: 1rem 0;
     width: 50px;
 }
+*/
 
 .wp-block-code .editor-plain-text {
     font-family: monospace, monospace;
