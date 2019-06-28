@@ -13,3 +13,11 @@
 5. Open assets/css/style-editor.css and make changes as per your color pallette & editor-font-sizes. Its between lines 424 - 442.
 
 6. Open assets/css/style-main.css and make changes as per your color pallette & editor-font-sizes. Its between lines 1849 - 1883.
+
+
+## 2. Code block customization
+
+1. In custom-functions.php, uncomment line 82 to add clipboard script for code block
+2. In custom-functions.php, uncomment line 82 to add Fira Code font for code block
+3. In assets/css/style-main.css uncomment lines in 2224 and 2419
+4. In assets/js/main.js uncomment lines in 3 and 74
