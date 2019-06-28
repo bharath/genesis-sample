@@ -2,7 +2,7 @@
 
 ## 1. Gutenberg color palette and font sizes
 
-1. In assets/css/style-var.css add your own Custom Color Palette for Front End & Gutenberg. Its between lines 135 - 142
+1. In assets/css/style-var.css add your own Custom Color Palette for Front End & Gutenberg. Its between lines 143 - 158;
 
 2. In custom-functions.php change editor-color-palette values as per your color scheme. Its between lines 153 - 196.
 
@@ -17,7 +17,8 @@
 
 ## 2. Code block customization
 
-1. In custom-functions.php, uncomment line 82 to add clipboard script for code block
-2. In custom-functions.php, uncomment line 82 to add Fira Code font for code block
-3. In assets/css/style-main.css uncomment lines in 2224 and 2419
-4. In assets/js/main.js uncomment lines in 3 and 74
+1. Install Server-Side Code Syntax Highlighting Block plugin from [here](https://github.com/westonruter/code-syntax-block)
+2. In custom-functions.php, uncomment line 82 to add clipboard script for code block
+3. In custom-functions.php, uncomment line 82 to add Fira Code font for code block
+4. In assets/css/style-main.css uncomment lines in 2224 and 2419
+5. In assets/js/main.js uncomment lines in 3 and 74
