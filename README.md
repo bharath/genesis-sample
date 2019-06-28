@@ -40,6 +40,8 @@ require_once( __DIR__ . '/custom-functions.php' );
 
 6. That's it. If you want to customize it further, read INSTRUCTIONS.md
 
+## File Structure
+
 ```
 
 ├── INSTRUCTIONS.md
