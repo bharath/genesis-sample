@@ -66,11 +66,8 @@ function bk_scripts_styles() {
     // Dequeue Gutenberg front-end styles.
     wp_dequeue_style( 'starter-gutenberg' );
 
-    // Enqueue Google Fonts.
+    // Enqueue Custom / Typekit / Google Fonts.
     wp_enqueue_style( 'bk-fonts', bk_fonts_url(), array(), null );
-
-    // Enqueue Adobe Fonts.
-    //wp_enqueue_style( 'bk-typekit', '//use.typekit.net/tlh3veq.css', array(), '1.0', 'all');
     
     // Sets the default timezone used by all date/time functions in a script
     date_default_timezone_set('Asia/Kolkata');
@@ -78,17 +75,8 @@ function bk_scripts_styles() {
     // Enqueue custom Gutenberg front-end styles.
     wp_enqueue_style( 'bk-gutenberg', get_stylesheet_directory_uri() . '/assets/css/front-end.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/front-end.css' ) ) );
 
-    // Enqueue CSS Variables.
-    //wp_enqueue_style( 'bk-var', get_stylesheet_directory_uri() . '/assets/css/style-var-min.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-min.css' ) ) );
-
-    // Enqueue CSS Variables overrides for genesis-sample style.css.
-    //wp_enqueue_style( 'bk-var-gs', get_stylesheet_directory_uri() . '/assets/css/style-var-gs-min.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-gs-min.css' ) ) );
-    
-    // Enqueue theme's main styles.
-    //wp_enqueue_style( 'bk-styles', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
-
     // Enqueue theme's main styles with variables.
-    wp_enqueue_style( 'bk-styles', get_stylesheet_directory_uri() . '/assets/css/style-main-var.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main-var.css' ) ) );
+    wp_enqueue_style( 'bk-styles', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
 
     // Enqueue Fira Code font for code block
     //wp_enqueue_style( 'blog-code', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', array(), '1.206', 'all');
@@ -123,11 +111,8 @@ function bk_gutenberg_scripts_styles() {
     // Enqueue CSS Variables.
     wp_enqueue_style( 'bk-var', get_stylesheet_directory_uri() . '/assets/css/style-var-min.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-min.css' ) ) );
     
-    // Enqueue Google Fonts for Gutenberg admin editor.
+    // Enqueue Custom / Typekit / Google Fonts for Gutenberg admin editor.
     wp_enqueue_style( 'bk-gutenberg-fonts', bk_fonts_url(), array(), null );
-
-    // Enqueue Adobe Fonts for Gutenberg admin editor.
-    //wp_enqueue_style( 'bk-typekit', '//use.typekit.net/tlh3veq.css', array(), '1.0', 'all');
 
     // Enqueue Gutenberg admin editor scripts.
     //array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ),
@@ -178,9 +163,9 @@ if ( ! function_exists( 'bk_setup' ) ) :
                     'color' => 'var(--ccp-accent)',
                 ),
                 array(
-                    'name'  => esc_html__( 'Gray', 'theme-name' ),
-                    'slug' => 'gray',
-                    'color' => 'var(--ccp-gray)',
+                    'name'  => esc_html__( 'Black', 'theme-name' ),
+                    'slug' => 'black',
+                    'color' => 'var(--ccp-black)',
                 ),
                 array(
                     'name'  => esc_html__( 'Blackish', 'theme-name' ),
@@ -188,9 +173,14 @@ if ( ! function_exists( 'bk_setup' ) ) :
                     'color' => 'var(--ccp-blackish)',
                 ),
                 array(
-                    'name'  => esc_html__( 'Black', 'theme-name' ),
-                    'slug' => 'black',
-                    'color' => 'var(--ccp-black)',
+                    'name'  => esc_html__( 'Grey', 'theme-name' ),
+                    'slug' => 'grey',
+                    'color' => 'var(--ccp-grey)',
+                ),
+                array(
+                    'name'  => esc_html__( 'Greyish', 'theme-name' ),
+                    'slug' => 'greyish',
+                    'color' => 'var(--ccp-greyish)',
                 ),
                 array(
                     'name'  => esc_html__( 'White', 'theme-name' ),
@@ -251,7 +241,7 @@ if ( ! function_exists( 'bk_setup' ) ) :
         // Enqueue editor styles.
         add_editor_style( '/assets/css/style-editor.css' );
         
-        add_theme_support( 'dark-editor-style' );
+        //add_theme_support( 'dark-editor-style' );
 
     }
 
@@ -334,6 +324,7 @@ function bk_custom_gutenberg_admin_css() {
     .editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:hover {
         color: var(--ccp-accent);
     }
+
 CSS;
 
 	wp_add_inline_style( 'bk-gutenberg-fonts', $css );

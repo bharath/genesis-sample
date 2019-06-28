@@ -486,6 +486,26 @@ h6 {
 	border: 1px solid #e8eaeb;
 }
 
+.editor-post-title__block:before {
+    background: var(--ccp-main);
+    content: "\020";
+    display: block;
+    height: 2px;
+    width: 50px;
+    margin: 0 0 0 14px;
+    position: relative;
+    top: 0.5em;
+}
+
+h2:before {
+    background: var(--ccp-main);
+    content: "\020";
+    display: block;
+    height: 2px;
+    margin: 1rem 0;
+    width: 50px;
+}
+
 .wp-block-code .editor-plain-text {
     font-family: monospace, monospace;
     font-size: 16px;

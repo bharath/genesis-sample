@@ -134,9 +134,10 @@
     --------------------------------------------- */
     --ccp-main: #03A577;
     --ccp-accent: #02684C;
-    --ccp-grey: #6E6E6A;
-    --ccp-blackish: #2c2c2c;
     --ccp-black: #000000;
+    --ccp-blackish: #2c2c2c;
+    --ccp-grey: #6E6E6A;
+    --ccp-greyish: #999;
     --ccp-white: #ffffff;
     --ccp-transparent: transparent;
 			
@@ -278,11 +279,12 @@
         
         /* -- Custom Color Palette for Front End & Gutenberg  
         --------------------------------------------- */
-        --ccp-main: #007BB3;
-        --ccp-accent: #0067A5;
-        --ccp-grey: #6E6E6A;
-        --ccp-blackish: #2c2c2c;
+        --ccp-main: #03A577;
+        --ccp-accent: #02684C;
         --ccp-black: #000000;
+        --ccp-blackish: #2c2c2c;
+        --ccp-grey: #6E6E6A;
+        --ccp-greyish: #999;
         --ccp-white: #ffffff;
         --ccp-transparent: transparent;
 
