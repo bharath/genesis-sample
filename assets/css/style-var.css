@@ -5,6 +5,7 @@
 
     /* -- Background Colors 
     --------------------------------------------- */
+
     --background-color: #fff;
 	--mark-background-color: #ddd;
     --input-background-color: #fff;
@@ -38,6 +39,7 @@
 
     /* -- Text Colors 
     --------------------------------------------- */
+
 	--text-color: #333;
 	--mark-color: #333;
 	--input-color: #333;
@@ -58,6 +60,7 @@
     
     /* -- Link Colors 
     --------------------------------------------- */
+
 	--link-color: #0073e5;
 	--link-focus-color: #333;
 	--link-hover-color: #333;
@@ -79,12 +82,14 @@
     
     /* -- Box Shadow Colors 
     --------------------------------------------- */
+
     --search-input-focus-box-shadow-color: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     --after-entry-box-shadow-color: 0 0 20px rgba(0, 0, 0, 0.05);
 	--site-header-box-shadow-color: 0 0 20px rgba(0, 0, 0, 0.05);
 
     /* -- Misc Colors 
     --------------------------------------------- */
+
 	--menu-toggle-color: #333;
 	--menu-toggle-focus-color: #0073e5;
 	--menu-toggle-hover-color: #0073e5;
@@ -92,6 +97,7 @@
 
     /* -- Border Colors 
     --------------------------------------------- */
+
 	--border-color: #eee;
 	--hr-border-color: #eee;
 	--gallery-img-border-color: #eee;
@@ -118,6 +124,7 @@
 
     /* -- Genesis Color Palette 
     --------------------------------------------- */
+
     --gcp-one: #0073e5;
     --gcp-two: #333;
     --gcp-three: #777;
@@ -132,6 +139,7 @@
     
     /* -- Custom Color Palette for Front End & Gutenberg  
     --------------------------------------------- */
+
     --ccp-main: #03A577;
     --ccp-accent: #02684C;
     --ccp-black: #000000;
@@ -140,7 +148,15 @@
     --ccp-greyish: #999;
     --ccp-white: #ffffff;
     --ccp-transparent: transparent;
-			
+
+    --ccp-link-color: #03A577;
+    --ccp-accent-color: #02684C;
+    --ccp-button-bg: #03A577;
+    --ccp-button-color: #02684C;
+    --ccp-button-outline-hover: #02684C;
+    --ccp-theme-primary: #03A577;
+    --ccp-theme-secondary: #02684C;
+
 }
 
 @media (prefers-color-scheme:dark) {
@@ -149,6 +165,7 @@
 
         /* -- Background Colors 
         --------------------------------------------- */
+
         --background-color: #121217;
         --mark-background-color: #ddd;
         --input-background-color: #fff;
@@ -182,6 +199,7 @@
 
         /* -- Text Colors 
         --------------------------------------------- */
+
         --text-color: #707078;
         --mark-color: #333;
         --input-color: #333;
@@ -226,12 +244,14 @@
         
         /* -- Box Shadow Colors 
         --------------------------------------------- */
+
         --search-input-focus-box-shadow-color: 0 0 2px 2px rgba(0, 0, 0, 0.6);
         --after-entry-box-shadow-color: 0 0 20px rgba(0, 0, 0, 0.05);
         --site-header-box-shadow-color: 0 0 20px rgba(0, 0, 0, 0.05);
 
         /* -- Misc Colors 
         --------------------------------------------- */
+
         --menu-toggle-color: #333;
         --menu-toggle-focus-color: #0073e5;
         --menu-toggle-hover-color: #0073e5;
@@ -239,6 +259,7 @@
 
         /* -- Border Colors 
         --------------------------------------------- */
+
         --border-color: #eee;
         --hr-border-color: #eee;
         --gallery-img-border-color: #eee;
@@ -265,6 +286,7 @@
 
         /* -- Genesis Color Palette  
         --------------------------------------------- */
+
         --gcp-one: #0073e5;
         --gcp-two: #333;
         --gcp-three: #777;
@@ -279,6 +301,7 @@
         
         /* -- Custom Color Palette for Front End & Gutenberg  
         --------------------------------------------- */
+        
         --ccp-main: #03A577;
         --ccp-accent: #02684C;
         --ccp-black: #000000;
