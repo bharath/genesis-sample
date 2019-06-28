@@ -1840,9 +1840,6 @@ p.entry-meta {
 
 
 
-/* -- Start adding your own CSS 
---------------------------------------------- */
-
 /* CSS Variables
 ---------------------------------------------------------------------------- */ 
 
@@ -1850,6 +1847,7 @@ p.entry-meta {
 
     /* -- Background Colors 
     --------------------------------------------- */
+
     --background-color: #fff;
 	--mark-background-color: #ddd;
     --input-background-color: #fff;
@@ -1883,6 +1881,7 @@ p.entry-meta {
 
     /* -- Text Colors 
     --------------------------------------------- */
+
 	--text-color: #333;
 	--mark-color: #333;
 	--input-color: #333;
@@ -1903,6 +1902,7 @@ p.entry-meta {
     
     /* -- Link Colors 
     --------------------------------------------- */
+
 	--link-color: #0073e5;
 	--link-focus-color: #333;
 	--link-hover-color: #333;
@@ -1924,12 +1924,14 @@ p.entry-meta {
     
     /* -- Box Shadow Colors 
     --------------------------------------------- */
+
     --search-input-focus-box-shadow-color: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     --after-entry-box-shadow-color: 0 0 20px rgba(0, 0, 0, 0.05);
 	--site-header-box-shadow-color: 0 0 20px rgba(0, 0, 0, 0.05);
 
     /* -- Misc Colors 
     --------------------------------------------- */
+
 	--menu-toggle-color: #333;
 	--menu-toggle-focus-color: #0073e5;
 	--menu-toggle-hover-color: #0073e5;
@@ -1937,6 +1939,7 @@ p.entry-meta {
 
     /* -- Border Colors 
     --------------------------------------------- */
+
 	--border-color: #eee;
 	--hr-border-color: #eee;
 	--gallery-img-border-color: #eee;
@@ -1963,6 +1966,7 @@ p.entry-meta {
 
     /* -- Genesis Color Palette 
     --------------------------------------------- */
+
     --gcp-one: #0073e5;
     --gcp-two: #333;
     --gcp-three: #777;
@@ -1977,6 +1981,7 @@ p.entry-meta {
     
     /* -- Custom Color Palette for Front End & Gutenberg  
     --------------------------------------------- */
+
     --ccp-main: #03A577;
     --ccp-accent: #02684C;
     --ccp-black: #000000;
@@ -1985,7 +1990,15 @@ p.entry-meta {
     --ccp-greyish: #999;
     --ccp-white: #ffffff;
     --ccp-transparent: transparent;
-			
+
+    --ccp-link-color: #03A577;
+    --ccp-accent-color: #02684C;
+    --ccp-button-bg: #03A577;
+    --ccp-button-color: #02684C;
+    --ccp-button-outline-hover: #02684C;
+    --ccp-theme-primary: #03A577;
+    --ccp-theme-secondary: #02684C;
+
 }
 
 @media (prefers-color-scheme:dark) {
@@ -1994,6 +2007,7 @@ p.entry-meta {
 
         /* -- Background Colors 
         --------------------------------------------- */
+
         --background-color: #121217;
         --mark-background-color: #ddd;
         --input-background-color: #fff;
@@ -2027,6 +2041,7 @@ p.entry-meta {
 
         /* -- Text Colors 
         --------------------------------------------- */
+
         --text-color: #707078;
         --mark-color: #333;
         --input-color: #333;
@@ -2071,12 +2086,14 @@ p.entry-meta {
         
         /* -- Box Shadow Colors 
         --------------------------------------------- */
+
         --search-input-focus-box-shadow-color: 0 0 2px 2px rgba(0, 0, 0, 0.6);
         --after-entry-box-shadow-color: 0 0 20px rgba(0, 0, 0, 0.05);
         --site-header-box-shadow-color: 0 0 20px rgba(0, 0, 0, 0.05);
 
         /* -- Misc Colors 
         --------------------------------------------- */
+
         --menu-toggle-color: #333;
         --menu-toggle-focus-color: #0073e5;
         --menu-toggle-hover-color: #0073e5;
@@ -2084,6 +2101,7 @@ p.entry-meta {
 
         /* -- Border Colors 
         --------------------------------------------- */
+
         --border-color: #eee;
         --hr-border-color: #eee;
         --gallery-img-border-color: #eee;
@@ -2110,6 +2128,7 @@ p.entry-meta {
 
         /* -- Genesis Color Palette  
         --------------------------------------------- */
+
         --gcp-one: #0073e5;
         --gcp-two: #333;
         --gcp-three: #777;
@@ -2124,6 +2143,7 @@ p.entry-meta {
         
         /* -- Custom Color Palette for Front End & Gutenberg  
         --------------------------------------------- */
+        
         --ccp-main: #03A577;
         --ccp-accent: #02684C;
         --ccp-black: #000000;
@@ -2215,6 +2235,212 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+
+/* -- Custom Styles for Extras 
+--------------------------------------------- */
+
+/* -- Custom Styles for code block 
+--------------------------------------------- */
+/*
+code.hljs {
+	font-size: 16px;
+	padding: 30px 30px;
+    border-radius: 20px;
+    background: rgba(54, 86, 102, 0.05) !important;
+    line-height: 1.5;
+}
+
+:not(pre) > code {
+    color: #FF0014;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
+    font-size: 18px;
+    border-radius: 3px;
+    margin: 0;
+    padding: 2px 5px;
+}
+
+pre {
+	position: relative;
+	overflow: visible;
+	margin-bottom: 30px;
+}
+
+pre .btn {
+	padding: 2px 6px;
+	position: absolute;
+	right: 4px;
+	top: 4px;
+	display: inline-block;
+	font-size: 13px;
+	line-height: 20px;
+	color: #333;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	background-color: #eee;
+	background-image: linear-gradient(#fcfcfc,#eee);
+	border: 1px solid #d5d5d5;
+	border-radius: 5px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-appearance: none;
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-o-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
+    line-height: 1;
+}
+
+pre .btn {
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-o-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
+	opacity: 0;
+	padding: 2px 6px;
+	position: absolute;
+    top: 4px;
+    right: 16px;
+    padding: 5px;
+}
+
+pre:hover .btn {
+	opacity: 1;
+}
+
+pre .btn:hover {    
+    background: none;
+    color: #FF0014
+}
+
+pre .btn:hover:focus {
+    color: #1bc1a1;
+    outline: none;
+}
+
+pre .btn:focus {
+    outline: none;
+}
+
+@media screen and (max-width: 768px) {
+	pre .btn {
+		opacity:1;
+	}
+}
+
+.tooltipped {
+	position: relative
+}
+
+.tooltipped::after {
+	position: absolute;
+	z-index: 1000000;
+	display: none;
+	padding: 5px 8px;
+	font: normal normal 11px/1.5 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: none;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: break-word;
+	white-space: pre;
+	pointer-events: none;
+	content: attr(aria-label);
+	background: rgba(0, 0, 0, 0.8);
+	border-radius: 3px;
+	-webkit-font-smoothing: subpixel-antialiased;
+	opacity: 0
+}
+
+.tooltipped::before {
+	position: absolute;
+	z-index: 1000001;
+	display: none;
+	width: 0;
+	height: 0;
+	color: rgba(0, 0, 0, 0.8);
+	pointer-events: none;
+	content: "";
+	border: 5px solid transparent;
+	opacity: 0
+}
+
+@-webkit-keyframes tooltip-appear {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 1
+	}
+}
+
+@keyframes tooltip-appear {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 1
+	}
+}
+
+.tooltipped:hover::before,
+.tooltipped:hover::after,
+.tooltipped:active::before,
+.tooltipped:active::after,
+.tooltipped:focus::before,
+.tooltipped:focus::after {
+	display: inline-block;
+	text-decoration: none;
+	-webkit-animation-name: tooltip-appear;
+	animation-name: tooltip-appear;
+	-webkit-animation-duration: 0.1s;
+	animation-duration: 0.1s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-animation-timing-function: ease-in;
+	animation-timing-function: ease-in;
+	-webkit-animation-delay: 0.1s;
+	animation-delay: 0.1s
+}
+
+.tooltipped-s::after {
+	top: 100%;
+	right: 50%;
+	margin-top: 5px
+}
+
+.tooltipped-s::before {
+	top: auto;
+	right: 50%;
+	bottom: -5px;
+	margin-right: -5px;
+	border-bottom-color: rgba(0, 0, 0, 0.8)
+}
+
+.tooltipped-s::after {
+	-webkit-transform: translateX(50%);
+	-ms-transform: translateX(50%);
+	transform: translateX(50%)
+}
+
+@media only screen and (min-width: 960px) {
+
+	.full-width-content .site-container .wp-block-code,
+	.full-width-content .site-container .is-style-alignwide {
+		margin-left: -110px;
+		margin-right: -110px;
+		max-width: 1000px;
+		width: auto;
+	}
+
+}
+*/
+
+
+/* -- Start adding your own CSS 
+--------------------------------------------- */
 
 /* -- Custom Styles 
 --------------------------------------------- */
