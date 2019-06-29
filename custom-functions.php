@@ -191,6 +191,16 @@ if ( ! function_exists( 'bk_setup' ) ) :
                     'name'  => esc_html__( 'Transparent', 'bk-child' ),
                     'slug' => 'transparent',
                     'color' => 'var(--ccp-transparent)',
+                ),
+                array(
+                    'name'  => esc_html__( 'Main Alt', 'bk-child' ),
+                    'slug' => 'main-alt',
+                    'color' => 'var(--ccp-main-alt)',
+                ),
+                array(
+                    'name'  => esc_html__( 'Accent Alt', 'bk-child' ),
+                    'slug' => 'accent-alt',
+                    'color' => 'var(--ccp-accent-alt)',
                 )
             )
         );
