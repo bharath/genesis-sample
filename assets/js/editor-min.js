@@ -1,1 +1,1 @@
-wp.domReady(()=>{wp.blocks.registerBlockStyle("core/button",{name:"bk-child-default",label:"BK Child Default"})});
+wp.domReady(()=>{wp.blocks.registerBlockStyle("core/button",{name:"circular",label:"Circular"}),wp.blocks.registerBlockStyle("core/button",{name:"dark",label:"Dark"})});

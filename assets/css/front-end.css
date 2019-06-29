@@ -413,9 +413,6 @@ hr.wp-block-separator {
 
 
 
-/* -- Start adding your own CSS 
---------------------------------------------- */
-
 /* -- Font Overrides 
 --------------------------------------------- */
 
@@ -453,17 +450,67 @@ hr.wp-block-separator {
 	background-color: var(--ccp-transparent);
 }
 
-/* -- Custom Styles by Bharath 
+/* -- Styles for Extras added to theme 
 --------------------------------------------- */
 
+/* -- Custom Button Styles added for circular 
+--------------------------------------------- */
+
+.site-container .wp-block-button.is-style-circular .wp-block-button__link {
+    background-color: var(--ccp-main);
+    border-radius: 100px;
+}
+
+.site-container .wp-block-button.is-style-circular .wp-block-button__link:hover,
+.site-container .wp-block-button.is-style-circular .wp-block-button__link:focus {
+    background-color: var(--ccp-accent);
+}
+
+/* -- Custom Button Styles added for Dark backgrounds 
+--------------------------------------------- */
+
+.site-container .wp-block-button.is-style-dark .wp-block-button__link {
+    background-color: var(--ccp-main-alt);
+}
+
+.site-container .wp-block-button.is-style-dark .wp-block-button__link:hover,
+.site-container .wp-block-button.is-style-dark .wp-block-button__link:focus {
+    background-color: var(--ccp-accent-alt);
+}
+
+/* -- Custom Button Styles added for theme specific if needed 
+--------------------------------------------- */
+
+.site-container .wp-block-button.is-style-custom .wp-block-button__link {
+    background-color: var(--ccp-main);
+    border-radius: 100px;
+}
+
+.site-container .wp-block-button.is-style-custom .wp-block-button__link:hover,
+.site-container .wp-block-button.is-style-custom .wp-block-button__link:focus {
+    background-color: var(--ccp-accent);
+}
+
+.site-container .wp-block-button.is-style-custom-dark .wp-block-button__link {
+    background-color: var(--ccp-main-alt);
+}
+
+.site-container .wp-block-button.is-style-custom-dark .wp-block-button__link:hover,
+.site-container .wp-block-button.is-style-custom-dark .wp-block-button__link:focus {
+    background-color: var(--ccp-accent-alt);
+}
+
+
+/* -- Start adding your own CSS 
+--------------------------------------------- */
+
+/* -- Custom Styles 
+--------------------------------------------- */
+
+.site-container .wp-block-button.is-style-outline .wp-block-button__link:hover,
 .site-container .wp-block-button.is-style-outline .wp-block-button__link,
 .site-container .wp-block-button .wp-block-button__link:focus,
 .site-container .wp-block-button .wp-block-button__link:hover,
 .site-container .wp-block-button .wp-block-button__link {
-    box-shadow: none;
     transition: none;
-}
-
-.site-container .is-style-theme-default .wp-block-button__link {
-    border-radius: 0;
 }

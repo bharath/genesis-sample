@@ -3,6 +3,28 @@
 
 :root { 
 
+    /* -- Custom Color Palette for Front End & Gutenberg  
+    --------------------------------------------- */
+
+    --ccp-main: #03A577;
+    --ccp-accent: #02684C;
+    --ccp-black: #000000;
+    --ccp-blackish: #2c2c2c;
+    --ccp-grey: #6E6E6A;
+    --ccp-greyish: #999;
+    --ccp-white: #ffffff;
+    --ccp-transparent: transparent;
+    --ccp-main-alt: #FF0014;
+    --ccp-accent-alt: #b3000e;
+
+    --ccp-link-color: #03A577;
+    --ccp-accent-color: #02684C;
+    --ccp-button-bg: #03A577;
+    --ccp-button-color: #02684C;
+    --ccp-button-outline-hover: #02684C;
+    --ccp-theme-primary: #03A577;
+    --ccp-theme-secondary: #02684C;
+
     /* -- Background Colors 
     --------------------------------------------- */
 
@@ -136,32 +158,24 @@
     --gcp-nine: transparent;
     --gcp-shadow-one: rgba(0, 0, 0, 0.6);
     --gcp-shadow-two: rgba(0, 0, 0, 0.05);
-    
-    /* -- Custom Color Palette for Front End & Gutenberg  
-    --------------------------------------------- */
-
-    --ccp-main: #03A577;
-    --ccp-accent: #02684C;
-    --ccp-black: #000000;
-    --ccp-blackish: #2c2c2c;
-    --ccp-grey: #6E6E6A;
-    --ccp-greyish: #999;
-    --ccp-white: #ffffff;
-    --ccp-transparent: transparent;
-
-    --ccp-link-color: #03A577;
-    --ccp-accent-color: #02684C;
-    --ccp-button-bg: #03A577;
-    --ccp-button-color: #02684C;
-    --ccp-button-outline-hover: #02684C;
-    --ccp-theme-primary: #03A577;
-    --ccp-theme-secondary: #02684C;
 
 }
 
 @media (prefers-color-scheme:dark) {
 	
 	:root { 
+
+        /* -- Custom Color Palette for Front End & Gutenberg  
+        --------------------------------------------- */
+        
+        --ccp-main: #03A577;
+        --ccp-accent: #02684C;
+        --ccp-black: #000000;
+        --ccp-blackish: #2c2c2c;
+        --ccp-grey: #6E6E6A;
+        --ccp-greyish: #999;
+        --ccp-white: #ffffff;
+        --ccp-transparent: transparent;
 
         /* -- Background Colors 
         --------------------------------------------- */
@@ -298,18 +312,6 @@
         --gcp-nine: transparent;
         --gcp-shadow-one: rgba(0, 0, 0, 0.6);
         --gcp-shadow-two: rgba(0, 0, 0, 0.05);
-        
-        /* -- Custom Color Palette for Front End & Gutenberg  
-        --------------------------------------------- */
-        
-        --ccp-main: #03A577;
-        --ccp-accent: #02684C;
-        --ccp-black: #000000;
-        --ccp-blackish: #2c2c2c;
-        --ccp-grey: #6E6E6A;
-        --ccp-greyish: #999;
-        --ccp-white: #ffffff;
-        --ccp-transparent: transparent;
 
     }
 

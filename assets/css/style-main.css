@@ -1845,6 +1845,28 @@ p.entry-meta {
 
 :root { 
 
+    /* -- Custom Color Palette for Front End & Gutenberg  
+    --------------------------------------------- */
+
+    --ccp-main: #03A577;
+    --ccp-accent: #02684C;
+    --ccp-black: #000000;
+    --ccp-blackish: #2c2c2c;
+    --ccp-grey: #6E6E6A;
+    --ccp-greyish: #999;
+    --ccp-white: #ffffff;
+    --ccp-transparent: transparent;
+    --ccp-main-alt: #FF0014;
+    --ccp-accent-alt: #b3000e;
+
+    --ccp-link-color: #03A577;
+    --ccp-accent-color: #02684C;
+    --ccp-button-bg: #03A577;
+    --ccp-button-color: #02684C;
+    --ccp-button-outline-hover: #02684C;
+    --ccp-theme-primary: #03A577;
+    --ccp-theme-secondary: #02684C;
+
     /* -- Background Colors 
     --------------------------------------------- */
 
@@ -1978,32 +2000,24 @@ p.entry-meta {
     --gcp-nine: transparent;
     --gcp-shadow-one: rgba(0, 0, 0, 0.6);
     --gcp-shadow-two: rgba(0, 0, 0, 0.05);
-    
-    /* -- Custom Color Palette for Front End & Gutenberg  
-    --------------------------------------------- */
-
-    --ccp-main: #03A577;
-    --ccp-accent: #02684C;
-    --ccp-black: #000000;
-    --ccp-blackish: #2c2c2c;
-    --ccp-grey: #6E6E6A;
-    --ccp-greyish: #999;
-    --ccp-white: #ffffff;
-    --ccp-transparent: transparent;
-
-    --ccp-link-color: #03A577;
-    --ccp-accent-color: #02684C;
-    --ccp-button-bg: #03A577;
-    --ccp-button-color: #02684C;
-    --ccp-button-outline-hover: #02684C;
-    --ccp-theme-primary: #03A577;
-    --ccp-theme-secondary: #02684C;
 
 }
 
 @media (prefers-color-scheme:dark) {
 	
 	:root { 
+
+        /* -- Custom Color Palette for Front End & Gutenberg  
+        --------------------------------------------- */
+        
+        --ccp-main: #03A577;
+        --ccp-accent: #02684C;
+        --ccp-black: #000000;
+        --ccp-blackish: #2c2c2c;
+        --ccp-grey: #6E6E6A;
+        --ccp-greyish: #999;
+        --ccp-white: #ffffff;
+        --ccp-transparent: transparent;
 
         /* -- Background Colors 
         --------------------------------------------- */
@@ -2140,18 +2154,6 @@ p.entry-meta {
         --gcp-nine: transparent;
         --gcp-shadow-one: rgba(0, 0, 0, 0.6);
         --gcp-shadow-two: rgba(0, 0, 0, 0.05);
-        
-        /* -- Custom Color Palette for Front End & Gutenberg  
-        --------------------------------------------- */
-        
-        --ccp-main: #03A577;
-        --ccp-accent: #02684C;
-        --ccp-black: #000000;
-        --ccp-blackish: #2c2c2c;
-        --ccp-grey: #6E6E6A;
-        --ccp-greyish: #999;
-        --ccp-white: #ffffff;
-        --ccp-transparent: transparent;
 
     }
 
@@ -2451,34 +2453,9 @@ a {
 
 a:hover {
     text-decoration: underline;
-    color: var(--ccp-accent, #03a577);
+    color: var(--ccp-accent);
 }
 
-.entry-content a {
-    -webkit-box-shadow: inset 0 -1px 0 currentColor;
-    box-shadow: inset 0 -1px 0 currentColor;
-    text-decoration: none;
-    -webkit-transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
-    transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
-    transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
-    transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
-}
-
-.entry-content a:hover {
-    color: var(--ccp-main, #03a577);
-    box-shadow: inset 0 -2px 0 currentcolor;
-    -webkit-box-shadow: inset 0 0 0 currentcolor, 0 3px 0 currentcolor;
-    box-shadow: inset 0 0 0 currentcolor, 0 3px 0 currentcolor;
-}
-
-.entry-content .post-edit-link {
-    text-decoration: none;
-    box-shadow: none;
-    -webkit-box-shadow: none;
-}
-
-.entry-content .post-edit-link:hover {
-    text-decoration: underline;
-    color: var(--ccp-main, #03a577);
-    box-shadow: none;
+.wp-block-group__inner-container {
+    padding: 30px 0;
 }
