@@ -46,7 +46,7 @@ require_once( __DIR__ . '/custom-functions.php' );
 
 ├── assets
 │   ├── css
-│   │   ├── font-files
+│   │   ├── fonts
 │   │   ├── images
 │   │   ├── front-end-min.css
 │   │   ├── front-end.css
