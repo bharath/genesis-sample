@@ -1,39 +1,33 @@
 wp.domReady( () => {
 
-    //wp.blocks.registerBlockStyle( 'core/button', {
-	//	name: 'bk-child-default',
-	//	label: 'BK Child Default',
-    //    isDefault: true,
-	//} );
-
-    wp.blocks.registerBlockStyle( 'core/button', {
+	wp.blocks.registerBlockStyle( 'core/button', {
 		name: 'circular',
 		label: 'Circular',
+		//isDefault: true,
 	} );
 
-    wp.blocks.registerBlockStyle( 'core/button', {
+	wp.blocks.registerBlockStyle( 'core/button', {
 		name: 'dark',
 		label: 'Dark',
 	} );
-
-    /*
-    // If your theme needs custom style uncomment this
-    wp.blocks.unregisterBlockStyle( 'core/button', 'default' );
+/*
+	// If your theme needs custom style uncomment this
+	wp.blocks.unregisterBlockStyle( 'core/button', 'default' );
 	wp.blocks.unregisterBlockStyle( 'core/button', 'outline' );
 	wp.blocks.unregisterBlockStyle( 'core/button', 'squared' );
 	wp.blocks.unregisterBlockStyle( 'core/button', 'circular' );
 	wp.blocks.unregisterBlockStyle( 'core/button', 'dark' );
 
-    wp.blocks.registerBlockStyle( 'core/button', {
+	wp.blocks.registerBlockStyle( 'core/button', {
 		name: 'custom',
 		label: 'Custom',
 	});
 
-    wp.blocks.registerBlockStyle( 'core/button', {
+	wp.blocks.registerBlockStyle( 'core/button', {
 		name: 'custom-dark',
 		label: 'Custom Dark',
 	});
-    */
+*/
 } );
 
 /*
