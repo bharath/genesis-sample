@@ -313,7 +313,6 @@ add_action( 'enqueue_block_editor_assets', 'bk_custom_gutenberg_admin_css', 11 )
  */
 function bk_custom_gutenberg_admin_css() {
 
-
 	$css = <<<CSS
 	.ab-block-post-grid .ab-post-grid-items h2 a:hover,
 	.block-editor__container .editor-block-list__block a {
