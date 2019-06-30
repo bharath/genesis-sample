@@ -414,12 +414,12 @@ hr.wp-block-separator {
 
 
 button, input[type="button"], input[type="reset"], input[type="submit"], .button {
-    background-color: var(--ccp-main);
-    font-size: 16px !important;
-    line-height: 1.625;
+	background-color: var(--ccp-main);
+	font-size: 16px !important;
+	line-height: 1.625;
 }
 
-/* -- Font Overrides 
+/* -- Font Overrides
 --------------------------------------------- */
 
 /* Buttons
@@ -427,7 +427,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .button
 
 .ab-block-cta .ab-button,
 .site-container .wp-block-button .wp-block-button__link {
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
+	font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* Blockquotes and captions
@@ -435,82 +435,82 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .button
 
 .site-container .wp-block-pullquote p,
 .site-container .wp-block-quote p {
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
+	font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 .site-container .wp-block-pullquote cite,
 .site-container .wp-block-quote cite {
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 18px;
+	font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
+	font-size: 18px;
 }
 
-/* -- Button Variations 
+/* -- Button Variations
 --------------------------------------------- */
 
 .site-container .wp-block-button .wp-block-button__link:focus,
 .site-container .wp-block-button .wp-block-button__link:hover {
-    background-color: var(--ccp-accent);
+	background-color: var(--ccp-accent);
 }
 
 .site-container .wp-block-button.is-style-outline .wp-block-button__link {
 	background-color: var(--ccp-transparent);
 }
 
-/* -- Styles for Extras added to theme 
+/* -- Styles for Extras added to theme
 --------------------------------------------- */
 
-/* -- Custom Button Styles added for circular 
+/* -- Custom Button Styles added for circular
 --------------------------------------------- */
 
 .site-container .wp-block-button.is-style-circular .wp-block-button__link {
-    background-color: var(--ccp-main);
-    border-radius: 100px;
+	background-color: var(--ccp-main);
+	border-radius: 100px;
 }
 
 .site-container .wp-block-button.is-style-circular .wp-block-button__link:hover,
 .site-container .wp-block-button.is-style-circular .wp-block-button__link:focus {
-    background-color: var(--ccp-accent);
+	background-color: var(--ccp-accent);
 }
 
-/* -- Custom Button Styles added for Dark backgrounds 
+/* -- Custom Button Styles added for Dark backgrounds
 --------------------------------------------- */
 
 .site-container .wp-block-button.is-style-dark .wp-block-button__link {
-    background-color: var(--ccp-main-alt);
+	background-color: var(--ccp-main-alt);
 }
 
 .site-container .wp-block-button.is-style-dark .wp-block-button__link:hover,
 .site-container .wp-block-button.is-style-dark .wp-block-button__link:focus {
-    background-color: var(--ccp-accent-alt);
+	background-color: var(--ccp-accent-alt);
 }
 
-/* -- Custom Button Styles added for theme specific if needed 
+/* -- Custom Button Styles added for theme specific if needed
 --------------------------------------------- */
 
 .site-container .wp-block-button.is-style-custom .wp-block-button__link {
-    background-color: var(--ccp-main);
-    border-radius: 100px;
+	background-color: var(--ccp-main);
+	border-radius: 100px;
 }
 
 .site-container .wp-block-button.is-style-custom .wp-block-button__link:hover,
 .site-container .wp-block-button.is-style-custom .wp-block-button__link:focus {
-    background-color: var(--ccp-accent);
+	background-color: var(--ccp-accent);
 }
 
 .site-container .wp-block-button.is-style-custom-dark .wp-block-button__link {
-    background-color: var(--ccp-main-alt);
+	background-color: var(--ccp-main-alt);
 }
 
 .site-container .wp-block-button.is-style-custom-dark .wp-block-button__link:hover,
 .site-container .wp-block-button.is-style-custom-dark .wp-block-button__link:focus {
-    background-color: var(--ccp-accent-alt);
+	background-color: var(--ccp-accent-alt);
 }
 
 
-/* -- Start adding your own CSS 
+/* -- Start adding your own CSS
 --------------------------------------------- */
 
-/* -- Custom Styles 
+/* -- Custom Styles
 --------------------------------------------- */
 
 .site-container .wp-block-button.is-style-outline .wp-block-button__link:hover,
@@ -518,5 +518,5 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .button
 .site-container .wp-block-button .wp-block-button__link:focus,
 .site-container .wp-block-button .wp-block-button__link:hover,
 .site-container .wp-block-button .wp-block-button__link {
-    transition: none;
+	transition: none;
 }

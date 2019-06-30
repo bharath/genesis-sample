@@ -1841,11 +1841,11 @@ p.entry-meta {
 
 
 /* CSS Variables
----------------------------------------------------------------------------- */ 
+---------------------------------------------------------------------------- */
 
-:root { 
+:root {
 
-	/* -- Custom Color Palette for Front End & Gutenberg  
+	/* -- Custom Color Palette for Front End & Gutenberg
 	--------------------------------------------- */
 
 	--ccp-main: #03A577;
@@ -1867,7 +1867,7 @@ p.entry-meta {
 	--ccp-theme-primary: #03A577;
 	--ccp-theme-secondary: #02684C;
 
-	/* -- Background Colors 
+	/* -- Background Colors
 	--------------------------------------------- */
 
 	--background-color: #fff;
@@ -1901,7 +1901,7 @@ p.entry-meta {
 	--author-box-background-color: #f5f5f5;
 	--star-background-color: transparent;
 
-	/* -- Text Colors 
+	/* -- Text Colors
 	--------------------------------------------- */
 
 	--text-color: #333;
@@ -1918,11 +1918,11 @@ p.entry-meta {
 	--button-disabled-text-color: #777;
 	--search-input-focus-text-color: #333;
 	--faq-text-color: #333;
-	--faq-focus-text-color: #0073e5;    
+	--faq-focus-text-color: #0073e5;
 	--faq-hover-text-color: #0073e5;
 	--focus-text-color: #333;
-	
-	/* -- Link Colors 
+
+	/* -- Link Colors
 	--------------------------------------------- */
 
 	--link-color: #0073e5;
@@ -1943,15 +1943,15 @@ p.entry-meta {
 	--pagination-link-color: #333;
 	--pagination-link-hover-color: #fff;
 	--nav-menu-highlight-link-color: #fff;
-	
-	/* -- Box Shadow Colors 
+
+	/* -- Box Shadow Colors
 	--------------------------------------------- */
 
 	--search-input-focus-box-shadow-color: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	--after-entry-box-shadow-color: 0 0 20px rgba(0, 0, 0, 0.05);
 	--site-header-box-shadow-color: 0 0 20px rgba(0, 0, 0, 0.05);
 
-	/* -- Misc Colors 
+	/* -- Misc Colors
 	--------------------------------------------- */
 
 	--menu-toggle-color: #333;
@@ -1959,7 +1959,7 @@ p.entry-meta {
 	--menu-toggle-hover-color: #0073e5;
 	--star-color: #333;
 
-	/* -- Border Colors 
+	/* -- Border Colors
 	--------------------------------------------- */
 
 	--border-color: #eee;
@@ -1986,7 +1986,7 @@ p.entry-meta {
 	--blockquote-border-color: #999;
 	--pre-border-color: #999;
 
-	/* -- Genesis Color Palette 
+	/* -- Genesis Color Palette
 	--------------------------------------------- */
 
 	--gcp-one: #0073e5;
@@ -2004,12 +2004,12 @@ p.entry-meta {
 }
 
 @media (prefers-color-scheme:dark) {
-	
-	:root { 
 
-		/* -- Custom Color Palette for Front End & Gutenberg  
+	:root {
+
+		/* -- Custom Color Palette for Front End & Gutenberg
 		--------------------------------------------- */
-		
+
 		--ccp-main: #03A577;
 		--ccp-accent: #02684C;
 		--ccp-black: #000000;
@@ -2019,7 +2019,7 @@ p.entry-meta {
 		--ccp-white: #ffffff;
 		--ccp-transparent: transparent;
 
-		/* -- Background Colors 
+		/* -- Background Colors
 		--------------------------------------------- */
 
 		--background-color: #121217;
@@ -2053,7 +2053,7 @@ p.entry-meta {
 		--author-box-background-color: #f5f5f5;
 		--star-background-color: transparent;
 
-		/* -- Text Colors 
+		/* -- Text Colors
 		--------------------------------------------- */
 
 		--text-color: #707078;
@@ -2070,13 +2070,13 @@ p.entry-meta {
 		--button-disabled-text-color: #777;
 		--search-input-focus-text-color: #333;
 		--faq-text-color: #333;
-		--faq-focus-text-color: #0073e5;    
+		--faq-focus-text-color: #0073e5;
 		--faq-hover-text-color: #0073e5;
 		--focus-text-color: #333;
 
 		--headings-color: #fff;
-		
-		/* -- Link Colors 
+
+		/* -- Link Colors
 		--------------------------------------------- */
 
 		--link-color: #0073e5;
@@ -2097,15 +2097,15 @@ p.entry-meta {
 		--pagination-link-color: #333;
 		--pagination-link-hover-color: #fff;
 		--nav-menu-highlight-link-color: #fff;
-		
-		/* -- Box Shadow Colors 
+
+		/* -- Box Shadow Colors
 		--------------------------------------------- */
 
 		--search-input-focus-box-shadow-color: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 		--after-entry-box-shadow-color: 0 0 20px rgba(0, 0, 0, 0.05);
 		--site-header-box-shadow-color: 0 0 20px rgba(0, 0, 0, 0.05);
 
-		/* -- Misc Colors 
+		/* -- Misc Colors
 		--------------------------------------------- */
 
 		--menu-toggle-color: #333;
@@ -2113,7 +2113,7 @@ p.entry-meta {
 		--menu-toggle-hover-color: #0073e5;
 		--star-color: #333;
 
-		/* -- Border Colors 
+		/* -- Border Colors
 		--------------------------------------------- */
 
 		--border-color: #eee;
@@ -2140,7 +2140,7 @@ p.entry-meta {
 		--blockquote-border-color: #999;
 		--pre-border-color: #999;
 
-		/* -- Genesis Color Palette  
+		/* -- Genesis Color Palette
 		--------------------------------------------- */
 
 		--gcp-one: #0073e5;
@@ -2164,7 +2164,7 @@ p.entry-meta {
 }
 
 
-/* -- Default Color Overrides 
+/* -- Default Color Overrides
 --------------------------------------------- */
 
 button, input[type="button"], input[type="reset"], input[type="submit"], .button {
@@ -2210,11 +2210,11 @@ input[type="submit"]:hover,
 }
 
 
-/* -- Font Overrides 
+/* -- Font Overrides
 --------------------------------------------- */
 
-body { 
-	font-family: proxima-nova, 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;  
+body {
+	font-family: proxima-nova, 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
 	-webkit-overflow-scrolling: touch;
 	-webkit-text-size-adjust: none;
 	text-rendering: optimizeLegibility;
@@ -2228,7 +2228,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* -- Fix for Menu items flash 
+/* -- Fix for Menu items flash
 --------------------------------------------- */
 
 .js nav {
@@ -2244,10 +2244,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* -- Custom Styles for Extras 
+/* -- Custom Styles for Extras
 --------------------------------------------- */
 
-/* -- Custom Styles for code block 
+/* -- Custom Styles for code block
 --------------------------------------------- */
 
 code.hljs {
@@ -2316,7 +2316,7 @@ pre:hover .btn {
 	opacity: 1;
 }
 
-pre .btn:hover {    
+pre .btn:hover {
 	background: none;
 	color: #FF0014
 }
@@ -2446,10 +2446,10 @@ pre .btn:focus {
 }
 
 
-/* -- Start adding your own CSS 
+/* -- Start adding your own CSS
 --------------------------------------------- */
 
-/* -- Custom Styles 
+/* -- Custom Styles
 --------------------------------------------- */
 
 a {
