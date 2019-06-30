@@ -76,7 +76,7 @@ function bk_scripts_styles() {
     wp_enqueue_style( 'bk-gutenberg', get_stylesheet_directory_uri() . '/assets/css/front-end.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/front-end.css' ) ) );
 
     // Enqueue theme's main styles with variables.
-    wp_enqueue_style( 'bk-styles', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
+    wp_enqueue_style( 'bk-style', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
 
     // Enqueue Fira Code font for code block
     //wp_enqueue_style( 'blog-code', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', array(), '1.206', 'all');
@@ -85,7 +85,7 @@ function bk_scripts_styles() {
     //wp_enqueue_script( 'clipboard-script', '//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', array('jquery'), '2.0.0', true);
     
     // Enqueue theme's main scripts.
-    wp_enqueue_script( 'bk-scripts', get_stylesheet_directory_uri() . '/assets/js/main-min.js', array( 'jquery' ), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/main-min.js' ) ), true );
+    //wp_enqueue_script( 'bk-scripts', get_stylesheet_directory_uri() . '/assets/js/main-min.js', array( 'jquery' ), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/main-min.js' ) ), true );
     
     // Move jQuery to footer
     if( ! is_admin() ) {
@@ -401,4 +401,16 @@ CSS;
 
 	return $css;
 
+}
+
+
+add_filter( 'gform_submit_button', 'add_custom_css_classes', 10, 2 );
+function add_custom_css_classes( $button, $form ) {
+    $dom = new DOMDocument();
+    $dom->loadHTML( $button );
+    $input = $dom->getElementsByTagName( 'input' )->item(0);
+    $classes = $input->getAttribute( 'class' );
+    $classes .= " wp-block-button__link";
+    $input->setAttribute( 'class', $classes );
+    return $dom->saveHtml( $input );
 }

@@ -533,7 +533,7 @@ h6 {
 --------------------------------------------- */
 
 .block-editor-block-list__layout .block-editor-block-list__block > .block-editor-block-list__block-edit::before {
-	border: 1px solid var(--ccp-main);
+	/*border: 1px solid var(--ccp-main);*/
 }
 
 .editor-post-title__block:before {
