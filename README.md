@@ -46,10 +46,10 @@ require_once( __DIR__ . '/custom-functions.php' );
 
 ├── assets
 │   ├── css
-│   │   ├── fonts
+│   │   ├── font-files
+│   │   ├── images
 │   │   ├── front-end-min.css
 │   │   ├── front-end.css
-│   │   ├── images
 │   │   ├── style-editor-min.css
 │   │   ├── style-editor.css
 │   │   ├── style-main-min.css
