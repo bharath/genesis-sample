@@ -44,12 +44,12 @@ require_once( __DIR__ . '/custom-functions.php' );
 
 ```
 
-├── README.md
-├── custom-functions.php
 ├── assets
 │   ├── css
+│   │   ├── fonts
 │   │   ├── front-end-min.css
 │   │   ├── front-end.css
+│   │   ├── images
 │   │   ├── style-editor-min.css
 │   │   ├── style-editor.css
 │   │   ├── style-main-min.css
@@ -61,6 +61,8 @@ require_once( __DIR__ . '/custom-functions.php' );
 │       ├── editor.js
 │       ├── main-min.js
 │       └── main.js
+├── README.md
+├── custom-functions.php
 
 ``` 
 
