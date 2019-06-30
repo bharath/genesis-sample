@@ -454,14 +454,17 @@ hr.wp-block-separator.is-style-dots {
 .wp-block-quote p,
 .ab-block-cta .ab-button,
 .wp-block-button .wp-block-button__link,
-body,
+body {
+	font-family: var(--font-family-normal);
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
+	font-family: var(--font-family-bold);
 }
 
 /* -- Button Variations
@@ -532,6 +535,10 @@ h6 {
 /* -- Custom Styles
 --------------------------------------------- */
 
+.wp-block-group {
+	padding: 50px 0;
+}
+
 .block-editor-block-list__layout .block-editor-block-list__block > .block-editor-block-list__block-edit::before {
 	/*border: 1px solid var(--ccp-main);*/
 }
@@ -571,3 +578,4 @@ h2:before {
 .wp-block-button.is-style-theme-default .wp-block-button__link {
 	border-radius: 0;
 }
+

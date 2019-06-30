@@ -218,32 +218,32 @@ if ( ! function_exists( 'bk_setup' ) ) :
 				array(
 					'name'      => esc_html__( 'Small', 'bk-child' ),
 					'shortName' => esc_html__( 'S', 'bk-child' ),
-					'size'      => 16,
+					'size'      => 'var(--font-size-s)',
 					'slug'      => 'small',
 				),
 				array(
 					'name'      => esc_html__( 'Normal', 'bk-child' ),
 					'shortName' => esc_html__( 'N', 'bk-child' ),
-					'size'      => 18,
+					'size'      => 'var(--font-size-n)',
 					'slug'      => 'normal',
 				),
 				array(
 					'name'      => esc_html__( 'Medium', 'bk-child' ),
 					'shortName' => esc_html__( 'M', 'bk-child' ),
-					'size'      => 20,
+					'size'      => 'var(--font-size-m)',
 					'slug'      => 'medium',
 				),
 				array(
 					'name'      => esc_html__( 'Large', 'bk-child' ),
 					'shortName' => esc_html__( 'L', 'bk-child' ),
-					'size'      => 24,
+					'size'      => 'var(--font-size-l)',
 					'slug'      => 'large',
 				),
 				array(
-					'name'      => esc_html__( 'Huge', 'bk-child' ),
+					'name'      => esc_html__( 'X Large', 'bk-child' ),
 					'shortName' => esc_html__( 'XL', 'bk-child' ),
-					'size'      => 28,
-					'slug'      => 'huge',
+					'size'      => 'var(--font-size-xl)',
+					'slug'      => 'x-large',
 				),
 			)
 		);
@@ -360,7 +360,7 @@ function bk_inline_font_sizes() {
 	foreach ( $editor_font_sizes[0] as $font_size ) {
 		$css .= <<<CSS
 		.site-container .has-{$font_size['slug']}-font-size {
-			font-size: {$font_size['size']}px;
+			font-size: {$font_size['size']};
 		}
 CSS;
 	}
