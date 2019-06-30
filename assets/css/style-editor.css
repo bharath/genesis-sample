@@ -529,15 +529,18 @@ h6 {
 	background-color: var(--ccp-accent-alt);
 }
 
-/* -- Start adding your own CSS
---------------------------------------------- */
-
-/* -- Custom Styles
+/* -- Custom Styles for Group Block 
 --------------------------------------------- */
 
 .wp-block-group {
 	padding: 50px 0;
 }
+
+/* -- Start adding your own CSS
+--------------------------------------------- */
+
+/* -- Custom Styles
+--------------------------------------------- */
 
 .block-editor-block-list__layout .block-editor-block-list__block > .block-editor-block-list__block-edit::before {
 	/*border: 1px solid var(--ccp-main);*/
