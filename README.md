@@ -61,8 +61,8 @@ require_once( __DIR__ . '/custom-functions.php' );
 │       ├── editor.js
 │       ├── main-min.js
 │       └── main.js
-├── README.md
 ├── custom-functions.php
+├── README.md
 
 ``` 
 
