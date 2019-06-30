@@ -1,8 +1,8 @@
 // Site wide Javascript
-(function($) {	
-    /*
-    // Add clipboard button to Code Block
-    $(document).ready(function () {
+(function($) {
+
+	// Add clipboard button to Code Block
+	$(document).ready(function () {
 
 		// demos.js
 		var clipboardDemos = new ClipboardJS('[data-clipboard-demo]');
@@ -32,7 +32,7 @@
 			snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn" data-clipboard-snippet><i class="far fa-clone"></i></button>');
 			//snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn" data-clipboard-snippet><img class="clippy" width="13" src="/wp-content/themes/blog/images/clippy.svg" alt="Copy to clipboard"></button>');
 
-        });
+		});
 
 		var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
 			target: function(trigger) {
@@ -71,5 +71,5 @@
 		}
 
 	});
-    */
+
 })(jQuery);
