@@ -532,7 +532,7 @@ h6 {
 /* -- Custom Styles for Group Block 
 --------------------------------------------- */
 
-.wp-block-group {
+.wp-block-group.is-style-alt {
 	padding: 50px 0;
 }
 
@@ -577,8 +577,3 @@ h2:before {
 .wp-block-button .wp-block-button__link:hover {
 	box-shadow: none;
 }
-
-.wp-block-button.is-style-theme-default .wp-block-button__link {
-	border-radius: 0;
-}
-
