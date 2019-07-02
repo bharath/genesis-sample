@@ -6,16 +6,16 @@
 	/* -- Custom Color Palette for Front End & Gutenberg
 	--------------------------------------------- */
 
-	--ccp-main: #03A577;
-	--ccp-accent: #02684C;
+	--ccp-primary: #03a577;
+	--ccp-secondary: #02684c;
 	--ccp-black: #000000;
 	--ccp-blackish: #2c2c2c;
-	--ccp-grey: #6E6E6A;
+	--ccp-grey: #6e6e6a;
 	--ccp-greyish: #999;
-	--ccp-white: #ffffff;
+	--ccp-white: #fff;
 	--ccp-transparent: transparent;
-	--ccp-main-alt: #FF0014;
-	--ccp-accent-alt: #b3000e;
+	--ccp-primary-alt: #ff0014;
+	--ccp-secondary-alt: #b3000e;
 
 	--font-size-s: 16px;
 	--font-size-n: 18px;
@@ -41,13 +41,13 @@
 	--gcp-shadow-one: rgba(0, 0, 0, 0.6);
 	--gcp-shadow-two: rgba(0, 0, 0, 0.05);
 
-	--ccp-link-color: #03A577;
-	--ccp-accent-color: #02684C;
-	--ccp-button-bg: #03A577;
-	--ccp-button-color: #02684C;
-	--ccp-button-outline-hover: #02684C;
-	--ccp-theme-primary: #03A577;
-	--ccp-theme-secondary: #02684C;
+	--ccp-link-color: #03a577;
+	--ccp-accent-color: #02684c;
+	--ccp-button-bg: #03a577;
+	--ccp-button-color: #02684c;
+	--ccp-button-outline-hover: #02684c;
+	--ccp-theme-primary: #03a577;
+	--ccp-theme-secondary: #02684c;
 
 	--g-font-family: "Source Sans Pro", sans-serif;
 

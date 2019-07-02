@@ -153,14 +153,14 @@ if ( ! function_exists( 'bk_setup' ) ) :
 		add_theme_support(
 			'editor-color-palette', array(
 				array(
-					'name'  => esc_html__( 'Main', 'bk-child' ),
-					'slug' => 'main',
-					'color' => 'var(--ccp-main)',
+					'name'  => esc_html__( 'Primary', 'bk-child' ),
+					'slug' => 'primary',
+					'color' => 'var(--ccp-primary)',
 				),
 				array(
-					'name'  => esc_html__( 'Accent', 'bk-child' ),
-					'slug' => 'accent',
-					'color' => 'var(--ccp-accent)',
+					'name'  => esc_html__( 'Secondary', 'bk-child' ),
+					'slug' => 'secondary',
+					'color' => 'var(--ccp-secondary)',
 				),
 				array(
 					'name'  => esc_html__( 'Black', 'bk-child' ),
@@ -193,14 +193,14 @@ if ( ! function_exists( 'bk_setup' ) ) :
 					'color' => 'var(--ccp-transparent)',
 				),
 				array(
-					'name'  => esc_html__( 'Main Alt', 'bk-child' ),
-					'slug' => 'main-alt',
-					'color' => 'var(--ccp-main-alt)',
+					'name'  => esc_html__( 'Primary Alt', 'bk-child' ),
+					'slug' => 'primary-alt',
+					'color' => 'var(--ccp-primary-alt)',
 				),
 				array(
-					'name'  => esc_html__( 'Accent Alt', 'bk-child' ),
-					'slug' => 'accent-alt',
-					'color' => 'var(--ccp-accent-alt)',
+					'name'  => esc_html__( 'Secondary Alt', 'bk-child' ),
+					'slug' => 'secondary-alt',
+					'color' => 'var(--ccp-secondary-alt)',
 				)
 			)
 		);
@@ -270,11 +270,11 @@ function bk_custom_gutenberg_css() {
 
 	$css = <<<CSS
 	.ab-block-post-grid .ab-post-grid-items h2 a:hover {
-		color: var(--ccp-main);
+		color: var(--ccp-primary);
 	}
 
 	.site-container .wp-block-button .wp-block-button__link {
-		background-color: var(--ccp-main);
+		background-color: var(--ccp-primary);
 	}
 
 	.wp-block-button .wp-block-button__link:not(.has-background),
@@ -284,12 +284,12 @@ function bk_custom_gutenberg_css() {
 	}
 
 	.site-container .wp-block-button.is-style-outline .wp-block-button__link {
-		color: var(--ccp-main);
+		color: var(--ccp-primary);
 	}
 
 	.site-container .wp-block-button.is-style-outline .wp-block-button__link:focus,
 	.site-container .wp-block-button.is-style-outline .wp-block-button__link:hover {
-		color: var(--ccp-accent);
+		color: var(--ccp-secondary);
 	}
 
 CSS;
@@ -316,22 +316,22 @@ function bk_custom_gutenberg_admin_css() {
 	$css = <<<CSS
 	.ab-block-post-grid .ab-post-grid-items h2 a:hover,
 	.block-editor__container .editor-block-list__block a {
-		color: var(--ccp-main);
+		color: var(--ccp-primary);
 	}
 
 	.editor-styles-wrapper .editor-rich-text .button,
 	.editor-styles-wrapper .wp-block-button .wp-block-button__link:not(.has-background) {
-		background-color: var(--ccp-main);
+		background-color: var(--ccp-primary);
 		color: var(--ccp-white);
 	}
 
 	.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link {
-		color: var(--ccp-main);
+		color: var(--ccp-primary);
 	}
 
 	.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:focus,
 	.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:hover {
-		color: var(--ccp-accent);
+		color: var(--ccp-secondary);
 	}
 
 CSS;
