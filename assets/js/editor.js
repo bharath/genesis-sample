@@ -1,5 +1,37 @@
 wp.domReady( () => {
 
+	wp.blocks.registerBlockStyle( 'core/heading', {
+		name: 'default',
+		label: 'Default',
+		isDefault: true,
+	} );
+
+	wp.blocks.registerBlockStyle( 'core/heading', {
+		name: 'alt',
+		label: 'Alternate',
+	} );
+
+	wp.blocks.registerBlockStyle( 'core/group', {
+		name: 'default',
+		label: 'Default',
+		isDefault: true,
+	} );
+
+	wp.blocks.registerBlockStyle( 'core/group', {
+		name: 'small-padding',
+		label: 'Small Padding',
+	} );
+
+	wp.blocks.registerBlockStyle( 'core/group', {
+		name: 'normal-padding',
+		label: 'Normal Padding',
+	} );
+
+	wp.blocks.registerBlockStyle( 'core/group', {
+		name: 'large-padding',
+		label: 'Large Padding',
+	} );
+
 	wp.blocks.registerBlockStyle( 'core/button', {
 		name: 'circular',
 		label: 'Circular',

@@ -2181,7 +2181,8 @@ p.entry-meta {
 
 button, input[type="button"], input[type="reset"], input[type="submit"], .button {
 	background-color: var(--ccp-main);
-	font-size: 16px !important;
+	font-size: var(--font-size-s) !important;
+	font-weight: 600;
 	line-height: 1.625;
 }
 
@@ -2237,13 +2238,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--font-family-bold);
 	/*font-display: swap;*/
-}
-
-/* -- Custom Styles for Group Block 
---------------------------------------------- */
-
-.wp-block-group.is-style-alt {
-	padding: 50px 0;
 }
 
 /* -- Fix for Menu items flash
