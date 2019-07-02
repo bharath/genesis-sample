@@ -2272,6 +2272,7 @@ code.hljs {
 	border-radius: 20px;
 	background: rgba(54, 86, 102, 0.05) !important;
 	line-height: 1.5;
+    font-family: 'Fira Code', monospace;
 }
 
 :not(pre) > code {
@@ -2448,7 +2449,7 @@ pre .btn:focus {
 	-ms-transform: translateX(50%);
 	transform: translateX(50%)
 }
-
+/*
 @media only screen and (min-width: 960px) {
 
 	.full-width-content .site-container .wp-block-code,
@@ -2460,7 +2461,7 @@ pre .btn:focus {
 	}
 
 }
-
+*/
 
 /* -- Start adding your own CSS
 --------------------------------------------- */

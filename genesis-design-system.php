@@ -33,7 +33,7 @@ class bk_Customize {
 	   $wp_customize->add_section( 'mytheme_options', 
 		  array(
 			 'title'       => __( 'Genesis Design Options', 'bk-child' ), //Visible title of section
-			 'priority'    => 120, //Determines what order this appears in
+			 'priority'    => 10, //Determines what order this appears in
 			 'capability'  => 'edit_theme_options', //Capability needed to tweak
 			 'description' => __('Allows you to set custom colors for BK Child theme.', 'bk-child'), //Descriptive tooltip
 		  ) 
