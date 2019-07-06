@@ -41,7 +41,7 @@ function bk_fonts_url() {
 		'subset' => rawurlencode( 'latin,latin-ext' ),
 	);
 
-	$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
 	//$fonts_url = 'https://use.typekit.net/tlh3veq.css';
 
 	return esc_url_raw( $fonts_url );
@@ -79,10 +79,10 @@ function bk_scripts_styles() {
 	wp_enqueue_style( 'bk-style', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
 
 	// Enqueue Fira Code font for code block
-	//wp_enqueue_style( 'blog-code', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', array(), '1.206', 'all');
+	wp_enqueue_style( 'blog-code', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', array(), '1.206', 'all');
 
 	// Enqueue Clipboard script for code block
-	//wp_enqueue_script( 'clipboard-script', '//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', array('jquery'), '2.0.0', true);
+	wp_enqueue_script( 'clipboard-script', '//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', array('jquery'), '2.0.0', true);
 
 	// Enqueue theme's main scripts.
 	//wp_enqueue_script( 'bk-scripts', get_stylesheet_directory_uri() . '/assets/js/main-min.js', array( 'jquery' ), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/main-min.js' ) ), true );
@@ -413,3 +413,38 @@ function add_custom_css_classes( $button, $form ) {
 	$input->setAttribute( 'class', $classes );
 	return $dom->saveHtml( $input );
 }
+
+
+add_filter(
+
+	'code_syntax_block_style',
+	function() {
+		//return 'tomorrow';
+		//return 'xcode';
+        //return 'color-brewer';
+        return 'github-gist';
+        //return 'bharath';
+    }
+    
+    //if ( ! is_page() ) {
+    //    return 'atom-one-light';
+    //}
+    //return 'atom-one-light';
+    
+);
+
+
+// Add Custom Blocks Panel in Gutenberg 
+function bk_block_categories( $categories ) {
+    return array_merge(
+        $categories,
+        array(
+            array(
+                'slug' => 'bk-blocks',
+                'title' => __( 'Bharath\'s Custom Blocks', 'bk-blocks' ),
+                'icon'  => 'layout',
+            ),
+        )
+    );
+}
+add_filter( 'block_categories', 'bk_block_categories' );

@@ -4,6 +4,8 @@
 	// Add clipboard button to Code Block
 	$(document).ready(function () {
 
+		hljs.initHighlightingOnLoad();
+
 		// demos.js
 		var clipboardDemos = new ClipboardJS('[data-clipboard-demo]');
 

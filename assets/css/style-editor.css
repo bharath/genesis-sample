@@ -472,7 +472,7 @@ h6 {
 
 .wp-block-button .wp-block-button__link:focus,
 .wp-block-button .wp-block-button__link:hover {
-	background-color: var(--ccp-accent);
+	background-color: var(--ccp-secondary);
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link {
@@ -492,7 +492,7 @@ h6 {
 
 .wp-block-button.is-style-circular .wp-block-button__link:hover,
 .wp-block-button.is-style-circular .wp-block-button__link:focus {
-	background-color: var(--ccp-accent);
+	background-color: var(--ccp-secondary);
 }
 
 /* -- Custom Button Styles added for Dark backgrounds
@@ -504,7 +504,7 @@ h6 {
 
 .wp-block-button.is-style-dark .wp-block-button__link:hover,
 .wp-block-button.is-style-dark .wp-block-button__link:focus {
-	background-color: var(--ccp-accent-alt);
+	background-color: var(--ccp-secondary-alt);
 }
 
 /* -- Custom Button Styles added for theme specific if needed
@@ -517,7 +517,7 @@ h6 {
 
 .wp-block-button.is-style-custom .wp-block-button__link:hover,
 .wp-block-button.is-style-custom .wp-block-button__link:focus {
-	background-color: var(--ccp-accent);
+	background-color: var(--ccp-secondary);
 }
 
 .wp-block-button.is-style-custom-dark .wp-block-button__link {
@@ -526,7 +526,7 @@ h6 {
 
 .wp-block-button.is-style-custom-dark .wp-block-button__link:hover,
 .wp-block-button.is-style-custom-dark .wp-block-button__link:focus {
-	background-color: var(--ccp-accent-alt);
+	background-color: var(--ccp-secondary-alt);
 }
 
 /* -- Custom Styles for Group Block 
@@ -544,6 +544,13 @@ h6 {
 	padding: 60px 0;
 }
 
+h1.is-style-alt {
+	font-size: 75px;
+	font-weight: 800;
+	color: #fff;
+	text-transform: uppercase;
+}
+
 /* -- Custom Styles by Bharath 
 --------------------------------------------- */
 
@@ -558,7 +565,7 @@ h6 {
 }
 
 .gform_wrapper .gform_footer input.button:hover {
-	background-color: var(--ccp-accent);
+	background-color: var(--ccp-secondary);
 }
 
 /* -- Start adding your own CSS
