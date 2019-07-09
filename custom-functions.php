@@ -8,7 +8,6 @@
  * @link    https://bharath.blog/
  */
 
-
 /**
  * Register Custom/Google/Adobe Fonts
  */
@@ -24,7 +23,7 @@ function bk_fonts_url() {
 	 * into your own language.
 	 */
 
-	$montserrat = esc_html_x( 'on', 'Montserrat font: on or off', 'bk-child' );
+	$montserrat   = esc_html_x( 'on', 'Montserrat font: on or off', 'bk-child' );
 	$merriweather = esc_html_x( 'on', 'Merriweather font: on or off', 'bk-child' );
 
 	if ( 'off' !== $montserrat ) {
@@ -36,23 +35,20 @@ function bk_fonts_url() {
 	}
 
 	$query_args = array(
-		'family' => rawurlencode( implode( '|', array_unique( $font_families ) ) ),
+		'family'  => rawurlencode( implode( '|', array_unique( $font_families ) ) ),
 		'display' => rawurlencode( 'swap' ),
-		'subset' => rawurlencode( 'latin,latin-ext' ),
+		'subset'  => rawurlencode( 'latin,latin-ext' ),
 	);
 
 	$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
-	//$fonts_url = 'https://use.typekit.net/tlh3veq.css';
 
 	return esc_url_raw( $fonts_url );
 
 }
 
 
- /* -- Gutenberg Stuff & Global Enqueues
---------------------------------------------- */
-
 /**
+ * Gutenberg Stuff & Global Enqueues.
  * Enqueue scripts and styles.
  */
 function bk_scripts_styles() {
@@ -69,32 +65,30 @@ function bk_scripts_styles() {
 	// Enqueue Custom / Typekit / Google Fonts.
 	wp_enqueue_style( 'bk-fonts', bk_fonts_url(), array(), null );
 
-	// Sets the default timezone used by all date/time functions in a script
-	date_default_timezone_set('Asia/Kolkata');
+	// Sets the default timezone used by all date/time functions in a script to developer timezone.
+	date_default_timezone_set( 'Asia/Kolkata' );
 
 	// Enqueue custom Gutenberg front-end styles.
-	wp_enqueue_style( 'bk-gutenberg', get_stylesheet_directory_uri() . '/assets/css/front-end.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/front-end.css' ) ) );
+	wp_enqueue_style( 'bk-gutenberg', get_stylesheet_directory_uri() . '/assets/css/front-end.css', array(), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/front-end.css' ) ) );
 
 	// Enqueue theme's main styles with variables.
-	wp_enqueue_style( 'bk-style', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
+	wp_enqueue_style( 'bk-style', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
 
-	// Enqueue Fira Code font for code block
-	wp_enqueue_style( 'blog-code', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', array(), '1.206', 'all');
+	// Enqueue Fira Code font for code block.
+	wp_enqueue_style( 'blog-code', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', array(), '1.206', 'all' );
 
-	// Enqueue Clipboard script for code block
-	wp_enqueue_script( 'clipboard-script', '//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', array('jquery'), '2.0.0', true);
+	// Enqueue Clipboard script for code block.
+	wp_enqueue_script( 'clipboard-script', '//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', array( 'jquery' ), '2.0.0', true );
 
 	// Enqueue theme's main scripts.
-	//wp_enqueue_script( 'bk-scripts', get_stylesheet_directory_uri() . '/assets/js/main-min.js', array( 'jquery' ), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/main-min.js' ) ), true );
+	wp_enqueue_script( 'bk-scripts', get_stylesheet_directory_uri() . '/assets/js/main-min.js', array( 'jquery' ), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/js/main-min.js' ) ), true );
 
-	// Move jQuery to footer
-	if( ! is_admin() ) {
+	// Move jQuery to footer.
+	if ( ! is_admin() ) {
 		wp_deregister_script( 'jquery' );
-		wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
+		wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, null, true );
 		wp_enqueue_script( 'jquery' );
 	}
-
-	//wp_deregister_style( 'dashicons' );
 
 }
 add_action( 'wp_enqueue_scripts', 'bk_scripts_styles', 11 );
@@ -109,14 +103,13 @@ function bk_gutenberg_scripts_styles() {
 	wp_dequeue_style( genesis_get_theme_handle() . '-gutenberg-fonts' );
 
 	// Enqueue CSS Variables.
-	wp_enqueue_style( 'bk-var', get_stylesheet_directory_uri() . '/assets/css/style-var-min.css', array(), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/css/style-var-min.css' ) ) );
+	wp_enqueue_style( 'bk-var', get_stylesheet_directory_uri() . '/assets/css/style-var-min.css', array(), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-var-min.css' ) ) );
 
 	// Enqueue Custom / Typekit / Google Fonts for Gutenberg admin editor.
 	wp_enqueue_style( 'bk-gutenberg-fonts', bk_fonts_url(), array(), null );
 
 	// Enqueue Gutenberg admin editor scripts.
-	//array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ),
-	wp_enqueue_script( 'bk-editor-js', get_stylesheet_directory_uri() . '/assets/js/editor-min.js', array( 'wp-blocks', 'wp-dom' ), date ( "dmyHis", filemtime( get_stylesheet_directory() . '/assets/js/editor-min.js' ) ), true );
+	wp_enqueue_script( 'bk-editor-js', get_stylesheet_directory_uri() . '/assets/js/editor-min.js', array( 'wp-blocks', 'wp-dom' ), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/js/editor-min.js' ) ), true );
 
 }
 add_action( 'enqueue_block_editor_assets', 'bk_gutenberg_scripts_styles', 11 );
@@ -139,69 +132,71 @@ if ( ! function_exists( 'bk_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-
 	function bk_setup() {
 
 		// Disable the custom color picker.
 		add_theme_support( 'disable-custom-colors' );
 
 		/**
+		 *
 		 * Custom colors for use in the editor.
 		 * Add support for custom color palettes in Gutenberg.
-		* @link https://wordpress.org/gutenberg/handbook/reference/theme-support/
+		 *
+		 * @link https://wordpress.org/gutenberg/handbook/reference/theme-support/
 		*/
 		add_theme_support(
-			'editor-color-palette', array(
+			'editor-color-palette',
+			array(
 				array(
 					'name'  => esc_html__( 'Primary', 'bk-child' ),
-					'slug' => 'primary',
+					'slug'  => 'primary',
 					'color' => 'var(--ccp-primary)',
 				),
 				array(
 					'name'  => esc_html__( 'Secondary', 'bk-child' ),
-					'slug' => 'secondary',
+					'slug'  => 'secondary',
 					'color' => 'var(--ccp-secondary)',
 				),
 				array(
 					'name'  => esc_html__( 'Black', 'bk-child' ),
-					'slug' => 'black',
+					'slug'  => 'black',
 					'color' => 'var(--ccp-black)',
 				),
 				array(
 					'name'  => esc_html__( 'Blackish', 'bk-child' ),
-					'slug' => 'blackish',
+					'slug'  => 'blackish',
 					'color' => 'var(--ccp-blackish)',
 				),
 				array(
 					'name'  => esc_html__( 'Grey', 'bk-child' ),
-					'slug' => 'grey',
+					'slug'  => 'grey',
 					'color' => 'var(--ccp-grey)',
 				),
 				array(
 					'name'  => esc_html__( 'Greyish', 'bk-child' ),
-					'slug' => 'greyish',
+					'slug'  => 'greyish',
 					'color' => 'var(--ccp-greyish)',
 				),
 				array(
 					'name'  => esc_html__( 'White', 'bk-child' ),
-					'slug' => 'white',
+					'slug'  => 'white',
 					'color' => 'var(--ccp-white)',
 				),
 				array(
 					'name'  => esc_html__( 'Transparent', 'bk-child' ),
-					'slug' => 'transparent',
+					'slug'  => 'transparent',
 					'color' => 'var(--ccp-transparent)',
 				),
 				array(
 					'name'  => esc_html__( 'Primary Alt', 'bk-child' ),
-					'slug' => 'primary-alt',
+					'slug'  => 'primary-alt',
 					'color' => 'var(--ccp-primary-alt)',
 				),
 				array(
 					'name'  => esc_html__( 'Secondary Alt', 'bk-child' ),
-					'slug' => 'secondary-alt',
+					'slug'  => 'secondary-alt',
 					'color' => 'var(--ccp-secondary-alt)',
-				)
+				),
 			)
 		);
 
@@ -214,7 +209,8 @@ if ( ! function_exists( 'bk_setup' ) ) :
 		 * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/#block-font-sizes
 		 */
 		add_theme_support(
-			'editor-font-sizes', array(
+			'editor-font-sizes',
+			array(
 				array(
 					'name'      => esc_html__( 'Small', 'bk-child' ),
 					'shortName' => esc_html__( 'S', 'bk-child' ),
@@ -250,8 +246,6 @@ if ( ! function_exists( 'bk_setup' ) ) :
 
 		// Enqueue editor styles.
 		add_editor_style( '/assets/css/style-editor.css' );
-
-		//add_theme_support( 'dark-editor-style' );
 
 	}
 
@@ -379,7 +373,7 @@ CSS;
  */
 function bk_inline_color_palette() {
 
-	$css                   = '';
+	$css                  = '';
 	$editor_color_palette = get_theme_support( 'editor-color-palette' );
 
 	foreach ( $editor_color_palette[0] as $color_info ) {
@@ -403,48 +397,48 @@ CSS;
 }
 
 
-add_filter( 'gform_submit_button', 'add_custom_css_classes', 10, 2 );
+/**
+ * Add block button styling to gravity submit button.
+ *
+ * @param string $button Contains the <input> tag to be filtered.
+ * @param object $form Contains all the properties of the current form.
+ */
 function add_custom_css_classes( $button, $form ) {
 	$dom = new DOMDocument();
 	$dom->loadHTML( $button );
-	$input = $dom->getElementsByTagName( 'input' )->item(0);
-	$classes = $input->getAttribute( 'class' );
-	$classes .= " wp-block-button__link";
+	$input    = $dom->getElementsByTagName( 'input' )->item( 0 );
+	$classes  = $input->getAttribute( 'class' );
+	$classes .= ' wp-block-button__link';
 	$input->setAttribute( 'class', $classes );
 	return $dom->saveHtml( $input );
 }
+add_filter( 'gform_submit_button', 'add_custom_css_classes', 10, 2 );
 
 
 add_filter(
 
 	'code_syntax_block_style',
 	function() {
-		//return 'tomorrow';
-		//return 'xcode';
-        //return 'color-brewer';
-        return 'github-gist';
-        //return 'bharath';
-    }
-    
-    //if ( ! is_page() ) {
-    //    return 'atom-one-light';
-    //}
-    //return 'atom-one-light';
-    
+		return 'github-gist';
+	}
 );
 
 
-// Add Custom Blocks Panel in Gutenberg 
+/**
+ * Add Custom Blocks Panel in Gutenberg.
+ *
+ * @param object $categories add custom category.
+ */
 function bk_block_categories( $categories ) {
-    return array_merge(
-        $categories,
-        array(
-            array(
-                'slug' => 'bk-blocks',
-                'title' => __( 'Bharath\'s Custom Blocks', 'bk-blocks' ),
-                'icon'  => 'layout',
-            ),
-        )
-    );
+	return array_merge(
+		$categories,
+		array(
+			array(
+				'slug'  => 'bk-blocks',
+				'title' => __( 'Bharath\'s Custom Blocks', 'bk-blocks' ),
+				'icon'  => 'layout',
+			),
+		)
+	);
 }
 add_filter( 'block_categories', 'bk_block_categories' );
