@@ -116,7 +116,7 @@ add_action( 'enqueue_block_editor_assets', 'bk_gutenberg_scripts_styles', 11 );
 
 
 /**
- * Gutenbergtheme functions and definitions
+ * Gutenberg theme functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -398,24 +398,6 @@ CSS;
 
 
 /**
- * Add block button styling to gravity submit button.
- *
- * @param string $button Contains the <input> tag to be filtered.
- * @param object $form Contains all the properties of the current form.
- */
-function add_custom_css_classes( $button, $form ) {
-	$dom = new DOMDocument();
-	$dom->loadHTML( $button );
-	$input    = $dom->getElementsByTagName( 'input' )->item( 0 );
-	$classes  = $input->getAttribute( 'class' );
-	$classes .= ' wp-block-button__link';
-	$input->setAttribute( 'class', $classes );
-	return $dom->saveHtml( $input );
-}
-add_filter( 'gform_submit_button', 'add_custom_css_classes', 10, 2 );
-
-
-/**
  * Adds alternate style to code block.
  */
 add_filter(
@@ -426,6 +408,7 @@ add_filter(
 );
 
 
+add_filter( 'block_categories', 'bk_block_categories' );
 /**
  * Add Custom Blocks Panel in Gutenberg.
  *
@@ -437,10 +420,9 @@ function bk_block_categories( $categories ) {
 		array(
 			array(
 				'slug'  => 'bk-blocks',
-				'title' => __( 'Bharath\'s Custom Blocks', 'bk-blocks' ),
+				'title' => __( 'Bharath\'s Custom Blocks', 'bk-child' ),
 				'icon'  => 'layout',
 			),
 		)
 	);
 }
-add_filter( 'block_categories', 'bk_block_categories' );
