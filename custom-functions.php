@@ -415,8 +415,10 @@ function add_custom_css_classes( $button, $form ) {
 add_filter( 'gform_submit_button', 'add_custom_css_classes', 10, 2 );
 
 
+/**
+ * Adds alternate style to code block.
+ */
 add_filter(
-
 	'code_syntax_block_style',
 	function() {
 		return 'github-gist';
