@@ -427,7 +427,7 @@ add_filter(
 /**
  * Add Custom Blocks Panel in Gutenberg.
  *
- * @param object $categories add custom category.
+ * @param array $categories adds custom category.
  */
 function bk_block_categories( $categories ) {
 	return array_merge(
