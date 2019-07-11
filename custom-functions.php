@@ -63,7 +63,7 @@ function bk_scripts_styles() {
 	wp_dequeue_style( genesis_get_theme_handle() . '-gutenberg' );
 
 	// Enqueue Custom / Typekit / Google Fonts.
-	wp_enqueue_style( 'bk-fonts', bk_fonts_url(), array(), null );
+	wp_enqueue_style( 'bk-fonts', bk_fonts_url(), array(), genesis_get_theme_version() );
 
 	// Sets the default timezone used by all date/time functions in a script to developer timezone.
 	date_default_timezone_set( 'Asia/Kolkata' );
@@ -83,10 +83,12 @@ function bk_scripts_styles() {
 	// Enqueue theme's main scripts.
 	wp_enqueue_script( 'bk-scripts', get_stylesheet_directory_uri() . '/assets/js/main-min.js', array( 'jquery' ), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/js/main-min.js' ) ), true );
 
+	$wp_jquery_ver = $GLOBALS['wp_scripts']->registered[ $jquery_handle ]->ver;
+
 	// Move jQuery to footer.
 	if ( ! is_admin() ) {
 		wp_deregister_script( 'jquery' );
-		wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, null, true );
+		wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, $wp_jquery_ver, true );
 		wp_enqueue_script( 'jquery' );
 	}
 
@@ -106,7 +108,7 @@ function bk_gutenberg_scripts_styles() {
 	wp_enqueue_style( 'bk-var', get_stylesheet_directory_uri() . '/assets/css/style-var-min.css', array(), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-var-min.css' ) ) );
 
 	// Enqueue Custom / Typekit / Google Fonts for Gutenberg admin editor.
-	wp_enqueue_style( 'bk-gutenberg-fonts', bk_fonts_url(), array(), null );
+	wp_enqueue_style( 'bk-gutenberg-fonts', bk_fonts_url(), array(), genesis_get_theme_version() );
 
 	// Enqueue Gutenberg admin editor scripts.
 	wp_enqueue_script( 'bk-editor-js', get_stylesheet_directory_uri() . '/assets/js/editor-min.js', array( 'wp-blocks', 'wp-dom' ), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/js/editor-min.js' ) ), true );
