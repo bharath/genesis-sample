@@ -2231,7 +2231,7 @@ input[type="submit"]:hover,
 .button:hover,
 .genesis-nav-menu > .menu-highlight > a:focus,
 .genesis-nav-menu > .menu-highlight > a:hover {
-	background-color: var(--ccp-accent); /* Color changed from default #0073e5 to #ff0014 */
+	background-color: var(--ccp-secondary); /* Color changed from default #0073e5 to #ff0014 */
 }
 
 
@@ -2483,5 +2483,5 @@ a {
 
 a:hover {
 	text-decoration: underline;
-	color: var(--ccp-accent);
+	color: var(--ccp-secondary);
 }
