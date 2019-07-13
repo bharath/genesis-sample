@@ -1,48 +1,48 @@
-wp.domReady( () => {
+wp.domReady(() => {
 
-	wp.blocks.registerBlockStyle( 'core/heading', {
+	wp.blocks.registerBlockStyle('core/heading', {
 		name: 'default',
 		label: 'Default',
-		isDefault: true,
-	} );
+		isDefault: true
+	});
 
-	wp.blocks.registerBlockStyle( 'core/heading', {
+	wp.blocks.registerBlockStyle('core/heading', {
 		name: 'alt',
-		label: 'Alternate',
-	} );
+		label: 'Alternate'
+	});
 
-	wp.blocks.registerBlockStyle( 'core/group', {
+	wp.blocks.registerBlockStyle('core/group', {
 		name: 'default',
 		label: 'Default',
-		isDefault: true,
-	} );
+		isDefault: true
+	});
 
-	wp.blocks.registerBlockStyle( 'core/group', {
+	wp.blocks.registerBlockStyle('core/group', {
 		name: 'small-padding',
-		label: 'Small Padding',
-	} );
+		label: 'Small Padding'
+	});
 
-	wp.blocks.registerBlockStyle( 'core/group', {
+	wp.blocks.registerBlockStyle('core/group', {
 		name: 'normal-padding',
-		label: 'Normal Padding',
-	} );
+		label: 'Normal Padding'
+	});
 
-	wp.blocks.registerBlockStyle( 'core/group', {
+	wp.blocks.registerBlockStyle('core/group', {
 		name: 'large-padding',
-		label: 'Large Padding',
-	} );
+		label: 'Large Padding'
+	});
 
-	wp.blocks.registerBlockStyle( 'core/button', {
+	wp.blocks.registerBlockStyle('core/button', {
 		name: 'circular',
-		label: 'Circular',
-		//isDefault: true,
-	} );
+		label: 'Circular'
+	});
 
-	wp.blocks.registerBlockStyle( 'core/button', {
+	wp.blocks.registerBlockStyle('core/button', {
 		name: 'dark',
-		label: 'Dark',
-	} );
-/*
+		label: 'Dark'
+	});
+
+	/*
 	// If your theme needs custom style uncomment this
 	wp.blocks.unregisterBlockStyle( 'core/button', 'default' );
 	wp.blocks.unregisterBlockStyle( 'core/button', 'outline' );
@@ -52,15 +52,16 @@ wp.domReady( () => {
 
 	wp.blocks.registerBlockStyle( 'core/button', {
 		name: 'custom',
-		label: 'Custom',
-	});
+		label: 'Custom'
+	} );
 
 	wp.blocks.registerBlockStyle( 'core/button', {
 		name: 'custom-dark',
-		label: 'Custom Dark',
-	});
-*/
-} );
+		label: 'Custom Dark'
+	} );
+	*/
+
+});
 
 /*
 // If your theme needs custom style uncomment this

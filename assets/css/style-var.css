@@ -9,13 +9,21 @@
 	--ccp-primary: #03a577;
 	--ccp-secondary: #02684c;
 	--ccp-black: #000000;
-	--ccp-blackish: #2c2c2c;
+	--ccp-blackish: #333;
 	--ccp-grey: #6e6e6a;
 	--ccp-greyish: #999;
 	--ccp-white: #fff;
 	--ccp-transparent: transparent;
 	--ccp-primary-alt: #ff0014;
 	--ccp-secondary-alt: #b3000e;
+
+	--light-background-color: #fff;
+	--dark-background-color: #333333;
+	--primary-color: var(--ccp-primary); /* Color for buttons, links, featured images, etc. */
+	--hover-color: var(--ccp-secondary);
+	--primary-text-color: #333;
+	--secondary-text-color: #777;
+	--border-color: #eee;
 
 	--font-size-s: 16px;
 	--font-size-n: 18px;
@@ -40,7 +48,7 @@
 	--gcp-nine: transparent;
 	--gcp-shadow-one: rgba(0, 0, 0, 0.6);
 	--gcp-shadow-two: rgba(0, 0, 0, 0.05);
-
+/*
 	--ccp-link-color: #03a577;
 	--ccp-accent-color: #02684c;
 	--ccp-button-bg: #03a577;
@@ -48,7 +56,7 @@
 	--ccp-button-outline-hover: #02684c;
 	--ccp-theme-primary: #03a577;
 	--ccp-theme-secondary: #02684c;
-
+*/
 	--g-font-family: "Source Sans Pro", sans-serif;
 
 
@@ -180,7 +188,7 @@
 		/* -- Custom Color Palette for Front End & Gutenberg
 		--------------------------------------------- */
 
-		--ccp-main: #03A577;
+		--ccp-primary: #03A577;
 		--ccp-accent: #02684C;
 		--ccp-black: #000000;
 		--ccp-blackish: #2c2c2c;

@@ -1890,7 +1890,7 @@ p.entry-meta {
 	--gcp-nine: transparent;
 	--gcp-shadow-one: rgba(0, 0, 0, 0.6);
 	--gcp-shadow-two: rgba(0, 0, 0, 0.05);
-
+/*
 	--ccp-link-color: #03a577;
 	--ccp-accent-color: #02684c;
 	--ccp-button-bg: #03a577;
@@ -1898,7 +1898,7 @@ p.entry-meta {
 	--ccp-button-outline-hover: #02684c;
 	--ccp-theme-primary: #03a577;
 	--ccp-theme-secondary: #02684c;
-
+*/
 	--g-font-family: "Source Sans Pro", sans-serif;
 
 
@@ -2267,6 +2267,23 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+@media only screen and (min-width: 960px) {
+	.wp-block-group__inner-container {
+		max-width: 1140px;
+	}
+}
+
+.wp-block-group__inner-container {
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 960px) {
+
+	.full-width-content .content {
+		width: 100%;
+	}
+
+}
 
 /* -- Custom Styles for Extras
 --------------------------------------------- */
