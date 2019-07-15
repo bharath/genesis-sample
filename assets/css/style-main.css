@@ -2276,7 +2276,7 @@ h1, h2, h3, h4, h5, h6 {
 .wp-block-group__inner-container {
     margin: 0 auto;
 }
-
+/*
 @media only screen and (min-width: 960px) {
 
 	.full-width-content .content {
@@ -2284,7 +2284,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 }
-
+*/
 /* -- Custom Styles for Extras
 --------------------------------------------- */
 
@@ -2479,8 +2479,8 @@ pre .btn:focus {
 
 	.full-width-content .site-container .wp-block-code,
 	.full-width-content .site-container .is-style-alignwide {
-		margin-left: -110px;
-		margin-right: -110px;
+		margin-left: -50px;
+		margin-right: -50px;
 		max-width: 1000px;
 		width: auto;
 	}

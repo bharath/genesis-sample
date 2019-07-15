@@ -77,6 +77,12 @@ function bk_scripts_styles() {
 	// Enqueue Fira Code font for code block.
 	wp_enqueue_style( 'bk-code-font', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', array(), '1.206', 'all' );
 
+	// Enqueue highlight style css for code block.
+	wp_enqueue_style( 'bk-hl-style', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/styles/xcode.min.css', array(), '9.15.8', 'all' );
+
+	// Enqueue highlight script for code block.
+	wp_enqueue_script( 'bk-hl-script', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js', array( 'jquery' ), '9.15.8', true );
+
 	// Enqueue Clipboard script for code block.
 	wp_enqueue_script( 'bk-clipboard', '//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', array( 'jquery' ), '2.0.0', true );
 
