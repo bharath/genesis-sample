@@ -8,7 +8,7 @@
 
 	--ccp-primary: #03a577;
 	--ccp-secondary: #02684c;
-	--ccp-black: #000000;
+	--ccp-black: #000;
 	--ccp-blackish: #333;
 	--ccp-grey: #6e6e6a;
 	--ccp-greyish: #999;
@@ -18,7 +18,7 @@
 	--ccp-secondary-alt: #b3000e;
 
 	--light-background-color: #fff;
-	--dark-background-color: #333333;
+	--dark-background-color: #333;
 	--primary-color: var(--ccp-primary); /* Color for buttons, links, featured images, etc. */
 	--hover-color: var(--ccp-secondary);
 	--primary-text-color: #333;
@@ -31,8 +31,9 @@
 	--font-size-l: 24px;
 	--font-size-xl: 28px;
 
-	--font-family-normal: proxima-nova, 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
-	--font-family-bold: proxima-nova, 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
+	--font-family-normal: "Montserrat", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", "Arial", sans-serif;
+	--font-family-bold: "Montserrat", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", "Arial", sans-serif;
+
 
 	/* -- Genesis Color Palette
 	--------------------------------------------- */
@@ -48,7 +49,9 @@
 	--gcp-nine: transparent;
 	--gcp-shadow-one: rgba(0, 0, 0, 0.6);
 	--gcp-shadow-two: rgba(0, 0, 0, 0.05);
-/*
+
+	/*
+
 	--ccp-link-color: #03a577;
 	--ccp-accent-color: #02684c;
 	--ccp-button-bg: #03a577;
@@ -56,7 +59,8 @@
 	--ccp-button-outline-hover: #02684c;
 	--ccp-theme-primary: #03a577;
 	--ccp-theme-secondary: #02684c;
-*/
+
+	*/
 	--g-font-family: "Source Sans Pro", sans-serif;
 
 
@@ -181,20 +185,20 @@
 
 }
 
-@media (prefers-color-scheme:dark) {
+@media (prefers-color-scheme: dark) {
 
 	:root {
 
 		/* -- Custom Color Palette for Front End & Gutenberg
 		--------------------------------------------- */
 
-		--ccp-primary: #03A577;
-		--ccp-accent: #02684C;
-		--ccp-black: #000000;
+		--ccp-primary: #03a577;
+		--ccp-accent: #02684c;
+		--ccp-black: #000;
 		--ccp-blackish: #2c2c2c;
-		--ccp-grey: #6E6E6A;
+		--ccp-grey: #6e6e6a;
 		--ccp-greyish: #999;
-		--ccp-white: #ffffff;
+		--ccp-white: #fff;
 		--ccp-transparent: transparent;
 
 		/* -- Background Colors
@@ -335,7 +339,12 @@
 
 	}
 
-	h1,h2,h3,h4,h5,h6 {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		color: var(--headings-color);
 	}
 

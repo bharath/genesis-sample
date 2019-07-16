@@ -32,7 +32,7 @@
 
 		[].forEach.call(snippets, function (snippet) {
 			snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn" data-clipboard-snippet><i class="far fa-clone"></i></button>');
-			//snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn" data-clipboard-snippet><img class="clippy" width="13" src="/wp-content/themes/blog/images/clippy.svg" alt="Copy to clipboard"></button>');
+			//snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn" data-clipboard-snippet><img class="clippy" width="13" src="https://starterv2.test/wp-content/themes/starter/assets/css/images/clippy.svg" alt="Copy to clipboard"></button>');
 
 		});
 

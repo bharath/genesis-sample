@@ -379,7 +379,7 @@ input,
 select,
 textarea {
 	background-color: var(--input-background-color, #fff);
-	border: 1px solid var(--input-border-color,#ddd);
+	border: 1px solid var(--input-border-color, #ddd);
 	color: var(--input-color, #333);
 	font-size: 18px;
 	font-weight: 400;
@@ -1839,7 +1839,6 @@ p.entry-meta {
 }
 
 
-
 /* CSS Variables
 ---------------------------------------------------------------------------- */
 
@@ -1850,7 +1849,7 @@ p.entry-meta {
 
 	--ccp-primary: #03a577;
 	--ccp-secondary: #02684c;
-	--ccp-black: #000000;
+	--ccp-black: #000;
 	--ccp-blackish: #333;
 	--ccp-grey: #6e6e6a;
 	--ccp-greyish: #999;
@@ -1860,7 +1859,7 @@ p.entry-meta {
 	--ccp-secondary-alt: #b3000e;
 
 	--light-background-color: #fff;
-	--dark-background-color: #333333;
+	--dark-background-color: #333;
 	--primary-color: var(--ccp-primary); /* Color for buttons, links, featured images, etc. */
 	--hover-color: var(--ccp-secondary);
 	--primary-text-color: #333;
@@ -1873,8 +1872,9 @@ p.entry-meta {
 	--font-size-l: 24px;
 	--font-size-xl: 28px;
 
-	--font-family-normal: proxima-nova, 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
-	--font-family-bold: proxima-nova, 'Montserrat', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, 'Helvetica Neue', Arial, sans-serif;
+	--font-family-normal: "Montserrat", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", "Arial", sans-serif;
+	--font-family-bold: "Montserrat", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", "Arial", sans-serif;
+
 
 	/* -- Genesis Color Palette
 	--------------------------------------------- */
@@ -1890,7 +1890,9 @@ p.entry-meta {
 	--gcp-nine: transparent;
 	--gcp-shadow-one: rgba(0, 0, 0, 0.6);
 	--gcp-shadow-two: rgba(0, 0, 0, 0.05);
-/*
+
+	/*
+
 	--ccp-link-color: #03a577;
 	--ccp-accent-color: #02684c;
 	--ccp-button-bg: #03a577;
@@ -1898,7 +1900,8 @@ p.entry-meta {
 	--ccp-button-outline-hover: #02684c;
 	--ccp-theme-primary: #03a577;
 	--ccp-theme-secondary: #02684c;
-*/
+
+	*/
 	--g-font-family: "Source Sans Pro", sans-serif;
 
 
@@ -2023,20 +2026,20 @@ p.entry-meta {
 
 }
 
-@media (prefers-color-scheme:dark) {
+@media (prefers-color-scheme: dark) {
 
 	:root {
 
 		/* -- Custom Color Palette for Front End & Gutenberg
 		--------------------------------------------- */
 
-		--ccp-primary: #03A577;
-		--ccp-accent: #02684C;
-		--ccp-black: #000000;
+		--ccp-primary: #03a577;
+		--ccp-accent: #02684c;
+		--ccp-black: #000;
 		--ccp-blackish: #2c2c2c;
-		--ccp-grey: #6E6E6A;
+		--ccp-grey: #6e6e6a;
 		--ccp-greyish: #999;
-		--ccp-white: #ffffff;
+		--ccp-white: #fff;
 		--ccp-transparent: transparent;
 
 		/* -- Background Colors
@@ -2177,7 +2180,12 @@ p.entry-meta {
 
 	}
 
-	h1,h2,h3,h4,h5,h6 {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		color: var(--headings-color);
 	}
 
@@ -2244,12 +2252,21 @@ body {
 	-webkit-text-size-adjust: none;
 	text-rendering: optimizeLegibility;
 	word-wrap: break-word;
+
 	/*font-display: swap;*/
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: var(--font-family-bold);
-	/*font-display: swap;*/
+
+	/*
+	font-display: swap;
+	*/
 }
 
 /* -- Fix for Menu items flash
@@ -2268,14 +2285,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media only screen and (min-width: 960px) {
+
 	.wp-block-group__inner-container {
 		max-width: 1140px;
 	}
+
 }
 
 .wp-block-group__inner-container {
-    margin: 0 auto;
+	margin: 0 auto;
 }
+
 /*
 @media only screen and (min-width: 960px) {
 
@@ -2285,6 +2305,7 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 */
+
 /* -- Custom Styles for Extras
 --------------------------------------------- */
 
@@ -2297,11 +2318,11 @@ code.hljs {
 	border-radius: 20px;
 	background: rgba(54, 86, 102, 0.05) !important;
 	line-height: 1.5;
-    font-family: 'Fira Code', monospace;
+	font-family: "Fira Code", monospace;
 }
 
 :not(pre) > code {
-	color: #FF0014;
+	color: #ff0014;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
 	font-size: 18px;
 	border-radius: 3px;
@@ -2322,13 +2343,12 @@ pre .btn {
 	top: 4px;
 	display: inline-block;
 	font-size: 13px;
-	line-height: 20px;
 	color: #333;
 	white-space: nowrap;
 	vertical-align: middle;
 	cursor: pointer;
 	background-color: #eee;
-	background-image: linear-gradient(#fcfcfc,#eee);
+	background-image: linear-gradient(#fcfcfc, #eee);
 	border: 1px solid #d5d5d5;
 	border-radius: 5px;
 	-webkit-user-select: none;
@@ -2347,7 +2367,6 @@ pre .btn {
 	-o-transition: opacity 0.3s ease-in-out;
 	transition: opacity 0.3s ease-in-out;
 	opacity: 0;
-	padding: 2px 6px;
 	position: absolute;
 	top: 4px;
 	right: 16px;
@@ -2360,7 +2379,7 @@ pre:hover .btn {
 
 pre .btn:hover {
 	background: none;
-	color: #FF0014
+	color: #ff0014;
 }
 
 pre .btn:hover:focus {
@@ -2373,13 +2392,15 @@ pre .btn:focus {
 }
 
 @media screen and (max-width: 768px) {
+
 	pre .btn {
-		opacity:1;
+		opacity: 1;
 	}
+
 }
 
 .tooltipped {
-	position: relative
+	position: relative;
 }
 
 .tooltipped::after {
@@ -2401,7 +2422,7 @@ pre .btn:focus {
 	background: rgba(0, 0, 0, 0.8);
 	border-radius: 3px;
 	-webkit-font-smoothing: subpixel-antialiased;
-	opacity: 0
+	opacity: 0;
 }
 
 .tooltipped::before {
@@ -2414,25 +2435,31 @@ pre .btn:focus {
 	pointer-events: none;
 	content: "";
 	border: 5px solid transparent;
-	opacity: 0
+	opacity: 0;
 }
 
 @-webkit-keyframes tooltip-appear {
+
 	from {
-		opacity: 0
+		opacity: 0;
 	}
+
 	to {
-		opacity: 1
+		opacity: 1;
 	}
+
 }
 
 @keyframes tooltip-appear {
+
 	from {
-		opacity: 0
+		opacity: 0;
 	}
+
 	to {
-		opacity: 1
+		opacity: 1;
 	}
+
 }
 
 .tooltipped:hover::before,
@@ -2452,13 +2479,13 @@ pre .btn:focus {
 	-webkit-animation-timing-function: ease-in;
 	animation-timing-function: ease-in;
 	-webkit-animation-delay: 0.1s;
-	animation-delay: 0.1s
+	animation-delay: 0.1s;
 }
 
 .tooltipped-s::after {
 	top: 100%;
 	right: 50%;
-	margin-top: 5px
+	margin-top: 5px;
 }
 
 .tooltipped-s::before {
@@ -2466,22 +2493,22 @@ pre .btn:focus {
 	right: 50%;
 	bottom: -5px;
 	margin-right: -5px;
-	border-bottom-color: rgba(0, 0, 0, 0.8)
+	border-bottom-color: rgba(0, 0, 0, 0.8);
 }
 
 .tooltipped-s::after {
 	-webkit-transform: translateX(50%);
 	-ms-transform: translateX(50%);
-	transform: translateX(50%)
+	transform: translateX(50%);
 }
 
 @media only screen and (min-width: 960px) {
 
 	.full-width-content .site-container .wp-block-code,
 	.full-width-content .site-container .is-style-alignwide {
-		margin-left: -50px;
-		margin-right: -50px;
-		max-width: 1000px;
+		margin-left: -30px;
+		margin-right: -30px;
+		max-width: 1140px;
 		width: auto;
 	}
 

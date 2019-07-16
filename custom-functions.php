@@ -415,6 +415,13 @@ add_filter(
 	}
 );
 
+add_filter(
+	'mkaz_prism_css_url',
+	function() {
+		return 'https://raw.githubusercontent.com/PrismJS/prism-themes/master/themes/prism-hopscotch.css';
+	}
+);
+
 
 add_filter( 'block_categories', 'bk_block_categories' );
 /**
