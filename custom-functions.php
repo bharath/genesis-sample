@@ -1,15 +1,15 @@
 <?php
 /**
- *  This file adds custom functions to your Theme.
+ * This file adds custom functions to your Theme.
  *
- *  @package bkchild
- *  @author  Bharath
- *  @license GPL-2.0-or-later
- *  @link    https://bharath.blog/
+ * @package bkchild
+ * @author  Bharath
+ * @license GPL-2.0-or-later
+ * @link    https://bharath.blog/
  */
 
 /**
- *  Register Custom/Google/Adobe Fonts
+ * Register Custom/Google/Adobe Fonts
  */
 function bk_fonts_url() {
 
@@ -18,9 +18,9 @@ function bk_fonts_url() {
 	$font_families = array();
 
 	/**
-	 *  Translators: If there are characters in your language that are not
-	 *  supported by Montserrat & Merriweather, translate this to 'off'. Do not translate
-	 *  into your own language.
+	 * Translators: If there are characters in your language that are not
+	 * supported by Montserrat & Merriweather, translate this to 'off'. Do not translate
+	 * into your own language.
 	 */
 
 	$montserrat   = esc_html_x( 'on', 'Montserrat font: on or off', 'bk-child' );
@@ -48,8 +48,8 @@ function bk_fonts_url() {
 
 
 /**
- *  Gutenberg Stuff & Global Enqueues.
- *  Enqueue scripts and styles.
+ * Gutenberg Stuff & Global Enqueues.
+ * Enqueue scripts and styles.
  */
 function bk_scripts_styles() {
 
@@ -75,16 +75,16 @@ function bk_scripts_styles() {
 	wp_enqueue_style( 'bk-style', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
 
 	// Enqueue Fira Code font for code block.
-	wp_enqueue_style( 'bk-code-font', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', array(), '1.206', 'all' );
+	wp_enqueue_style( 'bk-code-fonts', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', array(), '1.206', 'all' );
 
 	// Enqueue highlight style css for code block.
-	wp_enqueue_style( 'bk-hl-style', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/styles/xcode.min.css', array(), '9.15.8', 'all' );
+	wp_enqueue_style( 'bk-highlight-style', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/styles/xcode.min.css', array(), '9.15.8', 'all' );
 
 	// Enqueue highlight script for code block.
-	wp_enqueue_script( 'bk-hl-script', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js', array( 'jquery' ), '9.15.8', true );
+	wp_enqueue_script( 'bk-highlight-script', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js', array( 'jquery' ), '9.15.8', true );
 
 	// Enqueue Clipboard script for code block.
-	wp_enqueue_script( 'bk-clipboard', '//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', array( 'jquery' ), '2.0.0', true );
+	wp_enqueue_script( 'bk-code-clipboard', '//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', array( 'jquery' ), '2.0.0', true );
 
 	// Enqueue theme's main scripts.
 	wp_enqueue_script( 'bk-scripts', get_stylesheet_directory_uri() . '/assets/js/main-min.js', array( 'jquery' ), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/js/main-min.js' ) ), true );
@@ -103,7 +103,7 @@ add_action( 'wp_enqueue_scripts', 'bk_scripts_styles', 11 );
 
 
 /**
- *  Enqueue Gutenberg editor styles and scripts
+ * Enqueue Gutenberg editor styles and scripts
  */
 function bk_gutenberg_scripts_styles() {
 
@@ -124,21 +124,21 @@ add_action( 'enqueue_block_editor_assets', 'bk_gutenberg_scripts_styles', 11 );
 
 
 /**
- *  Gutenberg theme functions and definitions
+ * Gutenberg theme functions and definitions
  *
- *  @link https://developer.wordpress.org/themes/basics/theme-functions/
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- *  @package bkchild
+ * @package bkchild
  */
 
 if ( ! function_exists( 'bk_setup' ) ) :
 
 	/**
-	 *  Sets up theme defaults and registers support for various WordPress features.
+	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
-	 *  Note that this function is hooked into the after_setup_theme hook, which
-	 *  runs before the init hook. The init hook is too late for some features, such
-	 *  as indicating support for post thumbnails.
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
 	 */
 	function bk_setup() {
 
@@ -147,10 +147,10 @@ if ( ! function_exists( 'bk_setup' ) ) :
 
 		/**
 		 *
-		 *  Custom colors for use in the editor.
-		 *  Add support for custom color palettes in Gutenberg.
+		 * Custom colors for use in the editor.
+		 * Add support for custom color palettes in Gutenberg.
 		 *
-		 *  @link https://wordpress.org/gutenberg/handbook/reference/theme-support/
+		 * @link https://wordpress.org/gutenberg/handbook/reference/theme-support/
 		*/
 		add_theme_support(
 			'editor-color-palette',
@@ -208,13 +208,13 @@ if ( ! function_exists( 'bk_setup' ) ) :
 			)
 		);
 
-		// Disable custom font sizes.
+		// -- Disable custom font sizes
 		add_theme_support( 'disable-custom-font-sizes' );
 
 		/**
-		 *  Custom font sizes for use in the editor.
+		 * Custom font sizes for use in the editor.
 		 *
-		 *  @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/#block-font-sizes
+		 * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/#block-font-sizes
 		 */
 		add_theme_support(
 			'editor-font-sizes',
@@ -264,9 +264,9 @@ add_action( 'after_setup_theme', 'bk_setup' );
 
 add_action( 'wp_enqueue_scripts', 'bk_custom_gutenberg_css', 11 );
 /**
- *  Outputs front-end inline styles based on colors declared in config/appearance.php.
+ * Outputs front-end inline styles based on colors declared in config/appearance.php.
  *
- *  @since 2.9.0
+ * @since 2.9.0
  */
 function bk_custom_gutenberg_css() {
 
@@ -306,12 +306,12 @@ CSS;
 
 add_action( 'enqueue_block_editor_assets', 'bk_custom_gutenberg_admin_css', 11 );
 /**
- *  Outputs back-end inline styles based on colors declared in config/appearance.php.
+ * Outputs back-end inline styles based on colors declared in config/appearance.php.
  *
- *  Note this will appear before the style-editor.css injected by JavaScript,
- *  so overrides will need to have higher specificity.
+ * Note this will appear before the style-editor.css injected by JavaScript,
+ * so overrides will need to have higher specificity.
  *
- *  @since 2.9.0
+ * @since 2.9.0
  */
 function bk_custom_gutenberg_admin_css() {
 
@@ -344,11 +344,11 @@ CSS;
 
 
 /**
- *  Generate CSS for editor font sizes from the provided theme support.
+ * Generate CSS for editor font sizes from the provided theme support.
  *
- *  @since 2.9.0
+ * @since 2.9.0
  *
- *  @return string The CSS for editor font sizes if theme support was declared.
+ * @return string The CSS for editor font sizes if theme support was declared.
  */
 function bk_inline_font_sizes() {
 
@@ -373,11 +373,11 @@ CSS;
 
 
 /**
- *  Generate CSS for editor colors based on theme color palette support.
+ * Generate CSS for editor colors based on theme color palette support.
  *
- *  @since 2.9.0
+ * @since 2.9.0
  *
- *  @return string The editor colors CSS if `editor-color-palette` theme support was declared.
+ * @return string The editor colors CSS if `editor-color-palette` theme support was declared.
  */
 function bk_inline_color_palette() {
 
@@ -406,7 +406,7 @@ CSS;
 
 
 /**
- *  Adds alternate style to code block.
+ * Adds alternate style to code block.
  */
 add_filter(
 	'code_syntax_block_style',
@@ -425,9 +425,9 @@ add_filter(
 
 add_filter( 'block_categories', 'bk_block_categories' );
 /**
- *  Add Custom Blocks Panel in Gutenberg.
+ * Add Custom Blocks Panel in Gutenberg.
  *
- *  @param array $categories adds custom category.
+ * @param array $categories adds custom category.
  */
 function bk_block_categories( $categories ) {
 	return array_merge(
