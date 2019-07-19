@@ -27,7 +27,7 @@ function bk_fonts_url() {
 	$merriweather = esc_html_x( 'on', 'Merriweather font: on or off', 'bk-child' );
 
 	if ( 'off' !== $montserrat ) {
-		$font_families[] = 'Montserrat:400,400i,700';
+		$font_families[] = 'Montserrat:400,400i,500,700';
 	}
 
 	if ( 'off' !== $merriweather ) {
@@ -65,6 +65,12 @@ function bk_scripts_styles() {
 	// Enqueue Custom / Typekit / Google Fonts.
 	wp_enqueue_style( 'bk-fonts', bk_fonts_url(), array(), genesis_get_theme_version() );
 
+	// Enqueue Fira Code font for code block.
+	wp_enqueue_style( 'bk-code-fonts', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', array(), '1.206', 'all' );
+
+	// Enqueue highlight style css for code block.
+	wp_enqueue_style( 'bk-highlight-style', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/styles/xcode.min.css', array(), '9.15.8', 'all' );
+
 	// Sets the default timezone used by all date/time functions in a script to developer timezone.
 	date_default_timezone_set( 'Asia/Kolkata' );
 
@@ -73,12 +79,6 @@ function bk_scripts_styles() {
 
 	// Enqueue theme's main styles with variables.
 	wp_enqueue_style( 'bk-style', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
-
-	// Enqueue Fira Code font for code block.
-	wp_enqueue_style( 'bk-code-fonts', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', array(), '1.206', 'all' );
-
-	// Enqueue highlight style css for code block.
-	wp_enqueue_style( 'bk-highlight-style', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/styles/xcode.min.css', array(), '9.15.8', 'all' );
 
 	// Enqueue highlight script for code block.
 	wp_enqueue_script( 'bk-highlight-script', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js', array( 'jquery' ), '9.15.8', true );
@@ -291,7 +291,7 @@ function bk_custom_gutenberg_css() {
 
 	.site-container .wp-block-button.is-style-outline .wp-block-button__link:focus,
 	.site-container .wp-block-button.is-style-outline .wp-block-button__link:hover {
-		color: var(--ccp-secondary);
+		color: var(--ccp-white);
 	}
 
 CSS;

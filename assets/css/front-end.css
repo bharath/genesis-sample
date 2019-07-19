@@ -459,6 +459,11 @@ input[type="submit"],
 	background-color: var(--ccp-transparent);
 }
 
+.site-container .wp-block-button.is-style-outline .wp-block-button__link:hover {
+    background-color: var(--ccp-secondary);
+	border: 2px solid var(--ccp-secondary);
+}
+
 /* -- Styles for Extras added to theme
 --------------------------------------------- */
 
@@ -544,4 +549,12 @@ h1.is-style-alt {
 .site-container .wp-block-button .wp-block-button__link:hover,
 .site-container .wp-block-button .wp-block-button__link {
 	transition: none;
+	transition: background-color 300ms ease-out;
+}
+
+.site-container .wp-block-button .wp-block-button__link:focus,
+.site-container .wp-block-button .wp-block-button__link:hover,
+.site-container .wp-block-button.is-style-outline .wp-block-button__link:focus,
+.site-container .wp-block-button.is-style-outline .wp-block-button__link:hover {
+	box-shadow: none;
 }
