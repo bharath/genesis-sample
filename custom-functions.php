@@ -80,6 +80,9 @@ function bk_scripts_styles() {
 	// Enqueue theme's main styles with variables.
 	wp_enqueue_style( 'bk-style', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
 
+	// Enqueue Fira Code font for code block.
+	wp_enqueue_style( 'bk-code-fonts', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', array(), '1.206', 'all' );
+
 	// Enqueue highlight script for code block.
 	wp_enqueue_script( 'bk-highlight-script', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js', array( 'jquery' ), '9.15.8', true );
 
