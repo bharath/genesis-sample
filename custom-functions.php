@@ -11,7 +11,7 @@
 /**
  * Register Custom/Google/Adobe Fonts
  */
-function genesis_sample_fonts_url() {
+function genesis_sample_custom_fonts_url() {
 
 	$fonts_url = '';
 
@@ -63,7 +63,7 @@ function genesis_sample_scripts_styles() {
 	wp_dequeue_style( genesis_get_theme_handle() . '-gutenberg' );
 
 	// Enqueue Custom / Typekit / Google Fonts.
-	wp_enqueue_style( genesis_get_theme_handle() . '-custom-fonts', genesis_sample_fonts_url(), array(), genesis_get_theme_version() );
+	wp_enqueue_style( genesis_get_theme_handle() . '-custom-fonts', genesis_sample_custom_fonts_url(), array(), genesis_get_theme_version() );
 
 	// Enqueue Fira Code font for code block.
 	wp_enqueue_style( genesis_get_theme_handle() . '-code-fonts', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', array(), '1.206', 'all' );
@@ -121,7 +121,7 @@ function genesis_sample_gutenberg_scripts_styles() {
 	wp_enqueue_style( genesis_get_theme_handle() . '-var', get_stylesheet_directory_uri() . '/assets/css/style-var-min.css', array(), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-var-min.css' ) ) );
 
 	// Enqueue Custom / Typekit / Google Fonts for Gutenberg admin editor.
-	wp_enqueue_style( genesis_get_theme_handle() . '-custom-gutenberg-fonts', genesis_sample_fonts_url(), array(), genesis_get_theme_version() );
+	wp_enqueue_style( genesis_get_theme_handle() . '-custom-gutenberg-fonts', genesis_sample_custom_fonts_url(), array(), genesis_get_theme_version() );
 
 	// Enqueue Gutenberg admin editor scripts.
 	wp_enqueue_script( genesis_get_theme_handle() . '-editor-js', get_stylesheet_directory_uri() . '/assets/js/editor-min.js', array( 'wp-blocks', 'wp-dom' ), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/js/editor-min.js' ) ), true );
@@ -320,7 +320,7 @@ add_action( 'enqueue_block_editor_assets', 'genesis_sample_inline_gutenberg_admi
  *
  * @since 2.9.0
  */
-function genesis_sample_inline_gutenberg_admin_csss() {
+function genesis_sample_inline_gutenberg_admin_css() {
 
 	$css = <<<CSS
 	.ab-block-post-grid .ab-post-grid-items h2 a:hover,
