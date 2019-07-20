@@ -548,8 +548,8 @@ h1.is-style-alt {
 .site-container .wp-block-button .wp-block-button__link:focus,
 .site-container .wp-block-button .wp-block-button__link:hover,
 .site-container .wp-block-button .wp-block-button__link {
-	transition: none;
 	transition: background-color 300ms ease-out;
+	transition: none;
 }
 
 .site-container .wp-block-button .wp-block-button__link:focus,
