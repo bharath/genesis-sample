@@ -536,6 +536,39 @@ h1.is-style-alt {
 	text-transform: uppercase;
 }
 
+.site-container .wp-block-group .wp-block-group__inner-container {
+	margin: 0 auto;
+}
+
+.site-container .wp-block-group .wp-block-group__inner-container {
+	padding: 0;
+}
+
+.site-container .wp-block-group.alignfull .wp-block-group__inner-container,
+.site-container .wp-block-group.has-background .wp-block-group__inner-container {
+	padding: 0 30px;
+}
+
+
+@media only screen and (min-width: 960px) {
+
+	.site-container .wp-block-group .wp-block-group__inner-container {
+		max-width: 1140px;
+		padding: 0;
+	}
+
+	.site-container .wp-block-group.has-background .wp-block-group__inner-container,
+	.site-container .wp-block-group.alignwide .wp-block-group__inner-container,
+	.site-container .wp-block-group.alignfull .wp-block-group__inner-container {
+		padding: 0 30px;
+	}
+
+	.site-container .wp-block-group.has-background .wp-block-group__inner-container {
+		padding: 0 30px;
+	}
+
+}
+
 
 /* -- Start adding your own CSS
 --------------------------------------------- */
@@ -549,7 +582,6 @@ h1.is-style-alt {
 .site-container .wp-block-button .wp-block-button__link:hover,
 .site-container .wp-block-button .wp-block-button__link {
 	transition: background-color 300ms ease-out;
-	transition: none;
 }
 
 .site-container .wp-block-button .wp-block-button__link:focus,
@@ -557,4 +589,12 @@ h1.is-style-alt {
 .site-container .wp-block-button.is-style-outline .wp-block-button__link:focus,
 .site-container .wp-block-button.is-style-outline .wp-block-button__link:hover {
 	box-shadow: none;
+}
+
+.site-container .wp-block-button .wp-block-button__link {
+	padding: 12px 30px;
+}
+
+.site-container .wp-block-button.is-style-outline .wp-block-button__link {
+	padding: 10px 28px;
 }

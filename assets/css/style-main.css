@@ -2252,8 +2252,6 @@ body {
 	-webkit-text-size-adjust: none;
 	text-rendering: optimizeLegibility;
 	word-wrap: break-word;
-
-	/*font-display: swap;*/
 }
 
 h1,
@@ -2263,10 +2261,6 @@ h4,
 h5,
 h6 {
 	font-family: var(--font-family-bold);
-
-	/*
-	font-display: swap;
-	*/
 }
 
 /* -- Fix for Menu items flash
@@ -2286,25 +2280,11 @@ h6 {
 
 @media only screen and (min-width: 960px) {
 
-	.wp-block-group__inner-container {
-		max-width: 1140px;
-	}
-
-}
-
-.wp-block-group__inner-container {
-	margin: 0 auto;
-}
-
-/*
-@media only screen and (min-width: 960px) {
-
 	.full-width-content .content {
 		width: 100%;
 	}
 
 }
-*/
 
 /* -- Custom Styles for Extras
 --------------------------------------------- */
@@ -2550,7 +2530,6 @@ a:hover {
 .genesis-nav-menu a {
 	font-size: var(--font-size-s);
 }
-
 
 h1,
 h2,
