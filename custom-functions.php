@@ -25,13 +25,18 @@ function genesis_sample_custom_fonts_url() {
 
 	$montserrat   = esc_html_x( 'on', 'Montserrat font: on or off', 'genesis-sample' );
 	$merriweather = esc_html_x( 'on', 'Merriweather font: on or off', 'genesis-sample' );
+	$opensans     = esc_html_x( 'on', 'Open+Sans font: on or off', 'genesis-sample' );
 
 	if ( 'off' !== $montserrat ) {
-		$font_families[] = 'Montserrat:400,400i,500,700';
+		$font_families[] = 'Montserrat:400,400i,500,500i,700';
 	}
 
 	if ( 'off' !== $merriweather ) {
 		$font_families[] = 'Merriweather:400,400i';
+	}
+
+	if ( 'off' !== $opensans ) {
+		$font_families[] = 'Open+Sans:400,400i,500,500i,700';
 	}
 
 	$query_args = array(
@@ -422,6 +427,10 @@ add_filter(
 	}
 );
 
+
+/**
+ * Adds Prism style to code block.
+ */
 add_filter(
 	'mkaz_prism_css_url',
 	function() {
