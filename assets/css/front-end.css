@@ -460,7 +460,7 @@ input[type="submit"],
 }
 
 .site-container .wp-block-button.is-style-outline .wp-block-button__link:hover {
-    background-color: var(--ccp-secondary);
+	background-color: var(--ccp-secondary);
 	border: 2px solid var(--ccp-secondary);
 }
 

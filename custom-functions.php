@@ -77,8 +77,8 @@ function genesis_sample_scripts_styles() {
 	wp_enqueue_style( genesis_get_theme_handle() . '-highlight-style', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/styles/xcode.min.css', array(), '9.15.8', 'all' );
 
 	// Sets the default timezone used by all date/time functions in a script to developer timezone.
-	date_default_timezone_set( 'Asia/Kolkata' );
-
+	// date_default_timezone_set( 'Asia/Kolkata' );.
+	// date_default_timezone_set( get_option( 'timezone_string' ) );.
 	// Enqueue custom Gutenberg front-end styles.
 	wp_enqueue_style( genesis_get_theme_handle() . '-custom-gutenberg', get_stylesheet_directory_uri() . '/assets/css/front-end.css', array(), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/front-end.css' ) ) );
 
@@ -99,7 +99,7 @@ function genesis_sample_scripts_styles() {
 	}
 
 	// Enqueue theme's main scripts.
-	wp_enqueue_script( genesis_get_theme_handle() . '-scripts', get_stylesheet_directory_uri() . '/assets/js/main-min.js', array( 'jquery' ), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/js/main-min.js' ) ), true );
+	wp_enqueue_script( genesis_get_theme_handle() . '-scripts', get_stylesheet_directory_uri() . '/assets/js/main.js', array( 'jquery' ), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/js/main.js' ) ), true );
 
 	$wp_jquery_ver = $GLOBALS['wp_scripts']->registered[ $jquery_handle ]->ver;
 
@@ -129,7 +129,7 @@ function genesis_sample_gutenberg_scripts_styles() {
 	wp_enqueue_style( genesis_get_theme_handle() . '-custom-gutenberg-fonts', genesis_sample_custom_fonts_url(), array(), genesis_get_theme_version() );
 
 	// Enqueue Gutenberg admin editor scripts.
-	wp_enqueue_script( genesis_get_theme_handle() . '-editor-js', get_stylesheet_directory_uri() . '/assets/js/editor-min.js', array( 'wp-blocks', 'wp-dom' ), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/js/editor-min.js' ) ), true );
+	wp_enqueue_script( genesis_get_theme_handle() . '-editor-js', get_stylesheet_directory_uri() . '/assets/js/editor.js', array( 'wp-blocks', 'wp-dom' ), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ) ), true );
 
 }
 add_action( 'enqueue_block_editor_assets', 'genesis_sample_gutenberg_scripts_styles', 11 );
@@ -415,28 +415,6 @@ CSS;
 	return $css;
 
 }
-
-
-/**
- * Adds alternate style to code block.
- */
-add_filter(
-	'code_syntax_block_style',
-	function() {
-		return 'github-gist';
-	}
-);
-
-
-/**
- * Adds Prism style to code block.
- */
-add_filter(
-	'mkaz_prism_css_url',
-	function() {
-		return 'https://raw.githubusercontent.com/PrismJS/prism-themes/master/themes/prism-hopscotch.css';
-	}
-);
 
 
 add_filter( 'block_categories', 'genesis_sample_block_categories' );

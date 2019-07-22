@@ -585,7 +585,7 @@ h1.is-style-alt {
 	background: var(--ccp-primary);
 	content: "\020";
 	display: block;
-	height: 2px;
+	height: 4px;
 	width: 50px;
 	margin: 0 0 0 14px;
 	position: relative;
