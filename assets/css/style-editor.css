@@ -572,6 +572,23 @@ h1.is-style-alt {
 /* -- Custom Styles
 --------------------------------------------- */
 
+/* Regular content width.
+/* 702px + 27px to match paragraph width on front-end and editor.
+---------------------------------------------------------------------------- */
+
+.wp-block {
+	max-width: 1253px;
+}
+
+/* Width of "wide" blocks
+/* 1062px + 30px so wide images match width in front-end and editor.
+/* 1062px = default column width of 702px + .alignwide negative margin of 360px
+---------------------------------------------------------------------------- */
+
+.wp-block[data-align="wide"] {
+	max-width: 1616px;
+}
+
 /*
 .block-editor-block-list__layout .block-editor-block-list__block > .block-editor-block-list__block-edit::before {
 	border: 1px solid var(--ccp-primary);
