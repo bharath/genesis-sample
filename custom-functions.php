@@ -439,7 +439,7 @@ function genesis_sample_block_categories( $categories ) {
 
 add_filter( 'render_block', 'genesis_sample_custom_button_classes', 5, 2 );
 /**
- * Add Custom classes to Button block link.
+ * Add Custom classes to Button block link. For example fancybox.
  *
  * @param array $block_content remove allowed button link classes from the button container first.
  * @param array $block button block.
