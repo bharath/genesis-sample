@@ -25,7 +25,7 @@ function genesis_sample_custom_fonts_url() {
 
 	$montserrat   = esc_html_x( 'on', 'Montserrat font: on or off', 'genesis-sample' );
 	$merriweather = esc_html_x( 'on', 'Merriweather font: on or off', 'genesis-sample' );
-	$opensans     = esc_html_x( 'on', 'Open+Sans font: on or off', 'genesis-sample' );
+	$firacode     = esc_html_x( 'on', 'Fira Code font: on or off', 'genesis-sample' );
 
 	if ( 'off' !== $montserrat ) {
 		$font_families[] = 'Montserrat:400,400i,500,500i,700';
@@ -35,14 +35,14 @@ function genesis_sample_custom_fonts_url() {
 		$font_families[] = 'Merriweather:400,400i';
 	}
 
-	if ( 'off' !== $opensans ) {
-		$font_families[] = 'Open+Sans:400,400i,500,500i,700';
+	if ( 'off' !== $firacode ) {
+		$font_families[] = 'Fira Code:400,500,700';
 	}
 
 	$query_args = array(
 		'family'  => rawurlencode( implode( '|', array_unique( $font_families ) ) ),
 		'display' => rawurlencode( 'swap' ),
-		'subset'  => rawurlencode( 'latin,latin-ext' ),
+		//'subset'  => rawurlencode( 'latin,latin-ext' ),.
 	);
 
 	$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
@@ -71,7 +71,7 @@ function genesis_sample_scripts_styles() {
 	wp_enqueue_style( genesis_get_theme_handle() . '-custom-fonts', genesis_sample_custom_fonts_url(), array(), genesis_get_theme_version() );
 
 	// Enqueue Fira Code font for code block.
-	wp_enqueue_style( genesis_get_theme_handle() . '-code-fonts', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', array(), '1.206', 'all' );
+	// wp_enqueue_style( genesis_get_theme_handle() . '-code-fonts', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', array(), '1.206', 'all' );.
 
 	// Enqueue highlight style css for code block.
 	wp_enqueue_style( genesis_get_theme_handle() . '-highlight-style', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/styles/xcode.min.css', array(), '9.15.8', 'all' );
@@ -83,12 +83,9 @@ function genesis_sample_scripts_styles() {
 	wp_enqueue_style( genesis_get_theme_handle() . '-custom-gutenberg', get_stylesheet_directory_uri() . '/assets/css/front-end.css', array(), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/front-end.css' ) ) );
 
 	// Enqueue theme's main styles with variables.
-	wp_enqueue_style( genesis_get_theme_handle() . '-custom', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
+	wp_enqueue_style( genesis_get_theme_handle() . '-main', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
 
 	if ( has_block( 'code' ) ) {
-
-		// Enqueue Fira Code font for code block.
-		wp_enqueue_style( genesis_get_theme_handle() . '-code-fonts', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', array(), '1.206', 'all' );
 
 		// Enqueue highlight script for code block.
 		wp_enqueue_script( genesis_get_theme_handle() . '-highlight-script', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js', array( 'jquery' ), '9.15.8', true );
@@ -123,7 +120,7 @@ function genesis_sample_gutenberg_scripts_styles() {
 	wp_dequeue_style( genesis_get_theme_handle() . '-gutenberg-fonts' );
 
 	// Enqueue CSS Variables.
-	wp_enqueue_style( genesis_get_theme_handle() . '-var', get_stylesheet_directory_uri() . '/assets/css/style-var-min.css', array(), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-var-min.css' ) ) );
+	wp_enqueue_style( genesis_get_theme_handle() . '-var', get_stylesheet_directory_uri() . '/assets/css/style-var.css', array(), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-var.css' ) ) );
 
 	// Enqueue Custom / Typekit / Google Fonts for Gutenberg admin editor.
 	wp_enqueue_style( genesis_get_theme_handle() . '-custom-gutenberg-fonts', genesis_sample_custom_fonts_url(), array(), genesis_get_theme_version() );
