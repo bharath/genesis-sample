@@ -8,10 +8,6 @@
  * @link    https://www.studiopress.com/
  */
 
-/**
- * Load Custom Controls
- */
-require_once get_stylesheet_directory() . '/inc/class-genesis-sample-separator-control.php';
 
 /**
  * Registers settings and controls with the Customizer.
@@ -21,55 +17,53 @@ require_once get_stylesheet_directory() . '/inc/class-genesis-sample-separator-c
 function genesis_sample_customize_register( $wp_customize ) {
 
 	$wp_customize->add_panel(
-		'genesis-sample-custom-options',
+		'genesis_sample_custom_settings',
 		array(
 			'priority'       => 10,
 			'capability'     => 'edit_theme_options',
 			'theme_supports' => '',
-			'title'          => __( 'Genesis Sample Custom Options', 'genesis-sample' ),
+			'title'          => __( 'Genesis Sample Custom Settings', 'genesis-sample' ),
 			'description'    => '',
 		)
 	);
 
-	// All our sections, settings, and controls will be added here.
 	$wp_customize->add_section(
-		'genesis-sample-gutenberg-options',
+		'genesis_sample_gutenberg_options',
 		array(
-			'title'       => __( 'Gutenberg', 'genesis-sample' ),
+			'title'       => __( 'Gutenberg Settings', 'genesis-sample' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			'description' => __( 'Allows you to set custom options for Genesis Sample theme.', 'genesis-sample' ),
-			'panel'       => 'genesis-sample-custom-options',
+			'panel'       => 'genesis',
 		)
 	);
 
-	$wp_customize->remove_section( 'colors');
+	$wp_customize->remove_section( 'colors' );
 
 	$wp_customize->add_section(
-		'genesis-sample-color-options',
+		'genesis_sample_color_options',
 		array(
-			'title'       => __( 'Editor Color Palette', 'genesis-sample' ),
+			'title'       => __( 'Gutenberg Color Palette', 'genesis-sample' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			'description' => __( 'Allows you to set custom options for Genesis Sample theme.', 'genesis-sample' ),
-			'panel'       => 'genesis-sample-custom-options',
+			'panel'       => 'genesis',
 		)
 	);
 
 	$wp_customize->add_section(
-		'genesis-sample-font-options',
+		'genesis_sample_font_options',
 		array(
-			'title'       => __( 'Editor Font Sizes', 'genesis-sample' ),
+			'title'       => __( 'Gutenberg Font Sizes', 'genesis-sample' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			'description' => __( 'Allows you to set custom Font options for Genesis Sample theme.', 'genesis-sample' ),
-			'panel'       => 'genesis-sample-custom-options',
+			'panel'       => 'genesis',
 		)
 	);
 
-
 	$wp_customize->add_setting(
-		'genesis-sample-dark-mode',
+		'genesis_sample_dark_mode',
 		array(
 			'default'    => '',
 			'type'       => 'theme_mod',
@@ -81,13 +75,13 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'genesis-sample-dark-mode',
+			'genesis_sample_dark-mode',
 			array(
 				'type'     => 'checkbox',
 				'label'    => __( 'Enable a dark theme style.', 'genesis-sample' ),
-				'settings' => 'genesis-sample-dark-mode',
+				'settings' => 'genesis_sample_dark_mode',
 				'priority' => 10,
-				'section'  => 'genesis-sample-gutenberg-options',
+				'section'  => 'genesis_sample_gutenberg_options',
 			)
 		)
 	);
@@ -105,7 +99,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 			$wp_customize,
 			'genesis_sample_separator_1',
 			array(
-				'section' => 'genesis-sample-options',
+				'section' => 'genesis_sample_gutenberg_options',
 			)
 		)
 	);
@@ -130,7 +124,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 					'label'    => __( 'Link Color', 'genesis-sample' ), // Admin-visible name of the control.
 					'settings' => 'link_textcolor', // Which setting to load and manipulate (serialized is okay).
 					'priority' => 10, // Determines the order this control appears in for the specified section.
-					'section'  => 'genesis-sample-color-options', // ID of the section this control should render in (can be one of yours, or a WordPress default section).
+					'section'  => 'genesis_sample_color_options', // ID of the section this control should render in (can be one of yours, or a WordPress default section).
 				)
 			)
 		);
@@ -155,7 +149,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 					'label'    => __( 'Link Accent Color', 'genesis-sample' ), // Admin-visible name of the control.
 					'settings' => 'link_textaccentcolor', // Which setting to load and manipulate (serialized is okay).
 					'priority' => 10, // Determines the order this control appears in for the specified section.
-					'section'  => 'genesis-sample-color-options', // ID of the section this control should render in (can be one of yours, or a WordPress default section).
+					'section'  => 'genesis_sample_color_options', // ID of the section this control should render in (can be one of yours, or a WordPress default section).
 				)
 			)
 		);
@@ -177,12 +171,38 @@ function genesis_sample_customize_register( $wp_customize ) {
 			array(
 				'type'     => 'checkbox',
 				'label'    => __( 'Enable a dark theme style.', 'genesis-sample' ),
-				'settings' => 'genesis-sample-dark-mode',
+				'settings' => 'genesis_sample_custom_editor_font_sizes',
 				'priority' => 10,
-				'section'  => 'genesis-sample-font-options',
+				'section'  => 'genesis_sample_font_options',
 			)
 		)
 	);
 
 }
 add_action( 'customize_register', 'genesis_sample_customize_register' );
+
+
+
+/**
+ * Custom Controls
+ */
+if ( class_exists( 'WP_Customize_Control' ) ) :
+
+	// Separator Control.
+	if ( ! class_exists( 'Genesis_Sample_Separator_Control' ) ) :
+		/**
+		 * Separator for customizer options.
+		 */
+		class Genesis_Sample_Separator_Control extends WP_Customize_Control {
+
+			/**
+			 * Displays the control content.
+			 */
+			public function render_content() {
+				echo '<hr/>';
+			}
+
+		}
+	endif;
+
+endif;
