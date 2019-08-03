@@ -15,8 +15,11 @@ This will be tested and updated when a new Genesis Sample update is released.
 2. Open functions.php and add the following code at the end.
 
 ```php
-// Custom Functions
-require_once( __DIR__ . '/custom-functions.php' );
+// Custom Functions.
+require get_stylesheet_directory() . '/custom-functions.php';
+
+// Customizer Options.
+require get_stylesheet_directory() . '/inc/customizer.php';
 ```
 
 6. That's it. If you want to customize it further, read Customizations section below.
