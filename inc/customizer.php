@@ -8,6 +8,9 @@
  * @link    https://www.studiopress.com/
  */
 
+// Include customizer controls.
+require_once get_stylesheet_directory() . '/inc/class-genesis-sample-separator-control.php';
+
 
 /**
  * Registers settings and controls with the Customizer.
@@ -104,56 +107,238 @@ function genesis_sample_customize_register( $wp_customize ) {
 		)
 	);
 
-	// 2. Register new settings to the WP database.
-		$wp_customize->add_setting(
-			'link_textcolor', // No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record.
+	// Gutenberg Colors.
+	$wp_customize->add_setting(
+		'primary_color',
+		array(
+			'default'    => '#0467c6',
+			'type'       => 'theme_mod',
+			'capability' => 'edit_theme_options',
+			'transport'  => 'refresh',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'genesis_sample_primary_color',
 			array(
-				'default'    => '#000', // Default setting/value to save.
-				'type'       => 'theme_mod', // Is this an 'option' or a 'theme_mod'?.
-				'capability' => 'edit_theme_options', // Optional. Special permissions for accessing this setting.
-				'transport'  => 'refresh', // What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?.
+				'label'    => __( 'Primary Color', 'genesis-sample' ),
+				'settings' => 'primary_color',
+				'priority' => 10,
+				'section'  => 'genesis_sample_color_options',
 			)
-		);
+		)
+	);
 
-		// 3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control( // Instantiate the color control class.
-				$wp_customize, // P ass the $wp_customize object (required).
-				'mytheme_link_textcolor', // Set a unique ID for the control.
-				array(
-					'label'    => __( 'Link Color', 'genesis-sample' ), // Admin-visible name of the control.
-					'settings' => 'link_textcolor', // Which setting to load and manipulate (serialized is okay).
-					'priority' => 10, // Determines the order this control appears in for the specified section.
-					'section'  => 'genesis_sample_color_options', // ID of the section this control should render in (can be one of yours, or a WordPress default section).
-				)
-			)
-		);
+	$wp_customize->add_setting(
+		'secondary_color',
+		array(
+			'default'    => '#004990',
+			'type'       => 'theme_mod',
+			'capability' => 'edit_theme_options',
+			'transport'  => 'refresh',
+		)
+	);
 
-		// 2. Register new settings to the WP database...
-		$wp_customize->add_setting(
-			'link_textaccentcolor', // No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record.
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'genesis_sample_secondary_color',
 			array(
-				'default'    => '#000', // Default setting/value to save.
-				'type'       => 'theme_mod', // Is this an 'option' or a 'theme_mod'?.
-				'capability' => 'edit_theme_options', // Optional. Special permissions for accessing this setting.
-				'transport'  => 'refresh', // What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?.
+				'label'    => __( 'Secondary Color', 'genesis-sample' ),
+				'settings' => 'secondary_color',
+				'priority' => 10,
+				'section'  => 'genesis_sample_color_options',
 			)
-		);
+		)
+	);
 
-		// 3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control( // Instantiate the color control class.
-				$wp_customize, // Pass the $wp_customize object (required).
-				'mytheme_link_textaccentcolor', // Set a unique ID for the control.
-				array(
-					'label'    => __( 'Link Accent Color', 'genesis-sample' ), // Admin-visible name of the control.
-					'settings' => 'link_textaccentcolor', // Which setting to load and manipulate (serialized is okay).
-					'priority' => 10, // Determines the order this control appears in for the specified section.
-					'section'  => 'genesis_sample_color_options', // ID of the section this control should render in (can be one of yours, or a WordPress default section).
-				)
+	$wp_customize->add_setting(
+		'black_color',
+		array(
+			'default'    => '#000',
+			'type'       => 'theme_mod',
+			'capability' => 'edit_theme_options',
+			'transport'  => 'refresh',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'genesis_sample_black_color',
+			array(
+				'label'    => __( 'Black Color', 'genesis-sample' ),
+				'settings' => 'black_color',
+				'priority' => 10,
+				'section'  => 'genesis_sample_color_options',
 			)
-		);
+		)
+	);
 
+	$wp_customize->add_setting(
+		'blackish_color',
+		array(
+			'default'    => '#333',
+			'type'       => 'theme_mod',
+			'capability' => 'edit_theme_options',
+			'transport'  => 'refresh',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'genesis_sample_blackish_color',
+			array(
+				'label'    => __( 'Blackish Color', 'genesis-sample' ),
+				'settings' => 'blackish_color',
+				'priority' => 10,
+				'section'  => 'genesis_sample_color_options',
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'grey_color',
+		array(
+			'default'    => '#6e6e6a',
+			'type'       => 'theme_mod',
+			'capability' => 'edit_theme_options',
+			'transport'  => 'refresh',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'genesis_sample_grey_color',
+			array(
+				'label'    => __( 'Grey Color', 'genesis-sample' ),
+				'settings' => 'grey_color',
+				'priority' => 10,
+				'section'  => 'genesis_sample_color_options',
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'greyish_color',
+		array(
+			'default'    => '#999',
+			'type'       => 'theme_mod',
+			'capability' => 'edit_theme_options',
+			'transport'  => 'refresh',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'genesis_sample_greyish_color',
+			array(
+				'label'    => __( 'Greyish Color', 'genesis-sample' ),
+				'settings' => 'greyish_color',
+				'priority' => 10,
+				'section'  => 'genesis_sample_color_options',
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'white_color',
+		array(
+			'default'    => '#fff',
+			'type'       => 'theme_mod',
+			'capability' => 'edit_theme_options',
+			'transport'  => 'refresh',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'genesis_sample_white_color',
+			array(
+				'label'    => __( 'White Color', 'genesis-sample' ),
+				'settings' => 'white_color',
+				'priority' => 10,
+				'section'  => 'genesis_sample_color_options',
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'transparent_color',
+		array(
+			'default'    => 'transparent',
+			'type'       => 'theme_mod',
+			'capability' => 'edit_theme_options',
+			'transport'  => 'refresh',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'genesis_sample_transparent_color',
+			array(
+				'label'    => __( 'Transparent Color', 'genesis-sample' ),
+				'settings' => 'transparent_color',
+				'priority' => 10,
+				'section'  => 'genesis_sample_color_options',
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'primary_alt_color',
+		array(
+			'default'    => '#ff0014',
+			'type'       => 'theme_mod',
+			'capability' => 'edit_theme_options',
+			'transport'  => 'refresh',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'genesis_sample_primary_alt_color',
+			array(
+				'label'    => __( 'Primary Alt Color', 'genesis-sample' ),
+				'settings' => 'primary_alt_color',
+				'priority' => 10,
+				'section'  => 'genesis_sample_color_options',
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'secondary_alt_color',
+		array(
+			'default'    => '#b3000e',
+			'type'       => 'theme_mod',
+			'capability' => 'edit_theme_options',
+			'transport'  => 'refresh',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'genesis_sample_secondary_alt_color',
+			array(
+				'label'    => __( 'Secondary Alt Color', 'genesis-sample' ),
+				'settings' => 'secondary_alt_color',
+				'priority' => 10,
+				'section'  => 'genesis_sample_color_options',
+			)
+		)
+	);
+
+	// Gutenberg Fonts.
 	$wp_customize->add_setting(
 		'genesis_sample_custom_editor_font_sizes',
 		array(
@@ -182,27 +367,42 @@ function genesis_sample_customize_register( $wp_customize ) {
 add_action( 'customize_register', 'genesis_sample_customize_register' );
 
 
+/**
+ *  This will output the custom WordPress settings to the live theme's WP head.
+ *
+ *  Used by hook: 'wp_head'
+ *
+ *  @see add_action('wp_head',$func)
+ *  @since MyTheme 1.0
+ */
+function genesis_sample_customizer_header_output() {
+	?>
+	<style type="text/css">
+		:root {
+			--ccp-primary: <?php echo esc_attr( get_theme_mod( 'primary_color', '#0467c6' ) ); ?>;
+			--ccp-secondary: <?php echo esc_attr( get_theme_mod( 'secondary_color', '#004990' ) ); ?>;
+			--ccp-black: <?php echo esc_attr( get_theme_mod( 'black_color', '#000abc' ) ); ?>;
+			--ccp-blackish: <?php echo esc_attr( get_theme_mod( 'blackish_color', '#333' ) ); ?>;
+			--ccp-grey: <?php echo esc_attr( get_theme_mod( 'grey_color', '#6e6e6a' ) ); ?>;
+			--ccp-greyish: <?php echo esc_attr( get_theme_mod( 'greyish_color', '#999' ) ); ?>;
+			--ccp-white: <?php echo esc_attr( get_theme_mod( 'white_color', '#fff' ) ); ?>;
+			--ccp-transparent: <?php echo esc_attr( get_theme_mod( 'transparent_color', 'transparent' ) ); ?>;
+			--ccp-primary-alt: <?php echo esc_attr( get_theme_mod( 'primary_alt_color', '#ff0014' ) ); ?>;
+			--ccp-secondary-alt: <?php echo esc_attr( get_theme_mod( 'secondary_alt_color', '#b3000e' ) ); ?>;
+		}
+	</style>
+	<?php
+}
+add_action( 'wp_head', 'genesis_sample_customizer_header_output' );
+
 
 /**
- * Custom Controls
+ * Enqueue the customizer stylesheet.
  */
-if ( class_exists( 'WP_Customize_Control' ) ) :
+function genesis_sample_customizer_stylesheet() {
 
-	// Separator Control.
-	if ( ! class_exists( 'Genesis_Sample_Separator_Control' ) ) :
-		/**
-		 * Separator for customizer options.
-		 */
-		class Genesis_Sample_Separator_Control extends WP_Customize_Control {
+	wp_register_style( genesis_get_theme_handle() . '-customizer-css', get_stylesheet_directory_uri() . '/assets/css/customizer.css', array(), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ), 'all' );
+	wp_enqueue_style( genesis_get_theme_handle() . '-customizer-css' );
 
-			/**
-			 * Displays the control content.
-			 */
-			public function render_content() {
-				echo '<hr/>';
-			}
-
-		}
-	endif;
-
-endif;
+}
+add_action( 'customize_controls_print_styles', 'genesis_sample_customizer_stylesheet' );

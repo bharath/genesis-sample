@@ -42,7 +42,7 @@ function genesis_sample_custom_fonts_url() {
 	$query_args = array(
 		'family'  => rawurlencode( implode( '|', array_unique( $font_families ) ) ),
 		'display' => rawurlencode( 'swap' ),
-		//'subset'  => rawurlencode( 'latin,latin-ext' ),.
+		// 'subset'  => rawurlencode( 'latin,latin-ext' ),.
 	);
 
 	$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
@@ -72,7 +72,6 @@ function genesis_sample_scripts_styles() {
 
 	// Enqueue Fira Code font for code block.
 	// wp_enqueue_style( genesis_get_theme_handle() . '-code-fonts', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', array(), '1.206', 'all' );.
-
 	// Enqueue highlight style css for code block.
 	wp_enqueue_style( genesis_get_theme_handle() . '-highlight-style', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/styles/xcode.min.css', array(), '9.15.8', 'all' );
 
@@ -411,6 +410,18 @@ CSS;
 
 	return $css;
 
+}
+
+
+add_filter( 'genesis_customizer_theme_settings_config', 'genesis_sample_customizer_panel_name' );
+/**
+ * Add Genesis theme name to Customizer theme settings panel.
+ *
+ * @param return $config theme title.
+ */
+function genesis_sample_customizer_panel_name( $config ) {
+	$config['genesis']['title'] = __( 'Genesis Theme Settings', 'genesis-sample' );
+	return $config;
 }
 
 

@@ -2304,7 +2304,8 @@ code.hljs {
 	border-radius: 20px;
 	background: rgba(54, 86, 102, 0.05) !important;
 	line-height: 1.5;
-	font-family: "Fira Code", monospace;
+	font-family: 'Fira Code', monospace;
+	font-weight: 400;
 }
 
 :not(pre) > code {

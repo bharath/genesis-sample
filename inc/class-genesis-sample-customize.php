@@ -1,22 +1,19 @@
 <?php
 /**
- *  BK
- *  Plugin URI: https://bharath.blog/genesis-design-system
- *  Description: Customize the default Genesis Theme design options.
- *  Version: 0.1
+ * This file adds custom functions to your Theme Customizer.
  *
- *  @package GenesisDesignSystem
- *  @author  Bharath
- *  @link    https://bharath.blog/
- *  @license GPL-2.0+
+ * @package Genesis Sample
+ * @author  StudioPress
+ * @license GPL-2.0-or-later
+ * @link    https://www.studiopress.com/
  */
 
 /**
  *  Description: Customize class
  *
- *  @param \BK_Customize check.
+ *  @param \Genesis_Sample_Customize check.
  */
-class BK_Customize {
+class Genesis_Sample_Customize {
 	/**
 	 *  This hooks into 'customize_register' (available as of WP 3.4) and allows
 	 *  you to add new sections and controls to the Theme Customize screen.
