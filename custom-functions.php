@@ -164,16 +164,6 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 			'editor-color-palette',
 			array(
 				array(
-					'name'  => esc_html__( 'Primary', 'genesis-sample' ),
-					'slug'  => 'primary',
-					'color' => 'var(--ccp-primary)',
-				),
-				array(
-					'name'  => esc_html__( 'Secondary', 'genesis-sample' ),
-					'slug'  => 'secondary',
-					'color' => 'var(--ccp-secondary)',
-				),
-				array(
 					'name'  => esc_html__( 'Black', 'genesis-sample' ),
 					'slug'  => 'black',
 					'color' => 'var(--ccp-black)',
@@ -202,6 +192,16 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 					'name'  => esc_html__( 'Transparent', 'genesis-sample' ),
 					'slug'  => 'transparent',
 					'color' => 'var(--ccp-transparent)',
+				),
+				array(
+					'name'  => esc_html__( 'Primary', 'genesis-sample' ),
+					'slug'  => 'primary',
+					'color' => 'var(--ccp-primary)',
+				),
+				array(
+					'name'  => esc_html__( 'Secondary', 'genesis-sample' ),
+					'slug'  => 'secondary',
+					'color' => 'var(--ccp-secondary)',
 				),
 				array(
 					'name'  => esc_html__( 'Primary Alt', 'genesis-sample' ),
