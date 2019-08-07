@@ -150,6 +150,8 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 	 */
 	function genesis_sample_setup() {
 
+		add_theme_support( 'wp-block-styles' );
+
 		// Disable the custom color picker.
 		add_theme_support( 'disable-custom-colors' );
 
