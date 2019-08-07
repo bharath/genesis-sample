@@ -379,15 +379,14 @@ function genesis_sample_customizer_header_output() {
 	?>
 	<style type="text/css">
 		:root {
-			--ccp-primary: <?php echo esc_attr( get_theme_mod( 'primary_color', '#0467c6' ) ); ?>;
-			--ccp-secondary: <?php echo esc_attr( get_theme_mod( 'secondary_color', '#004990' ) ); ?>;
 			--ccp-black: <?php echo esc_attr( get_theme_mod( 'black_color', '#000abc' ) ); ?>;
 			--ccp-blackish: <?php echo esc_attr( get_theme_mod( 'blackish_color', '#333' ) ); ?>;
 			--ccp-grey: <?php echo esc_attr( get_theme_mod( 'grey_color', '#6e6e6a' ) ); ?>;
 			--ccp-greyish: <?php echo esc_attr( get_theme_mod( 'greyish_color', '#999' ) ); ?>;
 			--ccp-white: <?php echo esc_attr( get_theme_mod( 'white_color', '#fff' ) ); ?>;
 			--ccp-transparent: <?php echo esc_attr( get_theme_mod( 'transparent_color', 'transparent' ) ); ?>;
-			--ccp-primary-alt: <?php echo esc_attr( get_theme_mod( 'primary_alt_color', '#ff0014' ) ); ?>;
+			--ccp-primary: <?php echo esc_attr( get_theme_mod( 'primary_color', '#0467c6' ) ); ?>;
+			--ccp-secondary: <?php echo esc_attr( get_theme_mod( 'secondary_color', '#004990' ) ); ?>;		--ccp-primary-alt: <?php echo esc_attr( get_theme_mod( 'primary_alt_color', '#ff0014' ) ); ?>;
 			--ccp-secondary-alt: <?php echo esc_attr( get_theme_mod( 'secondary_alt_color', '#b3000e' ) ); ?>;
 		}
 	</style>
