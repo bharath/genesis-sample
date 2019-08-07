@@ -401,7 +401,7 @@ add_action( 'wp_head', 'genesis_sample_customizer_header_output' );
  */
 function genesis_sample_customizer_stylesheet() {
 
-	wp_register_style( genesis_get_theme_handle() . '-customizer-css', get_stylesheet_directory_uri() . '/assets/css/customizer.css', array(), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ), 'all' );
+	wp_register_style( genesis_get_theme_handle() . '-customizer-css', get_stylesheet_directory_uri() . '/assets/css/customizer.css', array(), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/customizer.css' ) ), 'all' );
 	wp_enqueue_style( genesis_get_theme_handle() . '-customizer-css' );
 
 }
