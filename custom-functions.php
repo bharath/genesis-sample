@@ -150,8 +150,8 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 	 */
 	function genesis_sample_setup() {
 
-		add_theme_support( 'wp-block-styles' );
-
+		// Add default block styles
+		// add_theme_support( 'wp-block-styles' );.
 		// Disable the custom color picker.
 		add_theme_support( 'disable-custom-colors' );
 
@@ -281,6 +281,7 @@ add_action( 'wp_enqueue_scripts', 'genesis_sample_inline_gutenberg_css', 11 );
 function genesis_sample_inline_gutenberg_css() {
 
 	$css = <<<CSS
+
 	.ab-block-post-grid .ab-post-grid-items h2 a:hover {
 		color: var(--ccp-primary);
 	}
@@ -326,6 +327,7 @@ add_action( 'enqueue_block_editor_assets', 'genesis_sample_inline_gutenberg_admi
 function genesis_sample_inline_gutenberg_admin_css() {
 
 	$css = <<<CSS
+
 	.ab-block-post-grid .ab-post-grid-items h2 a:hover,
 	.block-editor__container .editor-block-list__block a {
 		color: var(--ccp-primary);
@@ -371,10 +373,13 @@ function genesis_sample_custom_font_sizes() {
 
 	foreach ( $editor_font_sizes[0] as $font_size ) {
 		$css .= <<<CSS
-		.site-container .has-{$font_size['slug']}-font-size {
-			font-size: {$font_size['size']};
-		}
+
+	.site-container .has-{$font_size['slug']}-font-size {
+		font-size: {$font_size['size']};
+	}
+
 CSS;
+
 	}
 
 	return $css;
@@ -395,35 +400,27 @@ function genesis_sample_custom_color_palette() {
 	$editor_color_palette = get_theme_support( 'editor-color-palette' );
 
 	foreach ( $editor_color_palette[0] as $color_info ) {
-		$css .= <<<CSS
-		.site-container .has-{$color_info['slug']}-color,
-		.site-container .wp-block-button .wp-block-button__link.has-{$color_info['slug']}-color,
-		.site-container .wp-block-button.is-style-outline .wp-block-button__link.has-{$color_info['slug']}-color {
-			color: {$color_info['color']};
-		}
 
-		.site-container .has-{$color_info['slug']}-background-color,
-		.site-container .wp-block-button .wp-block-button__link.has-{$color_info['slug']}-background-color,
-		.site-container .wp-block-pullquote.is-style-solid-color.has-{$color_info['slug']}-background-color {
-			background-color: {$color_info['color']};
-		}
+		$css .= <<<CSS
+
+	.site-container .has-{$color_info['slug']}-color,
+	.site-container .wp-block-button .wp-block-button__link.has-{$color_info['slug']}-color,
+	.site-container .wp-block-button.is-style-outline .wp-block-button__link.has-{$color_info['slug']}-color {
+		color: {$color_info['color']};
+	}
+
+	.site-container .has-{$color_info['slug']}-background-color,
+	.site-container .wp-block-button .wp-block-button__link.has-{$color_info['slug']}-background-color,
+	.site-container .wp-block-pullquote.is-style-solid-color.has-{$color_info['slug']}-background-color {
+		background-color: {$color_info['color']};
+	}
+
 CSS;
+
 	}
 
 	return $css;
 
-}
-
-
-add_filter( 'genesis_customizer_theme_settings_config', 'genesis_sample_customizer_panel_name' );
-/**
- * Add Genesis theme name to Customizer theme settings panel.
- *
- * @param return $config theme title.
- */
-function genesis_sample_customizer_panel_name( $config ) {
-	$config['genesis']['title'] = __( 'Genesis Theme Settings', 'genesis-sample' );
-	return $config;
 }
 
 

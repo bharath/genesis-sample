@@ -74,3 +74,18 @@ require get_stylesheet_directory() . '/inc/customizer.php';
 3. In custom-functions.php, uncomment line 82 to add Fira Code font for code block
 4. In assets/css/style-main.css uncomment lines in 2224 and 2419
 5. In assets/js/main.js uncomment lines in 3 and 74
+
+# 2. Theme Rename
+
+Add the following in package.json
+
+```json
+{
+	"devDependencies": {
+		"genesis-theme-claim": "^0.6.0",
+	},
+	"scripts": {
+		"rename": "genesis-theme-claim",
+	},
+}
+```

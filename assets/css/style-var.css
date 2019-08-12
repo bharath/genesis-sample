@@ -6,14 +6,14 @@
 	/* -- Custom Color Palette for Front End & Gutenberg
 	--------------------------------------------- */
 
-	--ccp-primary: #0467c6;
-	--ccp-secondary: #004990;
 	--ccp-black: #000;
 	--ccp-blackish: #333;
 	--ccp-grey: #6e6e6a;
 	--ccp-greyish: #999;
 	--ccp-white: #fff;
 	--ccp-transparent: transparent;
+	--ccp-primary: #0467c6;
+	--ccp-secondary: #004990;
 	--ccp-primary-alt: #ff0014;
 	--ccp-secondary-alt: #b3000e;
 
