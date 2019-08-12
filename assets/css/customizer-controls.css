@@ -1,0 +1,9 @@
+.customize-control .font-size-container input[type=number] {
+	float: left;
+	width: 50%;
+	margin-right: 10px;
+}
+
+.font-size-reset {
+	line-height: 1.3;
+}

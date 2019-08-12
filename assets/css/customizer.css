@@ -1,2 +1,9 @@
 /* -- Customizer CSS
 --------------------------------------------- */
+
+#sub-accordion-section-genesis_sample_gutenberg_options .customize-control-description {
+    margin-top: 5px;
+    margin-bottom: 0px;
+	line-height: 1.5;
+	font-style: normal;
+}
