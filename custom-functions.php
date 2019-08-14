@@ -15,7 +15,7 @@ function genesis_sample_custom_fonts_url() {
 
 	$fonts_url = '';
 
-	$font_families = array();
+	$font_families = [];
 
 	/**
 	 * Translators: If there are characters in your language that are not
@@ -39,11 +39,11 @@ function genesis_sample_custom_fonts_url() {
 		$font_families[] = 'Fira Code:400,500,700';
 	}
 
-	$query_args = array(
+	$query_args = [
 		'family'  => rawurlencode( implode( '|', array_unique( $font_families ) ) ),
 		'display' => rawurlencode( 'swap' ),
 		// 'subset'  => rawurlencode( 'latin,latin-ext' ),.
-	);
+	];
 
 	$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
 
@@ -68,34 +68,34 @@ function genesis_sample_scripts_styles() {
 	wp_dequeue_style( genesis_get_theme_handle() . '-gutenberg' );
 
 	// Enqueue Custom / Typekit / Google Fonts.
-	wp_enqueue_style( genesis_get_theme_handle() . '-custom-fonts', genesis_sample_custom_fonts_url(), array(), genesis_get_theme_version() );
+	wp_enqueue_style( genesis_get_theme_handle() . '-custom-fonts', genesis_sample_custom_fonts_url(), [], genesis_get_theme_version() );
 
 	// Enqueue Fira Code font for code block.
 	// wp_enqueue_style( genesis_get_theme_handle() . '-code-fonts', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', array(), '1.206', 'all' );.
 	// Enqueue highlight style css for code block.
-	wp_enqueue_style( genesis_get_theme_handle() . '-highlight-style', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/styles/xcode.min.css', array(), '9.15.8', 'all' );
+	wp_enqueue_style( genesis_get_theme_handle() . '-highlight-style', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/styles/xcode.min.css', [], '9.15.8', 'all' );
 
 	// Sets the default timezone used by all date/time functions in a script to developer timezone.
 	// date_default_timezone_set( 'Asia/Kolkata' );.
 	// date_default_timezone_set( get_option( 'timezone_string' ) );.
 	// Enqueue custom Gutenberg front-end styles.
-	wp_enqueue_style( genesis_get_theme_handle() . '-custom-gutenberg', get_stylesheet_directory_uri() . '/assets/css/front-end.css', array(), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/front-end.css' ) ) );
+	wp_enqueue_style( genesis_get_theme_handle() . '-custom-gutenberg', get_stylesheet_directory_uri() . '/assets/css/front-end.css', [], date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/front-end.css' ) ) );
 
 	// Enqueue theme's main styles with variables.
-	wp_enqueue_style( genesis_get_theme_handle() . '-main', get_stylesheet_directory_uri() . '/assets/css/style-main.css', array(), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
+	wp_enqueue_style( genesis_get_theme_handle() . '-main', get_stylesheet_directory_uri() . '/assets/css/style-main.css', [], date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
 
 	if ( has_block( 'code' ) ) {
 
 		// Enqueue highlight script for code block.
-		wp_enqueue_script( genesis_get_theme_handle() . '-highlight-script', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js', array( 'jquery' ), '9.15.8', true );
+		wp_enqueue_script( genesis_get_theme_handle() . '-highlight-script', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js', [ 'jquery' ], '9.15.8', true );
 
 		// Enqueue Clipboard script for code block.
-		wp_enqueue_script( genesis_get_theme_handle() . '-code-clipboard', '//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', array( 'jquery' ), '2.0.0', true );
+		wp_enqueue_script( genesis_get_theme_handle() . '-code-clipboard', '//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', [ 'jquery' ], '2.0.0', true );
 
 	}
 
 	// Enqueue theme's main scripts.
-	wp_enqueue_script( genesis_get_theme_handle() . '-scripts', get_stylesheet_directory_uri() . '/assets/js/main.js', array( 'jquery' ), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/js/main.js' ) ), true );
+	wp_enqueue_script( genesis_get_theme_handle() . '-scripts', get_stylesheet_directory_uri() . '/assets/js/main.js', [ 'jquery' ], date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/js/main.js' ) ), true );
 
 	$wp_jquery_ver = $GLOBALS['wp_scripts']->registered[ $jquery_handle ]->ver;
 
@@ -119,13 +119,13 @@ function genesis_sample_gutenberg_scripts_styles() {
 	wp_dequeue_style( genesis_get_theme_handle() . '-gutenberg-fonts' );
 
 	// Enqueue CSS Variables.
-	wp_enqueue_style( genesis_get_theme_handle() . '-var', get_stylesheet_directory_uri() . '/assets/css/style-var.css', array(), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-var.css' ) ) );
+	wp_enqueue_style( genesis_get_theme_handle() . '-var', get_stylesheet_directory_uri() . '/assets/css/style-var.css', [], date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-var.css' ) ) );
 
 	// Enqueue Custom / Typekit / Google Fonts for Gutenberg admin editor.
-	wp_enqueue_style( genesis_get_theme_handle() . '-custom-gutenberg-fonts', genesis_sample_custom_fonts_url(), array(), genesis_get_theme_version() );
+	wp_enqueue_style( genesis_get_theme_handle() . '-custom-gutenberg-fonts', genesis_sample_custom_fonts_url(), [], genesis_get_theme_version() );
 
 	// Enqueue Gutenberg admin editor scripts.
-	wp_enqueue_script( genesis_get_theme_handle() . '-editor-js', get_stylesheet_directory_uri() . '/assets/js/editor.js', array( 'wp-blocks', 'wp-dom' ), date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ) ), true );
+	wp_enqueue_script( genesis_get_theme_handle() . '-editor-js', get_stylesheet_directory_uri() . '/assets/js/editor.js', [ 'wp-blocks', 'wp-dom' ], date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ) ), true );
 
 }
 add_action( 'enqueue_block_editor_assets', 'genesis_sample_gutenberg_scripts_styles', 11 );
@@ -164,58 +164,58 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 		*/
 		add_theme_support(
 			'editor-color-palette',
-			array(
-				array(
+			[
+				[
 					'name'  => esc_html__( 'Black', 'genesis-sample' ),
 					'slug'  => 'black',
 					'color' => 'var(--ccp-black)',
-				),
-				array(
+				],
+				[
 					'name'  => esc_html__( 'Blackish', 'genesis-sample' ),
 					'slug'  => 'blackish',
 					'color' => 'var(--ccp-blackish)',
-				),
-				array(
+				],
+				[
 					'name'  => esc_html__( 'Grey', 'genesis-sample' ),
 					'slug'  => 'grey',
 					'color' => 'var(--ccp-grey)',
-				),
-				array(
+				],
+				[
 					'name'  => esc_html__( 'Greyish', 'genesis-sample' ),
 					'slug'  => 'greyish',
 					'color' => 'var(--ccp-greyish)',
-				),
-				array(
+				],
+				[
 					'name'  => esc_html__( 'White', 'genesis-sample' ),
 					'slug'  => 'white',
 					'color' => 'var(--ccp-white)',
-				),
-				array(
+				],
+				[
 					'name'  => esc_html__( 'Transparent', 'genesis-sample' ),
 					'slug'  => 'transparent',
 					'color' => 'var(--ccp-transparent)',
-				),
-				array(
+				],
+				[
 					'name'  => esc_html__( 'Primary', 'genesis-sample' ),
 					'slug'  => 'primary',
 					'color' => 'var(--ccp-primary)',
-				),
-				array(
+				],
+				[
 					'name'  => esc_html__( 'Secondary', 'genesis-sample' ),
 					'slug'  => 'secondary',
 					'color' => 'var(--ccp-secondary)',
-				),
-				array(
+				],
+				[
 					'name'  => esc_html__( 'Primary Alt', 'genesis-sample' ),
 					'slug'  => 'primary-alt',
 					'color' => 'var(--ccp-primary-alt)',
-				),
-				array(
+				],
+				[
 					'name'  => esc_html__( 'Secondary Alt', 'genesis-sample' ),
 					'slug'  => 'secondary-alt',
 					'color' => 'var(--ccp-secondary-alt)',
-				),
-			)
+				],
+			]
 		);
 
 		// -- Disable custom font sizes
@@ -228,38 +228,38 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 		 */
 		add_theme_support(
 			'editor-font-sizes',
-			array(
-				array(
+			[
+				[
 					'name'      => esc_html__( 'Small', 'genesis-sample' ),
 					'shortName' => esc_html__( 'S', 'genesis-sample' ),
 					'size'      => 'var(--font-size-s)',
 					'slug'      => 'small',
-				),
-				array(
+				],
+				[
 					'name'      => esc_html__( 'Normal', 'genesis-sample' ),
 					'shortName' => esc_html__( 'N', 'genesis-sample' ),
 					'size'      => 'var(--font-size-n)',
 					'slug'      => 'normal',
-				),
-				array(
+				],
+				[
 					'name'      => esc_html__( 'Medium', 'genesis-sample' ),
 					'shortName' => esc_html__( 'M', 'genesis-sample' ),
 					'size'      => 'var(--font-size-m)',
 					'slug'      => 'medium',
-				),
-				array(
+				],
+				[
 					'name'      => esc_html__( 'Large', 'genesis-sample' ),
 					'shortName' => esc_html__( 'L', 'genesis-sample' ),
 					'size'      => 'var(--font-size-l)',
 					'slug'      => 'large',
-				),
-				array(
+				],
+				[
 					'name'      => esc_html__( 'X Large', 'genesis-sample' ),
 					'shortName' => esc_html__( 'XL', 'genesis-sample' ),
 					'size'      => 'var(--font-size-xl)',
 					'slug'      => 'x-large',
-				),
-			)
+				],
+			]
 		);
 
 		// Enqueue editor styles.
@@ -433,13 +433,13 @@ add_filter( 'block_categories', 'genesis_sample_block_categories' );
 function genesis_sample_block_categories( $categories ) {
 	return array_merge(
 		$categories,
-		array(
-			array(
+		[
+			[
 				'slug'  => 'bk-blocks',
 				'title' => __( 'Bharath\'s Custom Blocks', 'genesis-sample' ),
 				'icon'  => 'layout',
-			),
-		)
+			],
+		]
 	);
 }
 
