@@ -749,7 +749,8 @@ a.alignright {
 }
 
 img.centered,
-.aligncenter {
+.aligncenter,
+.singular-image {
 	display: block;
 	margin: 0 auto 30px;
 }
@@ -1874,7 +1875,7 @@ p.entry-meta {
 	--secondary-text-color: #777;
 	--border-color: #eee;
 
-	--font-size-s: 16px;
+	--font-size-s: 15px;
 	--font-size-n: 18px;
 	--font-size-m: 20px;
 	--font-size-l: 24px;

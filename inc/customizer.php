@@ -510,20 +510,20 @@ function genesis_sample_customize_register( $wp_customize ) {
 		new Genesis_Sample_Reset_Control(
 			$wp_customize,
 			'regular_font_size',
-			array(
+			[
 				'section'  => 'genesis_sample_font_options',
 				'settings' => 'regular_font_size',
 				'priority' => 10,
 				'label'    => __( 'Regular Font size (px).', 'genesis-sample' ),
 				'type'     => 'number',
-			)
+			]
 		)
 	);
 
 	$wp_customize->add_setting(
 		'small_font_size',
 		array(
-			'default'           => '16',
+			'default'           => '15',
 			'sanitize_callback' => 'absint',
 		)
 	);
@@ -661,7 +661,7 @@ function genesis_sample_customizer_header_output() {
 			--ccp-secondary-alt: <?php echo esc_attr( get_theme_mod( 'secondary_alt_color', '#b3000e' ) ); ?>;
 
 			--font-size-r: <?php echo esc_attr( get_theme_mod( 'regular_font_size', '14' ) ); ?>px;
-			--font-size-s: <?php echo esc_attr( get_theme_mod( 'small_font_size', '16' ) ); ?>px;
+			--font-size-s: <?php echo esc_attr( get_theme_mod( 'small_font_size', '15' ) ); ?>px;
 			--font-size-n: <?php echo esc_attr( get_theme_mod( 'normal_font_size', '18' ) ); ?>px;
 			--font-size-m: <?php echo esc_attr( get_theme_mod( 'medium_font_size', '20' ) ); ?>px;
 			--font-size-l: <?php echo esc_attr( get_theme_mod( 'large_font_size', '24' ) ); ?>px;
