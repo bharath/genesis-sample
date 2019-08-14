@@ -30,35 +30,35 @@ class Genesis_Sample_Customize {
 
 		$wp_customize->add_panel(
 			'genesis-sample-options',
-			array(
+			[
 				'priority'       => 10,
 				'capability'     => 'edit_theme_options',
 				'theme_supports' => '',
 				'title'          => __( 'Genesis Sample Options', 'genesis-sample' ),
 				'description'    => '',
-			)
+			]
 		);
 
 		// 1. Define a new section (if desired) to the Theme Customizer.
 		$wp_customize->add_section(
 			'mytheme_options',
-			array(
+			[
 				'title'       => __( 'Genesis Design Options', 'genesis-sample' ), // Visible title of section.
 				'priority'    => 10, // Determines what order this appears in.
 				'capability'  => 'edit_theme_options', // Capability needed to tweak.
 				'description' => __( 'Allows you to set custom colors for BK Child theme.', 'genesis-sample' ), // Descriptive tooltip.
-			)
+			]
 		);
 
 		// 2. Register new settings to the WP database.
 		$wp_customize->add_setting(
 			'link_textcolor', // No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record.
-			array(
+			[
 				'default'    => '#000', // Default setting/value to save.
 				'type'       => 'theme_mod', // Is this an 'option' or a 'theme_mod'?.
 				'capability' => 'edit_theme_options', // Optional. Special permissions for accessing this setting.
 				'transport'  => 'refresh', // What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?.
-			)
+			]
 		);
 
 		// 3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
@@ -66,24 +66,24 @@ class Genesis_Sample_Customize {
 			new WP_Customize_Color_Control( // Instantiate the color control class.
 				$wp_customize, // P ass the $wp_customize object (required).
 				'mytheme_link_textcolor', // Set a unique ID for the control.
-				array(
+				[
 					'label'    => __( 'Link Color', 'genesis-sample' ), // Admin-visible name of the control.
 					'settings' => 'link_textcolor', // Which setting to load and manipulate (serialized is okay).
 					'priority' => 10, // Determines the order this control appears in for the specified section.
 					'section'  => 'mytheme_options', // ID of the section this control should render in (can be one of yours, or a WordPress default section).
-				)
+				]
 			)
 		);
 
 		// 2. Register new settings to the WP database...
 		$wp_customize->add_setting(
 			'link_textaccentcolor', // No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record.
-			array(
+			[
 				'default'    => '#000', // Default setting/value to save.
 				'type'       => 'theme_mod', // Is this an 'option' or a 'theme_mod'?.
 				'capability' => 'edit_theme_options', // Optional. Special permissions for accessing this setting.
 				'transport'  => 'refresh', // What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?.
-			)
+			]
 		);
 
 		// 3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
@@ -91,12 +91,12 @@ class Genesis_Sample_Customize {
 			new WP_Customize_Color_Control( // Instantiate the color control class.
 				$wp_customize, // Pass the $wp_customize object (required).
 				'mytheme_link_textaccentcolor', // Set a unique ID for the control.
-				array(
+				[
 					'label'    => __( 'Link Accent Color', 'genesis-sample' ), // Admin-visible name of the control.
 					'settings' => 'link_textaccentcolor', // Which setting to load and manipulate (serialized is okay).
 					'priority' => 10, // Determines the order this control appears in for the specified section.
 					'section'  => 'mytheme_options', // ID of the section this control should render in (can be one of yours, or a WordPress default section).
-				)
+				]
 			)
 		);
 	}
@@ -145,7 +145,7 @@ class Genesis_Sample_Customize {
 	 *  @since MyTheme 1.0
 	 */
 	public static function live_preview() {
-		wp_enqueue_script( genesis_get_theme_handle() . '-themecustomizer', get_template_directory_uri() . '/assets/js/theme-customizer.js', array( 'jquery', 'customize-preview' ), 0.1, true );
+		wp_enqueue_script( genesis_get_theme_handle() . '-themecustomizer', get_template_directory_uri() . '/assets/js/theme-customizer.js', [ 'jquery', 'customize-preview' ], 0.1, true );
 	}
 
 
@@ -184,10 +184,10 @@ class Genesis_Sample_Customize {
 }
 
 // Setup the Theme Customizer settings and controls...
-add_action( 'customize_register', array( 'bk_Customize', 'register' ) );
+add_action( 'customize_register', [ 'bk_Customize', 'register' ] );
 
 // Output custom CSS to live site.
-add_action( 'wp_head', array( 'bk_Customize', 'header_output' ) );
+add_action( 'wp_head', [ 'bk_Customize', 'header_output' ] );
 
 // Enqueue live preview javascript in Theme Customizer admin screen.
-add_action( 'customize_preview_init', array( 'bk_Customize', 'live_preview' ) );
+add_action( 'customize_preview_init', [ 'bk_Customize', 'live_preview' ] );
