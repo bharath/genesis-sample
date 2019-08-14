@@ -456,12 +456,12 @@ function genesis_sample_custom_button_classes( $block_content, $block ) {
 	if ( 'core/button' === $block['blockName'] && isset( $block['attrs']['className'] ) ) {
 
 		// Setting up a subset of custom button link classes.
-		$allowed_button_link_classes = array(
+		$allowed_button_link_classes = [
 			'fancybox',
 			'another-custom-class',
 			'example-custom-class',
 			// ...
-		);
+		];
 
 		// Remove allowed button link classes from the button container first.
 		$block_content = str_replace(
