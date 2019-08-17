@@ -9,8 +9,8 @@
  */
 
 // Include customizer controls.
-require_once get_stylesheet_directory() . '/inc/class-genesis-sample-separator-control.php';
-require_once get_stylesheet_directory() . '/inc/class-genesis-sample-reset-control.php';
+require_once get_stylesheet_directory() . '/inc/class/class-genesis-sample-separator-control.php';
+require_once get_stylesheet_directory() . '/inc/class/class-genesis-sample-reset-control.php';
 
 
 /**
