@@ -107,6 +107,18 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 			'editor-font-sizes',
 			[
 				[
+					'name'      => esc_html__( 'XX Small', 'genesis-sample' ),
+					'shortName' => esc_html__( 'XXS', 'genesis-sample' ),
+					'size'      => 'var(--font-size-xxs)',
+					'slug'      => 'xx-small',
+				],
+				[
+					'name'      => esc_html__( 'X Small', 'genesis-sample' ),
+					'shortName' => esc_html__( 'XS', 'genesis-sample' ),
+					'size'      => 'var(--font-size-xs)',
+					'slug'      => 'x-small',
+				],
+				[
 					'name'      => esc_html__( 'Small', 'genesis-sample' ),
 					'shortName' => esc_html__( 'S', 'genesis-sample' ),
 					'size'      => 'var(--font-size-s)',
@@ -135,6 +147,12 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 					'shortName' => esc_html__( 'XL', 'genesis-sample' ),
 					'size'      => 'var(--font-size-xl)',
 					'slug'      => 'x-large',
+				],
+				[
+					'name'      => esc_html__( 'XX Large', 'genesis-sample' ),
+					'shortName' => esc_html__( 'XXL', 'genesis-sample' ),
+					'size'      => 'var(--font-size-xxl)',
+					'slug'      => 'xx-large',
 				],
 			]
 		);

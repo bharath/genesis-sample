@@ -76,8 +76,9 @@ function genesis_sample_scripts_styles() {
 	wp_enqueue_style( genesis_get_theme_handle() . '-highlight-style', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/styles/xcode.min.css', [], '9.15.8', 'all' );
 
 	// Sets the default timezone used by all date/time functions in a script to developer timezone.
-	// date_default_timezone_set( 'Asia/Kolkata' );.
 	// date_default_timezone_set( get_option( 'timezone_string' ) );.
+	date_default_timezone_set( 'Asia/Kolkata' );
+
 	// Enqueue custom Gutenberg front-end styles.
 	wp_enqueue_style( genesis_get_theme_handle() . '-custom-gutenberg', get_stylesheet_directory_uri() . '/assets/css/front-end.css', [], date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/front-end.css' ) ) );
 

@@ -16,10 +16,26 @@ This will be tested and updated when a new Genesis Sample update is released.
 
 ```php
 // Custom Functions.
-require get_stylesheet_directory() . '/custom-functions.php';
+require_once get_stylesheet_directory() . '/inc/custom-functions.php';
+
+// WordPress Cleanup.
+require_once get_stylesheet_directory() . '/inc/wordpress-cleanup.php';
 
 // Customizer Options.
-require get_stylesheet_directory() . '/inc/customizer.php';
+require_once get_stylesheet_directory() . '/inc/customizer.php';
+
+// Gutenberg Options.
+require_once get_stylesheet_directory() . '/inc/gutenberg.php';
+
+// Editor Color palette and fonts.
+require_once get_stylesheet_directory() . '/inc/editor-colors-fonts.php';
+
+// Automattic Options.
+require_once get_stylesheet_directory() . '/inc/automattic.php';
+
+// ACF Options.
+require_once get_stylesheet_directory() . '/inc/acf.php';
+
 ```
 
 6. That's it. If you want to customize it further, read Customizations section below.
