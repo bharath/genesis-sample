@@ -5,7 +5,7 @@ Description: This is the sample theme created for the Genesis Framework.
 Author: StudioPress
 Author URI: https://www.studiopress.com/
 
-Version: 3.0.1
+Version: 3.1.0
 
 Tags: accessibility-ready, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
 
@@ -154,10 +154,10 @@ html {
 }
 
 body {
-	background-color: var(--background-color);
-	color: var(--text-color);
-	font-family: var(--g-font-family);
-	font-size: var(--font-size-n);
+	background-color: #fff;
+	color: #333;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.625;
 	margin: 0;
@@ -176,14 +176,14 @@ textarea:focus,
 }
 
 a {
-	color: var(--link-color);
+	color: #0073e5;
 	text-decoration: underline;
 	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 a:focus,
 a:hover {
-	color: var(--link-hover-color);
+	color: #333;
 	text-decoration: none;
 }
 
@@ -205,7 +205,7 @@ li {
 hr {
 	border: none;
 	border-collapse: collapse;
-	border-top: 1px solid var(--hr-border-color);
+	border-top: 1px solid #eee;
 	clear: both;
 	margin: 30px 0;
 }
@@ -223,8 +223,8 @@ i {
 }
 
 mark {
-	background: var(--mark-background-color);
-	color: var(--mark-color);
+	background: #ddd;
+	color: #333;
 }
 
 blockquote {
@@ -240,7 +240,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: var(--g-font-family);
+	font-family: "Source Sans Pro", sans-serif;
 	font-weight: 400;
 	line-height: 1.2;
 	margin: 0 0 20px;
@@ -308,14 +308,14 @@ figure {
 }
 
 .gallery img {
-	border: 1px solid var(--gallery-img-border-color, #eee);
+	border: 1px solid #eee;
 	height: auto;
 	padding: 4px;
 }
 
 .gallery img:focus,
 .gallery img:hover {
-	border: 1px solid var(--gallery-img-hover-border-color, #999);
+	border: 1px solid #999;
 	outline: none;
 }
 
@@ -378,10 +378,10 @@ figure {
 input,
 select,
 textarea {
-	background-color: var(--input-background-color, #fff);
-	border: 1px solid var(--input-border-color, #ddd);
-	color: var(--input-color, #333);
-	font-size: var(--font-size-n);
+	background-color: #fff;
+	border: 1px solid #ddd;
+	color: #333;
+	font-size: 18px;
 	font-weight: 400;
 	padding: 15px;
 	width: 100%;
@@ -389,7 +389,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-	border: 1px solid var(--input-focus-border-color, #999);
+	border: 1px solid #999;
 	outline: none;
 }
 
@@ -400,17 +400,17 @@ input[type="radio"] {
 }
 
 ::-ms-input-placeholder {
-	color: var(--placeholder-color, #333);
+	color: #333;
 	opacity: 1;
 }
 
 :-ms-input-placeholder {
-	color: var(--placeholder-color, #333);
+	color: #333;
 	opacity: 1;
 }
 
 ::placeholder {
-	color: var(--placeholder-color, #333);
+	color: #333;
 	opacity: 1;
 }
 
@@ -421,10 +421,10 @@ input[type="submit"],
 .site-container div.wpforms-container-full .wpforms-form input[type="submit"],
 .site-container div.wpforms-container-full .wpforms-form button[type="submit"],
 .button {
-	background-color: var(--button-background-color, #333);
+	background-color: #333;
 	border: 0;
 	border-radius: 5px;
-	color: var(--button-text-color, #fff);
+	color: #fff;
 	cursor: pointer;
 	font-size: 16px;
 	font-weight: 600;
@@ -449,14 +449,14 @@ input[type="submit"]:hover,
 .site-container div.wpforms-container-full .wpforms-form button[type="submit"]:hover,
 .button:focus,
 .button:hover {
-	background-color: var(--button-focus-background-color, #0073e5);
+	background-color: #0073e5;
 	border-width: 0;
-	color: var(--button-focus-text-color, #fff);
+	color: #fff;
 }
 
 .entry-content .button:focus,
 .entry-content .button:hover {
-	color: var(--entry-content-button-hover-text-color, #fff);
+	color: #fff;
 }
 
 .button {
@@ -473,9 +473,9 @@ input[type="submit"]:hover,
 .site-container input[type="reset"]:disabled:hover,
 .site-container input[type="submit"]:disabled,
 .site-container input[type="submit"]:disabled:hover {
-	background-color: var(--button-disabled-background-color, #eee);
+	background-color: #eee;
 	border-width: 0;
-	color: var(--button-disabled-text-color, #777);
+	color: #777;
 	cursor: not-allowed;
 }
 
@@ -497,7 +497,7 @@ table {
 }
 
 tbody {
-	border-bottom: 1px solid var(--tbody-border-color, #eee);
+	border-bottom: 1px solid #eee;
 }
 
 td,
@@ -507,7 +507,7 @@ th {
 }
 
 td {
-	border-top: 1px solid var(--td-border-color, #eee);
+	border-top: 1px solid #eee;
 	padding: 10px;
 }
 
@@ -544,10 +544,10 @@ th:last-child {
 .screen-reader-text:focus,
 .screen-reader-shortcut:focus,
 .widget_search input[type="submit"]:focus {
-	background: var(--search-input-focus-background-color, #fff);
-	box-shadow: 0 0 2px 2px var(--search-input-focus-box-shadow-color, rgba(0, 0, 0, 0.6));
+	background: #fff;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
-	color: var(--search-input-focus-text-color, #333);
+	color: #333;
 	display: block;
 	font-size: 1em;
 	font-weight: 700;
@@ -632,7 +632,7 @@ th:last-child {
 }
 
 .after-entry {
-	box-shadow: 0 0 20px var(--after-entry-box-shadow-color, rgba(0, 0, 0, 0.05));
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 	padding: 20px 30px;
 }
 
@@ -641,7 +641,7 @@ th:last-child {
 }
 
 .breadcrumb {
-	border-bottom: 1px solid var(--breadcrumb-border-color, #eee);
+	border-bottom: 1px solid #eee;
 	font-size: 16px;
 	margin-bottom: 40px;
 	padding-bottom: 10px;
@@ -701,17 +701,17 @@ th:last-child {
 
 .entry-title a,
 .sidebar .widget-title a {
-	color: var(--entry-title-link-color, #333);
+	color: #333;
 	text-decoration: none;
 }
 
 .entry-title a:focus,
 .entry-title a:hover {
-	color: var(--entry-title-link-hover-color, #0073e5);
+	color: #0073e5;
 }
 
 .widget-title {
-	font-size: var(--font-size-n);
+	font-size: 18px;
 	font-weight: 600;
 	margin-bottom: 20px;
 }
@@ -836,7 +836,7 @@ img.alignright,
 --------------------------------------------- */
 
 .featured-content .entry {
-	border-bottom: 1px solid var(--feat-content-entry-border-color, #eee);
+	border-bottom: 1px solid #eee;
 	margin-bottom: 20px;
 }
 
@@ -864,7 +864,7 @@ img.alignright,
 }
 
 .sidebar .enews {
-	background-color: var(--enews-background-color, #f5f5f5);
+	background-color: #f5f5f5;
 	padding: 30px;
 }
 
@@ -890,17 +890,17 @@ img.alignright,
 --------------------------------------------- */
 
 .gs-faq__question {
-	background: var(--faq-background-color, transparent);
-	border-bottom: 1px solid var(--faq-border-color, #eee);
-	color: var(--faq-text-color, #333);
+	background: transparent;
+	border-bottom: 1px solid #eee;
+	color: #333;
 	padding-left: 0;
 	padding-right: 0;
 }
 
 .gs-faq__question:focus,
 .gs-faq__question:hover {
-	background: var(--faq-hover-background-color, transparent);
-	color: var(--faq-hover-text-color, #0073e5);
+	background: transparent;
+	color: #0073e5;
 }
 
 .gs-faq__question::after {
@@ -984,8 +984,8 @@ img.alignright,
 
 /* Display outline on focus */
 :focus {
-	color: var(--focus-text-color, #333);
-	outline: var(--focus-outline-color, #ccc) solid 1px;
+	color: #333;
+	outline: #ccc solid 1px;
 }
 
 
@@ -993,8 +993,8 @@ img.alignright,
 ---------------------------------------------------------------------------- */
 
 .site-header {
-	background-color: var(--site-header-background-color, #fff);
-	box-shadow: var(--site-header-box-shadow-color, rgba(0, 0, 0, 0.05));
+	background-color: #fff;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 	padding: 0 30px;
 }
 
@@ -1028,7 +1028,7 @@ img.alignright,
 .site-title a,
 .site-title a:focus,
 .site-title a:hover {
-	color: var(--site-title-link-color, #333);
+	color: #333;
 	text-decoration: none;
 }
 
@@ -1060,7 +1060,7 @@ img.alignright,
 }
 
 .genesis-nav-menu a {
-	color: var(--nav-menu-link-color, #333);
+	color: #333;
 	display: block;
 	font-size: 15px;
 	font-weight: 400;
@@ -1075,7 +1075,7 @@ img.alignright,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-	color: var(--nav-menu-link-hover-color, #0073e5);
+	color: #0073e5;
 	text-decoration: none;
 }
 
@@ -1096,7 +1096,7 @@ img.alignright,
 }
 
 .genesis-nav-menu .sub-menu a {
-	background-color: var(--nav-menu-sub-link-background-color, #fff);
+	background-color: #fff;
 	font-size: 14px;
 	position: relative;
 	word-wrap: break-word;
@@ -1137,9 +1137,9 @@ img.alignright,
 
 .menu-toggle,
 .sub-menu-toggle {
-	background-color: var(--menu-toggle-background-color, transparent);
+	background-color: transparent;
 	border-width: 0;
-	color: var(--menu-toggle-color, #333);
+	color: #333;
 	display: block;
 	margin: 0 auto;
 	overflow: hidden;
@@ -1151,9 +1151,9 @@ img.alignright,
 .menu-toggle:hover,
 .sub-menu-toggle:focus,
 .sub-menu-toggle:hover {
-	background-color: var(--menu-toggle-hover-background-color, transparent);
+	background-color: transparent;
 	border-width: 0;
-	color: var(--menu-toggle-hover-color, #0073e5);
+	color: #0073e5;
 }
 
 .menu-toggle {
@@ -1269,11 +1269,11 @@ img.alignright,
 }
 
 .entry-content code {
-	background-color: var(--code-background-color, #f5f5f5);
+	background-color: #f5f5f5;
 }
 
 .content .sticky {
-	background-color: var(--sticky-background-color, #f5f5f5);
+	background-color: #f5f5f5;
 	padding: 30px;
 }
 
@@ -1290,7 +1290,7 @@ p.entry-meta {
 }
 
 .entry-footer .entry-meta {
-	border-top: 1px solid var(--entry-footer-meta-border-color, #eee);
+	border-top: 1px solid #eee;
 	padding-top: 20px;
 }
 
@@ -1321,8 +1321,8 @@ p.entry-meta {
 }
 
 .archive-pagination li a {
-	background-color: var(--pagination-link-background-color, #f5f5f5);
-	color: var(--pagination-link-color, #333);
+	background-color: #f5f5f5;
+	color: #333;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 16px;
@@ -1335,8 +1335,8 @@ p.entry-meta {
 .archive-pagination li a:focus,
 .archive-pagination li a:hover,
 .archive-pagination li.active a {
-	background-color: var(--pagination-link-hover-background-color, #333);
-	color: var(--pagination-link-hover-color, #fff);
+	background-color: #333;
+	color: #fff;
 }
 
 /* Entry Comments
@@ -1412,8 +1412,8 @@ p.entry-meta {
 ---------------------------------------------------------------------------- */
 
 .footer-widgets {
-	border-top: 1px solid var(--footer-widgets-border-color, #eee);
-	background-color: var(--footer-widgets-background-color, #fff);
+	border-top: 1px solid #eee;
+	background-color: #fff;
 	clear: both;
 	padding: 60px 0;
 }
@@ -1439,8 +1439,8 @@ p.entry-meta {
 ---------------------------------------------------------------------------- */
 
 .site-footer {
-	background-color: var(--site-footer-background-color, #fff);
-	border-top: 1px solid var(--site-footer-border-color, #eee);
+	background-color: #fff;
+	border-top: 1px solid #eee;
 	font-size: 15px;
 	line-height: 1.5;
 	padding: 30px;
@@ -1497,9 +1497,9 @@ p.entry-meta {
 	}
 
 	.genesis-nav-menu > .menu-highlight > a {
-		background-color: var(--nav-menu-highlight-link-background-color, #333);
+		background-color: #333;
 		border-radius: 3px;
-		color: var(--nav-menu-highlight-link-color, #fff);
+		color: #fff;
 		font-weight: 600;
 		margin-left: 15px;
 		padding-left: 20px;
@@ -1508,7 +1508,7 @@ p.entry-meta {
 
 	.genesis-nav-menu > .menu-highlight > a:focus,
 	.genesis-nav-menu > .menu-highlight > a:hover {
-		background-color: var(--nav-menu-highlight-link-hover-background-color, #0073e5);
+		background-color: #0073e5;
 	}
 
 	.genesis-nav-menu .sub-menu,
@@ -1517,7 +1517,7 @@ p.entry-meta {
 	}
 
 	.genesis-nav-menu .sub-menu {
-		border-top: 1px solid var(--nav-menu-sub-border-color, #eee);
+		border-top: 1px solid #eee;
 		opacity: 0;
 		padding-left: 0;
 		position: absolute;
@@ -1525,7 +1525,7 @@ p.entry-meta {
 	}
 
 	.genesis-nav-menu .sub-menu a {
-		border: 1px solid var(--nav-menu-sub-link-border-color, #eee);
+		border: 1px solid #eee;
 		border-top: 0;
 		padding-bottom: 15px;
 		padding-top: 15px;
@@ -1582,8 +1582,7 @@ p.entry-meta {
 		float: right;
 	}
 
-	.full-width-content .content,
-	.landing-page .content {
+	.full-width-content .content {
 		float: none;
 		margin-left: auto;
 		margin-right: auto;
@@ -1605,7 +1604,7 @@ p.entry-meta {
 	--------------------------------------------- */
 
 	.author-box {
-		background-color: var(--author-box-background-color, #f5f5f5);
+		background-color: #f5f5f5;
 		padding: 30px;
 	}
 
@@ -1712,9 +1711,9 @@ p.entry-meta {
 	*,
 	*::before,
 	*::after {
-		background: var(--star-background-color, transparent) !important;
+		background: transparent !important;
 		box-shadow: none !important;
-		color: var(--star-color, #333) !important;
+		color: #333 !important;
 		text-shadow: none !important;
 	}
 
@@ -1763,7 +1762,7 @@ p.entry-meta {
 
 	blockquote,
 	pre {
-		border: 1px solid var(--blockquote-border-color, #999);
+		border: 1px solid #999;
 		page-break-inside: avoid;
 	}
 
@@ -1903,27 +1902,28 @@ explicitly, e.g.
 
 :root {
 
-	/* -- Custom Color Palette for Front End & Gutenberg
+	/* -- Custom Color Palette
 	--------------------------------------------- */
 
-	--ccp-black: #000;
-	--ccp-blackish: #333;
-	--ccp-grey: #6e6e6a;
-	--ccp-greyish: #999;
-	--ccp-white: #fff;
-	--ccp-transparent: transparent;
-	--ccp-primary: #0467c6;
-	--ccp-secondary: #004990;
-	--ccp-primary-alt: #ff0014;
-	--ccp-secondary-alt: #b3000e;
+	--primary: #0467c6;
+	--secondary: #004990;
+	--primary-alt: #ff0014;
+	--secondary-alt: #b3000e;
+	--black: #000;
+	--dark-gray-one: #333;
+	--dark-gray-two: #777;
+	--dark-gray-three: #999;
+	--light-gray-four: #ccc;
+	--light-gray-three: #ddd;
+	--light-gray-two: #eee;
+	--light-gray-one: #f5f5f5;
+	--white: #fff;
+	--transparent: transparent;
+	--shadow-one: rgba(0, 0, 0, 0.6);
+	--shadow-two: rgba(0, 0, 0, 0.05);
 
-	--light-background-color: #fff;
-	--dark-background-color: #333;
-	--primary-color: var(--ccp-primary);
-	--hover-color: var(--ccp-secondary);
-	--primary-text-color: #333;
-	--secondary-text-color: #777;
-	--border-color: #eee;
+	/* -- Custom Fonts
+	--------------------------------------------- */
 
 	--font-size-xxs: 14px;
 	--font-size-xs: 15px;
@@ -1933,41 +1933,17 @@ explicitly, e.g.
 	--font-size-l: 24px;
 	--font-size-xl: 27px;
 	--font-size-xxl: 30px;
+	--font-size-1em: 1em;
 
 	--font-family-normal: 'Inter var', 'Open Sans', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	--font-family-bold: 'Inter var', 'Open Sans', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
-
-	/* -- Genesis Color Palette
+	/* -- Genesis Sample Fonts
 	--------------------------------------------- */
 
-	--gcp-one: #0073e5;
-	--gcp-two: #333;
-	--gcp-three: #777;
-	--gcp-four: #999;
-	--gcp-five: #fff;
-	--gcp-six: #f5f5f5;
-	--gcp-seven: #eee;
-	--gcp-eight: #ddd;
-	--gcp-nine: transparent;
-	--gcp-shadow-one: rgba(0, 0, 0, 0.6);
-	--gcp-shadow-two: rgba(0, 0, 0, 0.05);
+	--font-family: "Source Sans Pro", sans-serif;
 
-	/*
-
-	--ccp-link-color: #03a577;
-	--ccp-accent-color: #02684c;
-	--ccp-button-bg: #03a577;
-	--ccp-button-color: #02684c;
-	--ccp-button-outline-hover: #02684c;
-	--ccp-theme-primary: #03a577;
-	--ccp-theme-secondary: #02684c;
-
-	*/
-	--g-font-family: "Source Sans Pro", sans-serif;
-
-
-	/* -- Background Colors
+	/* -- Genesis Sample Background Colors
 	--------------------------------------------- */
 
 	--background-color: #fff;
@@ -1979,6 +1955,7 @@ explicitly, e.g.
 	--button-hover-background-color: #0073e5;
 	--button-focus-background-color: #0073e5;
 	--button-disabled-background-color: #eee;
+	--screen-reader-text-focus-background-color: #fff;
 	--search-input-focus-background-color: #fff;
 	--enews-background-color: #f5f5f5;
 	--faq-background-color: transparent;
@@ -1999,9 +1976,9 @@ explicitly, e.g.
 	--nav-menu-highlight-link-focus-background-color: #0073e5;
 	--nav-menu-highlight-link-hover-background-color: #0073e5;
 	--author-box-background-color: #f5f5f5;
-	--star-background-color: transparent;
+	--star-background-color: transparent !important;
 
-	/* -- Text Colors
+	/* -- Genesis Sample Text Colors
 	--------------------------------------------- */
 
 	--text-color: #333;
@@ -2009,20 +1986,26 @@ explicitly, e.g.
 	--input-color: #333;
 	--select-color: #333;
 	--textarea-color: #333;
-	--placeholder-color: #333;
+	--input-placeholder-color: #333;
 	--button-text-color: #fff;
 	--button-hover-text-color: #fff;
 	--button-focus-text-color: #fff;
 	--entry-content-button-focus-text-color: #fff;
 	--entry-content-button-hover-text-color: #fff;
 	--button-disabled-text-color: #777;
+	--screen-reader-text-focus-color: #333;
 	--search-input-focus-text-color: #333;
 	--faq-text-color: #333;
 	--faq-focus-text-color: #0073e5;
 	--faq-hover-text-color: #0073e5;
 	--focus-text-color: #333;
+	--menu-toggle-color: #333;
+	--menu-toggle-focus-color: #0073e5;
+	--menu-toggle-hover-color: #0073e5;
+	--star-color: #333 !important;
 
-	/* -- Link Colors
+
+	/* -- Genesis Sample Link Colors
 	--------------------------------------------- */
 
 	--link-color: #0073e5;
@@ -2038,31 +2021,24 @@ explicitly, e.g.
 	--nav-menu-link-color: #333;
 	--nav-menu-link-focus-color: #0073e5;
 	--nav-menu-link-hover-color: #0073e5;
+	--nav-menu-current-link-color: #0073e5;
 	--nav-menu-current-link-focus-color: #0073e5;
 	--nav-menu-current-link-hover-color: #0073e5;
 	--pagination-link-color: #333;
 	--pagination-link-hover-color: #fff;
 	--nav-menu-highlight-link-color: #fff;
 
-	/* -- Box Shadow Colors
+	/* -- Genesis Sample Box Shadow Colors
 	--------------------------------------------- */
 
+	--screen-reader-text-focus-box-shadow-color: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	--search-input-focus-box-shadow-color: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	--after-entry-box-shadow-color: 0 0 20px rgba(0, 0, 0, 0.05);
 	--site-header-box-shadow-color: 0 0 20px rgba(0, 0, 0, 0.05);
 
-	/* -- Misc Colors
+	/* -- Genesis Sample Border Colors
 	--------------------------------------------- */
 
-	--menu-toggle-color: #333;
-	--menu-toggle-focus-color: #0073e5;
-	--menu-toggle-hover-color: #0073e5;
-	--star-color: #333;
-
-	/* -- Border Colors
-	--------------------------------------------- */
-
-	--border-color: #eee;
 	--hr-border-color: #eee;
 	--gallery-img-border-color: #eee;
 	--gallery-img-hover-border-color: #999;

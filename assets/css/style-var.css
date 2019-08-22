@@ -6,24 +6,22 @@
 	/* -- Custom Color Palette
 	--------------------------------------------- */
 
-	--ccp-black: #000;
-	--ccp-blackish: #333;
-	--ccp-grey: #6e6e6a;
-	--ccp-greyish: #999;
-	--ccp-white: #fff;
-	--ccp-transparent: transparent;
-	--ccp-primary: #0467c6;
-	--ccp-secondary: #004990;
-	--ccp-primary-alt: #ff0014;
-	--ccp-secondary-alt: #b3000e;
-
-	--light-background-color: #fff;
-	--dark-background-color: #333;
-	--primary-color: var(--ccp-primary);
-	--hover-color: var(--ccp-secondary);
-	--primary-text-color: #333;
-	--secondary-text-color: #777;
-	--border-color: #eee;
+	--primary: #0467c6;
+	--secondary: #004990;
+	--primary-alt: #ff0014;
+	--secondary-alt: #b3000e;
+	--black: #000;
+	--dark-gray-one: #333;
+	--dark-gray-two: #777;
+	--dark-gray-three: #999;
+	--light-gray-four: #ccc;
+	--light-gray-three: #ddd;
+	--light-gray-two: #eee;
+	--light-gray-one: #f5f5f5;
+	--white: #fff;
+	--transparent: transparent;
+	--shadow-one: rgba(0, 0, 0, 0.6);
+	--shadow-two: rgba(0, 0, 0, 0.05);
 
 	/* -- Custom Fonts
 	--------------------------------------------- */
@@ -36,53 +34,17 @@
 	--font-size-l: 24px;
 	--font-size-xl: 27px;
 	--font-size-xxl: 30px;
+	--font-size-1em: 1em;
 
 	--font-family-normal: 'Inter var', 'Open Sans', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	--font-family-bold: 'Inter var', 'Open Sans', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
-	/* -- Genesis Sample Color Palette
-	--------------------------------------------- */
-
-	--gs-blue: #0073e5;
-	--gs-dark-gray-one: #333;
-	--gs-dark-gray-two: #777;
-	--gs-dark-gray-three: #999;
-	--gs-white: #fff;
-	--gs-light-gray-one: #f5f5f5;
-	--gs-light-gray-two: #eee;
-	--gs-light-gray-three: #ddd;
-	--gs-transparent: transparent;
-	--gs-shadow-one: rgba(0, 0, 0, 0.6);
-	--gs-shadow-two: rgba(0, 0, 0, 0.05);
-
 	/* -- Genesis Sample Fonts
 	--------------------------------------------- */
 
-	--gs-font-size-xxs: 14px;
-	--gs-font-size-xs: 15px;
-	--gs-font-size-s: 16px;
-	--gs-font-size-n: 18px;
-	--gs-font-size-m: 20px;
-	--gs-font-size-l: 24px;
-	--gs-font-size-xl: 27px;
-	--gs-font-size-xxl: 30px;
+	--font-family: "Source Sans Pro", sans-serif;
 
-	--gs-font-family: "Source Sans Pro", sans-serif;
-
-	/*
-
-	--ccp-link-color: #03a577;
-	--ccp-accent-color: #02684c;
-	--ccp-button-bg: #03a577;
-	--ccp-button-color: #02684c;
-	--ccp-button-outline-hover: #02684c;
-	--ccp-theme-primary: #03a577;
-	--ccp-theme-secondary: #02684c;
-
-	*/
-
-
-	/* -- Background Colors
+	/* -- Genesis Sample Background Colors
 	--------------------------------------------- */
 
 	--background-color: #fff;
@@ -94,6 +56,7 @@
 	--button-hover-background-color: #0073e5;
 	--button-focus-background-color: #0073e5;
 	--button-disabled-background-color: #eee;
+	--screen-reader-text-focus-background-color: #fff;
 	--search-input-focus-background-color: #fff;
 	--enews-background-color: #f5f5f5;
 	--faq-background-color: transparent;
@@ -114,9 +77,9 @@
 	--nav-menu-highlight-link-focus-background-color: #0073e5;
 	--nav-menu-highlight-link-hover-background-color: #0073e5;
 	--author-box-background-color: #f5f5f5;
-	--star-background-color: transparent;
+	--star-background-color: transparent !important;
 
-	/* -- Text Colors
+	/* -- Genesis Sample Text Colors
 	--------------------------------------------- */
 
 	--text-color: #333;
@@ -124,20 +87,26 @@
 	--input-color: #333;
 	--select-color: #333;
 	--textarea-color: #333;
-	--placeholder-color: #333;
+	--input-placeholder-color: #333;
 	--button-text-color: #fff;
 	--button-hover-text-color: #fff;
 	--button-focus-text-color: #fff;
 	--entry-content-button-focus-text-color: #fff;
 	--entry-content-button-hover-text-color: #fff;
 	--button-disabled-text-color: #777;
+	--screen-reader-text-focus-color: #333;
 	--search-input-focus-text-color: #333;
 	--faq-text-color: #333;
 	--faq-focus-text-color: #0073e5;
 	--faq-hover-text-color: #0073e5;
 	--focus-text-color: #333;
+	--menu-toggle-color: #333;
+	--menu-toggle-focus-color: #0073e5;
+	--menu-toggle-hover-color: #0073e5;
+	--star-color: #333 !important;
 
-	/* -- Link Colors
+
+	/* -- Genesis Sample Link Colors
 	--------------------------------------------- */
 
 	--link-color: #0073e5;
@@ -153,31 +122,24 @@
 	--nav-menu-link-color: #333;
 	--nav-menu-link-focus-color: #0073e5;
 	--nav-menu-link-hover-color: #0073e5;
+	--nav-menu-current-link-color: #0073e5;
 	--nav-menu-current-link-focus-color: #0073e5;
 	--nav-menu-current-link-hover-color: #0073e5;
 	--pagination-link-color: #333;
 	--pagination-link-hover-color: #fff;
 	--nav-menu-highlight-link-color: #fff;
 
-	/* -- Box Shadow Colors
+	/* -- Genesis Sample Box Shadow Colors
 	--------------------------------------------- */
 
+	--screen-reader-text-focus-box-shadow-color: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	--search-input-focus-box-shadow-color: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	--after-entry-box-shadow-color: 0 0 20px rgba(0, 0, 0, 0.05);
 	--site-header-box-shadow-color: 0 0 20px rgba(0, 0, 0, 0.05);
 
-	/* -- Misc Colors
+	/* -- Genesis Sample Border Colors
 	--------------------------------------------- */
 
-	--menu-toggle-color: #333;
-	--menu-toggle-focus-color: #0073e5;
-	--menu-toggle-hover-color: #0073e5;
-	--star-color: #333;
-
-	/* -- Border Colors
-	--------------------------------------------- */
-
-	--border-color: #eee;
 	--hr-border-color: #eee;
 	--gallery-img-border-color: #eee;
 	--gallery-img-hover-border-color: #999;
