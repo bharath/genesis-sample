@@ -155,9 +155,13 @@ html {
 
 body {
 	background-color: #fff;
+	background-color: var(--background-color);
 	color: #333;
+	color: var(--text-color);
 	font-family: "Source Sans Pro", sans-serif;
+	font-family: var(--font-family);
 	font-size: 18px;
+	font-size: var(--font-size-n);
 	font-weight: 400;
 	line-height: 1.625;
 	margin: 0;
@@ -177,6 +181,7 @@ textarea:focus,
 
 a {
 	color: #0073e5;
+	color: var(--link-color);
 	text-decoration: underline;
 	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
@@ -184,6 +189,7 @@ a {
 a:focus,
 a:hover {
 	color: #333;
+	color: var(--text-color);
 	text-decoration: none;
 }
 
@@ -206,6 +212,7 @@ hr {
 	border: none;
 	border-collapse: collapse;
 	border-top: 1px solid #eee;
+	border-top: 1px solid var(--hr-border-color);
 	clear: both;
 	margin: 30px 0;
 }
@@ -224,7 +231,9 @@ i {
 
 mark {
 	background: #ddd;
+	background: var(--mark-background-color);
 	color: #333;
+	color: var(--mark-color);
 }
 
 blockquote {
@@ -241,6 +250,7 @@ h4,
 h5,
 h6 {
 	font-family: "Source Sans Pro", sans-serif;
+	font-family: var(--font-family);
 	font-weight: 400;
 	line-height: 1.2;
 	margin: 0 0 20px;
@@ -248,18 +258,22 @@ h6 {
 
 h1 {
 	font-size: 30px;
+	font-size: var(--font-size-xxl);
 }
 
 h2 {
 	font-size: 27px;
+	font-size: var(--font-size-xl);
 }
 
 h3 {
 	font-size: 24px;
+	font-size: var(--font-size-l);
 }
 
 h4 {
 	font-size: 20px;
+	font-size: var(--font-size-m);
 }
 
 .entry-content h3,
@@ -273,10 +287,12 @@ h4 {
 
 h5 {
 	font-size: 18px;
+	font-size: var(--font-size-n);
 }
 
 h6 {
 	font-size: 16px;
+	font-size: var(--font-size-s);
 }
 
 /* Objects
@@ -309,6 +325,7 @@ figure {
 
 .gallery img {
 	border: 1px solid #eee;
+	border: 1px solid var(--gallery-img-border-color);
 	height: auto;
 	padding: 4px;
 }
@@ -316,6 +333,7 @@ figure {
 .gallery img:focus,
 .gallery img:hover {
 	border: 1px solid #999;
+	border: 1px solid var(--gallery-img-focus-border-color);
 	outline: none;
 }
 
@@ -379,9 +397,13 @@ input,
 select,
 textarea {
 	background-color: #fff;
+	background-color: var(--input-background-color);
 	border: 1px solid #ddd;
+	border: 1px solid var(--input-border-color);
 	color: #333;
+	color: var(--input-color);
 	font-size: 18px;
+	font-size: var(--font-size-n);
 	font-weight: 400;
 	padding: 15px;
 	width: 100%;
@@ -390,6 +412,7 @@ textarea {
 input:focus,
 textarea:focus {
 	border: 1px solid #999;
+	border: 1px solid var(--input-focus-border-color);
 	outline: none;
 }
 
@@ -401,16 +424,19 @@ input[type="radio"] {
 
 ::-ms-input-placeholder {
 	color: #333;
+	color: var(--input-placeholder-color);
 	opacity: 1;
 }
 
 :-ms-input-placeholder {
 	color: #333;
+	color: var(--input-placeholder-color);
 	opacity: 1;
 }
 
 ::placeholder {
 	color: #333;
+	color: var(--input-placeholder-color);
 	opacity: 1;
 }
 
@@ -422,11 +448,14 @@ input[type="submit"],
 .site-container div.wpforms-container-full .wpforms-form button[type="submit"],
 .button {
 	background-color: #333;
+	background-color: var(--button-background-color);
 	border: 0;
 	border-radius: 5px;
 	color: #fff;
+	color: var(--button-text-color);
 	cursor: pointer;
 	font-size: 16px;
+	font-size: var(--font-size-s);
 	font-weight: 600;
 	padding: 15px 30px;
 	text-align: center;
@@ -450,13 +479,16 @@ input[type="submit"]:hover,
 .button:focus,
 .button:hover {
 	background-color: #0073e5;
+	background-color: var(--button-focus-background-color);
 	border-width: 0;
 	color: #fff;
+	color: var(--button-focus-text-color);
 }
 
 .entry-content .button:focus,
 .entry-content .button:hover {
 	color: #fff;
+	color: var(--entry-content-button-focus-text-color);
 }
 
 .button {
@@ -474,8 +506,10 @@ input[type="submit"]:hover,
 .site-container input[type="submit"]:disabled,
 .site-container input[type="submit"]:disabled:hover {
 	background-color: #eee;
+	background-color: var(--button-disabled-background-color);
 	border-width: 0;
 	color: #777;
+	color: var(--button-disabled-text-color);
 	cursor: not-allowed;
 }
 
@@ -498,6 +532,7 @@ table {
 
 tbody {
 	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid var(--tbody-border-color);
 }
 
 td,
@@ -508,6 +543,7 @@ th {
 
 td {
 	border-top: 1px solid #eee;
+	border-top: 1px solid var(--td-border-color);
 	padding: 10px;
 }
 
@@ -545,9 +581,12 @@ th:last-child {
 .screen-reader-shortcut:focus,
 .widget_search input[type="submit"]:focus {
 	background: #fff;
+	background: var(--screen-reader-text-focus-background-color);
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	box-shadow: var(--screen-reader-text-focus-box-shadow-color);
 	clip: auto !important;
 	color: #333;
+	color: var(--screen-reader-text-focus-color);
 	display: block;
 	font-size: 1em;
 	font-weight: 700;
@@ -633,6 +672,7 @@ th:last-child {
 
 .after-entry {
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+	box-shadow: var(--after-entry-box-shadow-color);
 	padding: 20px 30px;
 }
 
@@ -642,7 +682,9 @@ th:last-child {
 
 .breadcrumb {
 	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid var(--breadcrumb-border-color);
 	font-size: 16px;
+	font-size: var(--font-size-s);
 	margin-bottom: 40px;
 	padding-bottom: 10px;
 }
@@ -702,16 +744,19 @@ th:last-child {
 .entry-title a,
 .sidebar .widget-title a {
 	color: #333;
+	color: var(--entry-title-link-color);
 	text-decoration: none;
 }
 
 .entry-title a:focus,
 .entry-title a:hover {
 	color: #0073e5;
+	color: var(--entry-title-link-focus-color);
 }
 
 .widget-title {
 	font-size: 18px;
+	font-size: var(--font-size-n);
 	font-weight: 600;
 	margin-bottom: 20px;
 }
@@ -775,6 +820,7 @@ img.alignright,
 .gallery-caption,
 .wp-caption-text {
 	font-size: 14px;
+	font-size: var(--font-size-xxs);
 	font-weight: 600;
 	margin: 0;
 	text-align: center;
@@ -837,6 +883,7 @@ img.alignright,
 
 .featured-content .entry {
 	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid var(--feat-content-entry-border-color);
 	margin-bottom: 20px;
 }
 
@@ -847,6 +894,7 @@ img.alignright,
 
 .featured-content .entry-title {
 	font-size: 16px;
+	font-size: var(--font-size-s);
 	margin-bottom: 5px;
 	margin-top: 10px;
 }
@@ -865,6 +913,7 @@ img.alignright,
 
 .sidebar .enews {
 	background-color: #f5f5f5;
+	background-color: var(--enews-background-color);
 	padding: 30px;
 }
 
@@ -891,8 +940,11 @@ img.alignright,
 
 .gs-faq__question {
 	background: transparent;
+	background: var(--faq-background-color);
 	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid var(--faq-border-color);
 	color: #333;
+	color: var(--faq-text-color);
 	padding-left: 0;
 	padding-right: 0;
 }
@@ -900,7 +952,9 @@ img.alignright,
 .gs-faq__question:focus,
 .gs-faq__question:hover {
 	background: transparent;
+	background: var(--faq-focus-background-color);
 	color: #0073e5;
+	color: var(--faq-focus-text-color);
 }
 
 .gs-faq__question::after {
@@ -985,7 +1039,9 @@ img.alignright,
 /* Display outline on focus */
 :focus {
 	color: #333;
+	color: var(--focus-text-color);
 	outline: #ccc solid 1px;
+	outline: var(--focus-outline-color) solid 1px;
 }
 
 
@@ -994,7 +1050,9 @@ img.alignright,
 
 .site-header {
 	background-color: #fff;
+	background-color: var(--site-header-background-color);
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+	box-shadow: var(--site-header-box-shadow-color);
 	padding: 0 30px;
 }
 
@@ -1020,6 +1078,7 @@ img.alignright,
 
 .site-title {
 	font-size: 20px;
+	font-size: var(--font-size-m);
 	font-weight: 600;
 	line-height: 1;
 	margin-bottom: 0;
@@ -1029,6 +1088,7 @@ img.alignright,
 .site-title a:focus,
 .site-title a:hover {
 	color: #333;
+	color: var(--site-title-link-color);
 	text-decoration: none;
 }
 
@@ -1061,8 +1121,10 @@ img.alignright,
 
 .genesis-nav-menu a {
 	color: #333;
+	color: var(--nav-menu-link-color);
 	display: block;
 	font-size: 15px;
+	font-size: var(--font-size-xs);
 	font-weight: 400;
 	outline-offset: -1px;
 	padding-bottom: 12px;
@@ -1076,6 +1138,7 @@ img.alignright,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
 	color: #0073e5;
+	color: var(--nav-menu-link-focus-color);
 	text-decoration: none;
 }
 
@@ -1097,7 +1160,9 @@ img.alignright,
 
 .genesis-nav-menu .sub-menu a {
 	background-color: #fff;
+	background-color: var(--nav-menu-sub-link-background-color);
 	font-size: 14px;
+	font-size: var(--font-size-xxs);
 	position: relative;
 	word-wrap: break-word;
 }
@@ -1138,8 +1203,10 @@ img.alignright,
 .menu-toggle,
 .sub-menu-toggle {
 	background-color: transparent;
+	background-color: var(--menu-toggle-background-color);
 	border-width: 0;
 	color: #333;
+	color: var(--menu-toggle-color);
 	display: block;
 	margin: 0 auto;
 	overflow: hidden;
@@ -1152,8 +1219,10 @@ img.alignright,
 .sub-menu-toggle:focus,
 .sub-menu-toggle:hover {
 	background-color: transparent;
+	background-color: var(--menu-toggle-focus-background-color);
 	border-width: 0;
 	color: #0073e5;
+	color: var(--menu-toggle-focus-color);
 }
 
 .menu-toggle {
@@ -1270,10 +1339,12 @@ img.alignright,
 
 .entry-content code {
 	background-color: #f5f5f5;
+	background-color: var(--code-background-color);
 }
 
 .content .sticky {
 	background-color: #f5f5f5;
+	background-color: var(--sticky-background-color);
 	padding: 30px;
 }
 
@@ -1282,6 +1353,7 @@ img.alignright,
 
 p.entry-meta {
 	font-size: 16px;
+	font-size: var(--font-size-s);
 	margin-bottom: 0;
 }
 
@@ -1291,6 +1363,7 @@ p.entry-meta {
 
 .entry-footer .entry-meta {
 	border-top: 1px solid #eee;
+	border-top: 1px solid var(--entry-footer-meta-border-color);
 	padding-top: 20px;
 }
 
@@ -1322,10 +1395,13 @@ p.entry-meta {
 
 .archive-pagination li a {
 	background-color: #f5f5f5;
+	background-color: var(--pagination-link-background-color);
 	color: #333;
+	color: var(--pagination-link-color);
 	cursor: pointer;
 	display: inline-block;
 	font-size: 16px;
+	font-size: var(--font-size-s);
 	font-weight: 600;
 	margin-bottom: 4px;
 	padding: 8px 12px;
@@ -1336,7 +1412,9 @@ p.entry-meta {
 .archive-pagination li a:hover,
 .archive-pagination li.active a {
 	background-color: #333;
+	background-color: var(--pagination-link-hover-background-color);
 	color: #fff;
+	color: var(--pagination-link-hover-color);
 }
 
 /* Entry Comments
@@ -1397,6 +1475,7 @@ p.entry-meta {
 
 .sidebar {
 	font-size: 16px;
+	font-size: var(--font-size-s);
 	line-height: 1.5;
 }
 
@@ -1413,7 +1492,9 @@ p.entry-meta {
 
 .footer-widgets {
 	border-top: 1px solid #eee;
+	border-top: 1px solid var(--footer-widgets-border-color);
 	background-color: #fff;
+	background-color: var(--footer-widgets-background-color);
 	clear: both;
 	padding: 60px 0;
 }
@@ -1440,8 +1521,11 @@ p.entry-meta {
 
 .site-footer {
 	background-color: #fff;
+	background-color: var(--site-footer-background-color);
 	border-top: 1px solid #eee;
+	border-top: 1px solid var(--site-footer-border-color);
 	font-size: 15px;
+	font-size: var(--font-size-xs);
 	line-height: 1.5;
 	padding: 30px;
 	text-align: center;
@@ -1498,8 +1582,10 @@ p.entry-meta {
 
 	.genesis-nav-menu > .menu-highlight > a {
 		background-color: #333;
+		background-color: var(--nav-menu-highlight-link-background-color);
 		border-radius: 3px;
 		color: #fff;
+		color: var(--nav-menu-highlight-link-color);
 		font-weight: 600;
 		margin-left: 15px;
 		padding-left: 20px;
@@ -1509,6 +1595,7 @@ p.entry-meta {
 	.genesis-nav-menu > .menu-highlight > a:focus,
 	.genesis-nav-menu > .menu-highlight > a:hover {
 		background-color: #0073e5;
+		background-color: var(--nav-menu-highlight-link-hover-background-color);
 	}
 
 	.genesis-nav-menu .sub-menu,
@@ -1518,6 +1605,7 @@ p.entry-meta {
 
 	.genesis-nav-menu .sub-menu {
 		border-top: 1px solid #eee;
+		border-top: 1px solid var(--nav-menu-sub-border-color);
 		opacity: 0;
 		padding-left: 0;
 		position: absolute;
@@ -1526,6 +1614,7 @@ p.entry-meta {
 
 	.genesis-nav-menu .sub-menu a {
 		border: 1px solid #eee;
+		border: 1px solid var(--nav-menu-sub-link-border-color);
 		border-top: 0;
 		padding-bottom: 15px;
 		padding-top: 15px;
@@ -1605,6 +1694,7 @@ p.entry-meta {
 
 	.author-box {
 		background-color: #f5f5f5;
+		background-color: var(--author-box-background-color);
 		padding: 30px;
 	}
 
@@ -1712,8 +1802,10 @@ p.entry-meta {
 	*::before,
 	*::after {
 		background: transparent !important;
+		background: var(--star-background-color);
 		box-shadow: none !important;
 		color: #333 !important;
+		color: var(--star-color);
 		text-shadow: none !important;
 	}
 
@@ -1763,6 +1855,7 @@ p.entry-meta {
 	blockquote,
 	pre {
 		border: 1px solid #999;
+		border: 1px solid var(--blockquote-border-color);
 		page-break-inside: avoid;
 	}
 
