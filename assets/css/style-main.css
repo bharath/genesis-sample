@@ -589,6 +589,7 @@ th:last-child {
 	color: var(--screen-reader-text-focus-color);
 	display: block;
 	font-size: 1em;
+	font-size: var(--font-size-1em);
 	font-weight: 700;
 	height: auto;
 	padding: 15px 23px 14px;
@@ -732,12 +733,14 @@ th:last-child {
 .archive-title,
 .author-box-title {
 	font-size: 20px;
+	font-size: var(--font-size-m);
 	font-weight: 600;
 	margin-bottom: 10px;
 }
 
 .entry-title {
 	font-size: 30px;
+	font-size: var(--font-size-xxl);
 	margin-bottom: 10px;
 }
 
@@ -919,6 +922,7 @@ img.alignright,
 
 .enews-widget input {
 	font-size: 16px;
+	font-size: var(--font-size-s);
 	margin-bottom: 10px;
 }
 
@@ -992,6 +996,7 @@ img.alignright,
 
 .site-container .entry-content .wpforms-form .wpforms-field-sublabel {
 	font-size: 14px;
+	font-size: var(--font-size-xxs);
 	font-weight: 300;
 }
 
@@ -1941,6 +1946,9 @@ p.entry-meta {
 
 
 
+/* -- Custom Styles
+--------------------------------------------- */
+
 /* -------------------------------------------------------
 Variable font.
 Usage:
@@ -2331,7 +2339,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-	background-color: var(--ccp-primary);
+	background-color: var(--primary);
 	font-size: var(--font-size-s) !important;
 	font-weight: 600;
 	line-height: 1.625;
@@ -2351,7 +2359,7 @@ a,
 .menu-toggle:hover,
 .sub-menu-toggle:focus,
 .sub-menu-toggle:hover {
-	color: var(--ccp-primary); /* Color changed from default #0073e5 to primary */
+	color: var(--primary); /* Color changed from default #0073e5 to primary */
 }
 
 button:focus,
@@ -2370,7 +2378,7 @@ input[type="submit"]:hover,
 .button:hover,
 .genesis-nav-menu > .menu-highlight > a:focus,
 .genesis-nav-menu > .menu-highlight > a:hover {
-	background-color: var(--ccp-secondary); /* Color changed from default #0073e5 to #ff0014 */
+	background-color: var(--secondary); /* Color changed from default #0073e5 to #ff0014 */
 }
 
 
@@ -2660,7 +2668,7 @@ a {
 
 a:hover {
 	text-decoration: underline;
-	color: var(--ccp-secondary);
+	color: var(--secondary);
 }
 
 .genesis-nav-menu a {

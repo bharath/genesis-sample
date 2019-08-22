@@ -43,54 +43,74 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 			'editor-color-palette',
 			[
 				[
-					'name'  => esc_html__( 'Black', 'genesis-sample' ),
-					'slug'  => 'black',
-					'color' => 'var(--ccp-black)',
-				],
-				[
-					'name'  => esc_html__( 'Blackish', 'genesis-sample' ),
-					'slug'  => 'blackish',
-					'color' => 'var(--ccp-blackish)',
-				],
-				[
-					'name'  => esc_html__( 'Grey', 'genesis-sample' ),
-					'slug'  => 'grey',
-					'color' => 'var(--ccp-grey)',
-				],
-				[
-					'name'  => esc_html__( 'Greyish', 'genesis-sample' ),
-					'slug'  => 'greyish',
-					'color' => 'var(--ccp-greyish)',
-				],
-				[
-					'name'  => esc_html__( 'White', 'genesis-sample' ),
-					'slug'  => 'white',
-					'color' => 'var(--ccp-white)',
-				],
-				[
-					'name'  => esc_html__( 'Transparent', 'genesis-sample' ),
-					'slug'  => 'transparent',
-					'color' => 'var(--ccp-transparent)',
-				],
-				[
 					'name'  => esc_html__( 'Primary', 'genesis-sample' ),
 					'slug'  => 'primary',
-					'color' => 'var(--ccp-primary)',
+					'color' => 'var(--primary)',
 				],
 				[
 					'name'  => esc_html__( 'Secondary', 'genesis-sample' ),
 					'slug'  => 'secondary',
-					'color' => 'var(--ccp-secondary)',
+					'color' => 'var(--secondary)',
 				],
 				[
 					'name'  => esc_html__( 'Primary Alt', 'genesis-sample' ),
 					'slug'  => 'primary-alt',
-					'color' => 'var(--ccp-primary-alt)',
+					'color' => 'var(--primary-alt)',
 				],
 				[
 					'name'  => esc_html__( 'Secondary Alt', 'genesis-sample' ),
 					'slug'  => 'secondary-alt',
-					'color' => 'var(--ccp-secondary-alt)',
+					'color' => 'var(--secondary-alt)',
+				],
+				[
+					'name'  => esc_html__( 'Black', 'genesis-sample' ),
+					'slug'  => 'black',
+					'color' => 'var(--black)',
+				],
+				[
+					'name'  => esc_html__( 'Dark Gray One', 'genesis-sample' ),
+					'slug'  => 'dark-gray-one',
+					'color' => 'var(--dark-gray-one)',
+				],
+				[
+					'name'  => esc_html__( 'Dark Gray Two', 'genesis-sample' ),
+					'slug'  => 'dark-gray-two',
+					'color' => 'var(--dark-gray-two)',
+				],
+				[
+					'name'  => esc_html__( 'Dark Gray Three', 'genesis-sample' ),
+					'slug'  => 'dark-gray-three',
+					'color' => 'var(--dark-gray-three)',
+				],
+				[
+					'name'  => esc_html__( 'Light Gray Four', 'genesis-sample' ),
+					'slug'  => 'light-gray-four',
+					'color' => 'var(--light-gray-four)',
+				],
+				[
+					'name'  => esc_html__( 'Light Gray Three', 'genesis-sample' ),
+					'slug'  => 'light-gray-three',
+					'color' => 'var(--light-gray-three)',
+				],
+				[
+					'name'  => esc_html__( 'Light Gray Two', 'genesis-sample' ),
+					'slug'  => 'light-gray-two',
+					'color' => 'var(--light-gray-two)',
+				],
+				[
+					'name'  => esc_html__( 'Light Gray One', 'genesis-sample' ),
+					'slug'  => 'light-gray-one',
+					'color' => 'var(--light-gray-one)',
+				],
+				[
+					'name'  => esc_html__( 'White', 'genesis-sample' ),
+					'slug'  => 'white',
+					'color' => 'var(--white)',
+				],
+				[
+					'name'  => esc_html__( 'Transparent', 'genesis-sample' ),
+					'slug'  => 'transparent',
+					'color' => 'var(--transparent)',
 				],
 			]
 		);
@@ -178,26 +198,26 @@ function genesis_sample_inline_gutenberg_css() {
 	$css = <<<CSS
 
 	.ab-block-post-grid .ab-post-grid-items h2 a:hover {
-		color: var(--ccp-primary);
+		color: var(--primary);
 	}
 
 	.site-container .wp-block-button .wp-block-button__link {
-		background-color: var(--ccp-primary);
+		background-color: var(--primary);
 	}
 
 	.wp-block-button .wp-block-button__link:not(.has-background),
 	.wp-block-button .wp-block-button__link:not(.has-background):focus,
 	.wp-block-button .wp-block-button__link:not(.has-background):hover {
-		color: var(--ccp-white);
+		color: var(--white);
 	}
 
 	.site-container .wp-block-button.is-style-outline .wp-block-button__link {
-		color: var(--ccp-primary);
+		color: var(--primary);
 	}
 
 	.site-container .wp-block-button.is-style-outline .wp-block-button__link:focus,
 	.site-container .wp-block-button.is-style-outline .wp-block-button__link:hover {
-		color: var(--ccp-white);
+		color: var(--white);
 	}
 
 CSS;
@@ -225,22 +245,22 @@ function genesis_sample_inline_gutenberg_admin_css() {
 
 	.ab-block-post-grid .ab-post-grid-items h2 a:hover,
 	.block-editor__container .editor-block-list__block a {
-		color: var(--ccp-primary);
+		color: var(--primary);
 	}
 
 	.editor-styles-wrapper .editor-rich-text .button,
 	.editor-styles-wrapper .wp-block-button .wp-block-button__link:not(.has-background) {
-		background-color: var(--ccp-primary);
-		color: var(--ccp-white);
+		background-color: var(--primary);
+		color: var(--white);
 	}
 
 	.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link {
-		color: var(--ccp-primary);
+		color: var(--primary);
 	}
 
 	.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:focus,
 	.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:hover {
-		color: var(--ccp-secondary);
+		color: var(--secondary);
 	}
 
 CSS;
