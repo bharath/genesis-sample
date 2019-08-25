@@ -29,7 +29,7 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 		// Add default block styles
 		// add_theme_support( 'wp-block-styles' );.
 		// Disable the custom color picker.
-		//add_theme_support( 'disable-custom-colors' );
+		add_theme_support( 'disable-custom-colors' );
 
 		/**
 		 *
