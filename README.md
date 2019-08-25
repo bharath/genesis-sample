@@ -4,7 +4,7 @@ Customizations to Genesis Sample theme to use as a Starter theme. [Learn More](h
 
 ## Requirement
 
-Tested and works with Genesis Sample theme Version: 3.0.1
+Tested and works with Genesis Sample theme Version: 3.1.0
 
 This will be tested and updated when a new Genesis Sample update is released.
 
@@ -29,6 +29,9 @@ require_once get_stylesheet_directory() . '/inc/gutenberg.php';
 
 // Editor Color palette and fonts.
 require_once get_stylesheet_directory() . '/inc/editor-colors-fonts.php';
+
+// Woocommerce Options.
+require_once get_stylesheet_directory() . '/inc/woocommerce.php';
 
 // Automattic Options.
 require_once get_stylesheet_directory() . '/inc/automattic.php';
