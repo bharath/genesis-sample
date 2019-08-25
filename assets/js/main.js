@@ -4,36 +4,11 @@
 	// Add clipboard button to Code Block
 	$(document).ready(function () {
 
-		hljs.initHighlightingOnLoad();
-
-		// demos.js
-		var clipboardDemos = new ClipboardJS('[data-clipboard-demo]');
-
-		clipboardDemos.on('success', function (e) {
-			e.clearSelection();
-
-			console.info('Action:', e.action);
-			console.info('Text:', e.text);
-			console.info('Trigger:', e.trigger);
-
-			showTooltip(e.trigger, 'Copied!');
-		});
-
-		clipboardDemos.on('error', function (e) {
-			console.error('Action:', e.action);
-			console.error('Trigger:', e.trigger);
-
-			showTooltip(e.trigger, fallbackMessage(e.action));
-		});
-
-
 		// snippets.js
 		var snippets = document.querySelectorAll('.wp-block-code');
 
 		[].forEach.call(snippets, function (snippet) {
 			snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn" data-clipboard-snippet><i class="far fa-clone"></i></button>');
-			//snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn" data-clipboard-snippet><img class="clippy" width="13" src="https://starterv2.test/wp-content/themes/starter/assets/css/images/clippy.svg" alt="Copy to clipboard"></button>');
-
 		});
 
 		var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
@@ -71,6 +46,26 @@
 			elem.setAttribute('class', 'btn tooltipped tooltipped-s');
 			elem.setAttribute('aria-label', msg);
 		}
+
+		// Simplistic detection, do not use it in production
+		function fallbackMessage(action) {
+			var actionMsg = '';
+			var actionKey = (action === 'cut' ? 'X' : 'C');
+
+			if (/iPhone|iPad/i.test(navigator.userAgent)) {
+				actionMsg = 'No support :(';
+			}
+			else if (/Mac/i.test(navigator.userAgent)) {
+				actionMsg = 'Press ⌘-' + actionKey + ' to ' + action;
+			}
+			else {
+				actionMsg = 'Press Ctrl-' + actionKey + ' to ' + action;
+			}
+
+			return actionMsg;
+		}
+
+		hljs.initHighlightingOnLoad();
 
 	});
 

@@ -21,9 +21,6 @@ add_filter( 'woocommerce_enqueue_styles', 'genesis_sample_custom_woocommerce_sty
  */
 function genesis_sample_custom_woocommerce_styles( $enqueue_styles ) {
 
-	// Dequeue Woocommerce styles.
-	wp_dequeue_style( genesis_get_theme_handle() . '-woocommerce-styles' );
-
 	$enqueue_styles[ genesis_get_theme_handle() . '-custom-woocommerce-styles' ] = [
 		'src'     => get_stylesheet_directory_uri() . '/assets/css/woocommerce.css',
 		'deps'    => '',

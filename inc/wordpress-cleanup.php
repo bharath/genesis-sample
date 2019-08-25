@@ -21,8 +21,9 @@
  * @return array  Amended request arguments
  */
 function genesis_sample_dont_update_theme( $r, $url ) {
-	if ( 0 !== strpos( $url, 'https://api.wordpress.org/themes/update-check/1.1/' ) )
-	return $r; // Not a theme update request. Bail immediately.
+	if ( 0 !== strpos( $url, 'https://api.wordpress.org/themes/update-check/1.1/' ) ) {
+		return $r; // Not a theme update request. Bail immediately.
+	}
 	$themes = json_decode( $r['body']['themes'] );
 	$child  = get_option( 'stylesheet' );
 	unset( $themes->themes->$child );
@@ -34,6 +35,8 @@ add_filter( 'http_request_args', 'genesis_sample_dont_update_theme', 5, 2 );
 
 /**
  * Dequeue jQuery Migrate
+ *
+ * @param array $scripts remove jQuery Migrate.
  */
 function genesis_sample_dequeue_jquery_migrate( &$scripts ) {
 	if ( ! is_admin() ) {
@@ -46,6 +49,8 @@ add_filter( 'wp_default_scripts', 'genesis_sample_dequeue_jquery_migrate' );
 
 /**
  * Comment form, button class
+ *
+ * @param array $args for button block.
  */
 function genesis_sample_comment_form_button_class( $args ) {
 	$args['class_submit'] = 'submit wp-block-button__link';

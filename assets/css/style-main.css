@@ -1949,15 +1949,15 @@ p.entry-meta {
 /* -- Custom Styles
 --------------------------------------------- */
 
-/* -------------------------------------------------------
-Variable font.
-Usage:
+/* -- Variable font
+	Usage:
 
 	html { font-family: 'Inter', sans-serif; }
 	@supports (font-variation-settings: normal) {
 		html { font-family: 'Inter var', sans-serif; }
 	}
-*/
+--------------------------------------------- */
+
 @font-face {
 	font-family: 'Inter var';
 	font-weight: 100 900;
@@ -1966,6 +1966,7 @@ Usage:
 	font-named-instance: 'Regular';
 	src: url("fonts/Inter-upright.var.woff2") format("woff2");
 }
+
 @font-face {
 	font-family: 'Inter var';
 	font-weight: 100 900;
@@ -1975,20 +1976,19 @@ Usage:
 	src: url("fonts/Inter-italic.var.woff2") format("woff2");
 }
 
+/* -- Variable font
+	[EXPERIMENTAL] Multi-axis, single variable font.
 
-/* --------------------------------------------------------------------------
-[EXPERIMENTAL] Multi-axis, single variable font.
+	Slant axis is not yet widely supported (as of February 2019) and thus this
+	multi-axis single variable font is opt-in rather than the default.
 
-Slant axis is not yet widely supported (as of February 2019) and thus this
-multi-axis single variable font is opt-in rather than the default.
-
-When using this, you will probably need to set font-variation-settings
-explicitly, e.g.
+	When using this, you will probably need to set font-variation-settings
+	explicitly, e.g.
 
 	* { font-variation-settings: "slnt" 0deg }
 	.italic { font-variation-settings: "slnt" 10deg }
+--------------------------------------------- */
 
-*/
 @font-face {
 	font-family: 'Inter var experimental';
 	font-weight: 100 900;
@@ -2006,22 +2006,20 @@ explicitly, e.g.
 	/* -- Custom Color Palette
 	--------------------------------------------- */
 
-	--primary: #0467c6;
-	--secondary: #004990;
-	--primary-alt: #ff0014;
-	--secondary-alt: #b3000e;
-	--black: #000;
-	--dark-gray-one: #333;
-	--dark-gray-two: #777;
-	--dark-gray-three: #999;
-	--light-gray-four: #ccc;
-	--light-gray-three: #ddd;
-	--light-gray-two: #eee;
-	--light-gray-one: #f5f5f5;
-	--white: #fff;
-	--transparent: transparent;
-	--shadow-one: rgba(0, 0, 0, 0.6);
-	--shadow-two: rgba(0, 0, 0, 0.05);
+	--ccp-primary: #0467c6;
+	--ccp-secondary: #004990;
+	--ccp-primary-alt: #ff0014;
+	--ccp-secondary-alt: #b3000e;
+	--ccp-black: #000;
+	--ccp-dark-gray-one: #333;
+	--ccp-dark-gray-two: #777;
+	--ccp-dark-gray-three: #999;
+	--ccp-light-gray-four: #ccc;
+	--ccp-light-gray-three: #ddd;
+	--ccp-light-gray-two: #eee;
+	--ccp-light-gray-one: #f5f5f5;
+	--ccp-white: #fff;
+	--ccp-transparent: transparent;
 
 	/* -- Custom Fonts
 	--------------------------------------------- */
@@ -2031,13 +2029,15 @@ explicitly, e.g.
 	--font-size-s: 16px;
 	--font-size-n: 18px;
 	--font-size-m: 20px;
+	--font-size-xm: 21px;
 	--font-size-l: 24px;
 	--font-size-xl: 27px;
 	--font-size-xxl: 30px;
+	--font-size-xxxl: 32px;
 	--font-size-1em: 1em;
 
-	--font-family-normal: 'Inter var', 'Open Sans', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	--font-family-bold: 'Inter var', 'Open Sans', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--font-family-normal: 'Inter var', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--font-family-bold: 'Inter var', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
 	/* -- Genesis Sample Fonts
 	--------------------------------------------- */
@@ -2104,7 +2104,6 @@ explicitly, e.g.
 	--menu-toggle-focus-color: #0073e5;
 	--menu-toggle-hover-color: #0073e5;
 	--star-color: #333 !important;
-
 
 	/* -- Genesis Sample Link Colors
 	--------------------------------------------- */
@@ -2173,7 +2172,7 @@ explicitly, e.g.
 		--------------------------------------------- */
 
 		--ccp-primary: #03a577;
-		--ccp-accent: #02684c;
+		--ccp-secondary: #02684c;
 		--ccp-black: #000;
 		--ccp-blackish: #2c2c2c;
 		--ccp-grey: #6e6e6a;
@@ -2334,12 +2333,14 @@ explicitly, e.g.
 /* -- Default Color Overrides
 --------------------------------------------- */
 
+.site-container div.wpforms-container-full .wpforms-form input[type="submit"],
+.site-container div.wpforms-container-full .wpforms-form button[type="submit"],
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-	background-color: var(--primary);
+	background-color: var(--ccp-primary);
 	font-size: var(--font-size-s) !important;
 	font-weight: 600;
 	line-height: 1.625;
@@ -2359,9 +2360,18 @@ a,
 .menu-toggle:hover,
 .sub-menu-toggle:focus,
 .sub-menu-toggle:hover {
-	color: var(--primary); /* Color changed from default #0073e5 to primary */
+	color: var(--ccp-primary); /* Color changed from default #0073e5 to primary */
 }
 
+.genesis-nav-menu > .menu-highlight > a {
+	background-color: var(--ccp-primary);
+}
+
+.genesis-nav-menu > .menu-highlight > a:hover {
+	color: var(--ccp-white);
+}
+
+.genesis-nav-menu > .menu-highlight > a:hover,
 button:focus,
 button:hover,
 input[type="button"]:focus,
@@ -2378,7 +2388,7 @@ input[type="submit"]:hover,
 .button:hover,
 .genesis-nav-menu > .menu-highlight > a:focus,
 .genesis-nav-menu > .menu-highlight > a:hover {
-	background-color: var(--secondary); /* Color changed from default #0073e5 to #ff0014 */
+	background-color: var(--ccp-secondary); /* Color changed from default #0073e5 to #ff0014 */
 }
 
 
@@ -2668,7 +2678,7 @@ a {
 
 a:hover {
 	text-decoration: underline;
-	color: var(--secondary);
+	color: var(--ccp-secondary);
 }
 
 .genesis-nav-menu a {

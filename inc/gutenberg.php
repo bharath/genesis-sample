@@ -1,6 +1,6 @@
 <?php
 /**
- * This file adds Gutenberg functions to your Theme.
+ * This file adds Gutenberg related functions to your Theme.
  *
  * @package Genesis Sample
  * @author  StudioPress

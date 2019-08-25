@@ -6,22 +6,20 @@
 	/* -- Custom Color Palette
 	--------------------------------------------- */
 
-	--primary: #0467c6;
-	--secondary: #004990;
-	--primary-alt: #ff0014;
-	--secondary-alt: #b3000e;
-	--black: #000;
-	--dark-gray-one: #333;
-	--dark-gray-two: #777;
-	--dark-gray-three: #999;
-	--light-gray-four: #ccc;
-	--light-gray-three: #ddd;
-	--light-gray-two: #eee;
-	--light-gray-one: #f5f5f5;
-	--white: #fff;
-	--transparent: transparent;
-	--shadow-one: rgba(0, 0, 0, 0.6);
-	--shadow-two: rgba(0, 0, 0, 0.05);
+	--ccp-primary: #0467c6;
+	--ccp-secondary: #004990;
+	--ccp-primary-alt: #ff0014;
+	--ccp-secondary-alt: #b3000e;
+	--ccp-black: #000;
+	--ccp-dark-gray-one: #333;
+	--ccp-dark-gray-two: #777;
+	--ccp-dark-gray-three: #999;
+	--ccp-light-gray-four: #ccc;
+	--ccp-light-gray-three: #ddd;
+	--ccp-light-gray-two: #eee;
+	--ccp-light-gray-one: #f5f5f5;
+	--ccp-white: #fff;
+	--ccp-transparent: transparent;
 
 	/* -- Custom Fonts
 	--------------------------------------------- */
@@ -31,13 +29,15 @@
 	--font-size-s: 16px;
 	--font-size-n: 18px;
 	--font-size-m: 20px;
+	--font-size-xm: 21px;
 	--font-size-l: 24px;
 	--font-size-xl: 27px;
 	--font-size-xxl: 30px;
+	--font-size-xxxl: 32px;
 	--font-size-1em: 1em;
 
-	--font-family-normal: 'Inter var', 'Open Sans', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	--font-family-bold: 'Inter var', 'Open Sans', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--font-family-normal: 'Inter var', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--font-family-bold: 'Inter var', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
 	/* -- Genesis Sample Fonts
 	--------------------------------------------- */
@@ -104,7 +104,6 @@
 	--menu-toggle-focus-color: #0073e5;
 	--menu-toggle-hover-color: #0073e5;
 	--star-color: #333 !important;
-
 
 	/* -- Genesis Sample Link Colors
 	--------------------------------------------- */
@@ -173,7 +172,7 @@
 		--------------------------------------------- */
 
 		--ccp-primary: #03a577;
-		--ccp-accent: #02684c;
+		--ccp-secondary: #02684c;
 		--ccp-black: #000;
 		--ccp-blackish: #2c2c2c;
 		--ccp-grey: #6e6e6a;

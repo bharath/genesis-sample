@@ -15,7 +15,6 @@
  *
  * @package bkchild
  */
-
 if ( ! function_exists( 'genesis_sample_setup' ) ) :
 
 	/**
@@ -30,7 +29,7 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 		// Add default block styles
 		// add_theme_support( 'wp-block-styles' );.
 		// Disable the custom color picker.
-		add_theme_support( 'disable-custom-colors' );
+		//add_theme_support( 'disable-custom-colors' );
 
 		/**
 		 *
@@ -45,72 +44,67 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 				[
 					'name'  => esc_html__( 'Primary', 'genesis-sample' ),
 					'slug'  => 'primary',
-					'color' => 'var(--primary)',
+					'color' => 'var(--ccp-primary)',
 				],
 				[
 					'name'  => esc_html__( 'Secondary', 'genesis-sample' ),
 					'slug'  => 'secondary',
-					'color' => 'var(--secondary)',
+					'color' => 'var(--ccp-secondary)',
 				],
 				[
 					'name'  => esc_html__( 'Primary Alt', 'genesis-sample' ),
 					'slug'  => 'primary-alt',
-					'color' => 'var(--primary-alt)',
+					'color' => 'var(--ccp-primary-alt)',
 				],
 				[
 					'name'  => esc_html__( 'Secondary Alt', 'genesis-sample' ),
 					'slug'  => 'secondary-alt',
-					'color' => 'var(--secondary-alt)',
+					'color' => 'var(--ccp-secondary-alt)',
 				],
 				[
 					'name'  => esc_html__( 'Black', 'genesis-sample' ),
 					'slug'  => 'black',
-					'color' => 'var(--black)',
+					'color' => 'var(--ccp-black)',
 				],
 				[
 					'name'  => esc_html__( 'Dark Gray One', 'genesis-sample' ),
 					'slug'  => 'dark-gray-one',
-					'color' => 'var(--dark-gray-one)',
+					'color' => 'var(--ccp-dark-gray-one)',
 				],
 				[
 					'name'  => esc_html__( 'Dark Gray Two', 'genesis-sample' ),
 					'slug'  => 'dark-gray-two',
-					'color' => 'var(--dark-gray-two)',
+					'color' => 'var(--ccp-dark-gray-two)',
 				],
 				[
 					'name'  => esc_html__( 'Dark Gray Three', 'genesis-sample' ),
 					'slug'  => 'dark-gray-three',
-					'color' => 'var(--dark-gray-three)',
+					'color' => 'var(--ccp-dark-gray-three)',
 				],
 				[
 					'name'  => esc_html__( 'Light Gray Four', 'genesis-sample' ),
 					'slug'  => 'light-gray-four',
-					'color' => 'var(--light-gray-four)',
+					'color' => 'var(--ccp-light-gray-four)',
 				],
 				[
 					'name'  => esc_html__( 'Light Gray Three', 'genesis-sample' ),
 					'slug'  => 'light-gray-three',
-					'color' => 'var(--light-gray-three)',
+					'color' => 'var(--ccp-light-gray-three)',
 				],
 				[
 					'name'  => esc_html__( 'Light Gray Two', 'genesis-sample' ),
 					'slug'  => 'light-gray-two',
-					'color' => 'var(--light-gray-two)',
+					'color' => 'var(--ccp-light-gray-two)',
 				],
 				[
 					'name'  => esc_html__( 'Light Gray One', 'genesis-sample' ),
 					'slug'  => 'light-gray-one',
-					'color' => 'var(--light-gray-one)',
+					'color' => 'var(--ccp-light-gray-one)',
 				],
 				[
 					'name'  => esc_html__( 'White', 'genesis-sample' ),
 					'slug'  => 'white',
-					'color' => 'var(--white)',
-				],
-				[
-					'name'  => esc_html__( 'Transparent', 'genesis-sample' ),
-					'slug'  => 'transparent',
-					'color' => 'var(--transparent)',
+					'color' => 'var(--ccp-white)',
 				],
 			]
 		);
@@ -183,11 +177,9 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 	}
 
 endif;
-
 add_action( 'after_setup_theme', 'genesis_sample_setup' );
 
 
-add_action( 'wp_enqueue_scripts', 'genesis_sample_inline_gutenberg_css', 11 );
 /**
  * Outputs front-end inline styles based on colors declared in config/appearance.php.
  *
@@ -198,26 +190,26 @@ function genesis_sample_inline_gutenberg_css() {
 	$css = <<<CSS
 
 	.ab-block-post-grid .ab-post-grid-items h2 a:hover {
-		color: var(--primary);
+		color: var(--ccp-primary);
 	}
 
 	.site-container .wp-block-button .wp-block-button__link {
-		background-color: var(--primary);
+		background-color: var(--ccp-primary);
 	}
 
 	.wp-block-button .wp-block-button__link:not(.has-background),
 	.wp-block-button .wp-block-button__link:not(.has-background):focus,
 	.wp-block-button .wp-block-button__link:not(.has-background):hover {
-		color: var(--white);
+		color: var(--ccp-white);
 	}
 
 	.site-container .wp-block-button.is-style-outline .wp-block-button__link {
-		color: var(--primary);
+		color: var(--ccp-primary);
 	}
 
 	.site-container .wp-block-button.is-style-outline .wp-block-button__link:focus,
 	.site-container .wp-block-button.is-style-outline .wp-block-button__link:hover {
-		color: var(--white);
+		color: var(--ccp-white);
 	}
 
 CSS;
@@ -228,9 +220,9 @@ CSS;
 	wp_add_inline_style( genesis_get_theme_handle() . '-custom-gutenberg', $css );
 
 }
+add_action( 'wp_enqueue_scripts', 'genesis_sample_inline_gutenberg_css', 11 );
 
 
-add_action( 'enqueue_block_editor_assets', 'genesis_sample_inline_gutenberg_admin_css', 11 );
 /**
  * Outputs back-end inline styles based on colors declared in config/appearance.php.
  *
@@ -245,22 +237,22 @@ function genesis_sample_inline_gutenberg_admin_css() {
 
 	.ab-block-post-grid .ab-post-grid-items h2 a:hover,
 	.block-editor__container .editor-block-list__block a {
-		color: var(--primary);
+		color: var(--ccp-primary);
 	}
 
 	.editor-styles-wrapper .editor-rich-text .button,
 	.editor-styles-wrapper .wp-block-button .wp-block-button__link:not(.has-background) {
-		background-color: var(--primary);
-		color: var(--white);
+		background-color: var(--ccp-primary);
+		color: var(--ccp-white);
 	}
 
 	.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link {
-		color: var(--primary);
+		color: var(--ccp-primary);
 	}
 
 	.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:focus,
 	.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:hover {
-		color: var(--secondary);
+		color: var(--ccp-secondary);
 	}
 
 CSS;
@@ -268,6 +260,7 @@ CSS;
 	wp_add_inline_style( genesis_get_theme_handle() . '-custom-gutenberg-fonts', $css );
 
 }
+add_action( 'enqueue_block_editor_assets', 'genesis_sample_inline_gutenberg_admin_css', 11 );
 
 
 /**

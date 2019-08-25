@@ -443,6 +443,7 @@ hr.wp-block-separator.is-style-dots {
 }
 
 
+
 /* -- Custom Styles
 --------------------------------------------- */
 
@@ -553,7 +554,7 @@ h1.is-style-alt {
 	text-transform: uppercase;
 }
 
-/* -- Custom Styles by Bharath
+/* -- Gravity Form button
 --------------------------------------------- */
 
 .gform_wrapper .gform_footer input.button {
@@ -592,11 +593,6 @@ h1.is-style-alt {
 	max-width: 1616px;
 }
 
-/*
-.block-editor-block-list__layout .block-editor-block-list__block > .block-editor-block-list__block-edit::before {
-	border: 1px solid var(--ccp-primary);
-}*/
-
 .editor-block-list__layout .editor-block-list__block:not([data-type="core/columns"]):not([data-type="core/column"]):not([data-type="coblocks/accordion"]):not([data-type="coblocks/accordion-item"]):not([data-type="coblocks/row"]):not([data-type="coblocks/column"]):not([data-type="coblocks/buttons"]):not([data-type="atomic-blocks/ab-container"]):not([data-type="atomic-blocks/ab-pricing-table"]) > .editor-block-list__block-edit::before {
 	border: 1px solid rgba(66, 88, 99, 0.2);
 }
@@ -611,17 +607,6 @@ h1.is-style-alt {
 	position: relative;
 	top: 0.5em;
 }
-
-/*
-h2:before {
-	background: var(--ccp-primary);
-	content: "\020";
-	display: block;
-	height: 2px;
-	margin: 1rem 0;
-	width: 50px;
-}
-*/
 
 .wp-block-code .editor-plain-text {
 	font-family: monospace;
