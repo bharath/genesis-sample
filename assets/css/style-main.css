@@ -2016,6 +2016,7 @@ p.entry-meta {
 	--font-size-xl: 27px;
 	--font-size-xxl: 30px;
 	--font-size-xxxl: 32px;
+	--font-size-xxxxl: 48px;
 	--font-size-1em: 1em;
 
 	/* -- Genesis Sample Fonts
@@ -2028,6 +2029,7 @@ p.entry-meta {
 
 	--gcp-one: #0073e5;
 	--gcp-two: #333;
+	--gcp-eleven: #666;
 	--gcp-three: #777;
 	--gcp-four: #999;
 	--gcp-five: #fff;

@@ -20,6 +20,7 @@ h4.light,
 h5.light,
 h6.light {
 	color: #f5f5f5;
+	color: var(--gcp-six, #f5f5f5);
 }
 
 /* Background Color
@@ -48,6 +49,7 @@ h6.light {
 
 .site-container p.has-background.light-text a {
 	color: #fff;
+	color: var(--gcp-five, #fff);
 	text-decoration: underline;
 }
 
@@ -119,6 +121,7 @@ h6.light {
 
 .site-container .wp-block-cover .wp-block-cover-text {
 	font-size: 48px;
+	font-size: var(--font-size-xxxxl);
 }
 
 /* Buttons
@@ -126,6 +129,7 @@ h6.light {
 
 .ab-block-cta .ab-button {
 	font-family: "Source Sans Pro", sans-serif;
+	font-family: var(--font-family);
 	font-weight: 600;
 }
 
@@ -134,7 +138,9 @@ h6.light {
 	border-radius: 5px;
 	cursor: pointer;
 	font-size: 16px;
+	font-size: var(--font-size-s);
 	font-family: "Source Sans Pro", sans-serif;
+	font-family: var(--font-family);
 	font-weight: 600;
 	padding: 15px 30px;
 	text-align: center;
@@ -182,7 +188,9 @@ h6.light {
 .site-container .wp-block-pullquote p,
 .site-container .wp-block-quote p {
 	font-family: "Source Sans Pro", serif;
+	font-family: var(--font-family);
 	font-size: 21px;
+	font-size: var(--font-size-xm);
 	font-style: italic;
 	line-height: 1.8;
 	margin-bottom: 42px;
@@ -191,16 +199,19 @@ h6.light {
 .site-container .wp-block-pullquote p,
 .site-container .wp-block-quote.is-style-large p {
 	font-size: 32px;
+	font-size: var(--font-size-xxxl);
 }
 
 .site-container .wp-block-pullquote.is-style-solid-color p {
 	color: #fff;
+	color: var(--gcp-five, #fff);
 	margin-bottom: 42px;
 	text-align: center;
 }
 
 .site-container .wp-block-pullquote.is-style-solid-color {
 	background-color: #333;
+	background-color: var(--gcp-two, #333);
 }
 
 .wp-block-pullquote.is-style-solid-color.alignleft blockquote,
@@ -217,9 +228,12 @@ h6.light {
 .site-container .wp-block-pullquote cite,
 .site-container .wp-block-quote cite {
 	color: #666;
+	color: var(--gcp-eleven, #666);
 	display: block;
 	font-family: "Source Sans Pro", serif;
+	font-family: var(--font-family);
 	font-size: 16px;
+	font-size: var(--font-size-s);
 	font-style: italic;
 	margin-top: -25px;
 	text-align: inherit;
@@ -232,6 +246,7 @@ h6.light {
 
 .site-container .wp-block-pullquote.is-style-solid-color cite {
 	color: #fff;
+	color: var(--gcp-five, #fff);
 	font-style: italic;
 }
 
@@ -244,7 +259,9 @@ h6.light {
 .site-container .wp-block-embed figcaption,
 .site-container .wp-block-image figcaption {
 	color: #666;
+	color: var(--gcp-eleven, #666);
 	font-size: 16px;
+	font-size: var(--font-size-s);
 	font-style: italic;
 	margin-bottom: 30px;
 	margin-top: 10px;
@@ -321,6 +338,7 @@ h6.light {
 .wp-block-preformatted,
 .wp-block-verse {
 	font-size: 16px;
+	font-size: var(--font-size-s);
 }
 
 .wp-block-preformatted {
@@ -376,7 +394,6 @@ hr.wp-block-separator {
 /* Media Queries
 ---------------------------------------------------------------------------- */
 
-
 @media only screen and (max-width: 781px) {
 
 	.has-3-columns .wp-block-column,
@@ -410,7 +427,7 @@ input[type="reset"],
 input[type="submit"],
 .button {
 	background-color: var(--ccp-primary);
-	font-size: 16px !important;
+	font-size: var(--font-size-s) !important;
 	line-height: 1.625;
 }
 
@@ -436,7 +453,7 @@ input[type="submit"],
 .site-container .wp-block-pullquote cite,
 .site-container .wp-block-quote cite {
 	font-family: var(--font-family-normal);
-	font-size: 18px;
+	font-size: var(--font-size-n);
 }
 
 /* -- Button Variations
