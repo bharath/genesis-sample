@@ -151,6 +151,12 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 					'slug'      => 'medium',
 				],
 				[
+					'name'      => esc_html__( 'X Medium', 'genesis-sample' ),
+					'shortName' => esc_html__( 'XM', 'genesis-sample' ),
+					'size'      => 'var(--font-size-xm)',
+					'slug'      => 'x-medium',
+				],
+				[
 					'name'      => esc_html__( 'Large', 'genesis-sample' ),
 					'shortName' => esc_html__( 'L', 'genesis-sample' ),
 					'size'      => 'var(--font-size-l)',
