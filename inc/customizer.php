@@ -66,11 +66,26 @@ function genesis_sample_customize_register( $wp_customize ) {
 		]
 	);
 
+	/**
+	 * Checkbox sanitization callback example.
+	 *
+	 * Sanitization callback for 'checkbox' type controls. This callback sanitizes `$checked`
+	 * as a boolean value, either TRUE or FALSE.
+	 *
+	 * @param bool $checked Whether the checkbox is checked.
+	 * @return bool Whether the checkbox is checked.
+	 */
+	function genesis_sample_sanitize_checkbox( $checked ) {
+		// Boolean check.
+		return ( ( isset( $checked ) && true === $checked ) ? true : false );
+	}
+
 	// Enable wide and full alignments.
 	$wp_customize->add_setting(
 		'genesis_sample_align_wide',
 		[
-			'default' => true,
+			'default'           => true,
+			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
 
@@ -91,6 +106,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		'genesis_sample_color_palette',
 		[
 			'default' => true,
+			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
 
@@ -111,6 +127,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		'genesis_sample_editor_font_sizes',
 		[
 			'default' => true,
+			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
 
@@ -131,6 +148,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		'genesis_sample_custom_colors',
 		[
 			'default' => false,
+			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
 
@@ -151,6 +169,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		'genesis_sample_custom_font_sizes',
 		[
 			'default' => false,
+			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
 
@@ -171,6 +190,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		'genesis_sample_editor_styles',
 		[
 			'default' => true,
+			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
 
@@ -191,6 +211,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		'genesis_sample_dark_backgrounds',
 		[
 			'default' => false,
+			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
 
@@ -211,6 +232,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		'genesis_sample_wp_block_styles',
 		[
 			'default' => false,
+			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
 
@@ -231,6 +253,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		'genesis_sample_responsive_embeds',
 		[
 			'default' => true,
+			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
 
@@ -281,11 +304,11 @@ function genesis_sample_customize_register( $wp_customize ) {
 			$wp_customize,
 			'genesis_sample_primary_color',
 			[
-				'label'    => __( 'Primary Color', 'genesis-sample' ),
+				'label'       => __( 'Primary Color', 'genesis-sample' ),
 				'description' => esc_html__( 'Add a color to use within the Gutenberg editor color palette.', 'genesis-sample' ),
-				'settings' => 'primary_color',
-				'priority' => 10,
-				'section'  => 'genesis_sample_color_options',
+				'settings'    => 'primary_color',
+				'priority'    => 10,
+				'section'     => 'genesis_sample_color_options',
 			]
 		)
 	);
