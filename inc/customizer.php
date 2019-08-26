@@ -282,6 +282,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'genesis_sample_primary_color',
 			[
 				'label'    => __( 'Primary Color', 'genesis-sample' ),
+				'description' => esc_html__( 'Add a color to use within the Gutenberg editor color palette.', 'genesis-sample' ),
 				'settings' => 'primary_color',
 				'priority' => 10,
 				'section'  => 'genesis_sample_color_options',

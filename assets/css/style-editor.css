@@ -1,6 +1,6 @@
 body {
 	color: #333;
-	color: var(--gcp-two, #333);
+	color: var(--gcp-dark-gray-one, #333);
 	font-family: "Source Sans Pro", sans-serif;
 	font-size: 18px;
 	font-weight: 400;
@@ -26,7 +26,7 @@ tbody,
 td,
 th {
 	border-color: #eee;
-	border-color: var(--gcp-seven, #eee);
+	border-color: var(--gcp-light-gray-two, #eee);
 	text-align: left;
 }
 
@@ -72,13 +72,13 @@ th:first-child {
 
 a {
 	color: #0073e5;
-	color: var(--gcp-one, #0073e5);
+	color: var(--gcp-custom, #0073e5);
 }
 
 a:focus,
 a:hover {
 	color: #333;
-	color: var(--gcp-two, #333);
+	color: var(--gcp-dark-gray-one, #333);
 	text-decoration: none;
 }
 
@@ -128,7 +128,7 @@ h6 {
 .wp-block-heading h5.light,
 .wp-block-heading h6.light {
 	color: #f5f5f5;
-	color: var(--gcp-six, #f5f5f5);
+	color: var(--gcp-light-gray-one, #f5f5f5);
 }
 
 .editor-post-title__block .editor-post-title__input {
@@ -174,7 +174,7 @@ p.has-text-color a:hover {
 
 p.has-background.light-text a {
 	color: #fff;
-	color: var(--gcp-five, #fff);
+	color: var(--gcp-white, #fff);
 	text-decoration: underline;
 }
 
@@ -221,14 +221,14 @@ p.has-background.light-text a:hover {
 
 .wp-block-pullquote.is-style-solid-color p {
 	color: #fff;
-	color: var(--gcp-five, #fff);
+	color: var(--gcp-white, #fff);
 	margin-bottom: 42px;
 	text-align: center;
 }
 
 .wp-block-pullquote.is-style-solid-color {
 	background-color: #333;
-	background-color: var(--gcp-two, #333);
+	background-color: var(--gcp-dark-gray-one, #333);
 }
 
 
@@ -246,7 +246,7 @@ p.has-background.light-text a:hover {
 .wp-block-pullquote .wp-block-pullquote__citation,
 .wp-block-quote .wp-block-quote__citation {
 	color: #666;
-	color: var(--gcp-eleven, #666);
+	color: var(--gcp-dark-gray-two, #666);
 	display: block;
 	font-family: "Source Sans Pro", serif;
 	font-size: 16px;
@@ -262,7 +262,7 @@ p.has-background.light-text a:hover {
 
 .wp-block-pullquote.is-style-solid-color .wp-block-pullquote__citation {
 	color: #fff;
-	color: var(--gcp-five, #fff);
+	color: var(--gcp-white, #fff);
 	font-style: italic;
 }
 
@@ -275,7 +275,7 @@ p.has-background.light-text a:hover {
 .wp-block-embed figcaption,
 .wp-block-image figcaption {
 	color: #666;
-	color: var(--gcp-eleven, #666);
+	color: var(--gcp-dark-gray-two, #666);
 	font-size: 16px;
 	font-style: italic;
 	margin-bottom: 30px;
@@ -292,7 +292,7 @@ p.has-background.light-text a:hover {
 
 .wp-block-cover .wp-block-cover-text {
 	color: #fff;
-	color: var(--gcp-five, #fff);
+	color: var(--gcp-white, #fff);
 	font-size: 48px;
 }
 
@@ -301,7 +301,7 @@ p.has-background.light-text a:hover {
 
 .wp-block-image figcaption {
 	color: #666;
-	color: var(--gcp-eleven, #666);
+	color: var(--gcp-dark-gray-two, #666);
 	font-family: "Source Sans Pro", sans-serif;
 	font-size: 14px;
 	font-style: italic;
@@ -355,12 +355,12 @@ hr.wp-block-separator.is-style-dots {
 
 .wp-block-table tr {
 	border-top: 1px solid #eee;
-	border-top: 1px solid var(--gcp-seven, #eee);
+	border-top: 1px solid var(--gcp-light-gray-two, #eee);
 }
 
 .wp-block-table tbody {
 	border-bottom: 1px solid #eee;
-	border-bottom: 1px solid var(--gcp-seven, #eee);
+	border-bottom: 1px solid var(--gcp-light-gray-two, #eee);
 }
 
 /* Buttons
@@ -391,7 +391,7 @@ hr.wp-block-separator.is-style-dots {
 
 .wp-block-button.is-style-outline .wp-block-button__link {
 	background-color: transparent;
-	background-color: var(--gcp-ten, transparent);
+	background-color: var(--gcp-transparent, transparent);
 	border: 2px solid currentColor;
 	border-radius: 0;
 	padding: 13px 28px;
