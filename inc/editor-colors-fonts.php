@@ -106,6 +106,11 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 					'slug'  => 'white',
 					'color' => 'var(--ccp-white)',
 				],
+				[
+					'name'  => esc_html__( 'Transparent', 'genesis-sample' ),
+					'slug'  => 'transparent',
+					'color' => 'var(--ccp-transparent)',
+				],
 			]
 		);
 
@@ -123,56 +128,68 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 				[
 					'name'      => esc_html__( 'XX Small', 'genesis-sample' ),
 					'shortName' => esc_html__( 'XXS', 'genesis-sample' ),
-					'size'      => 'var(--font-size-xxs)',
+					'size'      => '14',
 					'slug'      => 'xx-small',
 				],
 				[
 					'name'      => esc_html__( 'X Small', 'genesis-sample' ),
 					'shortName' => esc_html__( 'XS', 'genesis-sample' ),
-					'size'      => 'var(--font-size-xs)',
+					'size'      => '15',
 					'slug'      => 'x-small',
 				],
 				[
 					'name'      => esc_html__( 'Small', 'genesis-sample' ),
 					'shortName' => esc_html__( 'S', 'genesis-sample' ),
-					'size'      => 'var(--font-size-s)',
+					'size'      => '16',
 					'slug'      => 'small',
 				],
 				[
 					'name'      => esc_html__( 'Normal', 'genesis-sample' ),
 					'shortName' => esc_html__( 'N', 'genesis-sample' ),
-					'size'      => 'var(--font-size-n)',
+					'size'      => '18',
 					'slug'      => 'normal',
 				],
 				[
 					'name'      => esc_html__( 'Medium', 'genesis-sample' ),
 					'shortName' => esc_html__( 'M', 'genesis-sample' ),
-					'size'      => 'var(--font-size-m)',
+					'size'      => '20',
 					'slug'      => 'medium',
 				],
 				[
 					'name'      => esc_html__( 'X Medium', 'genesis-sample' ),
 					'shortName' => esc_html__( 'XM', 'genesis-sample' ),
-					'size'      => 'var(--font-size-xm)',
+					'size'      => '21',
 					'slug'      => 'x-medium',
 				],
 				[
 					'name'      => esc_html__( 'Large', 'genesis-sample' ),
 					'shortName' => esc_html__( 'L', 'genesis-sample' ),
-					'size'      => 'var(--font-size-l)',
+					'size'      => '24',
 					'slug'      => 'large',
 				],
 				[
 					'name'      => esc_html__( 'X Large', 'genesis-sample' ),
 					'shortName' => esc_html__( 'XL', 'genesis-sample' ),
-					'size'      => 'var(--font-size-xl)',
+					'size'      => '27',
 					'slug'      => 'x-large',
 				],
 				[
 					'name'      => esc_html__( 'XX Large', 'genesis-sample' ),
 					'shortName' => esc_html__( 'XXL', 'genesis-sample' ),
-					'size'      => 'var(--font-size-xxl)',
+					'size'      => '30',
 					'slug'      => 'xx-large',
+				],
+				[
+					'name'      => esc_html__( 'XXX Large', 'genesis-sample' ),
+					'shortName' => esc_html__( 'XXXL', 'genesis-sample' ),
+					'size'      => '32',
+					'slug'      => 'xxx-large',
+				],
+				[
+					'name'      => esc_html__( 'XXXX Large', 'genesis-sample' ),
+					'shortName' => esc_html__( 'XXXXL', 'genesis-sample' ),
+					'size'      => '48',
+					'slug'      => 'xxxx-large',
 				],
 			]
 		);
@@ -289,7 +306,7 @@ function genesis_sample_custom_font_sizes() {
 		$css .= <<<CSS
 
 	.site-container .has-{$font_size['slug']}-font-size {
-		font-size: {$font_size['size']};
+		font-size: {$font_size['size']}px;
 	}
 
 CSS;
