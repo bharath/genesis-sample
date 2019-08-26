@@ -2003,27 +2003,6 @@ p.entry-meta {
 
 :root {
 
-	/* -- Genesis Sample Font Sizes
-	--------------------------------------------- */
-
-	--font-size-xxs: 14px;
-	--font-size-xs: 15px;
-	--font-size-s: 16px;
-	--font-size-n: 18px;
-	--font-size-m: 20px;
-	--font-size-xm: 21px;
-	--font-size-l: 24px;
-	--font-size-xl: 27px;
-	--font-size-xxl: 30px;
-	--font-size-xxxl: 32px;
-	--font-size-xxxxl: 48px;
-	--font-size-1em: 1em;
-
-	/* -- Genesis Sample Fonts
-	--------------------------------------------- */
-
-	--font-family: "Source Sans Pro", sans-serif;
-
 	/* -- Genesis Sample Color Palette
 	--------------------------------------------- */
 
@@ -2165,6 +2144,22 @@ p.entry-meta {
 	--font-family-normal: 'Inter var', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	--font-family-bold: 'Inter var', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
+	/* -- Custom Font Sizes
+	--------------------------------------------- */
+
+	--font-size-xxs: 14px;
+	--font-size-xs: 15px;
+	--font-size-s: 16px;
+	--font-size-n: 18px;
+	--font-size-m: 20px;
+	--font-size-xm: 21px;
+	--font-size-l: 24px;
+	--font-size-xl: 27px;
+	--font-size-xxl: 30px;
+	--font-size-xxxl: 32px;
+	--font-size-xxxxl: 48px;
+	--font-size-1em: 1em;
+
 	/* -- Custom Color Palette
 	--------------------------------------------- */
 
@@ -2194,6 +2189,7 @@ p.entry-meta {
 
 		--gcp-one: #03a577;/*0073e5*/
 		--gcp-two: #fff;/*333*/
+		--gcp-eleven: #666;
 		--gcp-three: #ddd;/*777*/
 		--gcp-four: #ccc;/*999*/
 		--gcp-five: #27282c;/*#fff*/
