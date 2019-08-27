@@ -12,7 +12,6 @@
 require_once get_stylesheet_directory() . '/inc/class/class-genesis-sample-separator-control.php';
 require_once get_stylesheet_directory() . '/inc/class/class-genesis-sample-reset-control.php';
 
-
 /**
  * Registers settings and controls with the Customizer.
  *
@@ -66,20 +65,6 @@ function genesis_sample_customize_register( $wp_customize ) {
 		]
 	);
 
-	/**
-	 * Checkbox sanitization callback example.
-	 *
-	 * Sanitization callback for 'checkbox' type controls. This callback sanitizes `$checked`
-	 * as a boolean value, either TRUE or FALSE.
-	 *
-	 * @param bool $checked Whether the checkbox is checked.
-	 * @return bool Whether the checkbox is checked.
-	 */
-	function genesis_sample_sanitize_checkbox( $checked ) {
-		// Boolean check.
-		return ( ( isset( $checked ) && true === $checked ) ? true : false );
-	}
-
 	// Enable wide and full alignments.
 	$wp_customize->add_setting(
 		'genesis_sample_align_wide',
@@ -105,7 +90,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'genesis_sample_color_palette',
 		[
-			'default' => true,
+			'default'           => true,
 			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
@@ -126,7 +111,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'genesis_sample_editor_font_sizes',
 		[
-			'default' => true,
+			'default'           => true,
 			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
@@ -147,7 +132,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'genesis_sample_custom_colors',
 		[
-			'default' => false,
+			'default'           => false,
 			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
@@ -168,7 +153,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'genesis_sample_custom_font_sizes',
 		[
-			'default' => false,
+			'default'           => false,
 			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
@@ -189,7 +174,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'genesis_sample_editor_styles',
 		[
-			'default' => true,
+			'default'           => true,
 			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
@@ -210,7 +195,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'genesis_sample_dark_backgrounds',
 		[
-			'default' => false,
+			'default'           => false,
 			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
@@ -231,7 +216,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'genesis_sample_wp_block_styles',
 		[
-			'default' => false,
+			'default'           => false,
 			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
@@ -242,7 +227,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'section'     => 'genesis_sample_gutenberg_options',
 			'settings'    => 'genesis_sample_wp_block_styles',
 			'priority'    => 10,
-			'label'       => __( 'Enable Default block styles.', 'genesis-sample' ),
+			'label'       => __( 'Enable Default core block styles.', 'genesis-sample' ),
 			'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#default-block-styles"><code>wp-block-styles</code></a>', 'genesis-sample' ),
 			'type'        => 'checkbox',
 		]
@@ -252,7 +237,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'genesis_sample_responsive_embeds',
 		[
-			'default' => true,
+			'default'           => true,
 			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
@@ -520,30 +505,6 @@ function genesis_sample_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Gutenberg Fonts.
-	$wp_customize->add_setting(
-		'regular_font_size',
-		[
-			'default'           => '14',
-			'sanitize_callback' => 'absint',
-			'transport'         => 'postMessage',
-		]
-	);
-
-	$wp_customize->add_control(
-		new Genesis_Sample_Reset_Control(
-			$wp_customize,
-			'regular_font_size',
-			[
-				'section'  => 'genesis_sample_font_options',
-				'settings' => 'regular_font_size',
-				'priority' => 10,
-				'label'    => __( 'Regular Font size (px).', 'genesis-sample' ),
-				'type'     => 'number',
-			]
-		)
-	);
-
 	$wp_customize->add_setting(
 		'small_font_size',
 		[
@@ -587,7 +548,6 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => '20',
 			'sanitize_callback' => 'absint',
-			'transport'         => 'postMessage',
 		]
 	);
 
@@ -644,6 +604,21 @@ function genesis_sample_customize_register( $wp_customize ) {
 
 }
 add_action( 'customize_register', 'genesis_sample_customize_register' );
+
+
+/**
+ * Checkbox sanitization callback example.
+ *
+ * Sanitization callback for 'checkbox' type controls. This callback sanitizes `$checked`
+ * as a boolean value, either TRUE or FALSE.
+ *
+ * @param bool $checked Whether the checkbox is checked.
+ * @return bool Whether the checkbox is checked.
+ */
+function genesis_sample_sanitize_checkbox( $checked ) {
+	// Boolean check.
+	return ( ( isset( $checked ) && true === $checked ) ? true : false );
+}
 
 
 /**
