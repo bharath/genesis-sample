@@ -1,6 +1,6 @@
 # Description
 
-Customizations to Genesis Sample theme to use as a Starter theme. [Learn More](https://bharath.blog/)
+Customizations to [Genesis Sample](https://github.com/studiopress/genesis-sample) theme to use as a Starter theme. [Learn More](https://bharath.blog/)
 
 ## Requirement
 
