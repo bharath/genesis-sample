@@ -2,12 +2,6 @@
 
 Customizations to [Genesis Sample](https://github.com/studiopress/genesis-sample) theme to use as a Starter theme. [Learn More](https://bharath.blog/)
 
-## Requirement
-
-Tested and works with Genesis Sample theme Version: 3.1.0
-
-This will be tested and updated when a new Genesis Sample update is released.
-
 ## Getting started
 
 1. Download this repo and move all the files inside genesis-sample-master folder to genesis-sample theme folder.
@@ -41,4 +35,4 @@ require_once get_stylesheet_directory() . '/inc/acf.php';
 
 ```
 
-6. That's it.
+3. That's it.
