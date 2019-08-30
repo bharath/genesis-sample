@@ -99,6 +99,9 @@ function genesis_sample_scripts_styles() {
 		// Enqueue Clipboard script for code block.
 		wp_enqueue_script( genesis_get_theme_handle() . '-code-clipboard', '//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', [ 'jquery' ], '2.0.4', true );
 
+		// Enqueue theme's main scripts.
+		wp_enqueue_script( genesis_get_theme_handle() . '-code-init', get_stylesheet_directory_uri() . '/assets/js/code.js', [ 'jquery' ], date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/js/code.js' ) ), true );
+
 	}
 
 	// Enqueue theme's main scripts.
