@@ -47,25 +47,42 @@ require_once get_stylesheet_directory() . '/inc/acf.php';
 
 ```
 
+├── README.md
 ├── assets
 │   ├── css
+│   │   ├── customizer-controls.css
+│   │   ├── customizer.css
 │   │   ├── fonts
-│   │   ├── images
-│   │   ├── front-end-min.css
+│   │   │   ├── Inter-italic.var.woff2
+│   │   │   ├── Inter-upright.var.woff2
+│   │   │   └── Inter.var.woff2
 │   │   ├── front-end.css
-│   │   ├── style-editor-min.css
+│   │   ├── images
+│   │   ├── style-dark.css
+│   │   ├── style-editor-dark.css
 │   │   ├── style-editor.css
-│   │   ├── style-main-min.css
 │   │   ├── style-main.css
-│   │   ├── style-var-min.css
-│   │   └── style-var.css
+│   │   ├── style-var.css
+│   │   └── woocommerce.css
 │   └── js
-│       ├── editor-min.js
+│       ├── code.js
+│       ├── customizer-controls.js
+│       ├── customizer-preview.js
 │       ├── editor.js
-│       ├── main-min.js
 │       └── main.js
-├── custom-functions.php
-├── README.md
+├── inc
+│   ├── acf.php
+│   ├── automattic.php
+│   ├── class
+│   │   ├── class-genesis-sample-customize.php
+│   │   ├── class-genesis-sample-reset-control.php
+│   │   └── class-genesis-sample-separator-control.php
+│   ├── custom-functions.php
+│   ├── customizer.php
+│   ├── editor-colors-fonts.php
+│   ├── gutenberg.php
+│   ├── woocommerce.php
+│   └── wordpress-cleanup.php
 
 ```
 
