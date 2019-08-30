@@ -86,14 +86,6 @@ require_once get_stylesheet_directory() . '/inc/acf.php';
 6. Open assets/css/style-main.css and make changes as per your color pallette & editor-font-sizes. Its between lines 1849 - 1883.
 
 
-## 2. Code block customization
-
-1. Install Server-Side Code Syntax Highlighting Block plugin from [here](https://github.com/westonruter/code-syntax-block)
-2. In custom-functions.php, uncomment line 82 to add clipboard script for code block
-3. In custom-functions.php, uncomment line 82 to add Fira Code font for code block
-4. In assets/css/style-main.css uncomment lines in 2224 and 2419
-5. In assets/js/main.js uncomment lines in 3 and 74
-
 # 2. Theme Rename
 
 Add the following in package.json
@@ -107,4 +99,12 @@ Add the following in package.json
 		"rename": "genesis-theme-claim",
 	},
 }
+```
+
+```shell
+npm install genesis-theme-claim --save-dev
+```
+
+```shell
+npm run rename
 ```
