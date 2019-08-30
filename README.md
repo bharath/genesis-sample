@@ -10,7 +10,7 @@ This will be tested and updated when a new Genesis Sample update is released.
 
 ## Getting started
 
-1. Download this repo and move all the files inside starter-master folder to genesis-sample theme folder.
+1. Download this repo and move all the files inside genesis-sample-master folder to genesis-sample theme folder.
 
 2. Open functions.php and add the following code at the end.
 
