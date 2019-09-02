@@ -91,7 +91,9 @@ function genesis_sample_scripts_styles() {
 		wp_enqueue_style( genesis_get_theme_handle() . '-code-fonts', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', [], '1.206', 'all' );
 
 		// Enqueue highlight style css for code block.
-		wp_enqueue_style( genesis_get_theme_handle() . '-highlight-style', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/styles/xcode.min.css', [], '9.15.8', 'all' );
+		// phpcs:disable
+		//wp_enqueue_style( genesis_get_theme_handle() . '-highlight-style', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/styles/xcode.min.css', [], '9.15.8', 'all' );
+		// phpcs:enable
 
 		// Enqueue highlight script for code block.
 		wp_enqueue_script( genesis_get_theme_handle() . '-highlight-script', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/highlight.min.js', [ 'jquery' ], '9.15.10', true );
