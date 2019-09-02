@@ -25,7 +25,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'priority'       => 10,
 			'capability'     => 'edit_theme_options',
 			'theme_supports' => '',
-			'title'          => __( 'Genesis Sample Custom Settings', 'genesis-sample' ),
+			'title'          => __( 'Genesis Design System', 'genesis-sample' ),
 			'description'    => '',
 		]
 	);
@@ -41,7 +41,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		]
 	);
 
-	$wp_customize->remove_section( 'colors' );
+	//$wp_customize->remove_section( 'colors' );
 
 	$wp_customize->add_section(
 		'genesis_sample_color_options',
@@ -49,7 +49,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'title'       => __( 'Gutenberg Color Palette', 'genesis-sample' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
-			'description' => __( 'Allows you to set Block color palettes for Genesis Sample theme. <a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-color-palettes"><code>editor-color-palette</code></a>', 'genesis-sample' ),
+			'description' => __( 'Allows you to set Block color palette for Genesis Sample theme. <a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-color-palettes"><code>editor-color-palette</code></a>', 'genesis-sample' ),
 			'panel'       => 'genesis',
 		]
 	);
@@ -61,6 +61,17 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			'description' => __( 'Allows you to set Block Font sizes for Genesis Sample theme. <a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-font-sizes"><code>editor-font-sizes</code></a>', 'genesis-sample' ),
+			'panel'       => 'genesis',
+		]
+	);
+
+	$wp_customize->add_section(
+		'genesis_sample_dark_color_options',
+		[
+			'title'       => __( 'Dark Mode Color Palette', 'genesis-sample' ),
+			'priority'    => 10,
+			'capability'  => 'edit_theme_options',
+			'description' => __( 'Allows you to set color palette for Dark mode in Genesis Sample theme. ', 'genesis-sample' ),
 			'panel'       => 'genesis',
 		]
 	);
@@ -507,6 +518,104 @@ function genesis_sample_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Gutenberg Dark Colors.
+	$wp_customize->add_setting(
+		'primary_dark_color',
+		[
+			'default'           => '#03a577',
+			'type'              => 'theme_mod',
+			'capability'        => 'edit_theme_options',
+			'transport'         => 'refresh',
+			'sanitize_callback' => 'sanitize_hex_color',
+		]
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'genesis_sample_primary_dark_color',
+			[
+				'label'       => __( 'Primary Dark Color', 'genesis-sample' ),
+				//'description' => esc_html__( 'Add a color to use within the Gutenberg editor color palette.', 'genesis-sample' ),
+				'settings'    => 'primary_dark_color',
+				'priority'    => 10,
+				'section'     => 'genesis_sample_dark_color_options',
+			]
+		)
+	);
+
+	$wp_customize->add_setting(
+		'secondary_dark_color',
+		[
+			'default'    => '#02684c',
+			'type'       => 'theme_mod',
+			'capability' => 'edit_theme_options',
+			'transport'  => 'refresh',
+		]
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'genesis_sample_secondary_dark_color',
+			[
+				'label'    => __( 'Secondary Dark Color', 'genesis-sample' ),
+				'settings' => 'secondary_dark_color',
+				'priority' => 10,
+				'section'  => 'genesis_sample_dark_color_options',
+			]
+		)
+	);
+
+	$wp_customize->add_setting(
+		'primary_alt_dark_color',
+		[
+			'default'    => '#ff0014',
+			'type'       => 'theme_mod',
+			'capability' => 'edit_theme_options',
+			'transport'  => 'refresh',
+		]
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'genesis_sample_primary_alt_dark_color',
+			[
+				'label'       => __( 'Primary Alt Dark Color', 'genesis-sample' ),
+				//'description' => esc_html__( 'Alternate Primary color used in dark sections', 'genesis-sample' ),
+				'settings'    => 'primary_alt_dark_color',
+				'priority'    => 10,
+				'section'     => 'genesis_sample_dark_color_options',
+			]
+		)
+	);
+
+	$wp_customize->add_setting(
+		'secondary_alt_dark_color',
+		[
+			'default'    => '#b3000e',
+			'type'       => 'theme_mod',
+			'capability' => 'edit_theme_options',
+			'transport'  => 'refresh',
+		]
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'genesis_sample_secondary_alt_dark_color',
+			[
+				'label'       => __( 'Secondary Alt Dark Color', 'genesis-sample' ),
+				//'description' => esc_html__( 'Alternate Secondary color used in dark sections', 'genesis-sample' ),
+				'settings'    => 'secondary_alt_dark_color',
+				'priority'    => 10,
+				'section'     => 'genesis_sample_dark_color_options',
+			]
+		)
+	);
+
+	// Gutenberg Font Sizes.
 	$wp_customize->add_setting(
 		'xx_small_font_size',
 		[
@@ -708,6 +817,10 @@ function genesis_sample_customizer_header_output() {
 	<style type="text/css">
 
 		:root {
+
+			/* -- Custom Color Palette
+			--------------------------------------------- */
+
 			--ccp-primary: <?php echo esc_attr( get_theme_mod( 'primary_color', '#0467c6' ) ); ?>;
 			--ccp-secondary: <?php echo esc_attr( get_theme_mod( 'secondary_color', '#004990' ) ); ?>;
 			--ccp-primary-alt: <?php echo esc_attr( get_theme_mod( 'primary_alt_color', '#ff0014' ) ); ?>;
@@ -719,6 +832,8 @@ function genesis_sample_customizer_header_output() {
 			--ccp-light-gray-01: <?php echo esc_attr( get_theme_mod( 'light-gray-01', '#f5f5f5' ) ); ?>;
 			--ccp-white: <?php echo esc_attr( get_theme_mod( 'white', '#fff' ) ); ?>;
 
+			/* -- Custom Font Sizes
+			--------------------------------------------- */
 
 			--font-size-r: <?php echo esc_attr( get_theme_mod( 'regular_font_size', '14' ) ); ?>px;
 			--font-size-xxs: <?php echo esc_attr( get_theme_mod( 'xx_small_font_size', '14' ) ); ?>px;
@@ -729,6 +844,28 @@ function genesis_sample_customizer_header_output() {
 			--font-size-l: <?php echo esc_attr( get_theme_mod( 'large_font_size', '24' ) ); ?>px;
 			--font-size-xl: <?php echo esc_attr( get_theme_mod( 'x_large_font_size', '27' ) ); ?>px;
 			--font-size-xxl: <?php echo esc_attr( get_theme_mod( 'xx_large_font_size', '30' ) ); ?>px;
+
+		}
+
+		@media (prefers-color-scheme: dark) {
+
+			:root {
+
+				/* -- Custom Color Palette
+				--------------------------------------------- */
+
+				--ccp-primary: <?php echo esc_attr( get_theme_mod( 'primary_dark_color', '#03a577' ) ); ?>;
+				--ccp-secondary: <?php echo esc_attr( get_theme_mod( 'secondary_dark_color', '#02684c' ) ); ?>;
+				--ccp-primary-alt: <?php echo esc_attr( get_theme_mod( 'primary_alt_dark_color', '#ff0014' ) ); ?>;
+				--ccp-secondary-alt: <?php echo esc_attr( get_theme_mod( 'secondary_alt_dark_color', '#b3000e' ) ); ?>;
+				--ccp-black: <?php echo esc_attr( get_theme_mod( 'black', '#000' ) ); ?>;
+				--ccp-dark-gray-01: <?php echo esc_attr( get_theme_mod( 'dark-gray-01', '#333' ) ); ?>;
+				--ccp-dark-gray-02: <?php echo esc_attr( get_theme_mod( 'dark-gray-02', '#666' ) ); ?>;
+				--ccp-light-gray-02: <?php echo esc_attr( get_theme_mod( 'light-gray-02', '#eee' ) ); ?>;
+				--ccp-light-gray-01: <?php echo esc_attr( get_theme_mod( 'light-gray-01', '#f5f5f5' ) ); ?>;
+				--ccp-white: <?php echo esc_attr( get_theme_mod( 'white', '#fff' ) ); ?>;
+
+			}
 
 		}
 
