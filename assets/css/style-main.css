@@ -1978,127 +1978,127 @@ p.entry-meta {
 	/* -- Genesis Sample Color Palette
 	--------------------------------------------- */
 
-	--gcp-custom: #0073e5;
-	--gcp-dark-gray-one: #333;
-	--gcp-dark-gray-two: #666;
-	--gcp-dark-gray-three: #777;
-	--gcp-dark-gray-four: #999;
-	--gcp-white: #fff;
-	--gcp-light-gray-one: #f5f5f5;
-	--gcp-light-gray-two: #eee;
-	--gcp-light-gray-three: #ddd;
-	--gcp-light-gray-four: #ccc;
-	--gcp-transparent: transparent;
+	--gcp-01: #0073e5;
+	--gcp-02: #333;
+	--gcp-03: #666;
+	--gcp-04: #777;
+	--gcp-05: #999;
+	--gcp-06: #ccc;
+	--gcp-07: #ddd;
+	--gcp-08: #eee;
+	--gcp-09: #f5f5f5;
+	--gcp-10: #fff;
+	--gcp-11: transparent;
 
 	/* -- Genesis Sample Background Colors
 	--------------------------------------------- */
 
-	--background-color: var(--gcp-white, #fff);
-	--mark-background-color: var(--gcp-light-gray-three, #ddd);
-	--input-background-color: var(--gcp-white, #fff);
-	--select-background-color: var(--gcp-white, #fff);
-	--textarea-background-color: var(--gcp-white, #fff);
-	--button-background-color: var(--gcp-dark-gray-one, #333);
-	--button-hover-background-color: var(--gcp-custom, #0073e5);
-	--button-focus-background-color: var(--gcp-custom, #0073e5);
-	--button-disabled-background-color: var(--gcp-light-gray-two, #eee);
-	--screen-reader-text-focus-background-color: var(--gcp-white, #fff);
-	--search-input-focus-background-color: var(--gcp-white, #fff);
-	--enews-background-color: var(--gcp-light-gray-one, #f5f5f5);
-	--faq-background-color: var(--gcp-transparent, transparent);
-	--faq-focus-background-color: var(--gcp-transparent, transparent);
-	--faq-hover-background-color: var(--gcp-transparent, transparent);
-	--site-header-background-color: var(--gcp-white, #fff);
-	--nav-menu-sub-link-background-color: var(--gcp-white, #fff);
-	--menu-toggle-background-color: var(--gcp-transparent, transparent);
-	--menu-toggle-focus-background-color: var(--gcp-transparent, transparent);
-	--menu-toggle-hover-background-color: var(--gcp-transparent, transparent);
-	--code-background-color: var(--gcp-light-gray-one, #f5f5f5);
-	--sticky-background-color: var(--gcp-light-gray-one, #f5f5f5);
-	--pagination-link-background-color: var(--gcp-light-gray-one, #f5f5f5);
-	--pagination-link-hover-background-color: var(--gcp-dark-gray-one, #333);
-	--footer-widgets-background-color: var(--gcp-white, #fff);
-	--site-footer-background-color: var(--gcp-white, #fff);
-	--nav-menu-highlight-link-background-color: var(--gcp-dark-gray-one, #333);
-	--nav-menu-highlight-link-focus-background-color: var(--gcp-custom, #0073e5);
-	--nav-menu-highlight-link-hover-background-color: var(--gcp-custom, #0073e5);
-	--author-box-background-color: var(--gcp-light-gray-one, #f5f5f5);
-	--star-background-color: var(--gcp-transparent, transparent) !important;
+	--background-color: var(--gcp-10, #fff);
+	--mark-background-color: var(--gcp-07, #ddd);
+	--input-background-color: var(--gcp-10, #fff);
+	--select-background-color: var(--gcp-10, #fff);
+	--textarea-background-color: var(--gcp-10, #fff);
+	--button-background-color: var(--gcp-02, #333);
+	--button-hover-background-color: var(--gcp-01, #0073e5);
+	--button-focus-background-color: var(--gcp-01, #0073e5);
+	--button-disabled-background-color: var(--gcp-08, #eee);
+	--screen-reader-text-focus-background-color: var(--gcp-10, #fff);
+	--search-input-focus-background-color: var(--gcp-10, #fff);
+	--enews-background-color: var(--gcp-09, #f5f5f5);
+	--faq-background-color: var(--gcp-11, transparent);
+	--faq-focus-background-color: var(--gcp-11, transparent);
+	--faq-hover-background-color: var(--gcp-11, transparent);
+	--site-header-background-color: var(--gcp-10, #fff);
+	--nav-menu-sub-link-background-color: var(--gcp-10, #fff);
+	--menu-toggle-background-color: var(--gcp-11, transparent);
+	--menu-toggle-focus-background-color: var(--gcp-11, transparent);
+	--menu-toggle-hover-background-color: var(--gcp-11, transparent);
+	--code-background-color: var(--gcp-09, #f5f5f5);
+	--sticky-background-color: var(--gcp-09, #f5f5f5);
+	--pagination-link-background-color: var(--gcp-09, #f5f5f5);
+	--pagination-link-hover-background-color: var(--gcp-02, #333);
+	--footer-widgets-background-color: var(--gcp-10, #fff);
+	--site-footer-background-color: var(--gcp-10, #fff);
+	--nav-menu-highlight-link-background-color: var(--gcp-02, #333);
+	--nav-menu-highlight-link-focus-background-color: var(--gcp-01, #0073e5);
+	--nav-menu-highlight-link-hover-background-color: var(--gcp-01, #0073e5);
+	--author-box-background-color: var(--gcp-09, #f5f5f5);
+	--star-background-color: var(--gcp-11, transparent) !important;
 
 	/* -- Genesis Sample Text Colors
 	--------------------------------------------- */
 
-	--text-color: var(--gcp-dark-gray-one, #333);
-	--mark-color: var(--gcp-dark-gray-one, #333);
-	--input-color: var(--gcp-dark-gray-one, #333);
-	--select-color: var(--gcp-dark-gray-one, #333);
-	--textarea-color: var(--gcp-dark-gray-one, #333);
-	--input-placeholder-color: var(--gcp-dark-gray-one, #333);
-	--button-text-color: var(--gcp-white, #fff);
-	--button-hover-text-color: var(--gcp-white, #fff);
-	--button-focus-text-color: var(--gcp-white, #fff);
-	--entry-content-button-focus-text-color: var(--gcp-white, #fff);
-	--entry-content-button-hover-text-color: var(--gcp-white, #fff);
-	--button-disabled-text-color: var(--gcp-dark-gray-three, #777);
-	--screen-reader-text-focus-color: var(--gcp-dark-gray-one, #333);
-	--search-input-focus-text-color: var(--gcp-dark-gray-one, #333);
-	--faq-text-color: var(--gcp-dark-gray-one, #333);
-	--faq-focus-text-color: var(--gcp-custom, #0073e5);
-	--faq-hover-text-color: var(--gcp-custom, #0073e5);
-	--focus-text-color: var(--gcp-dark-gray-one, #333);
-	--menu-toggle-color: var(--gcp-dark-gray-one, #333);
-	--menu-toggle-focus-color: var(--gcp-custom, #0073e5);
-	--menu-toggle-hover-color: var(--gcp-custom, #0073e5);
-	--star-color: var(--gcp-dark-gray-one, #333) !important;
+	--text-color: var(--gcp-02, #333);
+	--mark-color: var(--gcp-02, #333);
+	--input-color: var(--gcp-02, #333);
+	--select-color: var(--gcp-02, #333);
+	--textarea-color: var(--gcp-02, #333);
+	--input-placeholder-color: var(--gcp-02, #333);
+	--button-text-color: var(--gcp-10, #fff);
+	--button-hover-text-color: var(--gcp-10, #fff);
+	--button-focus-text-color: var(--gcp-10, #fff);
+	--entry-content-button-focus-text-color: var(--gcp-10, #fff);
+	--entry-content-button-hover-text-color: var(--gcp-10, #fff);
+	--button-disabled-text-color: var(--gcp-04, #777);
+	--screen-reader-text-focus-color: var(--gcp-02, #333);
+	--search-input-focus-text-color: var(--gcp-02, #333);
+	--faq-text-color: var(--gcp-02, #333);
+	--faq-focus-text-color: var(--gcp-01, #0073e5);
+	--faq-hover-text-color: var(--gcp-01, #0073e5);
+	--focus-text-color: var(--gcp-02, #333);
+	--menu-toggle-color: var(--gcp-02, #333);
+	--menu-toggle-focus-color: var(--gcp-01, #0073e5);
+	--menu-toggle-hover-color: var(--gcp-01, #0073e5);
+	--star-color: var(--gcp-02, #333) !important;
 
 	/* -- Genesis Sample Link Colors
 	--------------------------------------------- */
 
-	--link-color: var(--gcp-custom, #0073e5);
-	--link-focus-color: var(--gcp-dark-gray-one, #333);
-	--link-hover-color: var(--gcp-dark-gray-one, #333);
-	--entry-title-link-color: var(--gcp-dark-gray-one, #333);
-	--widget-title-link-color: var(--gcp-dark-gray-one, #333);
-	--entry-title-link-focus-color: var(--gcp-custom, #0073e5);
-	--entry-title-link-hover-color: var(--gcp-custom, #0073e5);
-	--site-title-link-color: var(--gcp-dark-gray-one, #333);
-	--site-title-link-focus-color: var(--gcp-dark-gray-one, #333);
-	--site-title-link-hover-color: var(--gcp-dark-gray-one, #333);
-	--nav-menu-link-color: var(--gcp-dark-gray-one, #333);
-	--nav-menu-link-focus-color: var(--gcp-custom, #0073e5);
-	--nav-menu-link-hover-color: var(--gcp-custom, #0073e5);
-	--nav-menu-current-link-color: var(--gcp-custom, #0073e5);
-	--nav-menu-current-link-focus-color: var(--gcp-custom, #0073e5);
-	--nav-menu-current-link-hover-color: var(--gcp-custom, #0073e5);
-	--pagination-link-color: var(--gcp-dark-gray-one, #333);
-	--pagination-link-hover-color: var(--gcp-white, #fff);
-	--nav-menu-highlight-link-color: var(--gcp-white, #fff);
+	--link-color: var(--gcp-01, #0073e5);
+	--link-focus-color: var(--gcp-02, #333);
+	--link-hover-color: var(--gcp-02, #333);
+	--entry-title-link-color: var(--gcp-02, #333);
+	--widget-title-link-color: var(--gcp-02, #333);
+	--entry-title-link-focus-color: var(--gcp-01, #0073e5);
+	--entry-title-link-hover-color: var(--gcp-01, #0073e5);
+	--site-title-link-color: var(--gcp-02, #333);
+	--site-title-link-focus-color: var(--gcp-02, #333);
+	--site-title-link-hover-color: var(--gcp-02, #333);
+	--nav-menu-link-color: var(--gcp-02, #333);
+	--nav-menu-link-focus-color: var(--gcp-01, #0073e5);
+	--nav-menu-link-hover-color: var(--gcp-01, #0073e5);
+	--nav-menu-current-link-color: var(--gcp-01, #0073e5);
+	--nav-menu-current-link-focus-color: var(--gcp-01, #0073e5);
+	--nav-menu-current-link-hover-color: var(--gcp-01, #0073e5);
+	--pagination-link-color: var(--gcp-02, #333);
+	--pagination-link-hover-color: var(--gcp-10, #fff);
+	--nav-menu-highlight-link-color: var(--gcp-10, #fff);
 
 	/* -- Genesis Sample Border Colors
 	--------------------------------------------- */
 
-	--hr-border-color: var(--gcp-light-gray-two, #eee);
-	--gallery-img-border-color: var(--gcp-light-gray-two, #eee);
-	--gallery-img-hover-border-color: var(--gcp-dark-gray-four, #999);
-	--gallery-img-focus-border-color: var(--gcp-dark-gray-four, #999);
-	--input-border-color: var(--gcp-light-gray-three, #ddd);
-	--select-border-color: var(--gcp-light-gray-three, #ddd);
-	--textarea-border-color: var(--gcp-light-gray-three, #ddd);
-	--input-focus-border-color: var(--gcp-dark-gray-four, #999);
-	--textarea-focus-border-color: var(--gcp-dark-gray-four, #999);
-	--tbody-border-color: var(--gcp-light-gray-two, #eee);
-	--td-border-color: var(--gcp-light-gray-two, #eee);
-	--breadcrumb-border-color: var(--gcp-light-gray-two, #eee);
-	--feat-content-entry-border-color: var(--gcp-light-gray-two, #eee);
-	--faq-border-color: var(--gcp-light-gray-two, #eee);
-	--focus-outline-color: var(--gcp-light-gray-four, #ccc);
-	--entry-footer-meta-border-color: var(--gcp-light-gray-two, #eee);
-	--footer-widgets-border-color: var(--gcp-light-gray-two, #eee);
-	--site-footer-border-color: var(--gcp-light-gray-two, #eee);
-	--nav-menu-sub-border-color: var(--gcp-light-gray-two, #eee);
-	--nav-menu-sub-link-border-color: var(--gcp-light-gray-two, #eee);
-	--blockquote-border-color: var(--gcp-dark-gray-four, #999);
-	--pre-border-color: var(--gcp-dark-gray-four, #999);
+	--hr-border-color: var(--gcp-08, #eee);
+	--gallery-img-border-color: var(--gcp-08, #eee);
+	--gallery-img-hover-border-color: var(--gcp-05, #999);
+	--gallery-img-focus-border-color: var(--gcp-05, #999);
+	--input-border-color: var(--gcp-07, #ddd);
+	--select-border-color: var(--gcp-07, #ddd);
+	--textarea-border-color: var(--gcp-07, #ddd);
+	--input-focus-border-color: var(--gcp-05, #999);
+	--textarea-focus-border-color: var(--gcp-05, #999);
+	--tbody-border-color: var(--gcp-08, #eee);
+	--td-border-color: var(--gcp-08, #eee);
+	--breadcrumb-border-color: var(--gcp-08, #eee);
+	--feat-content-entry-border-color: var(--gcp-08, #eee);
+	--faq-border-color: var(--gcp-08, #eee);
+	--focus-outline-color: var(--gcp-06, #ccc);
+	--entry-footer-meta-border-color: var(--gcp-08, #eee);
+	--footer-widgets-border-color: var(--gcp-08, #eee);
+	--site-footer-border-color: var(--gcp-08, #eee);
+	--nav-menu-sub-border-color: var(--gcp-08, #eee);
+	--nav-menu-sub-link-border-color: var(--gcp-08, #eee);
+	--blockquote-border-color: var(--gcp-05, #999);
+	--pre-border-color: var(--gcp-05, #999);
 
 	/* -- Custom Fonts
 	--------------------------------------------- */
@@ -2114,16 +2114,11 @@ p.entry-meta {
 	--ccp-primary-alt: #ff0014;
 	--ccp-secondary-alt: #b3000e;
 	--ccp-black: #000;
-	--ccp-dark-gray-one: #333;
-	--ccp-dark-gray-two: #666;
-	--ccp-dark-gray-three: #777;
-	--ccp-dark-gray-four: #999;
-	--ccp-light-gray-four: #ccc;
-	--ccp-light-gray-three: #ddd;
-	--ccp-light-gray-two: #eee;
-	--ccp-light-gray-one: #f5f5f5;
+	--ccp-dark-gray-01: #333;
+	--ccp-dark-gray-02: #666;
+	--ccp-light-gray-02: #eee;
+	--ccp-light-gray-01: #f5f5f5;
 	--ccp-white: #fff;
-	--ccp-transparent: transparent;
 
 }
 
@@ -2134,17 +2129,17 @@ p.entry-meta {
 		/* -- Genesis Sample Color Palette
 		--------------------------------------------- */
 
-		--gcp-custom: #03a577;/*0073e5*/
-		--gcp-dark-gray-one: #fff;/*333*/
-		--gcp-dark-gray-two: #666;
-		--gcp-dark-gray-three: #ddd;/*777*/
-		--gcp-dark-gray-four: #ccc;/*999*/
-		--gcp-white: #27282c;/*#fff*/
-		--gcp-light-gray-one: #333;/*f5f5f5*/
-		--gcp-light-gray-two: #555;/*eee*/
-		--gcp-light-gray-three: #777;/*ddd*/
-		--gcp-light-gray-four: #999;/*ccc*/
-		--gcp-transparent: transparent;/*transparent*/
+		--gcp-01: #03a577;/*0073e5*/
+		--gcp-02: #f5f5f5;/*333*/
+		--gcp-03: #eee;
+		--gcp-04: #ddd;/*777*/
+		--gcp-05: #ccc;/*999*/
+		--gcp-06: #999;/*ccc*/
+		--gcp-07: #777;/*ddd*/
+		--gcp-08: #555;/*eee*/
+		--gcp-09: #333;/*f5f5f5*/
+		--gcp-10: #27282c;/*#fff*/
+		--gcp-11: transparent;/*transparent*/
 
 		/* -- Genesis Sample Background Colors
 		--------------------------------------------- */
@@ -2314,6 +2309,8 @@ code.hljs {
 	font-weight: 400;
 }
 
+.hljs{display:block;overflow-x:auto;padding:.5em;background:#fff;color:black}.xml .hljs-meta{color:#c0c0c0}.hljs-comment,.hljs-quote{color:#007400}.hljs-tag,.hljs-attribute,.hljs-keyword,.hljs-selector-tag,.hljs-literal,.hljs-name{color:#aa0d91}.hljs-variable,.hljs-template-variable{color:#3F6E74}.hljs-code,.hljs-string,.hljs-meta-string{color:#c41a16}.hljs-regexp,.hljs-link{color:#0E0EFF}.hljs-title,.hljs-symbol,.hljs-bullet,.hljs-number{color:#1c00cf}.hljs-section,.hljs-meta{color:#643820}.hljs-class .hljs-title,.hljs-type,.hljs-built_in,.hljs-builtin-name,.hljs-params{color:#5c2699}.hljs-attr{color:#836C28}.hljs-subst{color:#000}.hljs-formula{background-color:#eee;font-style:italic}.hljs-addition{background-color:#baeeba}.hljs-deletion{background-color:#ffc8bd}.hljs-selector-id,.hljs-selector-class{color:#9b703f}.hljs-doctag,.hljs-strong{font-weight:bold}.hljs-emphasis{font-style:italic}
+
 :not(pre) > code {
 	color: #ff0014;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
@@ -2392,10 +2389,22 @@ pre .btn:focus {
 
 }
 
-/* -- highlight style CSS.
---------------------------------------------- */
+@media (prefers-color-scheme: dark) {
 
-.hljs{display:block;overflow-x:auto;padding:.5em;background:#fff;color:black}.xml .hljs-meta{color:#c0c0c0}.hljs-comment,.hljs-quote{color:#007400}.hljs-tag,.hljs-attribute,.hljs-keyword,.hljs-selector-tag,.hljs-literal,.hljs-name{color:#aa0d91}.hljs-variable,.hljs-template-variable{color:#3F6E74}.hljs-code,.hljs-string,.hljs-meta-string{color:#c41a16}.hljs-regexp,.hljs-link{color:#0E0EFF}.hljs-title,.hljs-symbol,.hljs-bullet,.hljs-number{color:#1c00cf}.hljs-section,.hljs-meta{color:#643820}.hljs-class .hljs-title,.hljs-type,.hljs-built_in,.hljs-builtin-name,.hljs-params{color:#5c2699}.hljs-attr{color:#836C28}.hljs-subst{color:#000}.hljs-formula{background-color:#eee;font-style:italic}.hljs-addition{background-color:#baeeba}.hljs-deletion{background-color:#ffc8bd}.hljs-selector-id,.hljs-selector-class{color:#9b703f}.hljs-doctag,.hljs-strong{font-weight:bold}.hljs-emphasis{font-style:italic}
+	code.hljs {
+		background: #1d1f21 !important;
+	}
+
+	.hljs{display:block;overflow-x:auto;padding:.5em;line-height:1.3em;color:#abb2bf;background:#282c34;border-radius:5px}.hljs-keyword,.hljs-operator{color:#F92672}.hljs-pattern-match{color:#F92672}.hljs-pattern-match .hljs-constructor{color:#61aeee}.hljs-function{color:#61aeee}.hljs-function .hljs-params{color:#A6E22E}.hljs-function .hljs-params .hljs-typing{color:#FD971F}.hljs-module-access .hljs-module{color:#7e57c2}.hljs-constructor{color:#e2b93d}.hljs-constructor .hljs-string{color:#9CCC65}.hljs-comment,.hljs-quote{color:#b18eb1;font-style:italic}.hljs-doctag,.hljs-formula{color:#c678dd}.hljs-section,.hljs-name,.hljs-selector-tag,.hljs-deletion,.hljs-subst{color:#e06c75}.hljs-literal{color:#56b6c2}.hljs-string,.hljs-regexp,.hljs-addition,.hljs-attribute,.hljs-meta-string{color:#98c379}.hljs-built_in,.hljs-class .hljs-title{color:#e6c07b}.hljs-attr,.hljs-variable,.hljs-template-variable,.hljs-type,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-number{color:#d19a66}.hljs-symbol,.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-title{color:#61aeee}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.hljs-link{text-decoration:underline}
+
+	pre .btn {
+		color: #5c6370;
+		background-color: #333;
+		background-image: linear-gradient(#222, #333);
+		border: 1px solid #333;
+	}
+
+}
 
 /* -- Code block tooltip
 --------------------------------------------- */
