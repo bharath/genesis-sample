@@ -41,7 +41,9 @@ function genesis_sample_customize_register( $wp_customize ) {
 		]
 	);
 
-	//$wp_customize->remove_section( 'colors' );
+	$wp_customize->remove_section( 'colors' );
+
+	$dark_mode_color_palette_section_link = "javascript:wp.customize.section( 'genesis_sample_dark_color_options' ).focus()";
 
 	$wp_customize->add_section(
 		'genesis_sample_color_options',
@@ -49,7 +51,8 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'title'       => __( 'Gutenberg Color Palette', 'genesis-sample' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
-			'description' => __( 'Allows you to set Block color palette for Genesis Sample theme. <a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-color-palettes"><code>editor-color-palette</code></a>', 'genesis-sample' ),
+			// translators: Section description with link to another section.
+			'description' => sprintf( __( 'Allows you to set Block color palette for Genesis Sample theme. If you are looking to change colors for Dark Mode, go <a href="%s">here</a>.', 'genesis-sample' ), $dark_mode_color_palette_section_link ),
 			'panel'       => 'genesis',
 		]
 	);
@@ -65,13 +68,16 @@ function genesis_sample_customize_register( $wp_customize ) {
 		]
 	);
 
+	$gutenberg_color_palette_section_link = "javascript:wp.customize.section( 'genesis_sample_color_options' ).focus()";
+
 	$wp_customize->add_section(
 		'genesis_sample_dark_color_options',
 		[
 			'title'       => __( 'Dark Mode Color Palette', 'genesis-sample' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
-			'description' => __( 'Allows you to set color palette for Dark mode in Genesis Sample theme. ', 'genesis-sample' ),
+			// translators: Section description with link to another section.
+			'description' => sprintf( __( 'Allows you to set color palette for Dark mode in Genesis Sample theme. If you are looking to change colors for Block color palette, go <a href="%s">here</a>.', 'genesis-sample' ), $gutenberg_color_palette_section_link ),
 			'panel'       => 'genesis',
 		]
 	);
