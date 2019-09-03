@@ -28,12 +28,17 @@ const excludes = [
 	".scripts",
 	".stylelintrc.json",
 	"*.zip",
+	"CHANGELOG.txt",
 	"composer.json",
 	"composer.lock",
+	"config.codekit3",
+	"CONTRIBUTING.txt",
 	"node_modules",
 	"package-lock.json",
 	"package.json",
 	"phpcs.xml.dist",
+	"README.txt",
+	"themeclaim.json",
 	"vendor"
 ];
 
@@ -85,7 +90,7 @@ const setupZipArchive = function() {
  */
 const renameMarkdownFilesToTxt = new Promise(function(resolve, reject) {
 	console.log(chalk`{cyan Renaming .md files to .txt}`);
-	["CHANGELOG.md", "README.md", "CONTRIBUTING.md"].forEach(function(file) {
+	["CHANGELOG.md", "CONTRIBUTING.md"].forEach(function(file) {
 		if (fs.existsSync(file)) {
 			fs.renameSync(file, file.replace(".md", ".txt"));
 		}
@@ -119,7 +124,7 @@ const zipFiles = function() {
  */
 const renameTxtFilesToMarkdown = function() {
 	console.log(chalk`{cyan Renaming .txt files to .md}`);
-	["CHANGELOG.txt", "README.txt", "CONTRIBUTING.txt"].forEach(function(file) {
+	["CHANGELOG.txt", "CONTRIBUTING.txt"].forEach(function(file) {
 		if (fs.existsSync(file)) {
 			fs.renameSync(file, file.replace(".txt", ".md"));
 		}
