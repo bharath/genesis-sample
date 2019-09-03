@@ -19,17 +19,6 @@ require_once get_stylesheet_directory() . '/inc/class/class-genesis-sample-reset
  */
 function genesis_sample_customize_register( $wp_customize ) {
 
-	$wp_customize->add_panel(
-		'genesis_sample_custom_settings',
-		[
-			'priority'       => 10,
-			'capability'     => 'edit_theme_options',
-			'theme_supports' => '',
-			'title'          => __( 'Genesis Design System', 'genesis-sample' ),
-			'description'    => '',
-		]
-	);
-
 	$wp_customize->add_section(
 		'genesis_sample_gutenberg_options',
 		[
