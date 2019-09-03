@@ -283,22 +283,18 @@ function genesis_sample_customize_register( $wp_customize ) {
 		'primary_color',
 		[
 			'default'           => '#0467c6',
-			'type'              => 'theme_mod',
-			'capability'        => 'edit_theme_options',
-			'transport'         => 'refresh',
 			'sanitize_callback' => 'sanitize_hex_color',
+			'transport'         => 'postMessage',
 		]
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'genesis_sample_primary_color',
+			'primary_color',
 			[
-				'label'    => __( 'Primary Color', 'genesis-sample' ),
-				'settings' => 'primary_color',
-				'priority' => 10,
-				'section'  => 'genesis_sample_color_options',
+				'label'   => __( 'Primary Color', 'genesis-sample' ),
+				'section' => 'genesis_sample_color_options',
 			]
 		)
 	);
@@ -306,22 +302,19 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'secondary_color',
 		[
-			'default'    => '#004990',
-			'type'       => 'theme_mod',
-			'capability' => 'edit_theme_options',
-			'transport'  => 'refresh',
+			'default'           => '#004990',
+			'sanitize_callback' => 'sanitize_hex_color',
+			'transport'         => 'postMessage',
 		]
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'genesis_sample_secondary_color',
+			'secondary_color',
 			[
-				'label'    => __( 'Secondary Color', 'genesis-sample' ),
-				'settings' => 'secondary_color',
-				'priority' => 10,
-				'section'  => 'genesis_sample_color_options',
+				'label'   => __( 'Secondary Color', 'genesis-sample' ),
+				'section' => 'genesis_sample_color_options',
 			]
 		)
 	);
@@ -329,22 +322,19 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'primary_alt_color',
 		[
-			'default'    => '#ff0014',
-			'type'       => 'theme_mod',
-			'capability' => 'edit_theme_options',
-			'transport'  => 'refresh',
+			'default'           => '#ff0014',
+			'sanitize_callback' => 'sanitize_hex_color',
+			'transport'         => 'postMessage',
 		]
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'genesis_sample_primary_alt_color',
+			'primary_alt_color',
 			[
-				'label'    => __( 'Primary Alt Color', 'genesis-sample' ),
-				'settings' => 'primary_alt_color',
-				'priority' => 10,
-				'section'  => 'genesis_sample_color_options',
+				'label'   => __( 'Primary Alt Color', 'genesis-sample' ),
+				'section' => 'genesis_sample_color_options',
 			]
 		)
 	);
@@ -352,160 +342,139 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'secondary_alt_color',
 		[
-			'default'    => '#b3000e',
-			'type'       => 'theme_mod',
-			'capability' => 'edit_theme_options',
-			'transport'  => 'refresh',
+			'default'           => '#b3000e',
+			'sanitize_callback' => 'sanitize_hex_color',
+			'transport'         => 'postMessage',
 		]
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'genesis_sample_secondary_alt_color',
+			'secondary_alt_color',
 			[
-				'label'    => __( 'Secondary Alt Color', 'genesis-sample' ),
-				'settings' => 'secondary_alt_color',
-				'priority' => 10,
-				'section'  => 'genesis_sample_color_options',
+				'label'   => __( 'Secondary Alt Color', 'genesis-sample' ),
+				'section' => 'genesis_sample_color_options',
 			]
 		)
 	);
 
 	$wp_customize->add_setting(
-		'black',
+		'black_color',
 		[
-			'default'    => '#000',
-			'type'       => 'theme_mod',
-			'capability' => 'edit_theme_options',
-			'transport'  => 'refresh',
+			'default'           => '#000',
+			'sanitize_callback' => 'sanitize_hex_color',
+			'transport'         => 'postMessage',
 		]
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'genesis_sample_black',
+			'black_color',
 			[
-				'label'    => __( 'Black', 'genesis-sample' ),
-				'settings' => 'black',
-				'priority' => 10,
-				'section'  => 'genesis_sample_color_options',
+				'label'   => __( 'Black', 'genesis-sample' ),
+				'section' => 'genesis_sample_color_options',
 			]
 		)
 	);
 
 	$wp_customize->add_setting(
-		'dark_gray_01',
+		'dark_gray_01_color',
 		[
-			'default'    => '#333',
-			'type'       => 'theme_mod',
-			'capability' => 'edit_theme_options',
-			'transport'  => 'refresh',
+			'default'           => '#333',
+			'sanitize_callback' => 'sanitize_hex_color',
+			'transport'         => 'postMessage',
 		]
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'genesis_sample_dark_gray_01',
+			'dark_gray_01_color',
 			[
-				'label'    => __( 'Dark Gray One', 'genesis-sample' ),
-				'settings' => 'dark_gray_01',
-				'priority' => 10,
-				'section'  => 'genesis_sample_color_options',
+				'label'   => __( 'Dark Gray One', 'genesis-sample' ),
+				'section' => 'genesis_sample_color_options',
 			]
 		)
 	);
 
 	$wp_customize->add_setting(
-		'dark_gray_02',
+		'dark_gray_02_color',
 		[
-			'default'    => '#666',
-			'type'       => 'theme_mod',
-			'capability' => 'edit_theme_options',
-			'transport'  => 'refresh',
+			'default'           => '#666',
+			'sanitize_callback' => 'sanitize_hex_color',
+			'transport'         => 'postMessage',
 		]
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'genesis_sample_dark_gray_02',
+			'dark_gray_02_color',
 			[
-				'label'    => __( 'Dark Gray Two', 'genesis-sample' ),
-				'settings' => 'dark_gray_02',
-				'priority' => 10,
-				'section'  => 'genesis_sample_color_options',
+				'label'   => __( 'Dark Gray Two', 'genesis-sample' ),
+				'section' => 'genesis_sample_color_options',
 			]
 		)
 	);
 
 	$wp_customize->add_setting(
-		'light_gray_02',
+		'light_gray_02_color',
 		[
-			'default'    => '#eee',
-			'type'       => 'theme_mod',
-			'capability' => 'edit_theme_options',
-			'transport'  => 'refresh',
+			'default'           => '#eee',
+			'sanitize_callback' => 'sanitize_hex_color',
+			'transport'         => 'postMessage',
 		]
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'genesis_sample_light_gray_02',
+			'light_gray_02_color',
 			[
-				'label'    => __( 'Light Gray Two', 'genesis-sample' ),
-				'settings' => 'light_gray_02',
-				'priority' => 10,
-				'section'  => 'genesis_sample_color_options',
+				'label'   => __( 'Light Gray Two', 'genesis-sample' ),
+				'section' => 'genesis_sample_color_options',
 			]
 		)
 	);
 
 	$wp_customize->add_setting(
-		'light_gray_01',
+		'light_gray_01_color',
 		[
-			'default'    => '#f5f5f5',
-			'type'       => 'theme_mod',
-			'capability' => 'edit_theme_options',
-			'transport'  => 'refresh',
+			'default'           => '#f5f5f5',
+			'sanitize_callback' => 'sanitize_hex_color',
+			'transport'         => 'postMessage',
 		]
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'genesis_sample_light_gray_01',
+			'light_gray_01_color',
 			[
-				'label'    => __( 'Light Gray One', 'genesis-sample' ),
-				'settings' => 'light_gray_01',
-				'priority' => 10,
-				'section'  => 'genesis_sample_color_options',
+				'label'   => __( 'Light Gray One', 'genesis-sample' ),
+				'section' => 'genesis_sample_color_options',
 			]
 		)
 	);
 
 	$wp_customize->add_setting(
-		'white',
+		'white_color',
 		[
-			'default'    => '#fff',
-			'type'       => 'theme_mod',
-			'capability' => 'edit_theme_options',
-			'transport'  => 'refresh',
+			'default'           => '#fff',
+			'sanitize_callback' => 'sanitize_hex_color',
+			'transport'         => 'postMessage',
 		]
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'genesis_sample_white',
+			'white_color',
 			[
-				'label'    => __( 'White', 'genesis-sample' ),
-				'settings' => 'white',
-				'priority' => 10,
-				'section'  => 'genesis_sample_color_options',
+				'label'   => __( 'White', 'genesis-sample' ),
+				'section' => 'genesis_sample_color_options',
 			]
 		)
 	);
@@ -515,22 +484,18 @@ function genesis_sample_customize_register( $wp_customize ) {
 		'primary_dark_color',
 		[
 			'default'           => '#03a577',
-			'type'              => 'theme_mod',
-			'capability'        => 'edit_theme_options',
-			'transport'         => 'refresh',
 			'sanitize_callback' => 'sanitize_hex_color',
+			'transport'         => 'postMessage',
 		]
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'genesis_sample_primary_dark_color',
+			'primary_dark_color',
 			[
-				'label'    => __( 'Primary Dark Color', 'genesis-sample' ),
-				'settings' => 'primary_dark_color',
-				'priority' => 10,
-				'section'  => 'genesis_sample_dark_color_options',
+				'label'   => __( 'Primary Dark Color', 'genesis-sample' ),
+				'section' => 'genesis_sample_dark_color_options',
 			]
 		)
 	);
@@ -538,22 +503,19 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'secondary_dark_color',
 		[
-			'default'    => '#02684c',
-			'type'       => 'theme_mod',
-			'capability' => 'edit_theme_options',
-			'transport'  => 'refresh',
+			'default'           => '#02684c',
+			'sanitize_callback' => 'sanitize_hex_color',
+			'transport'         => 'postMessage',
 		]
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'genesis_sample_secondary_dark_color',
+			'secondary_dark_color',
 			[
-				'label'    => __( 'Secondary Dark Color', 'genesis-sample' ),
-				'settings' => 'secondary_dark_color',
-				'priority' => 10,
-				'section'  => 'genesis_sample_dark_color_options',
+				'label'   => __( 'Secondary Dark Color', 'genesis-sample' ),
+				'section' => 'genesis_sample_dark_color_options',
 			]
 		)
 	);
@@ -561,22 +523,19 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'primary_alt_dark_color',
 		[
-			'default'    => '#ff0014',
-			'type'       => 'theme_mod',
-			'capability' => 'edit_theme_options',
-			'transport'  => 'refresh',
+			'default'           => '#ff0014',
+			'sanitize_callback' => 'sanitize_hex_color',
+			'transport'         => 'postMessage',
 		]
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'genesis_sample_primary_alt_dark_color',
+			'primary_alt_dark_color',
 			[
-				'label'    => __( 'Primary Alt Dark Color', 'genesis-sample' ),
-				'settings' => 'primary_alt_dark_color',
-				'priority' => 10,
-				'section'  => 'genesis_sample_dark_color_options',
+				'label'   => __( 'Primary Alt Dark Color', 'genesis-sample' ),
+				'section' => 'genesis_sample_dark_color_options',
 			]
 		)
 	);
@@ -584,22 +543,19 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'secondary_alt_dark_color',
 		[
-			'default'    => '#b3000e',
-			'type'       => 'theme_mod',
-			'capability' => 'edit_theme_options',
-			'transport'  => 'refresh',
+			'default'           => '#b3000e',
+			'sanitize_callback' => 'sanitize_hex_color',
+			'transport'         => 'postMessage',
 		]
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'genesis_sample_secondary_alt_dark_color',
+			'secondary_alt_dark_color',
 			[
-				'label'    => __( 'Secondary Alt Dark Color', 'genesis-sample' ),
-				'settings' => 'secondary_alt_dark_color',
-				'priority' => 10,
-				'section'  => 'genesis_sample_dark_color_options',
+				'label'   => __( 'Secondary Alt Dark Color', 'genesis-sample' ),
+				'section' => 'genesis_sample_dark_color_options',
 			]
 		)
 	);
@@ -617,7 +573,6 @@ function genesis_sample_customize_register( $wp_customize ) {
 		'xx_small_font_size',
 		[
 			'section'  => 'genesis_sample_font_options',
-			'settings' => 'xx_small_font_size',
 			'priority' => 10,
 			'label'    => __( 'XX Small Font size (px).', 'genesis-sample' ),
 			'type'     => 'number',
@@ -636,7 +591,6 @@ function genesis_sample_customize_register( $wp_customize ) {
 		'x_small_font_size',
 		[
 			'section'  => 'genesis_sample_font_options',
-			'settings' => 'x_small_font_size',
 			'priority' => 10,
 			'label'    => __( 'X Small Font size (px).', 'genesis-sample' ),
 			'type'     => 'number',
@@ -655,7 +609,6 @@ function genesis_sample_customize_register( $wp_customize ) {
 		'small_font_size',
 		[
 			'section'  => 'genesis_sample_font_options',
-			'settings' => 'small_font_size',
 			'priority' => 10,
 			'label'    => __( 'Small Font size (px).', 'genesis-sample' ),
 			'type'     => 'number',
@@ -674,7 +627,6 @@ function genesis_sample_customize_register( $wp_customize ) {
 		'normal_font_size',
 		[
 			'section'  => 'genesis_sample_font_options',
-			'settings' => 'normal_font_size',
 			'priority' => 10,
 			'label'    => __( 'Normal Font size (px).', 'genesis-sample' ),
 			'type'     => 'number',
@@ -693,7 +645,6 @@ function genesis_sample_customize_register( $wp_customize ) {
 		'medium_font_size',
 		[
 			'section'  => 'genesis_sample_font_options',
-			'settings' => 'medium_font_size',
 			'priority' => 10,
 			'label'    => __( 'Medium Font size (px).', 'genesis-sample' ),
 			'type'     => 'number',
@@ -713,7 +664,6 @@ function genesis_sample_customize_register( $wp_customize ) {
 		'large_font_size',
 		[
 			'section'  => 'genesis_sample_font_options',
-			'settings' => 'large_font_size',
 			'priority' => 10,
 			'label'    => __( 'Large Font size (px).', 'genesis-sample' ),
 			'type'     => 'number',
@@ -733,7 +683,6 @@ function genesis_sample_customize_register( $wp_customize ) {
 		'x_large_font_size',
 		[
 			'section'  => 'genesis_sample_font_options',
-			'settings' => 'x_large_font_size',
 			'priority' => 10,
 			'label'    => __( 'X Large Font size (px).', 'genesis-sample' ),
 			'type'     => 'number',
@@ -753,7 +702,6 @@ function genesis_sample_customize_register( $wp_customize ) {
 		'xx_large_font_size',
 		[
 			'section'  => 'genesis_sample_font_options',
-			'settings' => 'xx_large_font_size',
 			'priority' => 10,
 			'label'    => __( 'XX Large Font size (px).', 'genesis-sample' ),
 			'type'     => 'number',
@@ -814,12 +762,12 @@ function genesis_sample_customizer_header_output() {
 			--ccp-secondary: <?php echo esc_attr( get_theme_mod( 'secondary_color', '#004990' ) ); ?>;
 			--ccp-primary-alt: <?php echo esc_attr( get_theme_mod( 'primary_alt_color', '#ff0014' ) ); ?>;
 			--ccp-secondary-alt: <?php echo esc_attr( get_theme_mod( 'secondary_alt_color', '#b3000e' ) ); ?>;
-			--ccp-black: <?php echo esc_attr( get_theme_mod( 'black', '#000' ) ); ?>;
-			--ccp-dark-gray-01: <?php echo esc_attr( get_theme_mod( 'dark-gray-01', '#333' ) ); ?>;
-			--ccp-dark-gray-02: <?php echo esc_attr( get_theme_mod( 'dark-gray-02', '#666' ) ); ?>;
-			--ccp-light-gray-02: <?php echo esc_attr( get_theme_mod( 'light-gray-02', '#eee' ) ); ?>;
-			--ccp-light-gray-01: <?php echo esc_attr( get_theme_mod( 'light-gray-01', '#f5f5f5' ) ); ?>;
-			--ccp-white: <?php echo esc_attr( get_theme_mod( 'white', '#fff' ) ); ?>;
+			--ccp-black: <?php echo esc_attr( get_theme_mod( 'black_color', '#000' ) ); ?>;
+			--ccp-dark-gray-01: <?php echo esc_attr( get_theme_mod( 'dark_gray_01_color', '#333' ) ); ?>;
+			--ccp-dark-gray-02: <?php echo esc_attr( get_theme_mod( 'dark_gray_02_color', '#666' ) ); ?>;
+			--ccp-light-gray-02: <?php echo esc_attr( get_theme_mod( 'light_gray_02_color', '#eee' ) ); ?>;
+			--ccp-light-gray-01: <?php echo esc_attr( get_theme_mod( 'light_gray_01_color', '#f5f5f5' ) ); ?>;
+			--ccp-white: <?php echo esc_attr( get_theme_mod( 'white_color', '#fff' ) ); ?>;
 
 			/* -- Custom Font Sizes
 			--------------------------------------------- */

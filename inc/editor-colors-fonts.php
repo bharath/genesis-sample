@@ -64,32 +64,32 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 				[
 					'name'  => esc_html__( 'Black', 'genesis-sample' ),
 					'slug'  => 'black',
-					'color' => esc_html( get_theme_mod( 'black', '#000' ) ),
+					'color' => esc_html( get_theme_mod( 'black_color', '#000' ) ),
 				],
 				[
 					'name'  => esc_html__( 'Dark Gray One', 'genesis-sample' ),
 					'slug'  => 'dark-gray-01',
-					'color' => esc_html( get_theme_mod( 'dark-gray-01', '#333' ) ),
+					'color' => esc_html( get_theme_mod( 'dark_gray_01_color', '#333' ) ),
 				],
 				[
 					'name'  => esc_html__( 'Dark Gray Two', 'genesis-sample' ),
 					'slug'  => 'dark-gray-02',
-					'color' => esc_html( get_theme_mod( 'dark-gray-02', '#666' ) ),
+					'color' => esc_html( get_theme_mod( 'dark_gray_02_color', '#666' ) ),
 				],
 				[
 					'name'  => esc_html__( 'Light Gray Two', 'genesis-sample' ),
 					'slug'  => 'light-gray-02',
-					'color' => esc_html( get_theme_mod( 'light-gray-02', '#eee' ) ),
+					'color' => esc_html( get_theme_mod( 'light_gray_02_color', '#eee' ) ),
 				],
 				[
 					'name'  => esc_html__( 'Light Gray One', 'genesis-sample' ),
 					'slug'  => 'light-gray-01',
-					'color' => esc_html( get_theme_mod( 'light-gray-01', '#f5f5f5' ) ),
+					'color' => esc_html( get_theme_mod( 'light_gray_01_color', '#f5f5f5' ) ),
 				],
 				[
 					'name'  => esc_html__( 'White', 'genesis-sample' ),
 					'slug'  => 'white',
-					'color' => esc_html( get_theme_mod( 'white', '#fff' ) ),
+					'color' => esc_html( get_theme_mod( 'white_color', '#fff' ) ),
 				],
 			]
 		);
