@@ -28,16 +28,16 @@ const excludes = [
 	".scripts",
 	//".stylelintrc.json",
 	"*.zip",
-	"CHANGELOG.txt",
+	//"CHANGELOG.txt",
 	//"composer.json",
 	"composer.lock",
 	"config.codekit3",
-	"CONTRIBUTING.txt",
+	//"CONTRIBUTING.txt",
 	"node_modules",
 	"package-lock.json",
 	//"package.json",
 	//"phpcs.xml.dist",
-	"README.txt",
+	//"README.txt",
 	"themeclaim.json",
 	"vendor"
 ];
@@ -85,6 +85,20 @@ const setupZipArchive = function() {
 };
 
 /**
+ * Rename files from *.md to *.txt.
+ * Returns a promise so zip can be done once rename is complete.
+ */
+const renameMarkdownFilesToTxt = new Promise(function(resolve, reject) {
+	console.log(chalk`{cyan Renaming .md files to .txt}`);
+	["XYZ.md"].forEach(function(file) {
+		if (fs.existsSync(file)) {
+			fs.renameSync(file, file.replace(".md", ".txt"));
+		}
+	});
+	resolve("Success");
+});
+
+/**
  * Loops through theme directory, omitting files in the `exclude` array.
  * Adds each file to the zip archive.
  */
@@ -104,5 +118,18 @@ const zipFiles = function() {
 	});
 };
 
+/**
+ * Renames txt file to markdown.
+ * Executed in the output stream close event.
+ */
+const renameTxtFilesToMarkdown = function() {
+	console.log(chalk`{cyan Renaming .txt files to .md}`);
+	["XYZ.txt"].forEach(function(file) {
+		if (fs.existsSync(file)) {
+			fs.renameSync(file, file.replace(".txt", ".md"));
+		}
+	});
+};
+
 setupZipArchive();
-//renameMarkdownFilesToTxt.then(zipFiles);
+renameMarkdownFilesToTxt.then(zipFiles);
