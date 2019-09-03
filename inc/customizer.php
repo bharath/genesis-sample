@@ -306,11 +306,10 @@ function genesis_sample_customize_register( $wp_customize ) {
 			$wp_customize,
 			'genesis_sample_primary_color',
 			[
-				'label'       => __( 'Primary Color', 'genesis-sample' ),
-				//'description' => esc_html__( 'Add a color to use within the Gutenberg editor color palette.', 'genesis-sample' ),
-				'settings'    => 'primary_color',
-				'priority'    => 10,
-				'section'     => 'genesis_sample_color_options',
+				'label'    => __( 'Primary Color', 'genesis-sample' ),
+				'settings' => 'primary_color',
+				'priority' => 10,
+				'section'  => 'genesis_sample_color_options',
 			]
 		)
 	);
@@ -354,7 +353,6 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'genesis_sample_primary_alt_color',
 			[
 				'label'       => __( 'Primary Alt Color', 'genesis-sample' ),
-				//'description' => esc_html__( 'Alternate Primary color used in dark sections', 'genesis-sample' ),
 				'settings'    => 'primary_alt_color',
 				'priority'    => 10,
 				'section'     => 'genesis_sample_color_options',
@@ -378,7 +376,6 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'genesis_sample_secondary_alt_color',
 			[
 				'label'       => __( 'Secondary Alt Color', 'genesis-sample' ),
-				//'description' => esc_html__( 'Alternate Secondary color used in dark sections', 'genesis-sample' ),
 				'settings'    => 'secondary_alt_color',
 				'priority'    => 10,
 				'section'     => 'genesis_sample_color_options',
@@ -542,7 +539,6 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'genesis_sample_primary_dark_color',
 			[
 				'label'       => __( 'Primary Dark Color', 'genesis-sample' ),
-				//'description' => esc_html__( 'Add a color to use within the Gutenberg editor color palette.', 'genesis-sample' ),
 				'settings'    => 'primary_dark_color',
 				'priority'    => 10,
 				'section'     => 'genesis_sample_dark_color_options',
@@ -589,7 +585,6 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'genesis_sample_primary_alt_dark_color',
 			[
 				'label'       => __( 'Primary Alt Dark Color', 'genesis-sample' ),
-				//'description' => esc_html__( 'Alternate Primary color used in dark sections', 'genesis-sample' ),
 				'settings'    => 'primary_alt_dark_color',
 				'priority'    => 10,
 				'section'     => 'genesis_sample_dark_color_options',
@@ -613,7 +608,6 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'genesis_sample_secondary_alt_dark_color',
 			[
 				'label'       => __( 'Secondary Alt Dark Color', 'genesis-sample' ),
-				//'description' => esc_html__( 'Alternate Secondary color used in dark sections', 'genesis-sample' ),
 				'settings'    => 'secondary_alt_dark_color',
 				'priority'    => 10,
 				'section'     => 'genesis_sample_dark_color_options',
