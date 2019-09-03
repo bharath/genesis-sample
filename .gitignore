@@ -1,0 +1,54 @@
+# Ignore everything #
+
+# Custom changes
+
+.git
+!.gitignore
+!acf-json
+
+!assets/
+!assets/css/
+!assets/js/
+!assets/css/**
+!assets/js/**
+assets/css/.DS_Store
+assets/js/.DS_Store
+
+config.codekit3
+
+!inc/
+!inc/**
+inc/.DS_Store
+inc/class/.DS_Store
+
+!README.md
+
+# Misc Theme files
+
+!.editorconfig
+!.eslintignore
+!.eslintrc.js
+!.gitattributes
+!.stylelintrc.json
+!composer.json
+composer.lock
+node_modules
+package-lock.json
+!package.json
+!phpcs.xml.dist
+!themeclaim.json
+vendor
+
+# Genesis Sample Original theme files
+
+!CHANGELOG.txt
+!config
+!CONTRIBUTING.txt
+!functions.php
+!images
+!languages
+!lib
+!page-templates
+!README.txt
+!screenshot.png
+!style.css
