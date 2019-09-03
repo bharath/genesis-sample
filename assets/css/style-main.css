@@ -1935,7 +1935,7 @@ p.entry-meta {
 	font-display: swap;
 	font-style: normal;
 	font-named-instance: 'Regular';
-	src: url("fonts/Inter-upright.var.woff2") format("woff2");
+	src: url('fonts/Inter-upright.var.woff2') format("woff2");
 }
 
 @font-face {
@@ -1944,7 +1944,7 @@ p.entry-meta {
 	font-display: swap;
 	font-style: italic;
 	font-named-instance: 'Italic';
-	src: url("fonts/Inter-italic.var.woff2") format("woff2");
+	src: url('fonts/Inter-italic.var.woff2') format("woff2");
 }
 
 /* -- Variable font
@@ -1965,7 +1965,15 @@ p.entry-meta {
 	font-weight: 100 900;
 	font-display: swap;
 	font-style: oblique 0deg 10deg;
-	src: url("fonts/Inter.var.woff2") format("woff2");
+	src: url('fonts/Inter.var.woff2') format("woff2");
+}
+
+@font-face {
+	font-family: 'Fira Code VF';
+	src: url('fonts/FiraCode-VF.woff2') format("woff2-variations");
+	font-weight: 300 700;
+	font-style: normal;
+	font-display: swap;
 }
 
 
@@ -2305,7 +2313,9 @@ code.hljs {
 	font-weight: 400;
 }
 
+/* stylelint-disable */
 .hljs{display:block;overflow-x:auto;padding:.5em;background:#fff;color:black}.xml .hljs-meta{color:#c0c0c0}.hljs-comment,.hljs-quote{color:#007400}.hljs-tag,.hljs-attribute,.hljs-keyword,.hljs-selector-tag,.hljs-literal,.hljs-name{color:#aa0d91}.hljs-variable,.hljs-template-variable{color:#3F6E74}.hljs-code,.hljs-string,.hljs-meta-string{color:#c41a16}.hljs-regexp,.hljs-link{color:#0E0EFF}.hljs-title,.hljs-symbol,.hljs-bullet,.hljs-number{color:#1c00cf}.hljs-section,.hljs-meta{color:#643820}.hljs-class .hljs-title,.hljs-type,.hljs-built_in,.hljs-builtin-name,.hljs-params{color:#5c2699}.hljs-attr{color:#836C28}.hljs-subst{color:#000}.hljs-formula{background-color:#eee;font-style:italic}.hljs-addition{background-color:#baeeba}.hljs-deletion{background-color:#ffc8bd}.hljs-selector-id,.hljs-selector-class{color:#9b703f}.hljs-doctag,.hljs-strong{font-weight:bold}.hljs-emphasis{font-style:italic}
+/* stylelint-enable */
 
 :not(pre) > code {
 	color: #ff0014;
@@ -2391,7 +2401,9 @@ pre .btn:focus {
 		background: #1d1f21 !important;
 	}
 
+	/* stylelint-disable */
 	.hljs{display:block;overflow-x:auto;padding:.5em;line-height:1.3em;color:#abb2bf;background:#282c34;border-radius:5px}.hljs-keyword,.hljs-operator{color:#F92672}.hljs-pattern-match{color:#F92672}.hljs-pattern-match .hljs-constructor{color:#61aeee}.hljs-function{color:#61aeee}.hljs-function .hljs-params{color:#A6E22E}.hljs-function .hljs-params .hljs-typing{color:#FD971F}.hljs-module-access .hljs-module{color:#7e57c2}.hljs-constructor{color:#e2b93d}.hljs-constructor .hljs-string{color:#9CCC65}.hljs-comment,.hljs-quote{color:#b18eb1;font-style:italic}.hljs-doctag,.hljs-formula{color:#c678dd}.hljs-section,.hljs-name,.hljs-selector-tag,.hljs-deletion,.hljs-subst{color:#e06c75}.hljs-literal{color:#56b6c2}.hljs-string,.hljs-regexp,.hljs-addition,.hljs-attribute,.hljs-meta-string{color:#98c379}.hljs-built_in,.hljs-class .hljs-title{color:#e6c07b}.hljs-attr,.hljs-variable,.hljs-template-variable,.hljs-type,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-number{color:#d19a66}.hljs-symbol,.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-title{color:#61aeee}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.hljs-link{text-decoration:underline}
+	/* stylelint-enable */
 
 	pre .btn {
 		color: #5c6370;

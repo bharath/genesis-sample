@@ -25,7 +25,6 @@ function genesis_sample_custom_fonts_url() {
 
 	$montserrat   = esc_html_x( 'on', 'Montserrat font: on or off', 'genesis-sample' );
 	$merriweather = esc_html_x( 'on', 'Merriweather font: on or off', 'genesis-sample' );
-	$firacode     = esc_html_x( 'on', 'Fira Code font: on or off', 'genesis-sample' );
 
 	if ( 'off' !== $montserrat ) {
 		$font_families[] = 'Montserrat:400,400i,500,500i,700';
@@ -33,10 +32,6 @@ function genesis_sample_custom_fonts_url() {
 
 	if ( 'off' !== $merriweather ) {
 		$font_families[] = 'Merriweather:400,400i';
-	}
-
-	if ( 'off' !== $firacode ) {
-		$font_families[] = 'Fira Code:400,500,700';
 	}
 
 	$query_args = [
@@ -88,10 +83,10 @@ function genesis_sample_scripts_styles() {
 	if ( has_block( 'code' ) ) {
 
 		// Enqueue Fira Code font for code block.
-		wp_enqueue_style( genesis_get_theme_handle() . '-code-fonts', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css', [], '1.206', 'all' );
+		wp_enqueue_style( genesis_get_theme_handle() . '-code-fonts', '//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css', [], '1.207', 'all' );
 
-		// Enqueue highlight style css for code block.
 		// phpcs:disable
+		// Enqueue highlight style css for code block.
 		//wp_enqueue_style( genesis_get_theme_handle() . '-highlight-style', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/styles/xcode.min.css', [], '9.15.8', 'all' );
 		// phpcs:enable
 
