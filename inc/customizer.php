@@ -22,15 +22,15 @@ require_once get_stylesheet_directory() . '/inc/class/class-genesis-sample-reset
 function genesis_sample_get_customiser_default( $theme_mod ) {
 
 	$defaults = [
-		'genesis_sample_align_wide'        => 'true',
-		'genesis_sample_color_palette'     => 'true',
-		'genesis_sample_custom_colors'     => 'false',
-		'genesis_sample_editor_font_sizes' => 'true',
-		'genesis_sample_custom_font_sizes' => 'false',
-		'genesis_sample_editor_styles'     => 'true',
-		'genesis_sample_dark_backgrounds'  => 'false',
-		'genesis_sample_wp_block_styles'   => 'false',
-		'genesis_sample_responsive_embeds' => 'true',
+		'genesis_sample_align_wide'        => true,
+		'genesis_sample_color_palette'     => true,
+		'genesis_sample_editor_font_sizes' => true,
+		'genesis_sample_custom_font_sizes' => false,
+		'genesis_sample_custom_colors'     => false,
+		'genesis_sample_editor_styles'     => true,
+		'genesis_sample_dark_backgrounds'  => false,
+		'genesis_sample_wp_block_styles'   => false,
+		'genesis_sample_responsive_embeds' => true,
 		'primary_color'                    => '#0467c6',
 		'secondary_color'                  => '#004990',
 		'primary_alt_color'                => '#ff0014',
@@ -74,7 +74,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'title'       => __( 'Gutenberg Theme Support', 'genesis-sample' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
-			'description' => __( 'Allows you to set Gutenberg Theme Support options for Genesis Sample theme.', 'genesis-sample' ),
+			'description' => __( 'Allows you to set <a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/">Gutenberg Theme Support</a> opt-in features for Genesis Sample theme.', 'genesis-sample' ),
 			'panel'       => 'genesis',
 		]
 	);
@@ -90,7 +90,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			// translators: Section description with link to another section.
-			'description' => sprintf( __( 'Allows you to set Block color palette for Genesis Sample theme. If you are looking to change colors for Dark Mode, go <a href="%s">here</a>.', 'genesis-sample' ), $dark_mode_color_palette_section_link ),
+			'description' => sprintf( __( 'Allows you to set <a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-color-palettes">Block color palette</a> for Genesis Sample theme. If you are looking to change colors for Dark Color Scheme, go <a href="%s">here</a>.', 'genesis-sample' ), $dark_mode_color_palette_section_link ),
 			'panel'       => 'genesis',
 		]
 	);
@@ -101,7 +101,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'title'       => __( 'Gutenberg Font Sizes', 'genesis-sample' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
-			'description' => __( 'Allows you to set Block Font sizes for Genesis Sample theme. <a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-font-sizes"><code>editor-font-sizes</code></a>', 'genesis-sample' ),
+			'description' => __( 'Allows you to set <a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-font-sizes">Block Font sizes</a> for Genesis Sample theme.', 'genesis-sample' ),
 			'panel'       => 'genesis',
 		]
 	);
@@ -111,11 +111,11 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'genesis_sample_dark_color_options',
 		[
-			'title'       => __( 'Dark Mode Color Palette', 'genesis-sample' ),
+			'title'       => __( 'Dark Color Scheme Color Palette', 'genesis-sample' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			// translators: Section description with link to another section.
-			'description' => sprintf( __( 'Allows you to set color palette for Dark mode in Genesis Sample theme. If you are looking to change colors for Block color palette, go <a href="%s">here</a>.', 'genesis-sample' ), $gutenberg_color_palette_section_link ),
+			'description' => sprintf( __( 'Allows you to set color palette for <a target="_blank" href="https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme">Dark Color Scheme</a> in Genesis Sample theme. If you are looking to change colors for Block color palette, go <a href="%s">here</a>.', 'genesis-sample' ), $gutenberg_color_palette_section_link ),
 			'panel'       => 'genesis',
 		]
 	);
@@ -136,7 +136,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'settings'    => 'genesis_sample_align_wide',
 			'priority'    => 10,
 			'label'       => __( 'Wide Alignment.', 'genesis-sample' ),
-			'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#wide-alignment"><code>align-wide</code></a>', 'genesis-sample' ),
+			//'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#wide-alignment"><code>align-wide</code></a>', 'genesis-sample' ),
 			'type'        => 'checkbox',
 		]
 	);
@@ -145,7 +145,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'genesis_sample_color_palette',
 		[
-			'default'           => true,
+			'default'           => genesis_sample_get_customiser_default( 'genesis_sample_color_palette' ),
 			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
@@ -157,7 +157,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'settings'    => 'genesis_sample_color_palette',
 			'priority'    => 10,
 			'label'       => __( 'Block Color Palettes.', 'genesis-sample' ),
-			'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-color-palettes"><code>editor-color-palette</code></a>', 'genesis-sample' ),
+			//'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-color-palettes"><code>editor-color-palette</code></a>', 'genesis-sample' ),
 			'type'        => 'checkbox',
 		]
 	);
@@ -166,7 +166,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'genesis_sample_custom_colors',
 		[
-			'default'           => false,
+			'default'           => genesis_sample_get_customiser_default( 'genesis_sample_custom_colors' ),
 			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
@@ -177,8 +177,8 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'section'     => 'genesis_sample_gutenberg_options',
 			'settings'    => 'genesis_sample_custom_colors',
 			'priority'    => 10,
-			'label'       => __( 'Disable custom colors in block Color Palettes.', 'genesis-sample' ),
-			'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#disabling-custom-colors-in-block-color-palettes"><code>disable-custom-colors</code></a>', 'genesis-sample' ),
+			'label'       => __( 'Disable custom colors in Block Color Palettes.', 'genesis-sample' ),
+			//'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#disabling-custom-colors-in-block-color-palettes"><code>disable-custom-colors</code></a>', 'genesis-sample' ),
 			'type'        => 'checkbox',
 		]
 	);
@@ -187,7 +187,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'genesis_sample_editor_font_sizes',
 		[
-			'default'           => true,
+			'default'           => genesis_sample_get_customiser_default( 'genesis_sample_editor_font_sizes' ),
 			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
@@ -199,7 +199,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'settings'    => 'genesis_sample_editor_font_sizes',
 			'priority'    => 10,
 			'label'       => __( 'Block Font Sizes.', 'genesis-sample' ),
-			'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-font-sizes"><code>editor-font-sizes</code></a>', 'genesis-sample' ),
+			//'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-font-sizes"><code>editor-font-sizes</code></a>', 'genesis-sample' ),
 			'type'        => 'checkbox',
 		]
 	);
@@ -208,7 +208,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'genesis_sample_custom_font_sizes',
 		[
-			'default'           => false,
+			'default'           => genesis_sample_get_customiser_default( 'genesis_sample_custom_font_sizes' ),
 			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
@@ -219,8 +219,8 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'section'     => 'genesis_sample_gutenberg_options',
 			'settings'    => 'genesis_sample_custom_font_sizes',
 			'priority'    => 10,
-			'label'       => __( 'Disable custom font sizes.', 'genesis-sample' ),
-			'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#disabling-custom-font-sizes"><code>disable-custom-font-sizes</code></a>', 'genesis-sample' ),
+			'label'       => __( 'Disable custom font sizes in Block Font Sizes.', 'genesis-sample' ),
+			//'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#disabling-custom-font-sizes"><code>disable-custom-font-sizes</code></a>', 'genesis-sample' ),
 			'type'        => 'checkbox',
 		]
 	);
@@ -229,7 +229,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'genesis_sample_editor_styles',
 		[
-			'default'           => true,
+			'default'           => genesis_sample_get_customiser_default( 'genesis_sample_editor_styles' ),
 			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
@@ -241,7 +241,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'settings'    => 'genesis_sample_editor_styles',
 			'priority'    => 10,
 			'label'       => __( 'Editor styles.', 'genesis-sample' ),
-			'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#editor-styles"><code>editor-styles</code></a>', 'genesis-sample' ),
+			//'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#editor-styles"><code>editor-styles</code></a>', 'genesis-sample' ),
 			'type'        => 'checkbox',
 		]
 	);
@@ -250,7 +250,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'genesis_sample_dark_backgrounds',
 		[
-			'default'           => false,
+			'default'           => genesis_sample_get_customiser_default( 'genesis_sample_dark_backgrounds' ),
 			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
@@ -262,7 +262,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'settings'    => 'genesis_sample_dark_backgrounds',
 			'priority'    => 10,
 			'label'       => __( 'Dark backgrounds.', 'genesis-sample' ),
-			'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#dark-backgrounds"><code>dark-editor-style</code></a>', 'genesis-sample' ),
+			//'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#dark-backgrounds"><code>dark-editor-style</code></a>', 'genesis-sample' ),
 			'type'        => 'checkbox',
 		]
 	);
@@ -271,7 +271,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'genesis_sample_wp_block_styles',
 		[
-			'default'           => false,
+			'default'           => genesis_sample_get_customiser_default( 'genesis_sample_wp_block_styles' ),
 			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
@@ -283,7 +283,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'settings'    => 'genesis_sample_wp_block_styles',
 			'priority'    => 10,
 			'label'       => __( 'Default block styles.', 'genesis-sample' ),
-			'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#default-block-styles"><code>wp-block-styles</code></a>', 'genesis-sample' ),
+			//'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#default-block-styles"><code>wp-block-styles</code></a>', 'genesis-sample' ),
 			'type'        => 'checkbox',
 		]
 	);
@@ -292,7 +292,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'genesis_sample_responsive_embeds',
 		[
-			'default'           => true,
+			'default'           => genesis_sample_get_customiser_default( 'genesis_sample_responsive_embeds' ),
 			'sanitize_callback' => 'genesis_sample_sanitize_checkbox',
 		]
 	);
@@ -304,7 +304,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'settings'    => 'genesis_sample_responsive_embeds',
 			'priority'    => 10,
 			'label'       => __( 'Responsive embedded content.', 'genesis-sample' ),
-			'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#responsive-embedded-content"><code>responsive-embeds</code></a>', 'genesis-sample' ),
+			//'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#responsive-embedded-content"><code>responsive-embeds</code></a>', 'genesis-sample' ),
 			'type'        => 'checkbox',
 		]
 	);
