@@ -49,3 +49,19 @@ function genesis_sample_custom_button_classes( $block_content, $block ) {
 	return $block_content;
 
 }
+
+
+/**
+ * Default Block Styles.
+ */
+function genesis_sample_default_block_styles() {
+	add_theme_support(
+		'editor-default-block-styles',
+		[
+			'core/quote'     => 'large',
+			'core/pullquote' => 'solid-color',
+		]
+	);
+}
+
+add_action( 'after_setup_theme', 'genesis_sample_default_block_styles' );

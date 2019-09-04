@@ -135,7 +135,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'section'     => 'genesis_sample_gutenberg_options',
 			'settings'    => 'genesis_sample_align_wide',
 			'priority'    => 10,
-			'label'       => __( 'Wide and Full alignments.', 'genesis-sample' ),
+			'label'       => __( 'Wide Alignment.', 'genesis-sample' ),
 			'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#wide-alignment"><code>align-wide</code></a>', 'genesis-sample' ),
 			'type'        => 'checkbox',
 		]
@@ -177,7 +177,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'section'     => 'genesis_sample_gutenberg_options',
 			'settings'    => 'genesis_sample_custom_colors',
 			'priority'    => 10,
-			'label'       => __( 'Disable Custom colors in block color palettes.', 'genesis-sample' ),
+			'label'       => __( 'Disable custom colors in block Color Palettes.', 'genesis-sample' ),
 			'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#disabling-custom-colors-in-block-color-palettes"><code>disable-custom-colors</code></a>', 'genesis-sample' ),
 			'type'        => 'checkbox',
 		]
@@ -198,7 +198,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'section'     => 'genesis_sample_gutenberg_options',
 			'settings'    => 'genesis_sample_editor_font_sizes',
 			'priority'    => 10,
-			'label'       => __( 'Block font sizes.', 'genesis-sample' ),
+			'label'       => __( 'Block Font Sizes.', 'genesis-sample' ),
 			'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-font-sizes"><code>editor-font-sizes</code></a>', 'genesis-sample' ),
 			'type'        => 'checkbox',
 		]
@@ -219,7 +219,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'section'     => 'genesis_sample_gutenberg_options',
 			'settings'    => 'genesis_sample_custom_font_sizes',
 			'priority'    => 10,
-			'label'       => __( 'Disable Custom font sizes.', 'genesis-sample' ),
+			'label'       => __( 'Disable custom font sizes.', 'genesis-sample' ),
 			'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#disabling-custom-font-sizes"><code>disable-custom-font-sizes</code></a>', 'genesis-sample' ),
 			'type'        => 'checkbox',
 		]
@@ -261,7 +261,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'section'     => 'genesis_sample_gutenberg_options',
 			'settings'    => 'genesis_sample_dark_backgrounds',
 			'priority'    => 10,
-			'label'       => __( 'Dark editor style.', 'genesis-sample' ),
+			'label'       => __( 'Dark backgrounds.', 'genesis-sample' ),
 			'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#dark-backgrounds"><code>dark-editor-style</code></a>', 'genesis-sample' ),
 			'type'        => 'checkbox',
 		]
@@ -282,7 +282,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 			'section'     => 'genesis_sample_gutenberg_options',
 			'settings'    => 'genesis_sample_wp_block_styles',
 			'priority'    => 10,
-			'label'       => __( 'Default core block styles.', 'genesis-sample' ),
+			'label'       => __( 'Default block styles.', 'genesis-sample' ),
 			'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#default-block-styles"><code>wp-block-styles</code></a>', 'genesis-sample' ),
 			'type'        => 'checkbox',
 		]
