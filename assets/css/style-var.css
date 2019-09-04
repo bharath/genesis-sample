@@ -108,7 +108,7 @@
 	--nav-menu-highlight-link-focus-background-color: var(--gcp-01, #0073e5);
 	--nav-menu-highlight-link-hover-background-color: var(--gcp-01, #0073e5);
 	--author-box-background-color: var(--gcp-09, #f5f5f5);
-	--star-background-color: var(--gcp-11, transparent) !important;
+	--star-background-color: var(--gcp-11, transparent);
 
 	/* -- Genesis Sample Text Colors
 	--------------------------------------------- */
@@ -134,7 +134,7 @@
 	--menu-toggle-color: var(--gcp-02, #333);
 	--menu-toggle-focus-color: var(--gcp-01, #0073e5);
 	--menu-toggle-hover-color: var(--gcp-01, #0073e5);
-	--star-color: var(--gcp-02, #333) !important;
+	--star-color: var(--gcp-02, #333);
 
 	/* -- Genesis Sample Link Colors
 	--------------------------------------------- */
@@ -204,6 +204,19 @@
 	--ccp-light-gray-02: #eee;
 	--ccp-light-gray-01: #f5f5f5;
 	--ccp-white: #fff;
+
+	/* -- Custom Font Sizes
+	--------------------------------------------- */
+
+	--font-size-r: 14px;
+	--font-size-xxs: 14px;
+	--font-size-xs: 15px;
+	--font-size-s: 16px;
+	--font-size-n: 18px;
+	--font-size-m: 20px;
+	--font-size-l: 24px;
+	--font-size-xl: 27px;
+	--font-size-xxl: 30px;
 
 }
 

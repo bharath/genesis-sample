@@ -1779,10 +1779,10 @@ p.entry-meta {
 	*::before,
 	*::after {
 		background: transparent !important;
-		background: var(--star-background-color);
+		background: var(--star-background-color) !important;
 		box-shadow: none !important;
 		color: #333 !important;
-		color: var(--star-color);
+		color: var(--star-color) !important;
 		text-shadow: none !important;
 	}
 
@@ -2030,7 +2030,7 @@ p.entry-meta {
 	--nav-menu-highlight-link-focus-background-color: var(--gcp-01, #0073e5);
 	--nav-menu-highlight-link-hover-background-color: var(--gcp-01, #0073e5);
 	--author-box-background-color: var(--gcp-09, #f5f5f5);
-	--star-background-color: var(--gcp-11, transparent) !important;
+	--star-background-color: var(--gcp-11, transparent);
 
 	/* -- Genesis Sample Text Colors
 	--------------------------------------------- */
@@ -2056,7 +2056,7 @@ p.entry-meta {
 	--menu-toggle-color: var(--gcp-02, #333);
 	--menu-toggle-focus-color: var(--gcp-01, #0073e5);
 	--menu-toggle-hover-color: var(--gcp-01, #0073e5);
-	--star-color: var(--gcp-02, #333) !important;
+	--star-color: var(--gcp-02, #333);
 
 	/* -- Genesis Sample Link Colors
 	--------------------------------------------- */
@@ -2127,6 +2127,19 @@ p.entry-meta {
 	--ccp-light-gray-01: #f5f5f5;
 	--ccp-white: #fff;
 
+	/* -- Custom Font Sizes
+	--------------------------------------------- */
+
+	--font-size-r: 14px;
+	--font-size-xxs: 14px;
+	--font-size-xs: 15px;
+	--font-size-s: 16px;
+	--font-size-n: 18px;
+	--font-size-m: 20px;
+	--font-size-l: 24px;
+	--font-size-xl: 27px;
+	--font-size-xxl: 30px;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -2166,7 +2179,7 @@ p.entry-meta {
 		/* -- Custom Color Palette
 		--------------------------------------------- */
 
-		/*--ccp-primary: #03a577;
+		--ccp-primary: #03a577;
 		--ccp-secondary: #02684c;
 		--ccp-primary-alt: #ff0014;
 		--ccp-secondary-alt: #b3000e;
@@ -2176,7 +2189,7 @@ p.entry-meta {
 		--ccp-light-gray-two: #eee;
 		--ccp-light-gray-one: #f5f5f5;
 		--ccp-white: #fff;
-		--ccp-transparent: transparent;*/
+		--ccp-transparent: transparent;
 
 	}
 
