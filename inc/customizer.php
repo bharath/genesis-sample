@@ -284,7 +284,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => '#0467c6',
 			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
+			//'transport'         => 'postMessage',
 		]
 	);
 
@@ -304,7 +304,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => '#004990',
 			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
+			//'transport'         => 'postMessage',
 		]
 	);
 
@@ -324,7 +324,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => '#ff0014',
 			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
+			//'transport'         => 'postMessage',
 		]
 	);
 
@@ -344,7 +344,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => '#b3000e',
 			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
+			//'transport'         => 'postMessage',
 		]
 	);
 
@@ -364,7 +364,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => '#000',
 			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
+			//'transport'         => 'postMessage',
 		]
 	);
 
@@ -384,7 +384,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => '#333',
 			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
+			//'transport'         => 'postMessage',
 		]
 	);
 
@@ -404,7 +404,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => '#666',
 			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
+			//'transport'         => 'postMessage',
 		]
 	);
 
@@ -424,7 +424,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => '#eee',
 			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
+			//'transport'         => 'postMessage',
 		]
 	);
 
@@ -444,7 +444,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => '#f5f5f5',
 			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
+			//'transport'         => 'postMessage',
 		]
 	);
 
@@ -464,7 +464,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => '#fff',
 			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
+			//'transport'         => 'postMessage',
 		]
 	);
 
@@ -485,7 +485,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => '#03a577',
 			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
+			//'transport'         => 'postMessage',
 		]
 	);
 
@@ -505,7 +505,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => '#02684c',
 			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
+			//'transport'         => 'postMessage',
 		]
 	);
 
@@ -525,7 +525,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => '#ff0014',
 			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
+			//'transport'         => 'postMessage',
 		]
 	);
 
@@ -545,7 +545,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => '#b3000e',
 			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
+			//'transport'         => 'postMessage',
 		]
 	);
 
@@ -656,7 +656,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => '24',
 			'sanitize_callback' => 'absint',
-			'transport'         => 'postMessage',
+			//'transport'         => 'postMessage',
 		]
 	);
 
@@ -675,7 +675,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => '27',
 			'sanitize_callback' => 'absint',
-			'transport'         => 'postMessage',
+			//'transport'         => 'postMessage',
 		]
 	);
 
@@ -694,7 +694,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => '30',
 			'sanitize_callback' => 'absint',
-			'transport'         => 'postMessage',
+			//'transport'         => 'postMessage',
 		]
 	);
 

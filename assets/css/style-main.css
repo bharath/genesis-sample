@@ -2116,7 +2116,7 @@ p.entry-meta {
 	/* -- Custom Color Palette
 	--------------------------------------------- */
 
-	/*--ccp-primary: #0467c6;
+	--ccp-primary: #0467c6;
 	--ccp-secondary: #004990;
 	--ccp-primary-alt: #ff0014;
 	--ccp-secondary-alt: #b3000e;
@@ -2125,7 +2125,7 @@ p.entry-meta {
 	--ccp-dark-gray-02: #666;
 	--ccp-light-gray-02: #eee;
 	--ccp-light-gray-01: #f5f5f5;
-	--ccp-white: #fff;*/
+	--ccp-white: #fff;
 
 }
 
