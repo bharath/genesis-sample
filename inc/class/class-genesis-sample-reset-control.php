@@ -29,7 +29,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 					</label>
 
 					<div class="font-size-container">
-						<input name="_customize-input-regular_font_size" id="_customize-input-<?php echo esc_attr( $this->id ); ?>" type="number" value="<?php echo esc_attr( get_theme_mod( 'regular_font_size', '14' ) ); ?>" data-customize-setting-link="regular_font_size" class="customize-control-font-size-value" <?php $this->link(); ?> />
+						<input name="_customize-input-regular_font_size" id="_customize-input-<?php echo esc_attr( $this->id ); ?>" type="number" value="<?php echo esc_attr( get_theme_mod( 'regular_font_size', genesis_sample_get_customiser_default( 'regular_font_size' ) ) ); ?>" data-customize-setting-link="regular_font_size" class="customize-control-font-size-value" <?php $this->link(); ?> />
 
 						<input type="button" class="button button-regular wp-picker-default " id="font-size-reset" value="Default" aria-label="Reset to default regular font size">
 
