@@ -26,181 +26,156 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 	 */
 	function genesis_sample_setup() {
 
-		$genesis_sample_appearance = genesis_get_config( 'appearance' );
+		// Add default block styles
+		// add_theme_support( 'wp-block-styles' );.
+		// Disable the custom color picker.
+		add_theme_support( 'disable-custom-colors' );
 
-		// Adds support for editor font sizes.
-		remove_theme_support(
-			'editor-font-sizes',
-			$genesis_sample_appearance['editor-font-sizes']
-		);
-
-		// Adds support for editor color palette.
-		remove_theme_support(
+		/**
+		 *
+		 * Custom colors for use in the editor.
+		 * Add support for custom color palettes in Gutenberg.
+		 *
+		 * @link https://wordpress.org/gutenberg/handbook/reference/theme-support/
+		*/
+		add_theme_support(
 			'editor-color-palette',
-			$genesis_sample_appearance['editor-color-palette']
+			[
+				[
+					'name'  => esc_html__( 'Primary', 'genesis-sample' ),
+					'slug'  => 'primary',
+					'color' => esc_html( get_theme_mod( 'primary_color', genesis_sample_get_customiser_default( 'primary_color' ) ) ),
+					//'color' => 'var(--ccp-primary)',
+				],
+				[
+					'name'  => esc_html__( 'Secondary', 'genesis-sample' ),
+					'slug'  => 'secondary',
+					'color' => esc_html( get_theme_mod( 'secondary_color', genesis_sample_get_customiser_default( 'secondary_color' ) ) ),
+					//'color' => 'var(--ccp-secondary)',
+				],
+				[
+					'name'  => esc_html__( 'Primary Alt', 'genesis-sample' ),
+					'slug'  => 'primary-alt',
+					'color' => esc_html( get_theme_mod( 'primary_alt_color', genesis_sample_get_customiser_default( 'primary_alt_color' ) ) ),
+					//'color' => 'var(--ccp-primary-alt)',
+				],
+				[
+					'name'  => esc_html__( 'Secondary Alt', 'genesis-sample' ),
+					'slug'  => 'secondary-alt',
+					'color' => esc_html( get_theme_mod( 'secondary_alt_color', genesis_sample_get_customiser_default( 'secondary_alt_color' ) ) ),
+					//'color' => 'var(--ccp-secondary-alt)',
+				],
+				[
+					'name'  => esc_html__( 'Black', 'genesis-sample' ),
+					'slug'  => 'black',
+					'color' => esc_html( get_theme_mod( 'black_color', genesis_sample_get_customiser_default( 'black_color' ) ) ),
+					//'color' => 'var(--ccp-black)',
+				],
+				[
+					'name'  => esc_html__( 'Dark Gray One', 'genesis-sample' ),
+					'slug'  => 'dark-gray-01',
+					'color' => esc_html( get_theme_mod( 'dark_gray_01_color', genesis_sample_get_customiser_default( 'dark_gray_01_color' ) ) ),
+					//'color' => 'var(--ccp-dark-gray-01)',
+				],
+				[
+					'name'  => esc_html__( 'Dark Gray Two', 'genesis-sample' ),
+					'slug'  => 'dark-gray-02',
+					'color' => esc_html( get_theme_mod( 'dark_gray_02_color', genesis_sample_get_customiser_default( 'dark_gray_02_color' ) ) ),
+					//'color' => 'var(--ccp-dark-gray-02)',
+				],
+				[
+					'name'  => esc_html__( 'Light Gray Two', 'genesis-sample' ),
+					'slug'  => 'light-gray-02',
+					'color' => esc_html( get_theme_mod( 'light_gray_02_color', genesis_sample_get_customiser_default( 'light_gray_02_color' ) ) ),
+					//'color' => 'var(--ccp-light-gray-02)',
+				],
+				[
+					'name'  => esc_html__( 'Light Gray One', 'genesis-sample' ),
+					'slug'  => 'light-gray-01',
+					'color' => esc_html( get_theme_mod( 'light_gray_01_color', genesis_sample_get_customiser_default( 'light_gray_01_color' ) ) ),
+					//'color' => 'var(--ccp-light-gray-01)',
+				],
+				[
+					'name'  => esc_html__( 'White', 'genesis-sample' ),
+					'slug'  => 'white',
+					'color' => esc_html( get_theme_mod( 'white_color', genesis_sample_get_customiser_default( 'white_color' ) ) ),
+					//'color' => 'var(--ccp-white)',
+				],
+			]
 		);
 
-		if ( true === get_theme_mod( 'genesis_sample_custom_colors' ) ) {
+		// -- Disable custom font sizes
+		add_theme_support( 'disable-custom-font-sizes' );
 
-			// Disable the custom color picker.
-			add_theme_support( 'disable-custom-colors' );
-
-		}
-
-		if ( true === get_theme_mod( 'genesis_sample_color_palette' ) ) {
-
-			/**
-			 *
-			 * Custom colors for use in the editor.
-			 * Add support for custom color palettes in Gutenberg.
-			 *
-			 * @link https://wordpress.org/gutenberg/handbook/reference/theme-support/
-			*/
-			add_theme_support(
-				'editor-color-palette',
+		/**
+		 * Custom font sizes for use in the editor.
+		 *
+		 * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/#block-font-sizes
+		 */
+		add_theme_support(
+			'editor-font-sizes',
+			[
 				[
-					[
-						'name'  => esc_html__( 'Primary', 'genesis-sample' ),
-						'slug'  => 'primary',
-						'color' => esc_html( get_theme_mod( 'primary_color', genesis_sample_get_customiser_default( 'primary_color' ) ) ),
-						// -- 'color' => 'var(--ccp-primary)',
-					],
-					[
-						'name'  => esc_html__( 'Secondary', 'genesis-sample' ),
-						'slug'  => 'secondary',
-						'color' => esc_html( get_theme_mod( 'secondary_color', genesis_sample_get_customiser_default( 'secondary_color' ) ) ),
-						// -- 'color' => 'var(--ccp-secondary)',
-					],
-					[
-						'name'  => esc_html__( 'Primary Alt', 'genesis-sample' ),
-						'slug'  => 'primary-alt',
-						'color' => esc_html( get_theme_mod( 'primary_alt_color', genesis_sample_get_customiser_default( 'primary_alt_color' ) ) ),
-						// -- 'color' => 'var(--ccp-primary-alt)',
-					],
-					[
-						'name'  => esc_html__( 'Secondary Alt', 'genesis-sample' ),
-						'slug'  => 'secondary-alt',
-						'color' => esc_html( get_theme_mod( 'secondary_alt_color', genesis_sample_get_customiser_default( 'secondary_alt_color' ) ) ),
-						// -- 'color' => 'var(--ccp-secondary-alt)',
-					],
-					[
-						'name'  => esc_html__( 'Black', 'genesis-sample' ),
-						'slug'  => 'black',
-						'color' => esc_html( get_theme_mod( 'black_color', genesis_sample_get_customiser_default( 'black_color' ) ) ),
-						// -- 'color' => 'var(--ccp-black)',
-					],
-					[
-						'name'  => esc_html__( 'Dark Gray One', 'genesis-sample' ),
-						'slug'  => 'dark-gray-01',
-						'color' => esc_html( get_theme_mod( 'dark_gray_01_color', genesis_sample_get_customiser_default( 'dark_gray_01_color' ) ) ),
-						// -- 'color' => 'var(--ccp-dark-gray-01)',
-					],
-					[
-						'name'  => esc_html__( 'Dark Gray Two', 'genesis-sample' ),
-						'slug'  => 'dark-gray-02',
-						'color' => esc_html( get_theme_mod( 'dark_gray_02_color', genesis_sample_get_customiser_default( 'dark_gray_02_color' ) ) ),
-						// -- 'color' => 'var(--ccp-dark-gray-02)',
-					],
-					[
-						'name'  => esc_html__( 'Light Gray Two', 'genesis-sample' ),
-						'slug'  => 'light-gray-02',
-						'color' => esc_html( get_theme_mod( 'light_gray_02_color', genesis_sample_get_customiser_default( 'light_gray_02_color' ) ) ),
-						// -- 'color' => 'var(--ccp-light-gray-02)',
-					],
-					[
-						'name'  => esc_html__( 'Light Gray One', 'genesis-sample' ),
-						'slug'  => 'light-gray-01',
-						'color' => esc_html( get_theme_mod( 'light_gray_01_color', genesis_sample_get_customiser_default( 'light_gray_01_color' ) ) ),
-						// -- 'color' => 'var(--ccp-light-gray-01)',
-					],
-					[
-						'name'  => esc_html__( 'White', 'genesis-sample' ),
-						'slug'  => 'white',
-						'color' => esc_html( get_theme_mod( 'white_color', genesis_sample_get_customiser_default( 'white_color' ) ) ),
-						// -- 'color' => 'var(--ccp-white)',
-					],
-				]
-			);
-
-		}
-
-		if ( true === get_theme_mod( 'genesis_sample_custom_font_sizes' ) ) {
-
-			// Disable custom font sizes.
-			add_theme_support( 'disable-custom-font-sizes' );
-
-		}
-
-		if ( true === get_theme_mod( 'genesis_sample_editor_font_sizes' ) ) {
-
-			/**
-			 * Custom font sizes for use in the editor.
-			 *
-			 * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/#block-font-sizes
-			 */
-			add_theme_support(
-				'editor-font-sizes',
+					'name'      => esc_html__( 'XX Small', 'genesis-sample' ),
+					'shortName' => esc_html__( 'XXS', 'genesis-sample' ),
+					'size'      => esc_html( get_theme_mod( 'xx_small_font_size', '14' ) ),
+					//'size'      => '14',
+					'slug'      => 'xx-small',
+				],
 				[
-					[
-						'name'      => esc_html__( 'XX Small', 'genesis-sample' ),
-						'shortName' => esc_html__( 'XXS', 'genesis-sample' ),
-						'size'      => esc_html( get_theme_mod( 'xx_small_font_size', '14' ) ),
-						// -- 'size'      => '14',
-						'slug'      => 'xx-small',
-					],
-					[
-						'name'      => esc_html__( 'X Small', 'genesis-sample' ),
-						'shortName' => esc_html__( 'XS', 'genesis-sample' ),
-						'size'      => esc_html( get_theme_mod( 'x_small_font_size', '15' ) ),
-						// -- 'size'      => '15',
-						'slug'      => 'x-small',
-					],
-					[
-						'name'      => esc_html__( 'Small', 'genesis-sample' ),
-						'shortName' => esc_html__( 'S', 'genesis-sample' ),
-						'size'      => esc_html( get_theme_mod( 'small_font_size', '16' ) ),
-						// -- 'size'      => '16',
-						'slug'      => 'small',
-					],
-					[
-						'name'      => esc_html__( 'Normal', 'genesis-sample' ),
-						'shortName' => esc_html__( 'N', 'genesis-sample' ),
-						'size'      => esc_html( get_theme_mod( 'normal_font_size', '18' ) ),
-						// -- 'size'      => '18',
-						'slug'      => 'normal',
-					],
-					[
-						'name'      => esc_html__( 'Medium', 'genesis-sample' ),
-						'shortName' => esc_html__( 'M', 'genesis-sample' ),
-						'size'      => esc_html( get_theme_mod( 'medium_font_size', '20' ) ),
-						// -- 'size'      => '20',
-						'slug'      => 'medium',
-					],
-					[
-						'name'      => esc_html__( 'Large', 'genesis-sample' ),
-						'shortName' => esc_html__( 'L', 'genesis-sample' ),
-						'size'      => esc_html( get_theme_mod( 'large_font_size', '24' ) ),
-						// -- 'size'      => '24',
-						'slug'      => 'large',
-					],
-					[
-						'name'      => esc_html__( 'X Large', 'genesis-sample' ),
-						'shortName' => esc_html__( 'XL', 'genesis-sample' ),
-						'size'      => esc_html( get_theme_mod( 'x_large_font_size', '27' ) ),
-						// -- 'size'      => '27',
-						'slug'      => 'x-large',
-					],
-					[
-						'name'      => esc_html__( 'XX Large', 'genesis-sample' ),
-						'shortName' => esc_html__( 'XXL', 'genesis-sample' ),
-						'size'      => esc_html( get_theme_mod( 'xx_large_font_size', '30' ) ),
-						// -- 'size'      => '30',
-						'slug'      => 'xx-large',
-					],
-				]
-			);
+					'name'      => esc_html__( 'X Small', 'genesis-sample' ),
+					'shortName' => esc_html__( 'XS', 'genesis-sample' ),
+					'size'      => esc_html( get_theme_mod( 'x_small_font_size', '15' ) ),
+					//'size'      => '15',
+					'slug'      => 'x-small',
+				],
+				[
+					'name'      => esc_html__( 'Small', 'genesis-sample' ),
+					'shortName' => esc_html__( 'S', 'genesis-sample' ),
+					'size'      => esc_html( get_theme_mod( 'small_font_size', '16' ) ),
+					//'size'      => '16',
+					'slug'      => 'small',
+				],
+				[
+					'name'      => esc_html__( 'Normal', 'genesis-sample' ),
+					'shortName' => esc_html__( 'N', 'genesis-sample' ),
+					'size'      => esc_html( get_theme_mod( 'normal_font_size', '18' ) ),
+					//'size'      => '18',
+					'slug'      => 'normal',
+				],
+				[
+					'name'      => esc_html__( 'Medium', 'genesis-sample' ),
+					'shortName' => esc_html__( 'M', 'genesis-sample' ),
+					'size'      => esc_html( get_theme_mod( 'medium_font_size', '20' ) ),
+					//'size'      => '20',
+					'slug'      => 'medium',
+				],
+				[
+					'name'      => esc_html__( 'Large', 'genesis-sample' ),
+					'shortName' => esc_html__( 'L', 'genesis-sample' ),
+					'size'      => esc_html( get_theme_mod( 'large_font_size', '24' ) ),
+					//'size'      => '24',
+					'slug'      => 'large',
+				],
+				[
+					'name'      => esc_html__( 'X Large', 'genesis-sample' ),
+					'shortName' => esc_html__( 'XL', 'genesis-sample' ),
+					'size'      => esc_html( get_theme_mod( 'x_large_font_size', '27' ) ),
+					//'size'      => '27',
+					'slug'      => 'x-large',
+				],
+				[
+					'name'      => esc_html__( 'XX Large', 'genesis-sample' ),
+					'shortName' => esc_html__( 'XXL', 'genesis-sample' ),
+					'size'      => esc_html( get_theme_mod( 'xx_large_font_size', '30' ) ),
+					//'size'      => '30',
+					'slug'      => 'xx-large',
+				],
+			]
+		);
 
-		}
+		// Enqueue editor styles.
+		add_editor_style( '/assets/css/style-editor.css' );
 
 	}
 
