@@ -256,7 +256,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		'genesis_sample_dark-backgrounds',
+		'genesis_sample_dark_backgrounds',
 		[
 			'section'     => 'genesis_sample_gutenberg_options',
 			'settings'    => 'genesis_sample_dark_backgrounds',
