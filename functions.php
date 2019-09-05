@@ -210,7 +210,7 @@ require_once get_stylesheet_directory() . '/inc/wordpress-cleanup.php';
 
 // Customizer Options.
 // phpcs:disable
-require_once get_stylesheet_directory() . '/inc/customizer.php';
+//require_once get_stylesheet_directory() . '/inc/customizer.php';
 // phpcs:enable
 
 // Gutenberg Options.
