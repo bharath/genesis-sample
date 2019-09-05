@@ -60,6 +60,39 @@
 
 :root {
 
+	/* -- Custom Color Palette
+	--------------------------------------------- */
+
+	--ccp-primary: #0467c6;
+	--ccp-secondary: #004990;
+	--ccp-primary-alt: #ff0014;
+	--ccp-secondary-alt: #b3000e;
+	--ccp-black: #000;
+	--ccp-dark-gray-01: #333;
+	--ccp-dark-gray-02: #666;
+	--ccp-light-gray-02: #eee;
+	--ccp-light-gray-01: #f5f5f5;
+	--ccp-white: #fff;
+
+	/* -- Custom Fonts
+	--------------------------------------------- */
+
+	--font-family-normal: 'Inter var', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--font-family-bold: 'Inter var', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+	/* -- Custom Font Sizes
+	--------------------------------------------- */
+
+	--font-size-r: 14px;
+	--font-size-xxs: 14px;
+	--font-size-xs: 15px;
+	--font-size-s: 16px;
+	--font-size-n: 18px;
+	--font-size-m: 20px;
+	--font-size-l: 24px;
+	--font-size-xl: 27px;
+	--font-size-xxl: 30px;
+
 	/* -- Genesis Sample Color Palette
 	--------------------------------------------- */
 
@@ -185,44 +218,26 @@
 	--blockquote-border-color: var(--gcp-05, #999);
 	--pre-border-color: var(--gcp-05, #999);
 
-	/* -- Custom Fonts
-	--------------------------------------------- */
-
-	--font-family-normal: 'Inter var', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	--font-family-bold: 'Inter var', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-
-	/* -- Custom Color Palette
-	--------------------------------------------- */
-
-	--ccp-primary: #0467c6;
-	--ccp-secondary: #004990;
-	--ccp-primary-alt: #ff0014;
-	--ccp-secondary-alt: #b3000e;
-	--ccp-black: #000;
-	--ccp-dark-gray-01: #333;
-	--ccp-dark-gray-02: #666;
-	--ccp-light-gray-02: #eee;
-	--ccp-light-gray-01: #f5f5f5;
-	--ccp-white: #fff;
-
-	/* -- Custom Font Sizes
-	--------------------------------------------- */
-
-	--font-size-r: 14px;
-	--font-size-xxs: 14px;
-	--font-size-xs: 15px;
-	--font-size-s: 16px;
-	--font-size-n: 18px;
-	--font-size-m: 20px;
-	--font-size-l: 24px;
-	--font-size-xl: 27px;
-	--font-size-xxl: 30px;
-
 }
 
 @media (prefers-color-scheme: dark) {
 
 	:root {
+
+		/* -- Custom Color Palette
+		--------------------------------------------- */
+
+		--ccp-primary: #03a577;
+		--ccp-secondary: #02684c;
+		--ccp-primary-alt: #ff0014;
+		--ccp-secondary-alt: #b3000e;
+		--ccp-black: #000;
+		--ccp-dark-gray-one: #333;
+		--ccp-dark-gray-two: #777;
+		--ccp-light-gray-two: #eee;
+		--ccp-light-gray-one: #f5f5f5;
+		--ccp-white: #fff;
+		--ccp-transparent: transparent;
 
 		/* -- Genesis Sample Color Palette
 		--------------------------------------------- */
@@ -253,21 +268,6 @@
 
 		/* -- Genesis Sample Border Colors
 		--------------------------------------------- */
-
-		/* -- Custom Color Palette
-		--------------------------------------------- */
-
-		--ccp-primary: #03a577;
-		--ccp-secondary: #02684c;
-		--ccp-primary-alt: #ff0014;
-		--ccp-secondary-alt: #b3000e;
-		--ccp-black: #000;
-		--ccp-dark-gray-one: #333;
-		--ccp-dark-gray-two: #777;
-		--ccp-light-gray-two: #eee;
-		--ccp-light-gray-one: #f5f5f5;
-		--ccp-white: #fff;
-		--ccp-transparent: transparent;
 
 	}
 
