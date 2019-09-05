@@ -2229,15 +2229,6 @@ a,
 	color: var(--ccp-primary); /* Color changed from default #0073e5 to primary */
 }
 
-.genesis-nav-menu > .menu-highlight > a {
-	background-color: var(--ccp-primary);
-}
-
-.genesis-nav-menu > .menu-highlight > a:hover {
-	color: var(--ccp-white);
-}
-
-.genesis-nav-menu > .menu-highlight > a:hover,
 button:focus,
 button:hover,
 input[type="button"]:focus,
@@ -2251,10 +2242,22 @@ input[type="submit"]:hover,
 .site-container div.wpforms-container-full .wpforms-form button[type="submit"]:focus,
 .site-container div.wpforms-container-full .wpforms-form button[type="submit"]:hover,
 .button:focus,
-.button:hover,
-.genesis-nav-menu > .menu-highlight > a:focus,
-.genesis-nav-menu > .menu-highlight > a:hover {
+.button:hover {
 	background-color: var(--ccp-secondary); /* Color changed from default #0073e5 to #ff0014 */
+}
+
+@media only screen and (min-width: 960px) {
+
+	.genesis-nav-menu > .menu-highlight > a {
+		background-color: var(--ccp-primary);
+	}
+
+	.genesis-nav-menu > .menu-highlight > a:focus,
+	.genesis-nav-menu > .menu-highlight > a:hover {
+		color: var(--ccp-white);
+		background-color: var(--ccp-secondary); /* Color changed from default #0073e5 to #ff0014 */
+	}
+
 }
 
 
