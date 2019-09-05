@@ -132,12 +132,12 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'genesis_sample_align_wide',
 		[
-			'section'     => 'genesis_sample_gutenberg_options',
-			'settings'    => 'genesis_sample_align_wide',
-			'priority'    => 10,
-			'label'       => __( 'Wide Alignment.', 'genesis-sample' ),
-			//'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#wide-alignment"><code>align-wide</code></a>', 'genesis-sample' ),
-			'type'        => 'checkbox',
+			'section'  => 'genesis_sample_gutenberg_options',
+			'settings' => 'genesis_sample_align_wide',
+			'priority' => 10,
+			'label'    => __( 'Wide Alignment.', 'genesis-sample' ),
+			'type'     => 'checkbox',
+			// -- 'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#wide-alignment"><code>align-wide</code></a>', 'genesis-sample' ),
 		]
 	);
 
@@ -153,12 +153,11 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'genesis_sample_color_palette',
 		[
-			'section'     => 'genesis_sample_gutenberg_options',
-			'settings'    => 'genesis_sample_color_palette',
-			'priority'    => 10,
-			'label'       => __( 'Block Color Palettes.', 'genesis-sample' ),
-			//'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-color-palettes"><code>editor-color-palette</code></a>', 'genesis-sample' ),
-			'type'        => 'checkbox',
+			'section'  => 'genesis_sample_gutenberg_options',
+			'settings' => 'genesis_sample_color_palette',
+			'priority' => 10,
+			'label'    => __( 'Block Color Palettes.', 'genesis-sample' ),
+			'type'     => 'checkbox',
 		]
 	);
 
@@ -174,12 +173,11 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'genesis_sample_custom_colors',
 		[
-			'section'     => 'genesis_sample_gutenberg_options',
-			'settings'    => 'genesis_sample_custom_colors',
-			'priority'    => 10,
-			'label'       => __( 'Disable custom colors in Block Color Palettes.', 'genesis-sample' ),
-			//'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#disabling-custom-colors-in-block-color-palettes"><code>disable-custom-colors</code></a>', 'genesis-sample' ),
-			'type'        => 'checkbox',
+			'section'  => 'genesis_sample_gutenberg_options',
+			'settings' => 'genesis_sample_custom_colors',
+			'priority' => 10,
+			'label'    => __( 'Disable custom colors in Block Color Palettes.', 'genesis-sample' ),
+			'type'     => 'checkbox',
 		]
 	);
 
@@ -195,12 +193,11 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'genesis_sample_editor_font_sizes',
 		[
-			'section'     => 'genesis_sample_gutenberg_options',
-			'settings'    => 'genesis_sample_editor_font_sizes',
-			'priority'    => 10,
-			'label'       => __( 'Block Font Sizes.', 'genesis-sample' ),
-			//'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-font-sizes"><code>editor-font-sizes</code></a>', 'genesis-sample' ),
-			'type'        => 'checkbox',
+			'section'  => 'genesis_sample_gutenberg_options',
+			'settings' => 'genesis_sample_editor_font_sizes',
+			'priority' => 10,
+			'label'    => __( 'Block Font Sizes.', 'genesis-sample' ),
+			'type'     => 'checkbox',
 		]
 	);
 
@@ -216,12 +213,11 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'genesis_sample_custom_font_sizes',
 		[
-			'section'     => 'genesis_sample_gutenberg_options',
-			'settings'    => 'genesis_sample_custom_font_sizes',
-			'priority'    => 10,
-			'label'       => __( 'Disable custom font sizes in Block Font Sizes.', 'genesis-sample' ),
-			//'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#disabling-custom-font-sizes"><code>disable-custom-font-sizes</code></a>', 'genesis-sample' ),
-			'type'        => 'checkbox',
+			'section'  => 'genesis_sample_gutenberg_options',
+			'settings' => 'genesis_sample_custom_font_sizes',
+			'priority' => 10,
+			'label'    => __( 'Disable custom font sizes in Block Font Sizes.', 'genesis-sample' ),
+			'type'     => 'checkbox',
 		]
 	);
 
@@ -237,12 +233,11 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'genesis_sample_editor_styles',
 		[
-			'section'     => 'genesis_sample_gutenberg_options',
-			'settings'    => 'genesis_sample_editor_styles',
-			'priority'    => 10,
-			'label'       => __( 'Editor styles.', 'genesis-sample' ),
-			//'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#editor-styles"><code>editor-styles</code></a>', 'genesis-sample' ),
-			'type'        => 'checkbox',
+			'section'  => 'genesis_sample_gutenberg_options',
+			'settings' => 'genesis_sample_editor_styles',
+			'priority' => 10,
+			'label'    => __( 'Editor styles.', 'genesis-sample' ),
+			'type'     => 'checkbox',
 		]
 	);
 
@@ -258,12 +253,11 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'genesis_sample_dark_backgrounds',
 		[
-			'section'     => 'genesis_sample_gutenberg_options',
-			'settings'    => 'genesis_sample_dark_backgrounds',
-			'priority'    => 10,
-			'label'       => __( 'Dark backgrounds.', 'genesis-sample' ),
-			//'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#dark-backgrounds"><code>dark-editor-style</code></a>', 'genesis-sample' ),
-			'type'        => 'checkbox',
+			'section'  => 'genesis_sample_gutenberg_options',
+			'settings' => 'genesis_sample_dark_backgrounds',
+			'priority' => 10,
+			'label'    => __( 'Dark backgrounds.', 'genesis-sample' ),
+			'type'     => 'checkbox',
 		]
 	);
 
@@ -279,12 +273,11 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'genesis_sample_wp_block_styles',
 		[
-			'section'     => 'genesis_sample_gutenberg_options',
-			'settings'    => 'genesis_sample_wp_block_styles',
-			'priority'    => 10,
-			'label'       => __( 'Default block styles.', 'genesis-sample' ),
-			//'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#default-block-styles"><code>wp-block-styles</code></a>', 'genesis-sample' ),
-			'type'        => 'checkbox',
+			'section'  => 'genesis_sample_gutenberg_options',
+			'settings' => 'genesis_sample_wp_block_styles',
+			'priority' => 10,
+			'label'    => __( 'Default block styles.', 'genesis-sample' ),
+			'type'     => 'checkbox',
 		]
 	);
 
@@ -300,12 +293,11 @@ function genesis_sample_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'genesis_sample_responsive_embeds',
 		[
-			'section'     => 'genesis_sample_gutenberg_options',
-			'settings'    => 'genesis_sample_responsive_embeds',
-			'priority'    => 10,
-			'label'       => __( 'Responsive embedded content.', 'genesis-sample' ),
-			//'description' => __( '<a target="_blank" href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#responsive-embedded-content"><code>responsive-embeds</code></a>', 'genesis-sample' ),
-			'type'        => 'checkbox',
+			'section'  => 'genesis_sample_gutenberg_options',
+			'settings' => 'genesis_sample_responsive_embeds',
+			'priority' => 10,
+			'label'    => __( 'Responsive embedded content.', 'genesis-sample' ),
+			'type'     => 'checkbox',
 		]
 	);
 
@@ -333,7 +325,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => genesis_sample_get_customiser_default( 'primary_color' ),
 			'sanitize_callback' => 'sanitize_hex_color',
-			//'transport'         => 'postMessage',
+			// -- 'transport'         => 'postMessage',
 		]
 	);
 
@@ -353,7 +345,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => genesis_sample_get_customiser_default( 'secondary_color' ),
 			'sanitize_callback' => 'sanitize_hex_color',
-			//'transport'         => 'postMessage',
+			// -- 'transport'         => 'postMessage',
 		]
 	);
 
@@ -373,7 +365,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => genesis_sample_get_customiser_default( 'primary_alt_color' ),
 			'sanitize_callback' => 'sanitize_hex_color',
-			//'transport'         => 'postMessage',
+			// -- 'transport'         => 'postMessage',
 		]
 	);
 
@@ -393,7 +385,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => genesis_sample_get_customiser_default( 'secondary_alt_color' ),
 			'sanitize_callback' => 'sanitize_hex_color',
-			//'transport'         => 'postMessage',
+			// -- 'transport'         => 'postMessage',
 		]
 	);
 
@@ -413,7 +405,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => genesis_sample_get_customiser_default( 'black_color' ),
 			'sanitize_callback' => 'sanitize_hex_color',
-			//'transport'         => 'postMessage',
+			// -- 'transport'         => 'postMessage',
 		]
 	);
 
@@ -433,7 +425,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => genesis_sample_get_customiser_default( 'dark_gray_01_color' ),
 			'sanitize_callback' => 'sanitize_hex_color',
-			//'transport'         => 'postMessage',
+			// -- 'transport'         => 'postMessage',
 		]
 	);
 
@@ -453,7 +445,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => genesis_sample_get_customiser_default( 'dark_gray_02_color' ),
 			'sanitize_callback' => 'sanitize_hex_color',
-			//'transport'         => 'postMessage',
+			// -- 'transport'         => 'postMessage',
 		]
 	);
 
@@ -473,7 +465,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => genesis_sample_get_customiser_default( 'light_gray_02_color' ),
 			'sanitize_callback' => 'sanitize_hex_color',
-			//'transport'         => 'postMessage',
+			// -- 'transport'         => 'postMessage',
 		]
 	);
 
@@ -493,7 +485,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => genesis_sample_get_customiser_default( 'light_gray_01_color' ),
 			'sanitize_callback' => 'sanitize_hex_color',
-			//'transport'         => 'postMessage',
+			// -- 'transport'         => 'postMessage',
 		]
 	);
 
@@ -513,7 +505,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => genesis_sample_get_customiser_default( 'white_color' ),
 			'sanitize_callback' => 'sanitize_hex_color',
-			//'transport'         => 'postMessage',
+			// -- 'transport'         => 'postMessage',
 		]
 	);
 
@@ -534,7 +526,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => genesis_sample_get_customiser_default( 'primary_dark_color' ),
 			'sanitize_callback' => 'sanitize_hex_color',
-			//'transport'         => 'postMessage',
+			// -- 'transport'         => 'postMessage',
 		]
 	);
 
@@ -554,7 +546,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => genesis_sample_get_customiser_default( 'secondary_dark_color' ),
 			'sanitize_callback' => 'sanitize_hex_color',
-			//'transport'         => 'postMessage',
+			// -- 'transport'         => 'postMessage',
 		]
 	);
 
@@ -574,7 +566,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => genesis_sample_get_customiser_default( 'primary_alt_dark_color' ),
 			'sanitize_callback' => 'sanitize_hex_color',
-			//'transport'         => 'postMessage',
+			// -- 'transport'         => 'postMessage',
 		]
 	);
 
@@ -594,7 +586,7 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => genesis_sample_get_customiser_default( 'secondary_alt_dark_color' ),
 			'sanitize_callback' => 'sanitize_hex_color',
-			//'transport'         => 'postMessage',
+			// -- 'transport'         => 'postMessage',
 		]
 	);
 
@@ -726,7 +718,6 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => '24',
 			'sanitize_callback' => 'absint',
-			//'transport'         => 'postMessage',
 		]
 	);
 
@@ -745,7 +736,6 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => '27',
 			'sanitize_callback' => 'absint',
-			//'transport'         => 'postMessage',
 		]
 	);
 
@@ -764,7 +754,6 @@ function genesis_sample_customize_register( $wp_customize ) {
 		[
 			'default'           => '30',
 			'sanitize_callback' => 'absint',
-			//'transport'         => 'postMessage',
 		]
 	);
 
