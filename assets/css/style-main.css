@@ -2576,3 +2576,107 @@ a:hover {
 .genesis-nav-menu a {
 	font-size: 16px;
 }
+
+
+/* -- Drop Down Icons and mobile menu borders
+--------------------------------------------- */
+
+.genesis-responsive-menu {
+	padding-top: 0;
+}
+
+.genesis-nav-menu .menu-item {
+	border-top: 1px solid #eee;
+}
+
+.sub-menu-toggle {
+	line-height: 1;
+	padding: 10px;
+}
+
+.sub-menu .sub-menu-toggle {
+	padding: 9px 10px;
+}
+
+@media only screen and (min-width: 960px) {
+
+	.genesis-responsive-menu {
+		padding-top: 15px;
+	}
+
+	.genesis-nav-menu .menu-item {
+		border-top: none;
+	}
+
+	.sub-menu-toggle {
+		display: block;
+		visibility: visible;
+		right: 13px;
+		top: 13px;
+		padding: 0;
+	}
+
+	.sub-menu .sub-menu-toggle {
+		display: none;
+	}
+
+	.nav-primary .menu-item.menu-item-has-children > a {
+		padding-right: 32px;
+	}
+
+	.dashicons,
+	.dashicons-before::before {
+		color: #bbb;
+		width: 16px;
+		height: 16px;
+		font-size: 16px;
+	}
+
+}
+
+
+/* -- dark dropdowns
+--------------------------------------------- */
+
+.genesis-nav-menu .sub-menu a {
+	border: none;
+}
+
+@media only screen and (min-width: 960px) {
+
+	.genesis-nav-menu .sub-menu {
+		transition: none;
+	}
+
+	.genesis-responsive-menu .genesis-nav-menu > li:hover > a {
+
+	}
+
+	.genesis-responsive-menu .genesis-nav-menu > li > a:hover {
+		background: #555;
+		color: #fff;
+	}
+
+	.genesis-responsive-menu .sub-menu {
+		border: none;
+	}
+
+	.genesis-responsive-menu .sub-menu li a:hover {
+		color: #fff;
+		background: #333;
+	}
+
+	.genesis-nav-menu li:hover a {
+		color: #fff;
+		background: #555;
+	}
+
+	.genesis-nav-menu .sub-menu {
+		background: #555;
+	}
+
+	.genesis-nav-menu .sub-menu .sub-menu {
+		margin: -44px 0 0 180px;
+	}
+
+}
