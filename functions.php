@@ -205,19 +205,19 @@ function genesis_sample_comments_gravatar( $args ) {
 // Custom Functions.
 require_once get_stylesheet_directory() . '/inc/custom-functions.php';
 
+// Gutenberg Options.
+require_once get_stylesheet_directory() . '/inc/gutenberg.php';
+
 // WordPress Cleanup.
 require_once get_stylesheet_directory() . '/inc/wordpress-cleanup.php';
+
+// Genesis Changes.
+require_once get_stylesheet_directory() . '/inc/genesis-changes.php';
 
 // Customizer Options.
 // phpcs:disable
 //require_once get_stylesheet_directory() . '/inc/customizer.php';
 // phpcs:enable
-
-// Gutenberg Options.
-require_once get_stylesheet_directory() . '/inc/gutenberg.php';
-
-// Editor Color palette and fonts.
-require_once get_stylesheet_directory() . '/inc/editor-colors-fonts.php';
 
 // Woocommerce Options.
 require_once get_stylesheet_directory() . '/inc/woocommerce.php';
