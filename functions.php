@@ -205,6 +205,9 @@ function genesis_sample_comments_gravatar( $args ) {
 // Custom Functions.
 require_once get_stylesheet_directory() . '/inc/custom-functions.php';
 
+// Editor Color palette and fonts.
+require_once get_stylesheet_directory() . '/inc/editor-colors-fonts.php';
+
 // Gutenberg Options.
 require_once get_stylesheet_directory() . '/inc/gutenberg.php';
 
