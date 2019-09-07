@@ -12,8 +12,6 @@
  * Gutenberg theme functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
- * @package bkchild
  */
 if ( ! function_exists( 'genesis_sample_setup' ) ) :
 
@@ -106,51 +104,51 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 			'editor-font-sizes',
 			[
 				[
-					'name'      => esc_html__( 'XX Small', 'genesis-sample' ),
-					'shortName' => esc_html__( 'XXS', 'genesis-sample' ),
-					'size'      => '14',
+					'name'      => __( 'XX Small', 'genesis-sample' ),
+					'shortName' => __( 'XXS', 'genesis-sample' ),
+					'size'      => 14,
 					'slug'      => 'xx-small',
 				],
 				[
-					'name'      => esc_html__( 'X Small', 'genesis-sample' ),
-					'shortName' => esc_html__( 'XS', 'genesis-sample' ),
-					'size'      => '15',
+					'name'      => __( 'X Small', 'genesis-sample' ),
+					'shortName' => __( 'XS', 'genesis-sample' ),
+					'size'      => 15,
 					'slug'      => 'x-small',
 				],
 				[
-					'name'      => esc_html__( 'Small', 'genesis-sample' ),
-					'shortName' => esc_html__( 'S', 'genesis-sample' ),
-					'size'      => '16',
+					'name'      => __( 'Small', 'genesis-sample' ),
+					'shortName' => __( 'S', 'genesis-sample' ),
+					'size'      => 16,
 					'slug'      => 'small',
 				],
 				[
-					'name'      => esc_html__( 'Normal', 'genesis-sample' ),
-					'shortName' => esc_html__( 'N', 'genesis-sample' ),
-					'size'      => '18',
+					'name'      => __( 'Normal', 'genesis-sample' ),
+					'shortName' => __( 'N', 'genesis-sample' ),
+					'size'      => 18,
 					'slug'      => 'normal',
 				],
 				[
-					'name'      => esc_html__( 'Medium', 'genesis-sample' ),
-					'shortName' => esc_html__( 'M', 'genesis-sample' ),
-					'size'      => '20',
+					'name'      => __( 'Medium', 'genesis-sample' ),
+					'shortName' => __( 'M', 'genesis-sample' ),
+					'size'      => 20,
 					'slug'      => 'medium',
 				],
 				[
-					'name'      => esc_html__( 'Large', 'genesis-sample' ),
-					'shortName' => esc_html__( 'L', 'genesis-sample' ),
-					'size'      => '24',
+					'name'      => __( 'Large', 'genesis-sample' ),
+					'shortName' => __( 'L', 'genesis-sample' ),
+					'size'      => 24,
 					'slug'      => 'large',
 				],
 				[
-					'name'      => esc_html__( 'X Large', 'genesis-sample' ),
-					'shortName' => esc_html__( 'XL', 'genesis-sample' ),
-					'size'      => '27',
+					'name'      => __( 'X Large', 'genesis-sample' ),
+					'shortName' => __( 'XL', 'genesis-sample' ),
+					'size'      => 27,
 					'slug'      => 'x-large',
 				],
 				[
-					'name'      => esc_html__( 'XX Large', 'genesis-sample' ),
-					'shortName' => esc_html__( 'XXL', 'genesis-sample' ),
-					'size'      => '30',
+					'name'      => __( 'XX Large', 'genesis-sample' ),
+					'shortName' => __( 'XXL', 'genesis-sample' ),
+					'size'      => 30,
 					'slug'      => 'xx-large',
 				],
 			]
