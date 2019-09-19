@@ -420,6 +420,10 @@ input[type="submit"],
 	line-height: 1.625;
 }
 
+h4.not-ec {
+	margin-top: 0 !important;
+}
+
 /* -- Font Overrides
 --------------------------------------------- */
 
@@ -454,9 +458,6 @@ input[type="submit"],
 	border: 2px solid var(--ccp-secondary);
 }
 
-/* -- Styles for Extras added to theme
---------------------------------------------- */
-
 /* -- Custom Button Styles added for circular
 --------------------------------------------- */
 
@@ -473,35 +474,27 @@ input[type="submit"],
 /* -- Custom Button Styles added for Dark backgrounds
 --------------------------------------------- */
 
-.site-container .wp-block-button.is-style-dark .wp-block-button__link {
+.site-container .wp-block-button.is-style-fill-alt .wp-block-button__link {
 	background-color: var(--ccp-primary-alt);
 }
 
-.site-container .wp-block-button.is-style-dark .wp-block-button__link:hover,
-.site-container .wp-block-button.is-style-dark .wp-block-button__link:focus {
+.site-container .wp-block-button.is-style-fill-alt .wp-block-button__link:focus,
+.site-container .wp-block-button.is-style-fill-alt .wp-block-button__link:hover {
 	background-color: var(--ccp-secondary-alt);
 }
 
-/* -- Custom Button Styles added for theme specific if needed
---------------------------------------------- */
-
-.site-container .wp-block-button.is-style-custom .wp-block-button__link {
-	background-color: var(--ccp-primary);
-	border-radius: 100px;
+.site-container .wp-block-button.is-style-outline-alt .wp-block-button__link {
+	color: var(--ccp-primary-alt);
+	background-color: var(--ccp-transparent);
+	border: 2px solid currentColor;
+	border-radius: 0;
+	padding: 10px 28px;
 }
 
-.site-container .wp-block-button.is-style-custom .wp-block-button__link:hover,
-.site-container .wp-block-button.is-style-custom .wp-block-button__link:focus {
-	background-color: var(--ccp-secondary);
-}
-
-.site-container .wp-block-button.is-style-custom-dark .wp-block-button__link {
-	background-color: var(--ccp-primary-alt);
-}
-
-.site-container .wp-block-button.is-style-custom-dark .wp-block-button__link:hover,
-.site-container .wp-block-button.is-style-custom-dark .wp-block-button__link:focus {
+.site-container .wp-block-button.is-style-outline-alt .wp-block-button__link:focus,
+.site-container .wp-block-button.is-style-outline-alt .wp-block-button__link:hover {
 	background-color: var(--ccp-secondary-alt);
+	border: 2px solid var(--ccp-secondary-alt);
 }
 
 /* -- Custom Styles for Group Block

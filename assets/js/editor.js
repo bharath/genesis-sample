@@ -33,13 +33,13 @@ wp.domReady(() => {
 	});
 
 	wp.blocks.registerBlockStyle('core/button', {
-		name: 'circular',
-		label: 'Circular'
+		name: 'fill-alt',
+		label: 'Fill Alt'
 	});
 
 	wp.blocks.registerBlockStyle('core/button', {
-		name: 'dark',
-		label: 'Dark'
+		name: 'outline-alt',
+		label: 'Outline Alt'
 	});
 
 	/*

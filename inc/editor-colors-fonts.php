@@ -235,7 +235,7 @@ function genesis_sample_inline_gutenberg_admin_css() {
 
 	.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:focus,
 	.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:hover {
-		color: var(--ccp-secondary);
+		color: var(--ccp-white);
 	}
 
 CSS;
