@@ -2598,6 +2598,11 @@ a:hover {
 	padding: 9px 10px;
 }
 
+.nav-primary .menu-item.menu-item-has-children:hover .sub-menu-toggle,
+.sub-menu-toggle:hover {
+	transform: rotate(180deg);
+}
+
 @media only screen and (min-width: 960px) {
 
 	.genesis-responsive-menu {

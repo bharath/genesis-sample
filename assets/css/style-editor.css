@@ -495,7 +495,7 @@ h6 {
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link {
-	/*background-color: var(--ccp-transparent);*/
+	border-radius: 5px;
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link:focus,
@@ -508,7 +508,6 @@ h6 {
 	padding: 12px 30px;
 }
 
-.wp-block-button.is-style-outline-alt .wp-block-button__link,
 .wp-block-button.is-style-outline .wp-block-button__link {
 	padding: 10px 28px;
 }
@@ -529,7 +528,8 @@ h6 {
 	color: var(--ccp-primary-alt);
 	background-color: var(--ccp-transparent);
 	border: 2px solid currentColor;
-	border-radius: 0;
+	border-radius: 5px;
+	padding: 10px 28px;
 }
 
 .wp-block-button.is-style-outline-alt .wp-block-button__link:focus,
@@ -541,18 +541,6 @@ h6 {
 
 /* -- Custom Styles for Group Block
 --------------------------------------------- */
-
-.wp-block-group.is-style-small-padding {
-	padding: 15px 0;
-}
-
-.wp-block-group.is-style-normal-padding {
-	padding: 30px 0;
-}
-
-.wp-block-group.is-style-large-padding {
-	padding: 60px 0;
-}
 
 h1.is-style-alt {
 	font-size: 75px;

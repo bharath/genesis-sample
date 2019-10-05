@@ -420,9 +420,9 @@ input[type="submit"],
 	line-height: 1.625;
 }
 
-h4.not-ec {
+/*h4.not-ec {
 	margin-top: 0 !important;
-}
+}*/
 
 /* -- Font Overrides
 --------------------------------------------- */
@@ -451,6 +451,7 @@ h4.not-ec {
 
 .site-container .wp-block-button.is-style-outline .wp-block-button__link {
 	background-color: var(--ccp-transparent);
+	border-radius: 5px;
 }
 
 .site-container .wp-block-button.is-style-outline .wp-block-button__link:hover {
@@ -487,7 +488,6 @@ h4.not-ec {
 	color: var(--ccp-primary-alt);
 	background-color: var(--ccp-transparent);
 	border: 2px solid currentColor;
-	border-radius: 0;
 	padding: 10px 28px;
 }
 

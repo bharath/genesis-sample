@@ -201,6 +201,7 @@ function genesis_sample_comments_gravatar( $args ) {
 }
 
 
+add_theme_support( 'genesis-lazy-load-images' );
 
 // Custom Functions.
 require_once get_stylesheet_directory() . '/inc/custom-functions.php';
