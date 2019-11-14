@@ -52,6 +52,8 @@ function genesis_sample_custom_button_classes( $block_content, $block ) {
 
 /**
  * Default Block Styles.
+ *
+ * @link https://github.com/WordPress/gutenberg/pull/16532
  */
 function genesis_sample_default_block_styles() {
 	add_theme_support(
@@ -62,5 +64,4 @@ function genesis_sample_default_block_styles() {
 		]
 	);
 }
-
 add_action( 'after_setup_theme', 'genesis_sample_default_block_styles' );
