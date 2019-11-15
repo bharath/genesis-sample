@@ -207,7 +207,7 @@ add_theme_support( 'genesis-lazy-load-images' );
 require_once get_stylesheet_directory() . '/inc/custom-functions.php';
 
 // Editor Color palette and fonts.
-require_once get_stylesheet_directory() . '/inc/editor-colors-fonts.php';
+require_once get_stylesheet_directory() . '/inc/editor-theme-support.php';
 
 // Gutenberg Options.
 require_once get_stylesheet_directory() . '/inc/gutenberg.php';

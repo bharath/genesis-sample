@@ -80,6 +80,9 @@ function genesis_sample_scripts_styles() {
 	// Enqueue theme's main styles with variables.
 	wp_enqueue_style( genesis_get_theme_handle() . '-main', get_stylesheet_directory_uri() . '/assets/css/style-main.css', [], date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
 
+	// Enqueue theme Extras styles.
+	wp_enqueue_style( genesis_get_theme_handle() . '-extras', get_stylesheet_directory_uri() . '/assets/css/style-extras.css', [], date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-extras.css' ) ) );
+
 	if ( has_block( 'code' ) ) {
 
 		// Enqueue Fira Code font for code block.
