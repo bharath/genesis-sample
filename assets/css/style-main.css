@@ -208,12 +208,13 @@ li {
 }
 
 hr {
-	border: none;
+	border: 0;
 	border-collapse: collapse;
-	border-top: 1px solid #eee;
-	border-top: 1px solid var(--hr-border-color);
+	border-bottom: 1px solid currentColor;
 	clear: both;
-	margin: 30px 0;
+	color: #eee;
+	color: var(--hr-border-color);
+	margin: 1.65em auto;
 }
 
 b,
@@ -516,7 +517,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	margin-bottom: 40px;
-	table-layout: fixed;
 	width: 100%;
 	word-break: break-all;
 }
@@ -528,29 +528,22 @@ tbody {
 
 td,
 th {
+	line-height: 2;
 	text-align: left;
 	vertical-align: top;
 }
 
 td {
-	border-top: 1px solid #eee;
-	border-top: 1px solid var(--td-border-color);
-	padding: 10px;
+	padding: 0.5em;
+}
+
+tr {
+	border-top: 1px solid var(--tr-border-color);
 }
 
 th {
 	font-weight: 600;
-	padding: 0 10px 10px;
-}
-
-td:first-child,
-th:first-child {
-	padding-left: 0;
-}
-
-td:last-child,
-th:last-child {
-	padding-right: 0;
+	padding: 0.5em;
 }
 
 /* Screen Reader Text
@@ -804,11 +797,15 @@ img.alignright,
 	margin: 0 0 20px 20px;
 }
 
+figcaption,
 .gallery-caption,
 .wp-caption-text {
 	font-size: 14px;
 	font-weight: 600;
-	margin: 0;
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+	padding-left: 10px;
+	padding-right: 10px;
 	text-align: center;
 }
 
@@ -2127,7 +2124,7 @@ p.entry-meta {
 	--input-focus-border-color: var(--gcp-05, #999);
 	--textarea-focus-border-color: var(--gcp-05, #999);
 	--tbody-border-color: var(--gcp-08, #eee);
-	--td-border-color: var(--gcp-08, #eee);
+	--tr-border-color: var(--gcp-08, #eee);
 	--breadcrumb-border-color: var(--gcp-08, #eee);
 	--feat-content-entry-border-color: var(--gcp-08, #eee);
 	--faq-border-color: var(--gcp-08, #eee);
