@@ -1930,21 +1930,21 @@ p.entry-meta {
 --------------------------------------------- */
 
 @font-face {
-	font-family: 'Inter var';
-	font-weight: 100 900;
+	font-family: "Inter var";
+	font-weight: 100 900; /* stylelint-disable-line font-weight-notation */
 	font-display: swap;
 	font-style: normal;
-	font-named-instance: 'Regular';
-	src: url('fonts/Inter-upright.var.woff2') format("woff2");
+	font-named-instance: "Regular"; /* stylelint-disable-line property-no-unknown */
+	src: url(fonts/Inter-upright.var.woff2) format("woff2");
 }
 
 @font-face {
-	font-family: 'Inter var';
-	font-weight: 100 900;
+	font-family: "Inter var";
+	font-weight: 100 900; /* stylelint-disable-line font-weight-notation */
 	font-display: swap;
 	font-style: italic;
-	font-named-instance: 'Italic';
-	src: url('fonts/Inter-italic.var.woff2') format("woff2");
+	font-named-instance: "Italic"; /* stylelint-disable-line property-no-unknown */
+	src: url(fonts/Inter-italic.var.woff2) format("woff2");
 }
 
 /* -- Variable font
@@ -1961,17 +1961,17 @@ p.entry-meta {
 --------------------------------------------- */
 
 @font-face {
-	font-family: 'Inter var experimental';
-	font-weight: 100 900;
+	font-family: "Inter var experimental";
+	font-weight: 100 900; /* stylelint-disable-line font-weight-notation */
 	font-display: swap;
 	font-style: oblique 0deg 10deg;
-	src: url('fonts/Inter.var.woff2') format("woff2");
+	src: url(fonts/Inter.var.woff2) format("woff2");
 }
 
 @font-face {
-	font-family: 'Fira Code VF';
-	src: url('fonts/FiraCode-VF.woff2') format("woff2-variations");
-	font-weight: 300 700;
+	font-family: "Fira Code VF";
+	src: url(fonts/FiraCode-VF.woff2) format("woff2-variations");
+	font-weight: 300 700; /* stylelint-disable-line font-weight-notation */
 	font-style: normal;
 	font-display: swap;
 }
@@ -1999,8 +1999,8 @@ p.entry-meta {
 	/* -- Custom Fonts
 	--------------------------------------------- */
 
-	--font-family-normal: 'Inter var', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	--font-family-bold: 'Inter var', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--font-family-normal: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif; /* stylelint-disable-line value-keyword-case */
+	--font-family-bold: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif; /* stylelint-disable-line value-keyword-case */
 
 	/* -- Custom Font Sizes
 	--------------------------------------------- */
@@ -2325,7 +2325,7 @@ code.hljs {
 	border-radius: 20px;
 	background: rgba(54, 86, 102, 0.05) !important;
 	line-height: 1.5;
-	font-family: 'Fira Code', monospace;
+	font-family: "Fira Code", monospace;
 	font-weight: 400;
 }
 
@@ -2642,6 +2642,7 @@ a:hover {
 
 /* -- dark dropdowns
 --------------------------------------------- */
+
 /*
 .genesis-nav-menu .sub-menu a {
 	border: none;
