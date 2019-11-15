@@ -345,17 +345,17 @@ table {
 
 .wp-block-table tr {
 	border-top: 1px solid #eee;
-	border-top: 1px solid var(--gcp-08, #eee)
+	border-top: 1px solid var(--gcp-08, #eee);
 }
 
 .wp-block-table tr:last-of-type {
 	border-bottom: 1px solid #eee;
-	border-top: 1px solid var(--gcp-08, #eee)
+	border-top: 1px solid var(--gcp-08, #eee);
 }
 
 .wp-block-table tbody {
 	border-bottom: 1px solid #eee;
-	border-top: 1px solid var(--gcp-08, #eee)
+	border-top: 1px solid var(--gcp-08, #eee);
 }
 
 .wp-block-table.is-style-stripes {
@@ -558,24 +558,8 @@ h1.is-style-alt {
 /* -- Custom Styles
 --------------------------------------------- */
 
-/* Regular content width.
-/* 702px + 27px to match paragraph width on front-end and editor.
----------------------------------------------------------------------------- */
-
-.wp-block {
-	/*max-width: 1253px;*/
-}
-
-/* Width of "wide" blocks
-/* 1062px + 30px so wide images match width in front-end and editor.
-/* 1062px = default column width of 702px + .alignwide negative margin of 360px
----------------------------------------------------------------------------- */
-
-.wp-block[data-align="wide"] {
-	/*max-width: 1616px;*/
-}
-
 .editor-block-list__layout .editor-block-list__block:not([data-type="core/columns"]):not([data-type="core/column"]):not([data-type="coblocks/accordion"]):not([data-type="coblocks/accordion-item"]):not([data-type="coblocks/row"]):not([data-type="coblocks/column"]):not([data-type="coblocks/buttons"]):not([data-type="atomic-blocks/ab-container"]):not([data-type="atomic-blocks/ab-pricing-table"]) > .editor-block-list__block-edit::before {
+
 	/*border: 1px solid rgba(66, 88, 99, 0.2);*/
 }
 
