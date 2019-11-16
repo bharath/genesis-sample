@@ -201,8 +201,6 @@ function genesis_sample_comments_gravatar( $args ) {
 }
 
 
-add_theme_support( 'genesis-lazy-load-images' );
-
 // Custom Functions.
 require_once get_stylesheet_directory() . '/inc/custom-functions.php';
 
@@ -213,7 +211,7 @@ require_once get_stylesheet_directory() . '/inc/editor-theme-support.php';
 require_once get_stylesheet_directory() . '/inc/gutenberg.php';
 
 // WordPress Cleanup.
-require_once get_stylesheet_directory() . '/inc/wordpress-cleanup.php';
+require_once get_stylesheet_directory() . '/inc/wordpress-changes.php';
 
 // Genesis Changes.
 require_once get_stylesheet_directory() . '/inc/genesis-changes.php';
