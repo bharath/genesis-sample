@@ -16,3 +16,5 @@ remove_action( 'wp_head', 'genesis_load_favicon' );
 
 // Remove Header Description.
 remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
+
+add_theme_support( 'genesis-lazy-load-images' );
