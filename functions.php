@@ -201,6 +201,11 @@ function genesis_sample_comments_gravatar( $args ) {
 }
 
 
+/**
+ * REQUIRED FILES
+ * Include required files.
+ */
+
 // Custom Functions.
 require_once get_stylesheet_directory() . '/inc/custom-functions.php';
 
