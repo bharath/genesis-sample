@@ -48,7 +48,7 @@
 		}
 
 
-		hljs.initHighlightingOnLoad();
+		//hljs.initHighlightingOnLoad();
 
 	});
 

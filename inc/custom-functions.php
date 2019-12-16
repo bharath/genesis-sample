@@ -52,6 +52,8 @@ function genesis_sample_custom_fonts_url() {
  */
 function genesis_sample_scripts_styles() {
 
+	wp_deregister_style( 'syntax-highlighting-code-block' );
+
 	// Dequeue default theme styles.
 	wp_dequeue_style( genesis_get_theme_handle() );
 
@@ -91,10 +93,10 @@ function genesis_sample_scripts_styles() {
 		// phpcs:disable
 		// Enqueue highlight style css for code block.
 		//wp_enqueue_style( genesis_get_theme_handle() . '-highlight-style', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/styles/xcode.min.css', [], '9.15.8', 'all' );
-		// phpcs:enable
 
 		// Enqueue highlight script for code block.
-		wp_enqueue_script( genesis_get_theme_handle() . '-highlight-script', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/highlight.min.js', [ 'jquery' ], '9.15.10', true );
+		//wp_enqueue_script( genesis_get_theme_handle() . '-highlight-script', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/highlight.min.js', [ 'jquery' ], '9.15.10', true );
+		// phpcs:enable
 
 		// Enqueue Clipboard script for code block.
 		wp_enqueue_script( genesis_get_theme_handle() . '-code-clipboard', '//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', [ 'jquery' ], '2.0.4', true );
