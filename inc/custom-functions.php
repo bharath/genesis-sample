@@ -70,13 +70,13 @@ function genesis_sample_scripts_styles() {
 	wp_enqueue_style( genesis_get_theme_handle() . '-custom-fonts', genesis_sample_custom_fonts_url(), [], genesis_get_theme_version() );
 
 	// Enqueue custom Gutenberg front-end styles.
-	wp_enqueue_style( genesis_get_theme_handle() . '-custom-gutenberg', get_stylesheet_directory_uri() . '/assets/css/front-end.css', [], wp_date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/front-end.css' ) ) );
+	wp_enqueue_style( genesis_get_theme_handle() . '-custom-gutenberg', get_stylesheet_directory_uri() . '/assets/css/front-end.css', [], wp_date( 'dmy.hisa', filemtime( get_stylesheet_directory() . '/assets/css/front-end.css' ) ) );
 
 	// Enqueue theme's main styles with variables.
-	wp_enqueue_style( genesis_get_theme_handle() . '-main', get_stylesheet_directory_uri() . '/assets/css/style-main.css', [], wp_date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
+	wp_enqueue_style( genesis_get_theme_handle() . '-main', get_stylesheet_directory_uri() . '/assets/css/style-main.css', [], wp_date( 'dmy.hisa', filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
 
 	// Enqueue theme Extras styles.
-	wp_enqueue_style( genesis_get_theme_handle() . '-extras', get_stylesheet_directory_uri() . '/assets/css/style-extras.css', [], wp_date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-extras.css' ) ) );
+	wp_enqueue_style( genesis_get_theme_handle() . '-extras', get_stylesheet_directory_uri() . '/assets/css/style-extras.css', [], wp_date( 'dmy.hisa', filemtime( get_stylesheet_directory() . '/assets/css/style-extras.css' ) ) );
 
 	if ( has_block( 'code' ) ) {
 
@@ -95,12 +95,12 @@ function genesis_sample_scripts_styles() {
 		wp_enqueue_script( genesis_get_theme_handle() . '-code-clipboard', '//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', [ 'jquery' ], '2.0.4', true );
 
 		// Enqueue theme's main scripts.
-		wp_enqueue_script( genesis_get_theme_handle() . '-code-init', get_stylesheet_directory_uri() . '/assets/js/code.js', [ 'jquery' ], wp_date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/js/code.js' ) ), true );
+		wp_enqueue_script( genesis_get_theme_handle() . '-code-init', get_stylesheet_directory_uri() . '/assets/js/code.js', [ 'jquery' ], wp_date( 'dmy.hisa', filemtime( get_stylesheet_directory() . '/assets/js/code.js' ) ), true );
 
 	}
 
 	// Enqueue theme's main scripts.
-	wp_enqueue_script( genesis_get_theme_handle() . '-scripts', get_stylesheet_directory_uri() . '/assets/js/main.js', [ 'jquery' ], wp_date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/js/main.js' ) ), true );
+	wp_enqueue_script( genesis_get_theme_handle() . '-scripts', get_stylesheet_directory_uri() . '/assets/js/main.js', [ 'jquery' ], wp_date( 'dmy.hisa', filemtime( get_stylesheet_directory() . '/assets/js/main.js' ) ), true );
 
 	$wp_jquery_ver = $GLOBALS['wp_scripts']->registered[ $jquery_handle ]->ver;
 
@@ -124,13 +124,13 @@ function genesis_sample_gutenberg_scripts_styles() {
 	wp_dequeue_style( genesis_get_theme_handle() . '-gutenberg-fonts' );
 
 	// Enqueue CSS Variables.
-	wp_enqueue_style( genesis_get_theme_handle() . '-var', get_stylesheet_directory_uri() . '/assets/css/style-var.css', [], wp_date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/style-var.css' ) ) );
+	wp_enqueue_style( genesis_get_theme_handle() . '-var', get_stylesheet_directory_uri() . '/assets/css/style-var.css', [], wp_date( 'dmy.hisa', filemtime( get_stylesheet_directory() . '/assets/css/style-var.css' ) ) );
 
 	// Enqueue Custom / Typekit / Google Fonts for Gutenberg admin editor.
 	wp_enqueue_style( genesis_get_theme_handle() . '-custom-gutenberg-fonts', genesis_sample_custom_fonts_url(), [], genesis_get_theme_version() );
 
 	// Enqueue Gutenberg admin editor scripts.
-	wp_enqueue_script( genesis_get_theme_handle() . '-editor-js', get_stylesheet_directory_uri() . '/assets/js/editor.js', [ 'wp-blocks', 'wp-dom' ], wp_date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ) ), true );
+	wp_enqueue_script( genesis_get_theme_handle() . '-editor-js', get_stylesheet_directory_uri() . '/assets/js/editor.js', [ 'wp-blocks', 'wp-dom' ], wp_date( 'dmy.hisa', filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ) ), true );
 
 }
 add_action( 'enqueue_block_editor_assets', 'genesis_sample_gutenberg_scripts_styles', 11 );
