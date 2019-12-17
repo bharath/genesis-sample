@@ -1912,13 +1912,7 @@ p.entry-meta {
 
 	/* -- Genesis Sample Font Family
 	--------------------------------------------- */
-
 	--gs-font-family: "Source Sans Pro", sans-serif;
-
-	/* -- Custom Font Family
-	--------------------------------------------- */
-
-	--c-font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif; /* stylelint-disable-line value-keyword-case */
 
 	/* -- Genesis Sample Color Palette
 	--------------------------------------------- */
@@ -1935,6 +1929,11 @@ p.entry-meta {
 	--gs-grey-08: #f5f5f5;
 	--gs-white: #fff;
 	--gs-transparent: transparent;
+
+	/* -- Custom Font Family
+	--------------------------------------------- */
+
+	--c-font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif; /* stylelint-disable-line value-keyword-case */
 
 	/* -- Custom Color Palette
 	--------------------------------------------- */
