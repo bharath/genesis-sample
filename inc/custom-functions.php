@@ -52,6 +52,7 @@ function genesis_sample_custom_fonts_url() {
  */
 function genesis_sample_scripts_styles() {
 
+	// Deregister default syntax highlight theme.
 	wp_deregister_style( 'syntax-highlighting-code-block' );
 
 	// Dequeue default theme styles.

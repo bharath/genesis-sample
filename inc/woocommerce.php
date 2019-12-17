@@ -24,7 +24,7 @@ function genesis_sample_custom_woocommerce_styles( $enqueue_styles ) {
 	$enqueue_styles[ genesis_get_theme_handle() . '-custom-woocommerce-styles' ] = [
 		'src'     => get_stylesheet_directory_uri() . '/assets/css/woocommerce.css',
 		'deps'    => '',
-		'version' => genesis_get_theme_version(),
+		'version' => wp_date( 'dmy.His', filemtime( get_stylesheet_directory() . '/assets/css/woocommerce.css' ) ),
 		'media'   => 'screen',
 	];
 

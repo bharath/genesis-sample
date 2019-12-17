@@ -215,7 +215,9 @@ require_once get_stylesheet_directory() . '/inc/wordpress-changes.php';
 require_once get_stylesheet_directory() . '/inc/genesis-changes.php';
 
 // Customizer Options.
-require_once get_stylesheet_directory() . '/inc/customizer.php';
+// phpcs:disable
+// require_once get_stylesheet_directory() . '/inc/customizer.php';
+// phpcs:enable
 
 // Editor Color palette and fonts.
 require_once get_stylesheet_directory() . '/inc/editor-theme-support.php';
