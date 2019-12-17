@@ -1,5 +1,5 @@
 // Site wide Javascript
-(function ($) {
+jQuery( function( $ ) {
 
 	// Add clipboard button to Code Block
 	$(document).ready(function () {
@@ -52,4 +52,4 @@
 
 	});
 
-})(jQuery);
+});
