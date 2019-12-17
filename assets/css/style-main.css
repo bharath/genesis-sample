@@ -2071,7 +2071,7 @@ input[type="submit"]:hover,
 --------------------------------------------- */
 
 body {
-	font-family: var(--font-family-normal);
+	font-family: var(--c-font-family);
 }
 
 h1,
@@ -2080,7 +2080,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: var(--font-family-bold);
+	font-family: var(--c-font-family);
 	font-weight: 700;
 }
 

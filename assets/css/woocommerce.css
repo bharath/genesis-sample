@@ -908,6 +908,12 @@ div.woocommerce-info.wc-memberships-restriction-message.wc-memberships-restricte
 /* -- Custom Styles
 --------------------------------------------- */
 
+.woocommerce nav.woocommerce-pagination ul li a:focus,
+.woocommerce nav.woocommerce-pagination ul li a:hover,
+.woocommerce nav.woocommerce-pagination ul li span.current {
+	background-color: var(--ccp-primary);
+}
+
 .woocommerce div.product p.price,
 .woocommerce div.product span.price,
 .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover,
