@@ -157,6 +157,42 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 		// Enqueue editor styles.
 		add_editor_style( '/assets/css/style-editor.css' );
 
+		add_theme_support(
+			'__experimental-editor-gradient-presets',
+			[
+				[
+					'name'     => __( 'Light green cyan to vivid green cyan', 'genesis-sample' ),
+					'gradient' => 'linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%)',
+					'slug'     => 'light-green-cyan-to-vivid-green-cyan',
+				],
+				[
+					'name'     => __( 'Luminous vivid amber to luminous vivid orange', 'genesis-sample' ),
+					'gradient' => 'linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%)',
+					'slug'     => 'luminous-vivid-amber-to-luminous-vivid-orange',
+				],
+				[
+					'name'     => __( 'Luminous vivid orange to vivid red', 'genesis-sample' ),
+					'gradient' => 'linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%)',
+					'slug'     => 'luminous-vivid-orange-to-vivid-red',
+				],
+				[
+					'name'     => __( 'Very light gray to cyan bluish gray', 'genesis-sample' ),
+					'gradient' => 'linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%)',
+					'slug'     => 'very-light-gray-to-cyan-bluish-gray',
+				],
+				[
+					'name'     => __( 'Blush light purple', 'genesis-sample' ),
+					'gradient' => 'linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%)',
+					'slug'     => 'blush-light-purple',
+				],
+				[
+					'name'     => __( 'Midnight', 'genesis-sample' ),
+					'gradient' => 'linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%)',
+					'slug'     => 'midnight',
+				],
+			]
+		);
+
 	}
 
 endif;
