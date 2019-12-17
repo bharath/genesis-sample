@@ -154,12 +154,9 @@ html {
 }
 
 body {
-	background-color: #fff;
-	background-color: var(--background-color);
-	color: #333;
-	color: var(--text-color);
-	font-family: "Source Sans Pro", sans-serif;
-	font-family: var(--font-family);
+	background-color: var(--gs-white, #fff);
+	color: var(--gs-grey-01, #333);
+	font-family: var(--gs-font-family, "Source Sans Pro", sans-serif);
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.625;
@@ -179,16 +176,14 @@ textarea:focus,
 }
 
 a {
-	color: #0073e5;
-	color: var(--link-color);
+	color: var(--gs-accent, #0073e5);
 	text-decoration: underline;
 	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 a:focus,
 a:hover {
-	color: #333;
-	color: var(--text-color);
+	color: var(--gs-grey-01, #333);
 	text-decoration: none;
 }
 
@@ -212,8 +207,7 @@ hr {
 	border-collapse: collapse;
 	border-bottom: 1px solid currentColor;
 	clear: both;
-	color: #eee;
-	color: var(--hr-border-color);
+	color: var(--gs-grey-07, #eee);
 	margin: 1.65em auto;
 }
 
@@ -230,10 +224,8 @@ i {
 }
 
 mark {
-	background: #ddd;
-	background: var(--mark-background-color);
-	color: #333;
-	color: var(--mark-color);
+	background: var(--gs-grey-06, #ddd);
+	color: var(--gs-grey-01, #333);
 }
 
 blockquote {
@@ -249,8 +241,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Source Sans Pro", sans-serif;
-	font-family: var(--font-family);
+	font-family: var(--gs-font-family, "Source Sans Pro", sans-serif);
 	font-weight: 400;
 	line-height: 1.2;
 	margin: 0 0 20px;
@@ -318,16 +309,14 @@ figure {
 }
 
 .gallery img {
-	border: 1px solid #eee;
-	border: 1px solid var(--gallery-img-border-color);
+	border: 1px solid var(--gs-grey-07, #eee);
 	height: auto;
 	padding: 4px;
 }
 
 .gallery img:focus,
 .gallery img:hover {
-	border: 1px solid #999;
-	border: 1px solid var(--gallery-img-focus-border-color);
+	border: 1px solid var(--gs-grey-04, #999);
 	outline: none;
 }
 
@@ -390,12 +379,9 @@ figure {
 input,
 select,
 textarea {
-	background-color: #fff;
-	background-color: var(--input-background-color);
-	border: 1px solid #ddd;
-	border: 1px solid var(--input-border-color);
-	color: #333;
-	color: var(--input-color);
+	background-color: var(--gs-white, #fff);
+	border: 1px solid var(--gs-grey-06, #ddd);
+	color: var(--gs-grey-01, #333);
 	font-size: 18px;
 	font-weight: 400;
 	padding: 15px;
@@ -404,8 +390,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-	border: 1px solid #999;
-	border: 1px solid var(--input-focus-border-color);
+	border: 1px solid var(--gs-grey-04, #999);
 	outline: none;
 }
 
@@ -416,20 +401,17 @@ input[type="radio"] {
 }
 
 ::-ms-input-placeholder {
-	color: #333;
-	color: var(--input-placeholder-color);
+	color: var(--gs-grey-01, #333);
 	opacity: 1;
 }
 
 :-ms-input-placeholder {
-	color: #333;
-	color: var(--input-placeholder-color);
+	color: var(--gs-grey-01, #333);
 	opacity: 1;
 }
 
 ::placeholder {
-	color: #333;
-	color: var(--input-placeholder-color);
+	color: var(--gs-grey-01, #333);
 	opacity: 1;
 }
 
@@ -440,12 +422,10 @@ input[type="submit"],
 .site-container div.wpforms-container-full .wpforms-form input[type="submit"],
 .site-container div.wpforms-container-full .wpforms-form button[type="submit"],
 .button {
-	background-color: #333;
-	background-color: var(--button-background-color);
+	background-color: var(--gs-grey-01, #333);
 	border: 0;
 	border-radius: 5px;
-	color: #fff;
-	color: var(--button-text-color);
+	color: var(--gs-white, #fff);
 	cursor: pointer;
 	font-size: 16px;
 	font-weight: 600;
@@ -470,17 +450,14 @@ input[type="submit"]:hover,
 .site-container div.wpforms-container-full .wpforms-form button[type="submit"]:hover,
 .button:focus,
 .button:hover {
-	background-color: #0073e5;
-	background-color: var(--button-focus-background-color);
+	background-color: var(--gs-accent, #0073e5);
 	border-width: 0;
-	color: #fff;
-	color: var(--button-focus-text-color);
+	color: var(--gs-white, #fff);
 }
 
 .entry-content .button:focus,
 .entry-content .button:hover {
-	color: #fff;
-	color: var(--entry-content-button-focus-text-color);
+	color: var(--gs-white, #fff);
 }
 
 .button {
@@ -497,11 +474,9 @@ input[type="submit"]:hover,
 .site-container input[type="reset"]:disabled:hover,
 .site-container input[type="submit"]:disabled,
 .site-container input[type="submit"]:disabled:hover {
-	background-color: #eee;
-	background-color: var(--button-disabled-background-color);
+	background-color: var(--gs-grey-07, #eee);
 	border-width: 0;
-	color: #777;
-	color: var(--button-disabled-text-color);
+	color: var(--gs-grey-03, #777);
 	cursor: not-allowed;
 }
 
@@ -522,8 +497,7 @@ table {
 }
 
 tbody {
-	border-bottom: 1px solid #eee;
-	border-bottom: 1px solid var(--tbody-border-color);
+	border-bottom: 1px solid var(--gs-grey-07, #eee);
 }
 
 td,
@@ -538,7 +512,7 @@ td {
 }
 
 tr {
-	border-top: 1px solid var(--tr-border-color);
+	border-top: 1px solid var(--gs-grey-07, #eee);
 }
 
 th {
@@ -564,12 +538,10 @@ th {
 .screen-reader-text:focus,
 .screen-reader-shortcut:focus,
 .widget_search input[type="submit"]:focus {
-	background: #fff;
-	background: var(--screen-reader-text-focus-background-color);
+	background: var(--gs-white, #fff);
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
-	color: #333;
-	color: var(--screen-reader-text-focus-color);
+	color: var(--gs-grey-01, #333);
 	display: block;
 	font-size: 1em;
 	font-weight: 700;
@@ -663,8 +635,7 @@ th {
 }
 
 .breadcrumb {
-	border-bottom: 1px solid #eee;
-	border-bottom: 1px solid var(--breadcrumb-border-color);
+	border-bottom: 1px solid var(--gs-grey-07, #eee);
 	font-size: 16px;
 	margin-bottom: 40px;
 	padding-bottom: 10px;
@@ -724,15 +695,13 @@ th {
 
 .entry-title a,
 .sidebar .widget-title a {
-	color: #333;
-	color: var(--entry-title-link-color);
+	color: var(--gs-grey-01, #333);
 	text-decoration: none;
 }
 
 .entry-title a:focus,
 .entry-title a:hover {
-	color: #0073e5;
-	color: var(--entry-title-link-focus-color);
+	color: var(--gs-accent, #0073e5);
 }
 
 .widget-title {
@@ -865,8 +834,7 @@ figcaption,
 --------------------------------------------- */
 
 .featured-content .entry {
-	border-bottom: 1px solid #eee;
-	border-bottom: 1px solid var(--feat-content-entry-border-color);
+	border-bottom: 1px solid var(--gs-grey-07, #eee);
 	margin-bottom: 20px;
 }
 
@@ -894,8 +862,7 @@ figcaption,
 }
 
 .sidebar .enews {
-	background-color: #f5f5f5;
-	background-color: var(--enews-background-color);
+	background-color: var(--gs-grey-08, #f5f5f5);
 	padding: 30px;
 }
 
@@ -921,22 +888,17 @@ figcaption,
 --------------------------------------------- */
 
 .gs-faq__question {
-	background: transparent;
-	background: var(--faq-background-color);
-	border-bottom: 1px solid #eee;
-	border-bottom: 1px solid var(--faq-border-color);
-	color: #333;
-	color: var(--faq-text-color);
+	background: var(--gs-transparent, transparent);
+	border-bottom: 1px solid var(--gs-grey-07, #eee);
+	color: var(--gs-grey-01, #333);
 	padding-left: 0;
 	padding-right: 0;
 }
 
 .gs-faq__question:focus,
 .gs-faq__question:hover {
-	background: transparent;
-	background: var(--faq-focus-background-color);
-	color: #0073e5;
-	color: var(--faq-focus-text-color);
+	background: var(--gs-transparent, transparent);
+	color: var(--gs-accent, #0073e5);
 }
 
 .gs-faq__question::after {
@@ -1020,10 +982,8 @@ figcaption,
 
 /* Display outline on focus */
 :focus {
-	color: #333;
-	color: var(--focus-text-color);
-	outline: #ccc solid 1px;
-	outline: var(--focus-outline-color) solid 1px;
+	color: var(--gs-grey-01, #333);
+	outline: 1px solid var(--gs-grey-05, #ccc);
 }
 
 
@@ -1031,8 +991,7 @@ figcaption,
 ---------------------------------------------------------------------------- */
 
 .site-header {
-	background-color: #fff;
-	background-color: var(--site-header-background-color);
+	background-color: var(--gs-white, #fff);
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 	padding: 0 30px;
 }
@@ -1067,8 +1026,7 @@ figcaption,
 .site-title a,
 .site-title a:focus,
 .site-title a:hover {
-	color: #333;
-	color: var(--site-title-link-color);
+	color: var(--gs-grey-01, #333);
 	text-decoration: none;
 }
 
@@ -1100,8 +1058,7 @@ figcaption,
 }
 
 .genesis-nav-menu a {
-	color: #333;
-	color: var(--nav-menu-link-color);
+	color: var(--gs-grey-01, #333);
 	display: block;
 	font-size: 15px;
 	font-weight: 400;
@@ -1116,8 +1073,7 @@ figcaption,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-	color: #0073e5;
-	color: var(--nav-menu-link-focus-color);
+	color: var(--gs-accent, #0073e5);
 	text-decoration: none;
 }
 
@@ -1138,8 +1094,7 @@ figcaption,
 }
 
 .genesis-nav-menu .sub-menu a {
-	background-color: #fff;
-	background-color: var(--nav-menu-sub-link-background-color);
+	background-color: var(--gs-white, #fff);
 	font-size: 14px;
 	position: relative;
 	word-wrap: break-word;
@@ -1180,11 +1135,9 @@ figcaption,
 
 .menu-toggle,
 .sub-menu-toggle {
-	background-color: transparent;
-	background-color: var(--menu-toggle-background-color);
+	background-color: var(--gs-transparent, transparent);
 	border-width: 0;
-	color: #333;
-	color: var(--menu-toggle-color);
+	color: var(--gs-grey-01, #333);
 	display: block;
 	margin: 0 auto;
 	overflow: hidden;
@@ -1196,11 +1149,9 @@ figcaption,
 .menu-toggle:hover,
 .sub-menu-toggle:focus,
 .sub-menu-toggle:hover {
-	background-color: transparent;
-	background-color: var(--menu-toggle-focus-background-color);
+	background-color: var(--gs-transparent, transparent);
 	border-width: 0;
-	color: #0073e5;
-	color: var(--menu-toggle-focus-color);
+	color: var(--gs-accent, #0073e5);
 }
 
 .menu-toggle {
@@ -1316,13 +1267,11 @@ figcaption,
 }
 
 .entry-content code {
-	background-color: #f5f5f5;
-	background-color: var(--code-background-color);
+	background-color: var(--gs-grey-08, #f5f5f5);
 }
 
 .content .sticky {
-	background-color: #f5f5f5;
-	background-color: var(--sticky-background-color);
+	background-color: var(--gs-grey-08, #f5f5f5);
 	padding: 30px;
 }
 
@@ -1339,8 +1288,7 @@ p.entry-meta {
 }
 
 .entry-footer .entry-meta {
-	border-top: 1px solid #eee;
-	border-top: 1px solid var(--entry-footer-meta-border-color);
+	border-top: 1px solid var(--gs-grey-07, #eee);
 	padding-top: 20px;
 }
 
@@ -1371,10 +1319,8 @@ p.entry-meta {
 }
 
 .archive-pagination li a {
-	background-color: #f5f5f5;
-	background-color: var(--pagination-link-background-color);
-	color: #333;
-	color: var(--pagination-link-color);
+	background-color: var(--gs-grey-08, #f5f5f5);
+	color: var(--gs-grey-01, #333);
 	cursor: pointer;
 	display: inline-block;
 	font-size: 16px;
@@ -1387,10 +1333,8 @@ p.entry-meta {
 .archive-pagination li a:focus,
 .archive-pagination li a:hover,
 .archive-pagination li.active a {
-	background-color: #333;
-	background-color: var(--pagination-link-hover-background-color);
-	color: #fff;
-	color: var(--pagination-link-hover-color);
+	background-color: var(--gs-grey-01, #333);
+	color: var(--gs-white, #fff);
 }
 
 /* Entry Comments
@@ -1466,10 +1410,8 @@ p.entry-meta {
 ---------------------------------------------------------------------------- */
 
 .footer-widgets {
-	border-top: 1px solid #eee;
-	border-top: 1px solid var(--footer-widgets-border-color);
-	background-color: #fff;
-	background-color: var(--footer-widgets-background-color);
+	border-top: 1px solid var(--gs-grey-07, #eee);
+	background-color: var(--gs-white, #fff);
 	clear: both;
 	padding: 60px 0;
 }
@@ -1495,10 +1437,8 @@ p.entry-meta {
 ---------------------------------------------------------------------------- */
 
 .site-footer {
-	background-color: #fff;
-	background-color: var(--site-footer-background-color);
-	border-top: 1px solid #eee;
-	border-top: 1px solid var(--site-footer-border-color);
+	background-color: var(--gs-white, #fff);
+	border-top: 1px solid var(--gs-grey-07, #eee);
 	font-size: 15px;
 	line-height: 1.5;
 	padding: 30px;
@@ -1555,11 +1495,9 @@ p.entry-meta {
 	}
 
 	.genesis-nav-menu > .menu-highlight > a {
-		background-color: #333;
-		background-color: var(--nav-menu-highlight-link-background-color);
+		background-color: var(--gs-grey-01, #333);
 		border-radius: 3px;
-		color: #fff;
-		color: var(--nav-menu-highlight-link-color);
+		color: var(--gs-white, #fff);
 		font-weight: 600;
 		margin-left: 15px;
 		padding-left: 20px;
@@ -1568,8 +1506,7 @@ p.entry-meta {
 
 	.genesis-nav-menu > .menu-highlight > a:focus,
 	.genesis-nav-menu > .menu-highlight > a:hover {
-		background-color: #0073e5;
-		background-color: var(--nav-menu-highlight-link-hover-background-color);
+		background-color: var(--gs-accent, #0073e5);
 	}
 
 	.genesis-nav-menu .sub-menu,
@@ -1578,8 +1515,7 @@ p.entry-meta {
 	}
 
 	.genesis-nav-menu .sub-menu {
-		border-top: 1px solid #eee;
-		border-top: 1px solid var(--nav-menu-sub-border-color);
+		border-top: 1px solid var(--gs-grey-07, #eee);
 		opacity: 0;
 		padding-left: 0;
 		position: absolute;
@@ -1587,8 +1523,7 @@ p.entry-meta {
 	}
 
 	.genesis-nav-menu .sub-menu a {
-		border: 1px solid #eee;
-		border: 1px solid var(--nav-menu-sub-link-border-color);
+		border: 1px solid var(--gs-grey-07, #eee);
 		border-top: 0;
 		padding-bottom: 15px;
 		padding-top: 15px;
@@ -1667,8 +1602,7 @@ p.entry-meta {
 	--------------------------------------------- */
 
 	.author-box {
-		background-color: #f5f5f5;
-		background-color: var(--author-box-background-color);
+		background-color: var(--gs-grey-08, #f5f5f5);
 		padding: 30px;
 	}
 
@@ -1775,11 +1709,9 @@ p.entry-meta {
 	*,
 	*::before,
 	*::after {
-		background: transparent !important;
-		background: var(--star-background-color) !important;
+		background: var(--gs-transparent, transparent) !important;
 		box-shadow: none !important;
-		color: #333 !important;
-		color: var(--star-color) !important;
+		color: var(--gs-grey-01, #333) !important;
 		text-shadow: none !important;
 	}
 
@@ -1828,8 +1760,7 @@ p.entry-meta {
 
 	blockquote,
 	pre {
-		border: 1px solid #999;
-		border: 1px solid var(--blockquote-border-color);
+		border: 1px solid var(--gs-grey-04, #999);
 		page-break-inside: avoid;
 	}
 
@@ -1979,6 +1910,31 @@ p.entry-meta {
 
 :root {
 
+	/* -- Genesis Sample Font Family
+	--------------------------------------------- */
+	--gs-font-family: "Source Sans Pro", sans-serif;
+
+	/* -- Genesis Sample Color Palette
+	--------------------------------------------- */
+
+	--gs-accent: #0073e5;
+	--gs-black: #000;
+	--gs-grey-01: #333;
+	--gs-grey-02: #666;
+	--gs-grey-03: #777;
+	--gs-grey-04: #999;
+	--gs-grey-05: #ccc;
+	--gs-grey-06: #ddd;
+	--gs-grey-07: #eee;
+	--gs-grey-08: #f5f5f5;
+	--gs-white: #fff;
+	--gs-transparent: transparent;
+
+	/* -- Custom Font Family
+	--------------------------------------------- */
+
+	--c-font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif; /* stylelint-disable-line value-keyword-case */
+
 	/* -- Custom Color Palette
 	--------------------------------------------- */
 
@@ -1987,161 +1943,44 @@ p.entry-meta {
 	--ccp-primary-alt: #ff0014;
 	--ccp-secondary-alt: #b3000e;
 	--ccp-black: #000;
-	--ccp-dark-gray-01: #333;
-	--ccp-dark-gray-02: #666;
-	--ccp-light-gray-02: #eee;
-	--ccp-light-gray-01: #f5f5f5;
+	--ccp-grey-01: #333;
+	--ccp-grey-02: #666;
+	--ccp-grey-03: #eee;
+	--ccp-grey-04: #f5f5f5;
 	--ccp-white: #fff;
-
-	/* -- Custom Fonts
-	--------------------------------------------- */
-
-	--font-family-normal: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif; /* stylelint-disable-line value-keyword-case */
-	--font-family-bold: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif; /* stylelint-disable-line value-keyword-case */
 
 	/* -- Custom Font Sizes
 	--------------------------------------------- */
 
-	--font-size-r: 14px;
-	--font-size-xxs: 14px;
-	--font-size-xs: 15px;
-	--font-size-s: 16px;
-	--font-size-n: 18px;
-	--font-size-m: 20px;
-	--font-size-l: 24px;
-	--font-size-xl: 27px;
-	--font-size-xxl: 30px;
-
-	/* -- Genesis Sample Color Palette
-	--------------------------------------------- */
-
-	--gcp-01: #0073e5;
-	--gcp-02: #333;
-	--gcp-03: #666;
-	--gcp-04: #777;
-	--gcp-05: #999;
-	--gcp-06: #ccc;
-	--gcp-07: #ddd;
-	--gcp-08: #eee;
-	--gcp-09: #f5f5f5;
-	--gcp-10: #fff;
-	--gcp-11: transparent;
-
-	/* -- Genesis Sample Background Colors
-	--------------------------------------------- */
-
-	--background-color: var(--gcp-10, #fff);
-	--mark-background-color: var(--gcp-07, #ddd);
-	--input-background-color: var(--gcp-10, #fff);
-	--select-background-color: var(--gcp-10, #fff);
-	--textarea-background-color: var(--gcp-10, #fff);
-	--button-background-color: var(--gcp-02, #333);
-	--button-hover-background-color: var(--gcp-01, #0073e5);
-	--button-focus-background-color: var(--gcp-01, #0073e5);
-	--button-disabled-background-color: var(--gcp-08, #eee);
-	--screen-reader-text-focus-background-color: var(--gcp-10, #fff);
-	--search-input-focus-background-color: var(--gcp-10, #fff);
-	--enews-background-color: var(--gcp-09, #f5f5f5);
-	--faq-background-color: var(--gcp-11, transparent);
-	--faq-focus-background-color: var(--gcp-11, transparent);
-	--faq-hover-background-color: var(--gcp-11, transparent);
-	--site-header-background-color: var(--gcp-10, #fff);
-	--nav-menu-sub-link-background-color: var(--gcp-10, #fff);
-	--menu-toggle-background-color: var(--gcp-11, transparent);
-	--menu-toggle-focus-background-color: var(--gcp-11, transparent);
-	--menu-toggle-hover-background-color: var(--gcp-11, transparent);
-	--code-background-color: var(--gcp-09, #f5f5f5);
-	--sticky-background-color: var(--gcp-09, #f5f5f5);
-	--pagination-link-background-color: var(--gcp-09, #f5f5f5);
-	--pagination-link-hover-background-color: var(--gcp-02, #333);
-	--footer-widgets-background-color: var(--gcp-10, #fff);
-	--site-footer-background-color: var(--gcp-10, #fff);
-	--nav-menu-highlight-link-background-color: var(--gcp-02, #333);
-	--nav-menu-highlight-link-focus-background-color: var(--gcp-01, #0073e5);
-	--nav-menu-highlight-link-hover-background-color: var(--gcp-01, #0073e5);
-	--author-box-background-color: var(--gcp-09, #f5f5f5);
-	--star-background-color: var(--gcp-11, transparent);
-
-	/* -- Genesis Sample Text Colors
-	--------------------------------------------- */
-
-	--text-color: var(--gcp-02, #333);
-	--mark-color: var(--gcp-02, #333);
-	--input-color: var(--gcp-02, #333);
-	--select-color: var(--gcp-02, #333);
-	--textarea-color: var(--gcp-02, #333);
-	--input-placeholder-color: var(--gcp-02, #333);
-	--button-text-color: var(--gcp-10, #fff);
-	--button-hover-text-color: var(--gcp-10, #fff);
-	--button-focus-text-color: var(--gcp-10, #fff);
-	--entry-content-button-focus-text-color: var(--gcp-10, #fff);
-	--entry-content-button-hover-text-color: var(--gcp-10, #fff);
-	--button-disabled-text-color: var(--gcp-04, #777);
-	--screen-reader-text-focus-color: var(--gcp-02, #333);
-	--search-input-focus-text-color: var(--gcp-02, #333);
-	--faq-text-color: var(--gcp-02, #333);
-	--faq-focus-text-color: var(--gcp-01, #0073e5);
-	--faq-hover-text-color: var(--gcp-01, #0073e5);
-	--focus-text-color: var(--gcp-02, #333);
-	--menu-toggle-color: var(--gcp-02, #333);
-	--menu-toggle-focus-color: var(--gcp-01, #0073e5);
-	--menu-toggle-hover-color: var(--gcp-01, #0073e5);
-	--star-color: var(--gcp-02, #333);
-
-	/* -- Genesis Sample Link Colors
-	--------------------------------------------- */
-
-	--link-color: var(--gcp-01, #0073e5);
-	--link-focus-color: var(--gcp-02, #333);
-	--link-hover-color: var(--gcp-02, #333);
-	--entry-title-link-color: var(--gcp-02, #333);
-	--widget-title-link-color: var(--gcp-02, #333);
-	--entry-title-link-focus-color: var(--gcp-01, #0073e5);
-	--entry-title-link-hover-color: var(--gcp-01, #0073e5);
-	--site-title-link-color: var(--gcp-02, #333);
-	--site-title-link-focus-color: var(--gcp-02, #333);
-	--site-title-link-hover-color: var(--gcp-02, #333);
-	--nav-menu-link-color: var(--gcp-02, #333);
-	--nav-menu-link-focus-color: var(--gcp-01, #0073e5);
-	--nav-menu-link-hover-color: var(--gcp-01, #0073e5);
-	--nav-menu-current-link-color: var(--gcp-01, #0073e5);
-	--nav-menu-current-link-focus-color: var(--gcp-01, #0073e5);
-	--nav-menu-current-link-hover-color: var(--gcp-01, #0073e5);
-	--pagination-link-color: var(--gcp-02, #333);
-	--pagination-link-hover-color: var(--gcp-10, #fff);
-	--nav-menu-highlight-link-color: var(--gcp-10, #fff);
-
-	/* -- Genesis Sample Border Colors
-	--------------------------------------------- */
-
-	--hr-border-color: var(--gcp-08, #eee);
-	--gallery-img-border-color: var(--gcp-08, #eee);
-	--gallery-img-hover-border-color: var(--gcp-05, #999);
-	--gallery-img-focus-border-color: var(--gcp-05, #999);
-	--input-border-color: var(--gcp-07, #ddd);
-	--select-border-color: var(--gcp-07, #ddd);
-	--textarea-border-color: var(--gcp-07, #ddd);
-	--input-focus-border-color: var(--gcp-05, #999);
-	--textarea-focus-border-color: var(--gcp-05, #999);
-	--tbody-border-color: var(--gcp-08, #eee);
-	--tr-border-color: var(--gcp-08, #eee);
-	--breadcrumb-border-color: var(--gcp-08, #eee);
-	--feat-content-entry-border-color: var(--gcp-08, #eee);
-	--faq-border-color: var(--gcp-08, #eee);
-	--focus-outline-color: var(--gcp-06, #ccc);
-	--entry-footer-meta-border-color: var(--gcp-08, #eee);
-	--footer-widgets-border-color: var(--gcp-08, #eee);
-	--site-footer-border-color: var(--gcp-08, #eee);
-	--nav-menu-sub-border-color: var(--gcp-08, #eee);
-	--nav-menu-sub-link-border-color: var(--gcp-08, #eee);
-	--blockquote-border-color: var(--gcp-05, #999);
-	--pre-border-color: var(--gcp-05, #999);
+	--c-font-size-xxs: 14px;
+	--c-font-size-xs: 15px;
+	--c-font-size-s: 16px;
+	--c-font-size-n: 18px;
+	--c-font-size-m: 20px;
+	--c-font-size-l: 24px;
+	--c-font-size-xl: 27px;
+	--c-font-size-xxl: 30px;
 
 }
 
 @media (prefers-color-scheme: dark) {
 
 	:root {
+
+		/* -- Genesis Sample Color Palette
+		--------------------------------------------- */
+
+		--gs-accent: #03a577;
+		--gs-grey-01: #f5f5f5;
+		--gs-grey-02: #eee;
+		--gs-grey-03: #ddd;
+		--gs-grey-04: #ccc;
+		--gs-grey-05: #999;
+		--gs-grey-06: #777;
+		--gs-grey-07: #555;
+		--gs-grey-08: #333;
+		--gs-white: #27282c;
+		--gs-transparent: transparent;
 
 		/* -- Custom Color Palette
 		--------------------------------------------- */
@@ -2157,36 +1996,6 @@ p.entry-meta {
 		--ccp-light-gray-one: #f5f5f5;
 		--ccp-white: #fff;
 		--ccp-transparent: transparent;
-
-		/* -- Genesis Sample Color Palette
-		--------------------------------------------- */
-
-		--gcp-01: #03a577;/*0073e5*/
-		--gcp-02: #f5f5f5;/*333*/
-		--gcp-03: #eee;
-		--gcp-04: #ddd;/*777*/
-		--gcp-05: #ccc;/*999*/
-		--gcp-06: #999;/*ccc*/
-		--gcp-07: #777;/*ddd*/
-		--gcp-08: #555;/*eee*/
-		--gcp-09: #333;/*f5f5f5*/
-		--gcp-10: #27282c;/*#fff*/
-		--gcp-11: transparent;/*transparent*/
-
-		/* -- Genesis Sample Background Colors
-		--------------------------------------------- */
-
-		/* -- Genesis Sample Text Colors
-		--------------------------------------------- */
-
-		/* -- Genesis Sample Link Colors
-		--------------------------------------------- */
-
-		/* -- Genesis Sample Box Shadow Colors
-		--------------------------------------------- */
-
-		/* -- Genesis Sample Border Colors
-		--------------------------------------------- */
 
 	}
 

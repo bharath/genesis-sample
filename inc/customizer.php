@@ -822,10 +822,10 @@ function genesis_sample_customizer_header_output() {
 			--ccp-primary-alt: <?php echo esc_attr( get_theme_mod( 'primary_alt_color', genesis_sample_get_customiser_default( 'primary_alt_color' ) ) ); ?>;
 			--ccp-secondary-alt: <?php echo esc_attr( get_theme_mod( 'secondary_alt_color', genesis_sample_get_customiser_default( 'secondary_alt_color' ) ) ); ?>;
 			--ccp-black: <?php echo esc_attr( get_theme_mod( 'black_color', genesis_sample_get_customiser_default( 'black_color' ) ) ); ?>;
-			--ccp-dark-gray-01: <?php echo esc_attr( get_theme_mod( 'dark_gray_01_color', genesis_sample_get_customiser_default( 'dark_gray_01_color' ) ) ); ?>;
-			--ccp-dark-gray-02: <?php echo esc_attr( get_theme_mod( 'dark_gray_02_color', genesis_sample_get_customiser_default( 'dark_gray_02_color' ) ) ); ?>;
-			--ccp-light-gray-02: <?php echo esc_attr( get_theme_mod( 'light_gray_02_color', genesis_sample_get_customiser_default( 'light_gray_02_color' ) ) ); ?>;
-			--ccp-light-gray-01: <?php echo esc_attr( get_theme_mod( 'light_gray_01_color', genesis_sample_get_customiser_default( 'light_gray_01_color' ) ) ); ?>;
+			--ccp-grey-01: <?php echo esc_attr( get_theme_mod( 'grey_01_color', genesis_sample_get_customiser_default( 'grey_01_color' ) ) ); ?>;
+			--ccp-grey-02: <?php echo esc_attr( get_theme_mod( 'grey_02_color', genesis_sample_get_customiser_default( 'grey_02_color' ) ) ); ?>;
+			--ccp-grey-03: <?php echo esc_attr( get_theme_mod( 'grey_03_color', genesis_sample_get_customiser_default( 'grey_03_color' ) ) ); ?>;
+			--ccp-grey-04: <?php echo esc_attr( get_theme_mod( 'grey_04_color', genesis_sample_get_customiser_default( 'grey_04_color' ) ) ); ?>;
 			--ccp-white: <?php echo esc_attr( get_theme_mod( 'white_color', genesis_sample_get_customiser_default( 'white_color' ) ) ); ?>;
 
 			/* -- Custom Font Sizes
