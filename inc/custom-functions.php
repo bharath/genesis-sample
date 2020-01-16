@@ -93,7 +93,8 @@ function genesis_sample_scripts_styles() {
 		// phpcs:enable
 
 		// Enqueue Clipboard script for code block.
-		wp_enqueue_script( genesis_get_theme_handle() . '-code-clipboard', '//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', [ 'jquery' ], '2.0.4', true );
+		//wp_enqueue_script( genesis_get_theme_handle() . '-code-clipboard', '//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', [ 'jquery' ], '2.0.4', true );
+		wp_enqueue_script( 'clipboard' );
 
 		// Enqueue theme's main scripts.
 		wp_enqueue_script( genesis_get_theme_handle() . '-code-init', get_stylesheet_directory_uri() . '/assets/js/code.js', [ 'jquery' ], wp_date( 'dmy.His', filemtime( get_stylesheet_directory() . '/assets/js/code.js' ) ), true );

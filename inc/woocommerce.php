@@ -10,6 +10,9 @@
  * @link    https://www.studiopress.com/
  */
 
+add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+
+
 add_filter( 'woocommerce_enqueue_styles', 'genesis_sample_custom_woocommerce_styles' );
 /**
  * Enqueues the theme's custom WooCommerce styles to the WooCommerce plugin.
