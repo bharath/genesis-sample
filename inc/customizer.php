@@ -873,7 +873,7 @@ function genesis_sample_customizer_controls_enqueue() {
 
 	wp_enqueue_script( genesis_get_theme_handle() . '-customizer-controls-script', get_stylesheet_directory_uri() . '/assets/js/customizer-controls.js', [ 'jquery', 'customize-controls' ], genesis_get_theme_version(), true );
 
-	wp_register_style( genesis_get_theme_handle() . '-customizer-controls-style', get_stylesheet_directory_uri() . '/assets/css/customizer-controls.css', [], date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/customizer-controls.css' ) ), 'all' );
+	wp_register_style( genesis_get_theme_handle() . '-customizer-controls-style', get_stylesheet_directory_uri() . '/assets/css/customizer-controls.css', [], wp_date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/customizer-controls.css' ) ), 'all' );
 
 	wp_enqueue_style( genesis_get_theme_handle() . '-customizer-controls-style' );
 
@@ -897,7 +897,7 @@ add_action( 'customize_preview_init', 'genesis_sample_customize_preview_js' );
  */
 function genesis_sample_customizer_stylesheet() {
 
-	wp_register_style( genesis_get_theme_handle() . '-customizer-styles', get_stylesheet_directory_uri() . '/assets/css/customizer.css', [], date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/customizer.css' ) ), 'all' );
+	wp_register_style( genesis_get_theme_handle() . '-customizer-styles', get_stylesheet_directory_uri() . '/assets/css/customizer.css', [], wp_date( 'dmyHis', filemtime( get_stylesheet_directory() . '/assets/css/customizer.css' ) ), 'all' );
 	wp_enqueue_style( genesis_get_theme_handle() . '-customizer-styles' );
 
 }

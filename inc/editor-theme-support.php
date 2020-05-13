@@ -24,8 +24,11 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 	 */
 	function genesis_sample_setup() {
 
+		// phpcs:disable
 		// Add default block styles
-		// add_theme_support( 'wp-block-styles' );.
+		// add_theme_support( 'wp-block-styles' );
+		// phpcs:enable
+
 		// Disable the custom color picker.
 		add_theme_support( 'disable-custom-colors' );
 
@@ -154,11 +157,13 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 			]
 		);
 
+		add_theme_support( 'editor-styles' );
+
 		// Enqueue editor styles.
 		add_editor_style( '/assets/css/style-editor.css' );
 
 		add_theme_support(
-			'__experimental-editor-gradient-presets',
+			'editor-gradient-presets',
 			[
 				[
 					'name'     => __( 'Light green cyan to vivid green cyan', 'genesis-sample' ),

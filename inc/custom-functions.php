@@ -90,14 +90,15 @@ function genesis_sample_scripts_styles() {
 
 		// Enqueue highlight script for code block.
 		//wp_enqueue_script( genesis_get_theme_handle() . '-highlight-script', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/highlight.min.js', [ 'jquery' ], '9.15.10', true );
-		// phpcs:enable
 
 		// Enqueue Clipboard script for code block.
 		//wp_enqueue_script( genesis_get_theme_handle() . '-code-clipboard', '//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', [ 'jquery' ], '2.0.4', true );
+		// phpcs:enable
+
 		wp_enqueue_script( 'clipboard' );
 
 		// Enqueue theme's main scripts.
-		wp_enqueue_script( genesis_get_theme_handle() . '-code-init', get_stylesheet_directory_uri() . '/assets/js/code.js', [ 'jquery' ], wp_date( 'dmy.His', filemtime( get_stylesheet_directory() . '/assets/js/code.js' ) ), true );
+		wp_enqueue_script( genesis_get_theme_handle() . '-code-init', get_stylesheet_directory_uri() . '/assets/js/code.js', [ 'jquery, clipboard' ], wp_date( 'dmy.His', filemtime( get_stylesheet_directory() . '/assets/js/code.js' ) ), true );
 
 	}
 
