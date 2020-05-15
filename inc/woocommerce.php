@@ -10,7 +10,9 @@
  * @link    https://www.studiopress.com/
  */
 
-add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+// phpcs:disable
+//add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+// phpcs:enable
 
 
 add_filter( 'woocommerce_enqueue_styles', 'genesis_sample_custom_woocommerce_styles' );
