@@ -7,51 +7,49 @@
 //
 // Also renames some .md files to .txt to reduce support requests.
 
-const fs = require("fs");
-const path = require("path");
+const fs = require( 'fs' );
+const path = require( 'path' );
 
-const chalk = require("chalk");
-const archiver = require("archiver");
-const recursive = require("recursive-readdir");
-const prettyBytes = require("pretty-bytes");
+const chalk = require( 'chalk' );
+const archiver = require( 'archiver' );
+const recursive = require( 'recursive-readdir' );
+const prettyBytes = require( 'pretty-bytes' );
 
 const excludes = [
-	".circleci",
-	".DS_Store",
+	'.circleci',
+	'.DS_Store',
 	//".editorconfig",
 	//".eslintignore",
 	//".eslintrc.js",
-	".git",
+	'.git',
 	//".gitattributes",
-	".github",
+	'.github',
 	//".gitignore",
-	".scripts",
+	'.scripts',
 	//".stylelintrc.json",
-	"*.zip",
+	'*.zip',
 	//"CHANGELOG.txt",
 	//"composer.json",
-	"composer.lock",
-	"config.codekit3",
+	'composer.lock',
+	'config.codekit3',
 	//"CONTRIBUTING.txt",
-	"node_modules",
-	"package-lock.json",
+	'node_modules',
+	'package-lock.json',
 	//"package.json",
 	//"phpcs.xml.dist",
 	//"README.txt",
-	"themeclaim.json",
-	"vendor"
+	'themeclaim.json',
+	'vendor',
 ];
 
 // Creates a file to stream archive data to.
 // Uses the name in package.json, such as 'child-theme.1.1.0.zip'.
-let fileName = `${process.env.npm_package_name}.${
-	process.env.npm_package_theme_version
-}.zip`;
-let output = fs.createWriteStream(fileName);
+let fileName = `${ process.env.npm_package_name }.${ process.env.npm_package_theme_version }.zip`;
+let output = fs.createWriteStream( fileName );
 
-let archive = archiver("zip", {
-	zlib: { level: 9 } // Best compression.
-});
+let archive = archiver( 'zip', {
+	zlib: { level: 9 }, // Best compression.
+} );
 
 /**
  * Sets up the file output stream and archive.
@@ -59,63 +57,63 @@ let archive = archiver("zip", {
 const setupZipArchive = function() {
 	// Listens for all archive data to be written.
 	// Report the zip name and size, and rename *.txt files back to *.md again.
-	output.on("close", function() {
-		let fileSize = prettyBytes(archive.pointer());
-		console.log(chalk`{cyan Created ${fileName}, ${fileSize}}`);
+	output.on( 'close', function() {
+		let fileSize = prettyBytes( archive.pointer() );
+		console.log( chalk`{cyan Created ${ fileName }, ${ fileSize }}` );
 
 		renameTxtFilesToMarkdown();
-	});
+	} );
 
 	// Displays warnings during archiving.
-	archive.on("warning", function(err) {
-		if (err.code === "ENOENT") {
-			console.log(err);
+	archive.on( 'warning', function( err ) {
+		if ( err.code === 'ENOENT' ) {
+			console.log( err );
 		} else {
 			throw err;
 		}
-	});
+	} );
 
 	// Catches errors during archiving.
-	archive.on("error", function(err) {
+	archive.on( 'error', function( err ) {
 		throw err;
-	});
+	} );
 
 	// Pipes archive data to the file.
-	archive.pipe(output);
+	archive.pipe( output );
 };
 
 /**
  * Rename files from *.md to *.txt.
  * Returns a promise so zip can be done once rename is complete.
  */
-const renameMarkdownFilesToTxt = new Promise(function(resolve, reject) {
-	console.log(chalk`{cyan Renaming .md files to .txt}`);
-	["XYZ.md"].forEach(function(file) {
-		if (fs.existsSync(file)) {
-			fs.renameSync(file, file.replace(".md", ".txt"));
+const renameMarkdownFilesToTxt = new Promise( function( resolve, reject ) {
+	console.log( chalk`{cyan Renaming .md files to .txt}` );
+	[ 'XYZ.md' ].forEach( function( file ) {
+		if ( fs.existsSync( file ) ) {
+			fs.renameSync( file, file.replace( '.md', '.txt' ) );
 		}
-	});
-	resolve("Success");
-});
+	} );
+	resolve( 'Success' );
+} );
 
 /**
  * Loops through theme directory, omitting files in the `exclude` array.
  * Adds each file to the zip archive.
  */
 const zipFiles = function() {
-	recursive(process.cwd(), excludes, function(err, files) {
+	recursive( process.cwd(), excludes, function( err, files ) {
 		let relativePath;
 
-		console.log(chalk`{cyan Making zip file}`);
-		files.forEach(function(filePath) {
-			relativePath = path.relative(process.cwd(), filePath);
-			archive.file(filePath, {
-				name: `${process.env.npm_package_name}/${relativePath}`
-			});
-		});
+		console.log( chalk`{cyan Making zip file}` );
+		files.forEach( function( filePath ) {
+			relativePath = path.relative( process.cwd(), filePath );
+			archive.file( filePath, {
+				name: `${ process.env.npm_package_name }/${ relativePath }`,
+			} );
+		} );
 
 		archive.finalize();
-	});
+	} );
 };
 
 /**
@@ -123,13 +121,13 @@ const zipFiles = function() {
  * Executed in the output stream close event.
  */
 const renameTxtFilesToMarkdown = function() {
-	console.log(chalk`{cyan Renaming .txt files to .md}`);
-	["XYZ.txt"].forEach(function(file) {
-		if (fs.existsSync(file)) {
-			fs.renameSync(file, file.replace(".txt", ".md"));
+	console.log( chalk`{cyan Renaming .txt files to .md}` );
+	[ 'XYZ.txt' ].forEach( function( file ) {
+		if ( fs.existsSync( file ) ) {
+			fs.renameSync( file, file.replace( '.txt', '.md' ) );
 		}
-	});
+	} );
 };
 
 setupZipArchive();
-renameMarkdownFilesToTxt.then(zipFiles);
+renameMarkdownFilesToTxt.then( zipFiles );

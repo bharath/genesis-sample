@@ -1,6 +1,2 @@
 // Site wide Javascript
-(function ($) {
-
-
-
-})(jQuery);
+( function( $ ) {} )( jQuery );

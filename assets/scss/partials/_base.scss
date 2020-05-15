@@ -62,7 +62,3 @@ $breakpoints: (
   'desktop': $grid-width + $grid-gap, // required for include-media
   'content-width': $content-width + $grid-gap,
 );
-
-@import "../modules/helpers";
-@import "../vendor/_include-media";
-@import "../modules/base-styles";
