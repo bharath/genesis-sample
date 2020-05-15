@@ -6,6 +6,7 @@
 		"url": "https://github.com/studiopress/genesis-sample/"
 	},
 	"license": "GPL-2.0-or-later",
+	"main": "index.js",
 	"devDependencies": {
 		"archiver": "^3.1.1",
 		"autoprefixer": "^9.7.1",
@@ -19,17 +20,35 @@
 		"pretty-bytes": "^5.3.0",
 		"recursive-readdir": "^2.2.2",
 		"stylelint": "^9.10.1",
-		"stylelint-config-wordpress": "^13.1.0"
+		"stylelint-config-wordpress": "^13.1.0",
+		"@wordpress/scripts": "^9.1.0",
+		"css-loader": "^3.1.0",
+		"ignore-emit-webpack-plugin": "^2.0.2",
+		"mini-css-extract-plugin": "^0.8.0",
+		"node-sass": "^4.12.0",
+		"path": "^0.12.7",
+		"postcss-loader": "^3.0.0",
+		"postcss-preset-env": "^6.7.0",
+		"sass-loader": "^7.1.0"
 	},
 	"scripts": {
 		"rename": "genesis-theme-claim",
 		"autoprefixer": "postcss style.css lib/**/*.css --use autoprefixer --replace --no-map --verbose",
 		"makepot": "node .scripts/makepot.js",
-		"lint:css": "stylelint \"style.css\" \"lib/gutenberg/*.css\" \"lib/woocommerce/*.css\" \"lib/amp/*.css\" \"assets/css/*.css\"",
-		"lint:js": "eslint .",
 		"fix:js": "eslint . --fix",
 		"zip": "node .scripts/makezip.js",
-		"prep:piservice": "node .scripts/makePIServiceData.js"
+		"prep:piservice": "node .scripts/makePIServiceData.js",
+		"build": "wp-scripts build",
+		"check-engines": "wp-scripts check-engines",
+		"check-licenses": "wp-scripts check-licenses",
+		"format:js": "wp-scripts format-js",
+		"lint:css": "wp-scripts lint-style \"style.css\" \"lib/gutenberg/*.css\" \"lib/woocommerce/*.css\" \"lib/amp/*.css\" \"assets/css/*.css\"",
+		"lint:js": "wp-scripts lint-js",
+		"lint:md:docs": "wp-scripts lint-md-docs",
+		"lint:md:js": "wp-scripts lint-md-js",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"packages-update": "wp-scripts packages-update",
+		"start": "wp-scripts start"
 	},
 	"browserslist": [
 		"> 1%",
