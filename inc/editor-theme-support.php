@@ -25,12 +25,32 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 	function genesis_sample_setup() {
 
 		// phpcs:disable
+
 		// Add default block styles
-		// add_theme_support( 'wp-block-styles' );
-		// phpcs:enable
+		//add_theme_support( 'wp-block-styles' );
+
+		// Adds support for block alignments.
+		//add_theme_support( 'align-wide' );
+
+		// Make media embeds responsive.
+		//add_theme_support( 'responsive-embeds' );
+
+		// Add support for editor styles.
+		//add_theme_support( 'editor-styles' );
 
 		// Disable the custom color picker.
-		add_theme_support( 'disable-custom-colors' );
+		//add_theme_support( 'disable-custom-colors' );
+
+		// Disable custom font sizes
+		//add_theme_support( 'disable-custom-font-sizes' );
+
+		// Disable custom Gradients
+		//add_theme_support( 'disable-custom-gradients' );
+
+		// phpcs:enable
+
+		// Enqueue editor styles.
+		add_editor_style( '/assets/css/style-editor.css' );
 
 		/**
 		 *
@@ -95,9 +115,6 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 			]
 		);
 
-		// -- Disable custom font sizes
-		add_theme_support( 'disable-custom-font-sizes' );
-
 		/**
 		 * Custom font sizes for use in the editor.
 		 *
@@ -156,11 +173,6 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 				],
 			]
 		);
-
-		add_theme_support( 'editor-styles' );
-
-		// Enqueue editor styles.
-		add_editor_style( '/assets/css/style-editor.css' );
 
 		add_theme_support(
 			'editor-gradient-presets',
@@ -260,7 +272,7 @@ function genesis_sample_inline_gutenberg_admin_css() {
 	$css = <<<CSS
 
 	.ab-block-post-grid .ab-post-grid-items h2 a:hover,
-	.block-editor__container .editor-block-list__block a {
+	.block-editor__container .editor-styles-wrapper a {
 		color: var(--ccp-primary);
 	}
 
@@ -280,6 +292,8 @@ function genesis_sample_inline_gutenberg_admin_css() {
 	}
 
 CSS;
+
+	$css .= genesis_sample_editor_custom_color_palette();
 
 	wp_add_inline_style( genesis_get_theme_handle() . '-custom-gutenberg-fonts', $css );
 
@@ -345,6 +359,35 @@ function genesis_sample_custom_color_palette() {
 	.site-container .wp-block-button .wp-block-button__link.has-{$color_info['slug']}-background-color,
 	.site-container .wp-block-pullquote.is-style-solid-color.has-{$color_info['slug']}-background-color {
 		background-color: {$color_info['color']};
+	}
+
+CSS;
+
+	}
+
+	return $css;
+
+}
+
+
+/**
+ * Generate CSS for editor colors based on theme color palette support.
+ *
+ * @since 3.3.0
+ *
+ * @return string The editor colors CSS if `editor-color-palette` theme support was declared.
+ */
+function genesis_sample_editor_custom_color_palette() {
+
+	$css                  = '';
+	$editor_color_palette = get_theme_support( 'editor-color-palette' );
+
+	foreach ( $editor_color_palette[0] as $color_info ) {
+
+		$css .= <<<CSS
+
+	.has-{$color_info['slug']}-color {
+		color: {$color_info['color']};
 	}
 
 CSS;
