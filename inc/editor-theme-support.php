@@ -50,7 +50,7 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 		// phpcs:enable
 
 		// Enqueue editor styles.
-		add_editor_style( '/assets/css/style-editor.css' );
+		add_editor_style( '/assets/css/editor-styles.css' );
 
 		/**
 		 *

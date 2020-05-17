@@ -71,13 +71,10 @@ function genesis_sample_scripts_styles() {
 	wp_enqueue_style( genesis_get_theme_handle() . '-custom-fonts', genesis_sample_custom_fonts_url(), [], genesis_get_theme_version() );
 
 	// Enqueue custom Gutenberg front-end styles.
-	wp_enqueue_style( genesis_get_theme_handle() . '-custom-gutenberg', get_stylesheet_directory_uri() . '/assets/css/front-end.css', [], wp_date( 'dmy.His', filemtime( get_stylesheet_directory() . '/assets/css/front-end.css' ) ) );
+	wp_enqueue_style( genesis_get_theme_handle() . '-custom-gutenberg', get_stylesheet_directory_uri() . '/assets/css/block-styles.css', [], wp_date( 'dmy.His', filemtime( get_stylesheet_directory() . '/assets/css/block-styles.css' ) ) );
 
 	// Enqueue theme's main styles with variables.
-	wp_enqueue_style( genesis_get_theme_handle() . '-main', get_stylesheet_directory_uri() . '/assets/css/style-main.css', [], wp_date( 'dmy.His', filemtime( get_stylesheet_directory() . '/assets/css/style-main.css' ) ) );
-
-	// Enqueue theme Extras styles.
-	wp_enqueue_style( genesis_get_theme_handle() . '-extras', get_stylesheet_directory_uri() . '/assets/css/style-extras.css', [], wp_date( 'dmy.His', filemtime( get_stylesheet_directory() . '/assets/css/style-extras.css' ) ) );
+	wp_enqueue_style( genesis_get_theme_handle() . '-main', get_stylesheet_directory_uri() . '/assets/css/main-styles.css', [], wp_date( 'dmy.His', filemtime( get_stylesheet_directory() . '/assets/css/main-styles.css' ) ) );
 
 	if ( has_block( 'code' ) ) {
 

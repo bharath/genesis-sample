@@ -1,0 +1,182 @@
+/* -- Custom Styles
+--------------------------------------------- */
+
+.wp-block-button.aligncenter {
+	text-align: center;
+}
+
+.site-container .wp-block-button .wp-block-button__link {
+	border-radius: 0;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button {
+	background-color: var(--ccp-primary);
+	font-size: 16px !important;
+	line-height: 1.625;
+}
+
+/*h4.not-ec {
+	margin-top: 0 !important;
+}*/
+
+/* -- Font Overrides
+--------------------------------------------- */
+
+.site-container .wp-block-pullquote cite,
+.site-container .wp-block-quote cite,
+.site-container .wp-block-pullquote p,
+.site-container .wp-block-quote p,
+.ab-block-cta .ab-button,
+.site-container .wp-block-button .wp-block-button__link {
+	font-family: var(--c-font-family);
+}
+
+.site-container .wp-block-pullquote cite,
+.site-container .wp-block-quote cite {
+	font-size: 18px;
+}
+
+/* -- Button Variations
+--------------------------------------------- */
+
+.site-container .wp-block-button .wp-block-button__link:focus,
+.site-container .wp-block-button .wp-block-button__link:hover {
+	background-color: var(--ccp-secondary);
+}
+
+.site-container .wp-block-button.is-style-outline .wp-block-button__link {
+	background-color: var(--ccp-transparent);
+	border-radius: 0;
+}
+
+.site-container .wp-block-button.is-style-outline .wp-block-button__link:hover {
+	background-color: var(--ccp-secondary);
+	border: 2px solid var(--ccp-secondary);
+}
+
+/* -- Custom Button Styles added for circular
+--------------------------------------------- */
+
+.site-container .wp-block-button.is-style-circular .wp-block-button__link {
+	background-color: var(--ccp-primary);
+	border-radius: 100px;
+}
+
+.site-container .wp-block-button.is-style-circular .wp-block-button__link:hover,
+.site-container .wp-block-button.is-style-circular .wp-block-button__link:focus {
+	background-color: var(--ccp-secondary);
+}
+
+/* -- Custom Button Styles added for Dark backgrounds
+--------------------------------------------- */
+
+.site-container .wp-block-button.is-style-fill-alt .wp-block-button__link {
+	background-color: var(--ccp-primary-alt);
+}
+
+.site-container .wp-block-button.is-style-fill-alt .wp-block-button__link:focus,
+.site-container .wp-block-button.is-style-fill-alt .wp-block-button__link:hover {
+	background-color: var(--ccp-secondary-alt);
+}
+
+.site-container .wp-block-button.is-style-outline-alt .wp-block-button__link {
+	color: var(--ccp-primary-alt);
+	background-color: var(--ccp-transparent);
+	border: 2px solid currentColor;
+	padding: 10px 28px;
+}
+
+.site-container .wp-block-button.is-style-outline-alt .wp-block-button__link:focus,
+.site-container .wp-block-button.is-style-outline-alt .wp-block-button__link:hover {
+	background-color: var(--ccp-secondary-alt);
+	border: 2px solid var(--ccp-secondary-alt);
+}
+
+/* -- Custom Styles for Group Block
+--------------------------------------------- */
+
+.wp-block-group.is-style-small-padding {
+	padding: 15px 0;
+}
+
+.wp-block-group.is-style-normal-padding {
+	padding: 30px 0;
+}
+
+.wp-block-group.is-style-large-padding {
+	padding: 60px 0;
+}
+
+h1.is-style-alt {
+	font-size: 75px;
+	font-weight: 800;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.site-container .wp-block-group .wp-block-group__inner-container {
+	margin: 0 auto;
+}
+
+.site-container .wp-block-group .wp-block-group__inner-container {
+	padding: 0;
+}
+
+.site-container .wp-block-group.alignfull .wp-block-group__inner-container,
+.site-container .wp-block-group.has-background .wp-block-group__inner-container {
+	padding: 0 30px;
+}
+
+
+@media only screen and (min-width: 960px) {
+
+	.site-container .wp-block-group .wp-block-group__inner-container {
+		max-width: 1140px;
+		padding: 0;
+	}
+
+	.site-container .wp-block-group.has-background .wp-block-group__inner-container,
+	.site-container .wp-block-group.alignwide .wp-block-group__inner-container,
+	.site-container .wp-block-group.alignfull .wp-block-group__inner-container {
+		padding: 0 30px;
+	}
+
+	.site-container .wp-block-group.has-background .wp-block-group__inner-container {
+		padding: 0 30px;
+	}
+
+}
+
+
+/* -- Start adding your own CSS
+--------------------------------------------- */
+
+/* -- Custom Styles
+--------------------------------------------- */
+
+.site-container .wp-block-button.is-style-outline .wp-block-button__link:hover,
+.site-container .wp-block-button.is-style-outline .wp-block-button__link,
+.site-container .wp-block-button .wp-block-button__link:focus,
+.site-container .wp-block-button .wp-block-button__link:hover,
+.site-container .wp-block-button .wp-block-button__link {
+	transition: background-color 300ms ease-out;
+}
+
+.site-container .wp-block-button .wp-block-button__link:focus,
+.site-container .wp-block-button .wp-block-button__link:hover,
+.site-container .wp-block-button.is-style-outline .wp-block-button__link:focus,
+.site-container .wp-block-button.is-style-outline .wp-block-button__link:hover {
+	box-shadow: none;
+}
+
+.site-container .wp-block-button .wp-block-button__link {
+	padding: 12px 30px;
+}
+
+.site-container .wp-block-button.is-style-outline .wp-block-button__link {
+	padding: 10px 28px;
+}

@@ -1,0 +1,140 @@
+/* -- Default Color Overrides
+--------------------------------------------- */
+
+.site-container div.wpforms-container-full .wpforms-form input[type="submit"],
+.site-container div.wpforms-container-full .wpforms-form button[type="submit"],
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button {
+	background-color: var(--ccp-primary);
+	font-size: 16px !important;
+	font-weight: 600;
+	line-height: 1.625;
+}
+
+a,
+.entry-title a:focus,
+.entry-title a:hover,
+.gs-faq__question:focus,
+.gs-faq__question:hover,
+.genesis-nav-menu a:focus,
+.genesis-nav-menu a:hover,
+.genesis-nav-menu .current-menu-item > a,
+.genesis-nav-menu .sub-menu .current-menu-item > a:focus,
+.genesis-nav-menu .sub-menu .current-menu-item > a:hover,
+.menu-toggle:focus,
+.menu-toggle:hover,
+.sub-menu-toggle:focus,
+.sub-menu-toggle:hover {
+	color: var(--ccp-primary); /* Color changed from default #0073e5 to primary */
+}
+
+button:focus,
+button:hover,
+input[type="button"]:focus,
+input[type="button"]:hover,
+input[type="reset"]:focus,
+input[type="reset"]:hover,
+input[type="submit"]:focus,
+input[type="submit"]:hover,
+.site-container div.wpforms-container-full .wpforms-form input[type="submit"]:focus,
+.site-container div.wpforms-container-full .wpforms-form input[type="submit"]:hover,
+.site-container div.wpforms-container-full .wpforms-form button[type="submit"]:focus,
+.site-container div.wpforms-container-full .wpforms-form button[type="submit"]:hover,
+.button:focus,
+.button:hover {
+	background-color: var(--ccp-secondary); /* Color changed from default #0073e5 to #ff0014 */
+}
+
+@media only screen and (min-width: 960px) {
+
+	.genesis-nav-menu > .menu-highlight > a {
+		background-color: var(--ccp-primary);
+	}
+
+	.genesis-nav-menu > .menu-highlight > a:focus,
+	.genesis-nav-menu > .menu-highlight > a:hover {
+		color: var(--ccp-white);
+		background-color: var(--ccp-secondary); /* Color changed from default #0073e5 to #ff0014 */
+	}
+
+}
+
+
+/* -- Font Overrides
+--------------------------------------------- */
+
+body {
+	font-family: var(--c-font-family);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--c-font-family);
+	font-weight: 700;
+}
+
+.entry-content h3,
+.entry-content h4 {
+	font-weight: 700;
+}
+
+
+/* -- Fix for Menu items flash
+--------------------------------------------- */
+
+.js nav {
+	display: none;
+}
+
+@media only screen and (min-width: 960px) {
+
+	.js nav {
+		display: inline-block;
+	}
+
+}
+
+/* -- If its set to 100% then alignwide to be fixed in frontend.css
+--------------------------------------------- */
+
+/*
+@media only screen and (min-width: 960px) {
+
+	.full-width-content .content {
+		width: 100%;
+	}
+
+}
+*/
+
+/* -- Start adding your own CSS
+--------------------------------------------- */
+
+/* -- Custom Styles
+--------------------------------------------- */
+
+a {
+	text-decoration: none;
+	font-weight: 500;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: var(--ccp-secondary);
+}
+
+.genesis-nav-menu a {
+	font-weight: 500;
+}
+
+.site-footer,
+.genesis-nav-menu a {
+	font-size: 16px;
+}

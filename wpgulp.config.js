@@ -16,7 +16,7 @@ module.exports = {
 	injectChanges: true,
 
 	// Style options.
-	styleSRC: './assets/scss/style-mains.scss', // Path to main .scss file.
+	styleSRC: './assets/scss/*.scss', // Path to main .scss file.
 	styleDestination: './assets/css/', // Path to place the compiled CSS file. Default set to root folder.
 	outputStyle: 'compact', // Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
 	errLogToConsole: true,
@@ -48,8 +48,8 @@ module.exports = {
 	translationDestination: './languages', // Where to save the translation files.
 	packageName: 'WPGULP', // Package name.
 	bugReport: 'https://AhmadAwais.com/contact/', // Where can users report bugs.
-	lastTranslator: 'Ahmad Awais <your_email@email.com>', // Last translator Email ID.
-	team: 'AhmadAwais <your_email@email.com>', // Team's Email ID.
+	lastTranslator: 'Bharath <me@bharath.dev>', // Last translator Email ID.
+	team: 'Bharath <me@bharath.dev>', // Team's Email ID.
 
 	// Browsers you care about for autoprefixing. Browserlist https://github.com/ai/browserslist
 	// The following list is set as per WordPress requirements. Though, Feel free to change.
