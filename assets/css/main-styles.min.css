@@ -243,7 +243,7 @@ p.entry-meta{font-size:16px;margin-bottom:0}
 .footer-widget-area:last-child,.footer-widgets .widget:last-child{margin-bottom:0}
 .site-footer{background-color:var(--gs-white,#fff);border-top:1px solid var(--gs-grey-07,#eee);font-size:15px;line-height:1.5;padding:30px;text-align:center}
 .site-footer p{margin-bottom:0}
-code.hljs{font-size:16px;padding:30px 30px;border-radius:20px;background:rgba(54,86,102,0.05) !important;line-height:1.5;font-family:"Fira Code",monospace;font-weight:400}
+code.hljs{font-size:16px;padding:30px 30px;border-radius:20px;background:rgba(238,239,240,0.05) !important;line-height:1.5;font-family:"Fira Code",monospace;font-weight:400}
 .hljs{display:block;overflow-x:auto;padding:.5em;background:#fff;color:black}
 .xml .hljs-meta{color:silver}
 .hljs-comment,.hljs-quote{color:#007400}

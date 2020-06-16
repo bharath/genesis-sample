@@ -1,61 +1,52 @@
-/* -- Custom Styles
+/* -- Genesis Sample Font Family
+--------------------------------------------- */
+$gs-font-family: "Source Sans Pro", sans-serif;
+
+/* -- Custom Font Family
 --------------------------------------------- */
 
-/* -- Variable font
-	Usage:
+$c-font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif; /* stylelint-disable-line value-keyword-case */
 
-	html { font-family: 'Inter', sans-serif; }
-	@supports (font-variation-settings: normal) {
-		html { font-family: 'Inter var', sans-serif; }
-	}
+/* -- Genesis Sample Color Palette
+--------------------------------------------- */
+$gs-accent: #0073e5;
+$gs-dark-grey_01: #333;
+$gs-dark-grey-02: #666;
+$gs-dark-grey-03: #777;
+$gs-dark-grey-04: #999;
+$gs-light-grey-01: #ccc;
+$gs-light-grey-02: #ddd;
+$gs-light-grey-03: #eee;
+$gs-light-grey-04: #f5f5f5;
+$gs-white: #fff;
+$gs-transparent: transparent;
+
+/* -- Custom Color Palette
 --------------------------------------------- */
 
-@font-face {
-	font-family: "Inter var";
-	font-weight: 100 900; /* stylelint-disable-line font-weight-notation */
-	font-display: swap;
-	font-style: normal;
-	font-named-instance: "Regular"; /* stylelint-disable-line property-no-unknown */
-	src: url(fonts/Inter-upright.var.woff2) format("woff2");
-}
+$ccp-primary: #0467c6;
+$ccp-secondary: #004990;
+$ccp-primary-alt: #ff0014;
+$ccp-secondary-alt: #b3000e;
+$ccp-black: #000;
+$ccp-grey-01: #333;
+$ccp-grey-02: #666;
+$ccp-grey-03: #eee;
+$ccp-grey-04: #f5f5f5;
+$ccp-white: #fff;
 
-@font-face {
-	font-family: "Inter var";
-	font-weight: 100 900; /* stylelint-disable-line font-weight-notation */
-	font-display: swap;
-	font-style: italic;
-	font-named-instance: "Italic"; /* stylelint-disable-line property-no-unknown */
-	src: url(fonts/Inter-italic.var.woff2) format("woff2");
-}
-
-/* -- Variable font
-	[EXPERIMENTAL] Multi-axis, single variable font.
-
-	Slant axis is not yet widely supported (as of February 2019) and thus this
-	multi-axis single variable font is opt-in rather than the default.
-
-	When using this, you will probably need to set font-variation-settings
-	explicitly, e.g.
-
-	* { font-variation-settings: "slnt" 0deg }
-	.italic { font-variation-settings: "slnt" 10deg }
+/* -- Custom Font Sizes
 --------------------------------------------- */
 
-@font-face {
-	font-family: "Inter var experimental";
-	font-weight: 100 900; /* stylelint-disable-line font-weight-notation */
-	font-display: swap;
-	font-style: oblique 0deg 10deg;
-	src: url(fonts/Inter.var.woff2) format("woff2");
-}
+$c-font-size-xxs: 14px;
+$c-font-size-xs: 15px;
+$c-font-size-s: 16px;
+$c-font-size-n: 18px;
+$c-font-size-m: 20px;
+$c-font-size-l: 24px;
+$c-font-size-xl: 27px;
+$c-font-size-xxl: 30px;
 
-@font-face {
-	font-family: "Fira Code VF";
-	src: url(fonts/FiraCode-VF.woff2) format("woff2-variations");
-	font-weight: 300 700; /* stylelint-disable-line font-weight-notation */
-	font-style: normal;
-	font-display: swap;
-}
 
 
 /* CSS Variables
