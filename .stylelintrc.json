@@ -3,6 +3,7 @@
 	"rules": {
 		"media-feature-name-no-unknown": null,
 		"no-descending-specificity": null,
-		"no-duplicate-selectors": null
+		"no-duplicate-selectors": null,
+		"indentation": "tab"
 	}
 }

@@ -8,9 +8,9 @@
 
 	wp.customize(
 		'primary_color',
-		function ( value ) {
+		function( value ) {
 			value.bind(
-				function ( to ) {
+				function( to ) {
 
 					//$( 'a' ).css( 'color', to );
 					$( ':root' ).css( '--ccp-primary', to );
@@ -20,4 +20,4 @@
 		}
 	);
 
-} )( jQuery );
+}( jQuery ) );
