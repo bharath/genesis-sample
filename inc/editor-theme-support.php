@@ -25,40 +25,14 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 	function genesis_sample_setup() {
 
 		// phpcs:disable
-
 		// Add default block styles
 		//add_theme_support( 'wp-block-styles' );
-
-		// Adds support for block alignments.
-		//add_theme_support( 'align-wide' );
-
-		// Make media embeds responsive.
-		//add_theme_support( 'responsive-embeds' );
-
-		// Add support for editor styles.
-		//add_theme_support( 'editor-styles' );
-
-		// Disable the custom color picker.
-		//add_theme_support( 'disable-custom-colors' );
-
-		// Disable custom font sizes
-		//add_theme_support( 'disable-custom-font-sizes' );
-
-		// Disable custom Gradients
-		//add_theme_support( 'disable-custom-gradients' );
-
 		// phpcs:enable
 
-		// Enqueue editor styles.
-		add_editor_style( '/assets/css/style-editor.css' );
+		// Adds support for block alignments.
+		add_theme_support( 'align-wide' );
 
-		/**
-		 *
-		 * Custom colors for use in the editor.
-		 * Add support for custom color palettes in Gutenberg.
-		 *
-		 * @link https://wordpress.org/gutenberg/handbook/reference/theme-support/
-		*/
+		// Custom colors for use in the editor.
 		add_theme_support(
 			'editor-color-palette',
 			[
@@ -115,11 +89,7 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 			]
 		);
 
-		/**
-		 * Custom font sizes for use in the editor.
-		 *
-		 * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/#block-font-sizes
-		 */
+		// Custom font sizes for use in the editor.
 		add_theme_support(
 			'editor-font-sizes',
 			[
@@ -174,6 +144,7 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 			]
 		);
 
+		// Custom Gradients.
 		add_theme_support(
 			'editor-gradient-presets',
 			[
@@ -209,6 +180,46 @@ if ( ! function_exists( 'genesis_sample_setup' ) ) :
 				],
 			]
 		);
+
+		// phpcs:disable
+		// Disable the custom color picker.
+		//add_theme_support( 'disable-custom-colors' );
+
+		// Disable custom font sizes
+		//add_theme_support( 'disable-custom-font-sizes' );
+
+		// Disable custom Gradients
+		//add_theme_support( 'disable-custom-gradients' );
+		// phpcs:enable
+
+		// Supporting custom line heights.
+		add_theme_support( 'custom-line-height' );
+
+		// Support custom units. The available units are: px, em, rem, vh, vw.
+		add_theme_support( 'custom-units', 'px', 'rem', 'em' );
+
+		// Disabling the default block patterns.
+		remove_theme_support( 'core-block-patterns' );
+
+		// Add support for editor styles.
+		add_theme_support( 'editor-styles' );
+
+		// phpcs:disable
+		// Dark backgrounds.
+		// add_theme_support( 'dark-editor-style' );
+		// phpcs:enable
+
+		// Enqueue editor styles.
+		add_editor_style( '/assets/css/style-editor.css' );
+
+		// Make media embeds responsive.
+		add_theme_support( 'responsive-embeds' );
+
+		// Experimental — Cover block padding.
+		add_theme_support( 'experimental-custom-spacing' );
+
+		// Experimental — Link color control.
+		add_theme_support( 'experimental-link-color' );
 
 	}
 
