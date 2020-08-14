@@ -28,28 +28,29 @@ const excludes = [
 	".scripts",
 	//".stylelintrc.json",
 	"*.zip",
-	//"CHANGELOG.txt",
+	//"CHANGELOG.md",
 	//"composer.json",
 	"composer.lock",
 	"config.codekit3",
-	//"CONTRIBUTING.txt",
+	"CONTRIBUTING.md",
 	"node_modules",
 	"package-lock.json",
 	//"package.json",
 	//"phpcs.xml.dist",
-	//"README.txt",
+	"README.md",
 	"themeclaim.json",
 	"vendor"
 ];
 
 // Creates a file to stream archive data to.
 // Uses the name in package.json, such as 'child-theme.1.1.0.zip'.
-let fileName = `${process.env.npm_package_name}.${
-	process.env.npm_package_theme_version
-}.zip`;
-let output = fs.createWriteStream(fileName);
+const slug = process.env.THEME_SLUG || process.env.npm_package_theme_textdomain;
+const version = process.env.THEME_VERSION || process.env.npm_package_theme_version;
+const fileName = process.env.VERSION_ARTIFACT_FILE || `${slug}.${version}.zip`;
 
-let archive = archiver("zip", {
+const output = fs.createWriteStream(fileName);
+
+const archive = archiver("zip", {
 	zlib: { level: 9 } // Best compression.
 });
 
@@ -60,7 +61,7 @@ const setupZipArchive = function() {
 	// Listens for all archive data to be written.
 	// Report the zip name and size, and rename *.txt files back to *.md again.
 	output.on("close", function() {
-		let fileSize = prettyBytes(archive.pointer());
+		const fileSize = prettyBytes(archive.pointer());
 		console.log(chalk`{cyan Created ${fileName}, ${fileSize}}`);
 
 		renameTxtFilesToMarkdown();
@@ -90,7 +91,7 @@ const setupZipArchive = function() {
  */
 const renameMarkdownFilesToTxt = new Promise(function(resolve, reject) {
 	console.log(chalk`{cyan Renaming .md files to .txt}`);
-	["XYZ.md"].forEach(function(file) {
+	["CHANGELOG.md", "README.md", "CONTRIBUTING.md"].forEach(function(file) {
 		if (fs.existsSync(file)) {
 			fs.renameSync(file, file.replace(".md", ".txt"));
 		}
@@ -124,7 +125,7 @@ const zipFiles = function() {
  */
 const renameTxtFilesToMarkdown = function() {
 	console.log(chalk`{cyan Renaming .txt files to .md}`);
-	["XYZ.txt"].forEach(function(file) {
+	["CHANGELOG.txt", "README.txt", "CONTRIBUTING.txt"].forEach(function(file) {
 		if (fs.existsSync(file)) {
 			fs.renameSync(file, file.replace(".txt", ".md"));
 		}
