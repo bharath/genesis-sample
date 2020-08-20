@@ -38,6 +38,7 @@ package-lock.json
 !phpcs.xml.dist
 !themeclaim.json
 vendor
+.vscode
 
 # Genesis Sample Original theme files
 
