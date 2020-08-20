@@ -1,6 +1,6 @@
 # Description
 
-Customizations added to [Genesis Sample](https://github.com/studiopress/genesis-sample) 3.3.0 to use as a Starter theme. No changes made to actual genesis-sample files.
+Customizations added to [Genesis Sample](https://github.com/studiopress/genesis-sample) 3.3.1 to use as a Starter theme. No changes made to actual genesis-sample files.
 
 ## Instructions
 
