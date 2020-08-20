@@ -1,0 +1,260 @@
+version: 2.1
+
+commands:
+  install_dependencies:
+    description: "Install development dependencies."
+    steps:
+      - run: composer install
+      - run: npm ci
+  mkdir_artifacts:
+    description: "Make Artifacts directory"
+    steps:
+      - run:
+          command: |
+            [ ! -d "/tmp/artifacts" ] && mkdir /tmp/artifacts &>/dev/null
+  set_env_vars:
+    description: "Set commonly used environment variables"
+    steps:
+      - run:
+          name: "Set Theme Slug"
+          command: |
+            echo "export THEME_SLUG=$(grep 'textdomain":' /tmp/theme/package.json | awk -F: '{print $2}' | sed -e 's/\s//g' -e 's/[\"\,]//g')" >> ${BASH_ENV}
+      - run:
+          name: "Set Theme Version"
+          command: |
+            echo "export THEME_VERSION=$(grep 'version":' /tmp/theme/package.json | awk -F: '{print $2}' | sed -e 's/\s//g' -e 's/[\"\,]//g')" >> ${BASH_ENV}
+      - run:
+          name: "Set Artifact Name"
+          command: |
+            echo "export VERSION_ARTIFACT_FILE=${THEME_SLUG}.${THEME_VERSION}.zip" >> ${BASH_ENV}
+            echo "export VERSION_DATA_FILE=${THEME_SLUG}.${THEME_VERSION}.json" >> ${BASH_ENV}
+      - run:
+          name: "Set Latest Artifact Name"
+          command: |
+            echo "export LATEST_ARTIFACT_FILE=${THEME_SLUG}.latest.zip" >> ${BASH_ENV}
+            echo "export LATEST_DATA_FILE=${THEME_SLUG}.latest.json" >> ${BASH_ENV}
+
+executors:
+  base:
+    docker:
+      - image: circleci/buildpack-deps:latest
+    working_directory: /tmp
+  php_node:
+    docker:
+      - image: circleci/php:7.3.3-stretch-node-browsers
+    working_directory: /tmp/theme
+  python:
+    docker:
+      - image: circleci/python:3.7-stretch
+    working_directory: /tmp
+
+jobs:
+  checkout:
+    executor: base
+    steps:
+      - checkout:
+          path: theme
+      - set_env_vars
+      - persist_to_workspace:
+          root: /tmp
+          paths:
+            - theme
+
+  standards:
+    executor: php_node
+    steps:
+      - attach_workspace:
+          at: /tmp
+      - install_dependencies
+      - run: composer phpcs
+      - run: npm run lint:css
+      - run: npm run lint:js
+
+  bundle:
+    executor: php_node
+    steps:
+      - attach_workspace:
+          at: /tmp
+      - set_env_vars
+      - run: npm ci
+      - run: npm run zip
+      - mkdir_artifacts
+      - run: mv ./${VERSION_ARTIFACT_FILE} /tmp/artifacts/.
+      - persist_to_workspace:
+          root: /tmp
+          paths:
+            - artifacts
+            - theme
+      - store_artifacts:
+          path: /tmp/artifacts/
+
+  create_data_file:
+    executor: php_node
+    steps:
+      - attach_workspace:
+          at: /tmp
+      - set_env_vars
+      - run: npm run prep:piservice /tmp/artifacts
+      - persist_to_workspace:
+          root: /tmp
+          paths:
+            - artifacts
+
+  deploy_studiopress:
+    executor: base
+    parameters:
+      sp_install:
+        type: string
+        default: myspressstg
+    steps:
+      - attach_workspace:
+          at: /tmp
+      - set_env_vars
+      - run:
+          name: Deploy To StudioPress
+          command: |
+            DEST_PATH=home/wpe-user/sites/<< parameters.sp_install >>/wp-content/uploads/member-access
+            DEST_HOST=<< parameters.sp_install >>@<< parameters.sp_install >>.ssh.wpengine.net
+            echo "${SP_DEPLOY_KEY}" | base64 -d > ./sp_deploy_key
+            chmod 600 ./sp_deploy_key
+            scp -i ./sp_deploy_key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null /tmp/artifacts/${VERSION_ARTIFACT_FILE} ${DEST_HOST}:/${DEST_PATH}
+
+  deploy_s3:
+    executor: python
+    parameters:
+      environment:
+        type: string
+        default: themes
+    steps:
+      - attach_workspace:
+          at: /tmp
+      - set_env_vars
+      - run:
+          name: "Copy Version to Latest"
+          command: |
+            cp /tmp/artifacts/${VERSION_ARTIFACT_FILE} /tmp/artifacts/${LATEST_ARTIFACT_FILE}
+            cp /tmp/artifacts/${VERSION_DATA_FILE} /tmp/artifacts/${LATEST_DATA_FILE}
+      - aws-s3/sync:
+          from: "/tmp/artifacts/"
+          to: "s3://update.atomicblocks.com/<< parameters.environment >>/${THEME_SLUG}/"
+
+workflows:
+  version: 2
+  checks:
+    jobs:
+      - checkout:
+          filters:
+            branches:
+              ignore:
+                - master
+      - standards:
+          requires:
+            - checkout
+          filters:
+            branches:
+              ignore:
+                - master
+
+  branch_deploy:
+    jobs:
+      - checkout:
+          filters:
+            branches:
+              only:
+                - master
+      - standards:
+          requires:
+            - checkout
+          filters:
+            branches:
+              only:
+                - master
+      - bundle:
+          requires:
+            - standards
+          filters:
+            branches:
+              only:
+                - master
+      - create_data_file:
+          requires:
+            - bundle
+          filters:
+            branches:
+              only:
+                - master
+      - deploy_studiopress:
+          context: studiopress-deploy
+          sp_install: myspressstg
+          requires:
+            - bundle
+          filters:
+            branches:
+              only:
+                - master
+      - deploy_s3:
+          context: wpe-product-info-aws
+          environment: staging/themes
+          requires:
+            - create_data_file
+            - deploy_studiopress
+          filters:
+            branches:
+              only:
+                - master
+
+  tag_deploy:
+    jobs:
+      - checkout:
+          filters:
+            tags:
+              only: /^\d+\.\d+\.\d+$/
+            branches:
+              ignore: /.*/
+      - standards:
+          requires:
+            - checkout
+          filters:
+            tags:
+              only: /^\d+\.\d+\.\d+$/
+            branches:
+              ignore: /.*/
+      - bundle:
+          requires:
+            - standards
+          filters:
+            tags:
+              only: /^\d+\.\d+\.\d+$/
+            branches:
+              ignore: /.*/
+      - create_data_file:
+          requires:
+            - bundle
+          filters:
+            tags:
+              only: /^\d+\.\d+\.\d+$/
+            branches:
+              ignore: /.*/
+      - deploy_studiopress:
+          context: studiopress-deploy
+          sp_install: myspress
+          requires:
+            - bundle
+          filters:
+            tags:
+              only: /^\d+\.\d+\.\d+$/
+            branches:
+              ignore: /.*/
+      - deploy_s3:
+          context: wpe-product-info-aws
+          requires:
+            - create_data_file
+            - deploy_studiopress
+          filters:
+            tags:
+              only: /^\d+\.\d+\.\d+$/
+            branches:
+              ignore: /.*/
+
+orbs:
+  aws-s3: circleci/aws-s3@1.0.0

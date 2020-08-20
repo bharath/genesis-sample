@@ -1,0 +1,52 @@
+{
+	"workbench.colorCustomizations": {
+		"titleBar.inactiveBackground": "#00A0D2",
+		"titleBar.inactiveForeground": "#ffffff"
+	},
+
+	// phpcs & phpcbf
+	"phpcs.standard": "WordPress", // Default: null
+	"phpcbf.standard": "phpcs.xml.dist", // Default: null
+	"phpcbf.onsave": true, // Default: true,
+
+	// To prevent both the editor built-in linters [css] [less] [scss] and stylelint extension from reporting essentially the same errors, disable the built-in ones:
+	"css.validate": false,
+	"less.validate": false,
+	"scss.validate": false,
+
+	// Disable format on save so prettier doesn't run and enable code actions to run the linters on save.
+	"editor.formatOnSave": true, //Default: false
+
+	"[php]": {
+		"editor.formatOnSave": false
+	},
+
+	"[css]": {
+		"editor.formatOnSave": false
+	},
+
+	"[scss]": {
+		"editor.formatOnSave": false
+	},
+
+	"[javascript]": {
+		"editor.formatOnSave": false
+	},
+
+	"[javascriptreact]": {
+		"editor.formatOnSave": false
+	},
+
+	// Tell the ESLint, TSLint and Stylelint linter extensions to run on save
+	"editor.codeActionsOnSave": {
+		// For ESLint
+		"source.fixAll.eslint": true,
+		// For TSLint
+		"source.fixAll.tslint": true,
+		// For Stylelint
+		"source.fixAll.stylelint": true
+	},
+
+	// Optional BUT IMPORTANT: If you have the prettier extension enabled for other languages like HTML, turn it off for JS, React and css since we are doing it through linter extensions already
+	"prettier.disableLanguages": ["javascript", "javascriptreact", "css", "scss"]
+}
