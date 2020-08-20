@@ -28,16 +28,13 @@ const excludes = [
 	".scripts",
 	//".stylelintrc.json",
 	"*.zip",
-	//"CHANGELOG.md",
 	//"composer.json",
 	"composer.lock",
 	"config.codekit3",
-	"CONTRIBUTING.md",
 	"node_modules",
 	"package-lock.json",
 	//"package.json",
 	//"phpcs.xml.dist",
-	"README.md",
 	"themeclaim.json",
 	"vendor"
 ];
